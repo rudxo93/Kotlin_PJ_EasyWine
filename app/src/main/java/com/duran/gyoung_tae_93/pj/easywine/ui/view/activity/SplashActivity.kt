@@ -1,10 +1,11 @@
-package com.duran.gyoung_tae_93.pj.easywine
+package com.duran.gyoung_tae_93.pj.easywine.ui.view.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.duran.gyoung_tae_93.pj.easywine.R
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
@@ -18,7 +19,7 @@ class SplashActivity : AppCompatActivity() {
         val handler = Handler()
 
         handler.postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, IntroActivity::class.java)
             startActivity(intent)
             finish()
         }, SPLASH_TIME)

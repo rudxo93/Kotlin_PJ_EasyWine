@@ -1,4 +1,4 @@
-package com.duran.gyoung_tae_93.pj.easywine
+package com.duran.gyoung_tae_93.pj.easywine.ui.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

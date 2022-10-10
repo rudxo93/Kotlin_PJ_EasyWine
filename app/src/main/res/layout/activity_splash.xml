@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/wine_bottle"
-    tools:context=".SplashActivity">
+    tools:context=".ui.view.activity.SplashActivity">
 
     <FrameLayout
         android:layout_width="wrap_content"
