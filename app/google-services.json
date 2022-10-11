@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "67142633060",
+    "project_id": "easywine-5120e",
+    "storage_bucket": "easywine-5120e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:67142633060:android:37d13b1a3797a5ffd70171",
+        "android_client_info": {
+          "package_name": "com.duran.gyoung_tae_93.pj.easywine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "67142633060-ql1kvqhlc7e1hql2p26p23t11cc35ila.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0fw71E6wJsp7UXueSo8UH8pTH0Ge-7Ro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "67142633060-ql1kvqhlc7e1hql2p26p23t11cc35ila.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
