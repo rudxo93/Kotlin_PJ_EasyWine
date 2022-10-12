@@ -3,4 +3,10 @@
 
     <!-- Activity Intro -->
     <string name="login_btn_google">구글 로그인</string>
+
+    <!-- Activity Create Nickname -->
+    <string name="create_nickname_title">닉네임이 필요해요!</string>
+    <string name="create_nickname_title2">로 시작하기</string>
+    <string name="btn_success_nickname">시작하기! > </string>
+
 </resources>

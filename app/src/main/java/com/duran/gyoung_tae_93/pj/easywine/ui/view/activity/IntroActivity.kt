@@ -84,7 +84,7 @@ class IntroActivity : AppCompatActivity() {
                     // 구글 로그인 인증되었을때
                     Log.d(TAG, "Google Login Success")
                     Toast.makeText(this, "구글 로그인 성공", Toast.LENGTH_SHORT).show()
-                    moveMain(auth.currentUser)
+                    moveNickname(auth.currentUser)
                 } else {
                     // 구글 로그인 인증 실패
                     Log.d(TAG, "Google Login Fail")
@@ -94,10 +94,9 @@ class IntroActivity : AppCompatActivity() {
         }
     }
 
-    private fun moveMain(user: FirebaseUser?) {
+    private fun moveNickname(user: FirebaseUser?) {
         if(user != null) {
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
+            startActivity(Intent(this, CreateNicknameActivity::class.java))
         }
     }
 }
