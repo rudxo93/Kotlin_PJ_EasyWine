@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "67142633060-o8a5b4n1qju3fl8vljccb1utauf678ih.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.duran.gyoung_tae_93.pj.easywine",
+            "certificate_hash": "9327f0c46ce9fe7126c5588ed838479414000677"
+          }
+        },
+        {
           "client_id": "67142633060-ql1kvqhlc7e1hql2p26p23t11cc35ila.apps.googleusercontent.com",
           "client_type": 3
         }
