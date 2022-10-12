@@ -38,7 +38,7 @@ class CreateNicknameActivity : AppCompatActivity() {
     }
 
     /**
-     *  Edittext의 텍스트 변경 이벤트
+     *  Edittext 의 텍스트 변경 이벤트
      */
     private fun initCreateNk() {
         etCreateNk.addTextChangedListener(object : TextWatcher {
@@ -58,7 +58,7 @@ class CreateNicknameActivity : AppCompatActivity() {
     }
 
     /**
-     * Edittext의 Text 여부에 따른 Move Button on/off
+     * Edittext 의 Text 여부에 따른 Move Button on/off
      */
     private fun etEmptyCk(s: Editable?) {
         if (s.isNullOrEmpty()) {
@@ -85,11 +85,14 @@ class CreateNicknameActivity : AppCompatActivity() {
             userModel.timestamp = System.currentTimeMillis()
 
             firestore.collection("user").document(currentUid).set(userModel)
-            Log.d(TAG, "현재 작성된 닉네임으로 User컬렉션/${currentUid}문서 이름으로 Database를 생성합니다.")
+            Log.d(TAG, "현재 작성된 닉네임으로 User 컬렉션/${currentUid} 문서 이름으로 Database를 생성합니다.")
             moveMain()
         }
     }
 
+    /**
+     * 닉네임이 생성되었다면 MainActivity 로 이동 -> 이전 엑티비티 스택 제거
+     */
     private fun moveMain() {
         Log.d(TAG, "Nickname save -> Move MainActivity")
         val intent = Intent(this, MainActivity::class.java)

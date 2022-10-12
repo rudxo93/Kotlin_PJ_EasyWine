@@ -5,23 +5,67 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import com.duran.gyoung_tae_93.pj.easywine.R
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
 
+    private lateinit var firestore: FirebaseFirestore
+    private lateinit var auth: FirebaseAuth
+
+    private lateinit var currentUid: String
+
+    private val handler = Handler()
     private var SPLASH_TIME: Long = 3000
+    private var TAG = SplashActivity::class.java.simpleName
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        val handler = Handler()
+        auth = Firebase.auth
+        firestore = FirebaseFirestore.getInstance()
 
-        handler.postDelayed({
-            val intent = Intent(this, IntroActivity::class.java)
-            startActivity(intent)
-            finish()
-        }, SPLASH_TIME)
+        initGetUserNk()
     }
+
+    /**
+     * 현재 사용자의 uid를 사용해서 닉네임이 있는지 조회 -> 없다면 intro 이동 닉네임 생성 / 있다면 intro 생략 main 이동
+     */
+    private fun initGetUserNk() {
+        currentUid = auth.currentUser?.uid.toString()
+
+        val docRef = firestore.collection("user").document(currentUid)
+        docRef.get()
+            .addOnSuccessListener { document ->
+                if (document.data != null) { // data가 조회되었다면 mainActivity
+                    Log.d(TAG, "DocumentSnapshot data: ${document.data}")
+                    handler.postDelayed({
+                        Log.d(TAG, "This Uid have a data. Go to MainActivity")
+                        val intent = Intent(this, MainActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    }, SPLASH_TIME)
+                } else { // data가 조회되지 않는다면 introActivity
+                    Log.d(TAG, "No such document")
+                    handler.postDelayed({
+                        Log.d(TAG, "This Uid does not have a data. Go to IntroActivity")
+                        val intent = Intent(this, IntroActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    }, SPLASH_TIME)
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.d(TAG, "get failed with ", exception)
+            }
+
+    }
+
+
 }
