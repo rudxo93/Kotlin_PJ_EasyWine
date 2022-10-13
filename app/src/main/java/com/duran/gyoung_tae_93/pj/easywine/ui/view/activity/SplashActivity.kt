@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.util.Log
 import com.duran.gyoung_tae_93.pj.easywine.R
+import com.duran.gyoung_tae_93.pj.easywine.util.FBAuth
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -17,8 +18,6 @@ class SplashActivity : AppCompatActivity() {
 
     private lateinit var firestore: FirebaseFirestore
     private lateinit var auth: FirebaseAuth
-
-    private lateinit var currentUid: String
 
     private val handler = Handler()
     private var SPLASH_TIME: Long = 3000
@@ -38,9 +37,8 @@ class SplashActivity : AppCompatActivity() {
      * 현재 사용자의 uid를 사용해서 닉네임이 있는지 조회 -> 없다면 intro 이동 닉네임 생성 / 있다면 intro 생략 main 이동
      */
     private fun initGetUserNk() {
-        currentUid = auth.currentUser?.uid.toString()
 
-        val docRef = firestore.collection("user").document(currentUid)
+        val docRef = firestore.collection("user").document(FBAuth.getUid())
         docRef.get()
             .addOnSuccessListener { document ->
                 if (document.data != null) { // data가 조회되었다면 mainActivity

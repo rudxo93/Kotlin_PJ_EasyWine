@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil
 import com.duran.gyoung_tae_93.pj.easywine.R
 import com.duran.gyoung_tae_93.pj.easywine.data.model.UserModel
 import com.duran.gyoung_tae_93.pj.easywine.databinding.ActivityCreateNicknameBinding
+import com.duran.gyoung_tae_93.pj.easywine.util.FBAuth
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -76,16 +77,15 @@ class CreateNicknameActivity : AppCompatActivity() {
     private fun initBtnMoveMain() {
         btnMoveMain.setOnClickListener {
             val nickname = etCreateNk.text.toString()
-            val currentUid = auth.currentUser!!.uid
 
             val userModel = UserModel()
             userModel.email = auth.currentUser?.email
-            userModel.uid = auth.currentUser?.uid
+            userModel.uid = FBAuth.getUid()
             userModel.nickname = nickname
             userModel.timestamp = System.currentTimeMillis()
 
-            firestore.collection("user").document(currentUid).set(userModel)
-            Log.d(TAG, "현재 작성된 닉네임으로 User 컬렉션/${currentUid} 문서 이름으로 Database를 생성합니다.")
+            firestore.collection("user").document(FBAuth.getUid()).set(userModel)
+            Log.d(TAG, "현재 작성된 닉네임으로 User 컬렉션/${FBAuth.getUid()} 문서 이름으로 Database를 생성합니다.")
             moveMain()
         }
     }
