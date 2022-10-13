@@ -6,20 +6,23 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.duran.gyoung_tae_93.pj.easywine.R
 import com.duran.gyoung_tae_93.pj.easywine.data.model.UserModel
 import com.duran.gyoung_tae_93.pj.easywine.databinding.ActivityCreateNicknameBinding
+import com.duran.gyoung_tae_93.pj.easywine.ui.viewmodel.AuthViewModel
+import com.duran.gyoung_tae_93.pj.easywine.ui.viewmodel.FBViewModel
 import com.duran.gyoung_tae_93.pj.easywine.util.FBAuth
+import com.duran.gyoung_tae_93.pj.easywine.util.FBDocRef
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
 class CreateNicknameActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityCreateNicknameBinding
-    private lateinit var firestore: FirebaseFirestore
-    private lateinit var auth: FirebaseAuth
+    private val viewModel by lazy { FBViewModel() }
 
     private val TAG = CreateNicknameActivity::class.java.simpleName
 
@@ -29,9 +32,6 @@ class CreateNicknameActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_create_nickname)
-
-        auth = FirebaseAuth.getInstance()
-        firestore = FirebaseFirestore.getInstance()
 
         initCreateNk() // EditText변경 이벤트
         initBtnMoveMain() // MoveMain버튼 클릭시(입력한 닉네임 Database 저장)
@@ -47,11 +47,9 @@ class CreateNicknameActivity : AppCompatActivity() {
                 // 입력이 끝날때
                 etEmptyCk(s)
             }
-
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
                 // 입력 하기 전
             }
-
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 // 타이핑 되는 텍스트에 변화
             }
@@ -77,14 +75,8 @@ class CreateNicknameActivity : AppCompatActivity() {
     private fun initBtnMoveMain() {
         btnMoveMain.setOnClickListener {
             val nickname = etCreateNk.text.toString()
-
-            val userModel = UserModel()
-            userModel.email = auth.currentUser?.email
-            userModel.uid = FBAuth.getUid()
-            userModel.nickname = nickname
-            userModel.timestamp = System.currentTimeMillis()
-
-            firestore.collection("user").document(FBAuth.getUid()).set(userModel)
+            viewModel.insertNk(nickname)
+            Toast.makeText(this, "닉네임이 생성되었습니다", Toast.LENGTH_SHORT).show()
             Log.d(TAG, "현재 작성된 닉네임으로 User 컬렉션/${FBAuth.getUid()} 문서 이름으로 Database를 생성합니다.")
             moveMain()
         }

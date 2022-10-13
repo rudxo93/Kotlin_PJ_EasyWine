@@ -11,18 +11,16 @@ import androidx.databinding.DataBindingUtil
 import com.duran.gyoung_tae_93.pj.easywine.R
 import com.duran.gyoung_tae_93.pj.easywine.databinding.ActivityIntroBinding
 import com.duran.gyoung_tae_93.pj.easywine.ui.viewmodel.AuthViewModel
+import com.duran.gyoung_tae_93.pj.easywine.util.FBAuth
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 
 class IntroActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityIntroBinding
     private val viewModel by lazy { AuthViewModel() }
-    private lateinit var auth: FirebaseAuth // 계정인증
     private lateinit var googleSignInClient: GoogleSignInClient // 구글 로그인
 
     private val TAG = IntroActivity::class.java.simpleName
@@ -33,8 +31,6 @@ class IntroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_intro)
-
-        auth = FirebaseAuth.getInstance()
 
         initGoogleLoginClient()
         initGoogleLoginBtn()
@@ -82,7 +78,7 @@ class IntroActivity : AppCompatActivity() {
                     val account = task.getResult(ApiException::class.java)!!
                     viewModel.getUser(account.idToken!!)
                     Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show()
-                    moveNickname(auth.currentUser)
+                    moveNickname(FBAuth.getCurrentUser())
 
                 } catch (e: ApiException) {
                     Toast.makeText(this, e.localizedMessage, Toast.LENGTH_SHORT).show()
@@ -93,9 +89,10 @@ class IntroActivity : AppCompatActivity() {
     /**
      *  Google Login Success -> Move Create Nickname Activity
      */
-    private fun moveNickname(user: FirebaseUser?) {
-        if (user != null) {
-            startActivity(Intent(this, CreateNicknameActivity::class.java))
+    private fun moveNickname(user: String) {
+        if(user.isNotEmpty()) {
+            val intent = Intent(this, CreateNicknameActivity::class.java)
+            startActivity(intent)
         }
     }
 }

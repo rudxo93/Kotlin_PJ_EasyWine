@@ -5,12 +5,18 @@ import com.google.firebase.auth.FirebaseAuth
 class FBAuth {
     companion object {
 
-        private lateinit var auth: FirebaseAuth
+        private var auth: FirebaseAuth = FirebaseAuth.getInstance()
+
+        fun getCurrentUser() : String {
+            return auth.currentUser.toString()
+        }
 
         fun getUid() : String {
-            auth = FirebaseAuth.getInstance()
             return auth.currentUser?.uid.toString()
+        }
 
+        fun getEmail() : String {
+            return auth.currentUser?.email.toString()
         }
     }
 }
