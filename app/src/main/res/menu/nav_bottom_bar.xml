@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fragment_info"
+        android:icon="@drawable/ic_information"
+        android:title="@string/bottom_navi_info" />
+
+    <item
+        android:id="@+id/fragment_note"
+        android:icon="@drawable/ic_wine_note"
+        android:title="@string/bottom_navi_note" />
+
+    <item
+        android:id="@+id/fragment_search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/bottom_navi_search" />
+
+    <item
+        android:id="@+id/fragment_favorite"
+        android:icon="@drawable/ic_favorite_star"
+        android:title="@string/bottom_navi_favorite" />
+
+</menu>
