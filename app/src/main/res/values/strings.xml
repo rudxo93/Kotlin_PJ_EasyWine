@@ -15,7 +15,10 @@
     <string name="bottom_navi_search">와인검색</string>
     <string name="bottom_navi_favorite">와인북마크</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Toolbar Menu -->
+    <string name="menu_item_1">내정보</string>
+
+    <!-- Activity Main -->
+    <string name="main_toolbar_title">My Wine Cellar</string>
 
 </resources>
