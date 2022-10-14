@@ -21,4 +21,15 @@
     <!-- Activity Main -->
     <string name="main_toolbar_title">My Wine Cellar</string>
 
+    <!-- Info Fragment -->
+    <string name="info_title_1">와인 글라스 선택하기</string>
+    <string name="info_title_2">와인 오픈하는 법</string>
+    <string name="info_title_3">샴페인 오픈하는 법</string>
+    <string name="info_title_4">오프너가 없을 때</string>
+    <string name="info_title_5">코르크 마개가 부러졌을 때</string>
+    <string name="info_title_6">와인 빠르게 칠링하는 법</string>
+    <string name="info_title_7">와인 맛있게 마시는 방법</string>
+    <string name="info_title_8">와인 마시는 순서</string>
+    <string name="info_title_9">남은 와인 보관하기</string>
+
 </resources>

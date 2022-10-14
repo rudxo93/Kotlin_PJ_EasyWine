@@ -14,4 +14,22 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="InfoLinearLayout">
+        <item name="android:layout_marginStart">7dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginEnd">7dp</item>
+        <item name="android:background">@drawable/radius_info_rv_item_background</item>
+        <item name="android:elevation">14dp</item>
+        <item name="android:gravity">center|start</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingStart">10dp</item>
+    </style>
+
+    <style name="InfoTextView">
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/main_wine_color</item>
+        <item name="android:textSize">15sp</item>
+    </style>
 </resources>
