@@ -16,6 +16,33 @@
         android:theme="@style/Theme.EasyWine"
         tools:targetApi="31">
         <activity
+            android:name=".ui.view.activity.information.WineKeepActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.activity.information.WineOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.activity.information.WineDrinkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.activity.information.WineChillingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.activity.information.BrokenCorkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.activity.information.NoOpenerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.activity.information.ChampagneOpenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.activity.information.WineOpenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.activity.information.WineGlassActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.view.activity.MypageActivity"
             android:exported="false" />
         <activity
