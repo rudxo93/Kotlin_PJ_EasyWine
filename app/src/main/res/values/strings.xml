@@ -32,4 +32,73 @@
     <string name="info_title_8">와인 마시는 순서</string>
     <string name="info_title_9">남은 와인 보관하기</string>
 
+    <!-- Content item Wine Glass RedWine -->
+    <string name="content_item_wg_redWine_title1">Red Wine</string>
+    <string name="content_item_wg_redWine_title2">특징</string>
+    <string name="content_item_wg_redWine_title3">보편적인 와인잔</string>
+    <string name="content_item_wg_redWine_title3_1">보르도 와인잔</string>
+    <string name="content_item_wg_redWine_title3_2">부르고뉴 와인잔</string>
+    <string name="content_item_wg_redWine_content1">
+        대부분의 레드와인잔은 모양이 위로 갈수록 마치 튤립 모양과 같이 글라스가 좁아지는 형태가 많습니다.\n
+        이러한 이유는 와인의 향을 코로 모아 잘 느낄 수 있도록 해주기 때문입니다.\n
+        와인을 마실 때 와인의 맛이 혀의 안쪽 부분까지 닿도록 해서 레드와인의 떫고 텁텁한 타닌이나
+        산도를 잘 느낄 수 있게 해줍니다.
+    </string>
+    <string name="content_item_wg_redWine_content2">
+        가장 보편적으로 집에서 볼 수 있는 와인잔은 대부분 보르도 레드 와인잔입니다.\n
+        보르도 와인잔의 가장 큰 특징은 다른 와인잔에 비해 볼이 크고 깊고 입구가 넓은 형태입니다.\n
+        이러한 잔의 모양은 볼의 여유공간을 통해 와인과 공기가 더욱 잘 접촉되어 와인의 알코올을 증발하면서
+        풍부한 향은 잔 안에 퍼지게 되어 와인 향을 충분히 느낄 수 있도록 해줍니다.\n
+        보르도 잔은 대부분의 바디감 있는 레드 와인을 즐기기에 적합한 모양을 가지고 있습니다.
+    </string>
+    <string name="content_item_wg_redWine_content3">
+        부르고뉴 와인잔은 보르도 와인잔에 비해 볼이 옆으로 넓고 둥근 형태로 볼의 깊이는 더 낮게 만들어 집니다.\n
+        볼의 표면적을 넓게 해서 와인의 향을 극대화 시켜주므로 보르도 와인잔에 비해 좀 더 쉽게 향을 이끌어 냅니다.\n
+        깊이가 낮기 때문에 와인의 타닌을 즐기기 보다는 혀끝의 단맛에 더 집중할 수 있도록 합니다.\n
+        섬세하고 복합적인 향과 맛을 가진 와인을 즐기기에 아주 적합합니다.
+    </string>
+
+    <!-- Content item Wine Glass WhiteWine -->
+    <string name="content_item_wg_whiteWine_title1">White Wine</string>
+    <string name="content_item_wg_whiteWine_title2">특징</string>
+    <string name="content_item_wg_whiteWine_title3">화이트 와인잔</string>
+    <string name="content_item_wg_whiteWine_title3_1">큰 사이즈의 화이트 와인잔</string>
+    <string name="content_item_wg_whiteWine_title3_2">작은 사이즈의 화이트 와인잔</string>
+    <string name="content_item_wg_whiteWine_content1">
+        화이트 와인은 일반적으로 차가운 상태로 즐기는 것이 일반적입니다.\n
+        이러한 화이트 와인의 특성상 잔으로 옮겨 담은 와인의 온도가 상승하는 것을 늦추기 위해 레드와인 잔에 비해 볼이
+        더 작게 만들어졌고 상대적으로 레드와인 잔보다 적은 지름의 입구는 혀에 와인이 닿는 면적을 줄여 화이트 와인이
+        가지고 있는 신맛을 줄이는 동시에 단맛을 느낄 수 있도록 만든 것이 특징입니다.\n
+    </string>
+    <string name="content_item_wg_whiteWine_content2">
+        사이즈가 크다는 것은 볼 안에서 와인과 공기가 만나는 면적이 늘어나면서 산화 과정을 촉진시키는
+        역할을 하는데 이러한 산화 과정을 통해 와인은 본연의 깊은 맛을 깨워줍니다.\n
+        화이트 와인 중에서도 샤르도네와 같은 바디감이 묵직한 와인을 즐기기에 적합합니다.
+    </string>
+    <string name="content_item_wg_whiteWine_content3">
+        가볍고 상쾌한 느낌의 와인은 산화과정이 맛을 즐기는 것을 방해합니다.\n
+        작은 사이즈의 화이트 와인잔을 통해 와인이 가진 섬세함을 망가뜨리기 않고 충분히 즐길 수 있도록 합니다.
+    </string>
+
+    <!-- Content item Wine Glass Champagne -->
+    <string name="content_item_wg_champagne_title1">Champagne</string>
+    <string name="content_item_wg_champagne_title2">특징</string>
+    <string name="content_item_wg_champagne_title3">샴페인 잔</string>
+    <string name="content_item_wg_champagne_title3_1">쿠페 와인잔</string>
+    <string name="content_item_wg_champagne_title3_2">튤립 와인잔</string>
+    <string name="content_item_wg_champagne_content1">
+        영화나 드라마에서 쉽게 볼 수 있는 샴페인 잔은 폭이 얇고 가늘고 긴 형태를 하고 있습니다.\n
+        이러한 모양을 플루트 라고 부르며 다른 종류의 와인잔과 비교했을 때 잔의 입구가 좁아 샴페인과 스파클링 와인이
+        가지고 있는 기포와 탄산을 오랫동안 유지해주고잔 속에서 기포가 올라오는 모습을 즐길 수 있는 심미적인 만족감을 채워줍니다.
+    </string>
+    <string name="content_item_wg_champagne_content2">
+        쿠페 와인잔의 모양은 볼은 넓지만 길이는 짧고 얇은 손잡이를 가지고 있습니다.\n
+        와인과 공기가 쉽게 접촉하여 거품과 아로마를 빨리 날려주기 때문에 샴페인을 마실 때 적합합니다.
+    </string>
+    <string name="content_item_wg_champagne_content3">
+        튤립 모양의 와인잔은 우아하고 정교하며 화이트와인 뿐만 아니라 레드와인을 즐겨 마실 수 있습니다.\n
+        튤립 와인잔은 슬림하고 입술이 닿는 부분으로 올라갈 수록 폭이 좁아집니다.
+        코로 와인향을 맡기 전에 혀로 향과 맛을 맛볼 수 있습니다.
+    </string>
+
 </resources>

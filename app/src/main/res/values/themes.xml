@@ -32,4 +32,15 @@
         <item name="android:textColor">@color/main_wine_color</item>
         <item name="android:textSize">15sp</item>
     </style>
+
+    <style name="CollapsingToolbar.Expanded.Title" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="CollapsingToolbar.Collapsed.Title" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
 </resources>
