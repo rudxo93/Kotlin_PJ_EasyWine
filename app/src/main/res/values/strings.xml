@@ -132,4 +132,21 @@
         마지막으로 냅킨을 이용해서 병 입구를 닦아주면 와인 오픈 끝!!
     </string>
 
+    <!-- Content Item Champagne Open -->
+    <string name="content_item_champagneOpen_title1">How to Open Champagne</string>
+    <string name="content_item_champagneOpen_title2">1. 은박지, 철사 제거</string>
+    <string name="content_item_champagneOpen_title3">2. 코르크 빼기</string>
+    <string name="content_item_champagneOpen_content1">
+        우선 코르크 마개를 감싸고 있는 은박지를 벗겨줍니다.\n
+        그 다음 코르크 마개가 갑자기 튀어나가지 않도록 엄지손가락으로 눌러주면서 코르크 마개를 고정하고 있는 철사를 천천히 풀어줍니다.\n
+        주의 할 점은 코르크 마개를 빼기 직전까지 철사를 제거하지 않습니다.\n
+        그렇지 않으면 준비가 되기 전에 코로크 마개가 빠져버리기 때문입니다.
+    </string>
+    <string name="content_item_champagneOpen_content2">
+        주로 사용하는 손으로 병을 잡고 45도로 기운다.\n
+        다른 손으로 코르크 마개를 잡아주고 병을 잡은 손으로 병을 돌려줍니다.\n
+        그렇게 되면 코르크 마개가 점점 나오게 되는데 이때 코르크 마개가 한번에 튀어나오지 않도록 힘을 유지해야 합니다.\n
+        코르크가 80%정도 올라왔다고 생각이 든다면 코르크를 살짝 꺾어줍니다.\n
+        기포빠지는 소리나 나게되는데 이 소리가 멈춘 뒤 코르크를 빼면 성공입니다!
+    </string>
 </resources>
