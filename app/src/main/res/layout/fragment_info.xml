@@ -99,7 +99,7 @@
                 style="@style/InfoTextView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/info_title_5" />
+                android:text="@string/info_title_6" />
 
         </LinearLayout>
 
@@ -118,7 +118,7 @@
                 style="@style/InfoTextView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/info_title_6" />
+                android:text="@string/info_title_7" />
 
         </LinearLayout>
 
@@ -137,31 +137,12 @@
                 style="@style/InfoTextView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/info_title_7" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linear_title_8"
-            style="@style/InfoLinearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="45dp">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_wine_glass" />
-
-            <TextView
-                style="@style/InfoTextView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
                 android:text="@string/info_title_8" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linear_title_9"
+            android:id="@+id/linear_title_8"
             style="@style/InfoLinearLayout"
             android:layout_width="match_parent"
             android:layout_height="45dp">

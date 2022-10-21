@@ -19,11 +19,10 @@ class InfoFragment : Fragment(), View.OnClickListener {
     private val wineOpen by lazy { binding.linearTitle2 }
     private val champagneOpen by lazy { binding.linearTitle3 }
     private val noOpener by lazy { binding.linearTitle4 }
-    private val brokenCork by lazy { binding.linearTitle5 }
-    private val wineChilling by lazy { binding.linearTitle6 }
-    private val wineDrink by lazy { binding.linearTitle7 }
-    private val wineOrder by lazy { binding.linearTitle8 }
-    private val wineKeep by lazy { binding.linearTitle9 }
+    private val wineChilling by lazy { binding.linearTitle5 }
+    private val wineDrink by lazy { binding.linearTitle6 }
+    private val wineOrder by lazy { binding.linearTitle7 }
+    private val wineKeep by lazy { binding.linearTitle8 }
 
     private val TAG = InfoFragment::class.java.simpleName
 
@@ -46,7 +45,6 @@ class InfoFragment : Fragment(), View.OnClickListener {
         wineOpen.setOnClickListener(this)
         champagneOpen.setOnClickListener(this)
         noOpener.setOnClickListener(this)
-        brokenCork.setOnClickListener(this)
         wineChilling.setOnClickListener(this)
         wineDrink.setOnClickListener(this)
         wineOrder.setOnClickListener(this)
@@ -74,22 +72,18 @@ class InfoFragment : Fragment(), View.OnClickListener {
                     startActivity(intent)
                 }
                 R.id.linear_title_5 -> {
-                    val intent = Intent(context, BrokenCorkActivity::class.java)
-                    startActivity(intent)
-                }
-                R.id.linear_title_6 -> {
                     val intent = Intent(context, WineChillingActivity::class.java)
                     startActivity(intent)
                 }
-                R.id.linear_title_7 -> {
+                R.id.linear_title_6 -> {
                     val intent = Intent(context, WineDrinkActivity::class.java)
                     startActivity(intent)
                 }
-                R.id.linear_title_8 -> {
+                R.id.linear_title_7 -> {
                     val intent = Intent(context, WineOrderActivity::class.java)
                     startActivity(intent)
                 }
-                R.id.linear_title_9 -> {
+                R.id.linear_title_8 -> {
                     val intent = Intent(context, WineKeepActivity::class.java)
                     startActivity(intent)
                 }
