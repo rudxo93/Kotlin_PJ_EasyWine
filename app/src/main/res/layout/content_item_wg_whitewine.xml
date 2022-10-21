@@ -23,7 +23,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/iv_wind_glass"
+            android:id="@+id/iv_wine_glass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/white_wine_remove"
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="40dp"
             android:src="@drawable/white_wine_name_remove"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_wind_glass"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_wine_glass"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -46,9 +46,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_wind_glass">
+            app:layout_constraintTop_toBottomOf="@+id/iv_wine_glass">
 
             <TextView
                 android:layout_width="wrap_content"
