@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +17,17 @@
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wine_chilling_title1"
+            android:text="@string/content_item_wine_drink_title1"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/nanumhand"
+            android:text="@string/content_item_wine_drink_title2"
             android:textColor="@color/black"
             android:textSize="40sp"
             android:textStyle="bold" />
@@ -27,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wine_chilling_content1"
+            android:text="@string/content_item_wine_drink_content1"
             android:textColor="@color/black"
             android:textSize="25sp" />
 
@@ -36,7 +46,7 @@
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wine_chilling_title2"
+            android:text="@string/content_item_wine_drink_title3"
             android:textColor="@color/black"
             android:textSize="40sp"
             android:textStyle="bold" />
@@ -46,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wine_chilling_content2"
+            android:text="@string/content_item_wine_drink_content2"
             android:textColor="@color/black"
             android:textSize="25sp" />
 
@@ -55,7 +65,7 @@
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wine_chilling_title3"
+            android:text="@string/content_item_wine_drink_title4"
             android:textColor="@color/black"
             android:textSize="40sp"
             android:textStyle="bold" />
@@ -65,26 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wine_chilling_content3"
-            android:textColor="@color/black"
-            android:textSize="25sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wine_chilling_title4"
-            android:textColor="@color/black"
-            android:textSize="40sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wine_chilling_content4"
+            android:text="@string/content_item_wine_drink_content3"
             android:textColor="@color/black"
             android:textSize="25sp" />
 

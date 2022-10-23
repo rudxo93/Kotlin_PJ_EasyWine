@@ -28,7 +28,7 @@
     <string name="info_title_4">오프너가 없을 때</string>
     <string name="info_title_5">코르크 마개가 부러졌을 때</string>
     <string name="info_title_6">와인 빠르게 칠링하는 법</string>
-    <string name="info_title_7">와인 맛있게 마시는 방법</string>
+    <string name="info_title_7">와인 즐기는 방법</string>
     <string name="info_title_8">와인 마시는 순서</string>
     <string name="info_title_9">남은 와인 보관하기</string>
 
@@ -236,6 +236,28 @@
         아이스버킷에 찬물을 절반 정도 넣고 나머지 절반을 얼음으로 채워줍니다.\n
         그 다음 소금을 한 주먹 섞어줍니다.\n
         소금이 와인 온도를 좀 더 빨리 낮춰줍니다.\n
+    </string>
+
+    <!-- Content Item Wine Drink -->
+    <string name="content_item_wine_drink_title1">How To Enjoy Wine?</string>
+    <string name="content_item_wine_drink_title2">1. 눈으로 즐기기</string>
+    <string name="content_item_wine_drink_title3">2. 향으로 즐기기</string>
+    <string name="content_item_wine_drink_title4">3. 맛으로 즐기기</string>
+    <string name="content_item_wine_drink_content1">
+        와인은 색과 투명도, 맑은 정도에 따라 특성이 구분됩니다.\n
+        레드와인의 경우 보라색, 벽돌색, 진한 자주색, 바랜색 정도로 구분할 수 있는데 마시기 전에 먼저 색을 즐겨봅시다!\n
+    </string>
+    <string name="content_item_wine_drink_content2">
+        와인은 향으로 마시는 술입니다.\n
+        와인을 잔 안에서 2~3바퀴 돌려 향이 잘 발산되도록(스월링) 한 뒤 코를 가져다 대고 향을 맡습니다.\n
+        과일향, 꽃향, 나무향 등 다양한 향이 발산되는 것을 느껴봅시다!\n
+    </string>
+    <string name="content_item_wine_drink_content3">
+        한번에 많은 양을 마시지 않고 입안에 머금을 수 있는 정도만 마십니다.\n
+        입안에 잠깐 머물게 해서 코로 올라오는 향을 맡으면 이전에 코로 맡은 향과는 또 다른 향을 느낄 수 있습니다.\n
+        목구멍으로 와인이 넘어가고 나면 은은하고 잔잔한 잔향이 입안에 남는데, 잔향이 오래 남는 와인이
+        있는가 하면 짧게 사라지는 것도 있습니다.\n
+        그 차이를 구분하는 것도 하나의 재미를 느낄 수 있습니다.\n
     </string>
 
 </resources>
