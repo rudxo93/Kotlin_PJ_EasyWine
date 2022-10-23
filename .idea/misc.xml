@@ -23,7 +23,7 @@
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/activity_mypage.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/activity_no_opener.xml" value="0.2621178225205071" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/activity_splash.xml" value="0.36614583333333334" />
-        <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/activity_wine_chilling.xml" value="0.3515625" />
+        <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/activity_wine_chilling.xml" value="0.26202012672381664" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/activity_wine_drink.xml" value="0.3515625" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/activity_wine_glass.xml" value="0.18842133476279818" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/activity_wine_keep.xml" value="0.3515625" />
@@ -34,6 +34,7 @@
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/content_item_wg_champagne.xml" value="0.3651041666666667" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/content_item_wg_redwine.xml" value="0.5" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/content_item_wg_whitewine.xml" value="0.36614583333333334" />
+        <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/content_item_wine_chilling.xml" value="0.3651041666666667" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/content_item_wineglass.xml" value="0.3651041666666667" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/content_item_wineglass1.xml" value="0.3651041666666667" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/content_item_wineglass2.xml" value="0.3651041666666667" />
