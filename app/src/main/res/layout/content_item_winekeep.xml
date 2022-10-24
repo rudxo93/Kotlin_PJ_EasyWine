@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
@@ -17,7 +17,7 @@
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wine_order_title1"
+            android:text="@string/content_item_wine_keep_title1"
             android:textColor="@color/black"
             android:textSize="40sp"
             android:textStyle="bold" />
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wine_order_content1"
+            android:text="@string/content_item_wine_keep_content1"
             android:textColor="@color/black"
             android:textSize="25sp" />
 
@@ -36,7 +36,7 @@
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wine_order_title2"
+            android:text="@string/content_item_wine_keep_title2"
             android:textColor="@color/black"
             android:textSize="40sp"
             android:textStyle="bold" />
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wine_order_content2"
+            android:text="@string/content_item_wine_keep_content2"
             android:textColor="@color/black"
             android:textSize="25sp" />
 
@@ -55,7 +55,7 @@
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wine_order_title3"
+            android:text="@string/content_item_wine_keep_title3"
             android:textColor="@color/black"
             android:textSize="40sp"
             android:textStyle="bold" />
@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wine_order_content3"
+            android:text="@string/content_item_wine_keep_content3"
             android:textColor="@color/black"
             android:textSize="25sp" />
 
@@ -74,7 +74,7 @@
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wine_order_title4"
+            android:text="@string/content_item_wine_keep_title4"
             android:textColor="@color/black"
             android:textSize="40sp"
             android:textStyle="bold" />
@@ -84,7 +84,45 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wine_order_content4"
+            android:text="@string/content_item_wine_keep_content4"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/nanumhand"
+            android:text="@string/content_item_wine_keep_title5"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/nanumhand"
+            android:text="@string/content_item_wine_keep_content5"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/nanumhand"
+            android:text="@string/content_item_wine_keep_title6"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/nanumhand"
+            android:text="@string/content_item_wine_keep_content6"
             android:textColor="@color/black"
             android:textSize="25sp" />
 
