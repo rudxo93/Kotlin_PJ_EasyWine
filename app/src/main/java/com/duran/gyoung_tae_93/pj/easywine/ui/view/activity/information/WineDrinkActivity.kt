@@ -19,7 +19,7 @@ class WineDrinkActivity : AppCompatActivity() {
     }
 
     private fun getToolbarSetting() {
-        topToolbar.setTitle("와인 맛있게 마시는 방법")
+        topToolbar.setTitle("와인 즐기는 방법")
         supportActionBar?.setDisplayShowTitleEnabled(true)
     }
 }
