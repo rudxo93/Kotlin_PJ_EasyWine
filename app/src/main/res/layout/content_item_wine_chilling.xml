@@ -13,80 +13,52 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            style="@style/content_item_title"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wine_chilling_title1"
-            android:textColor="@color/black"
-            android:textSize="40sp"
-            android:textStyle="bold" />
+            android:text="@string/content_item_wine_chilling_title1" />
 
         <TextView
+            style="@style/content_item_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wine_chilling_content1"
-            android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:text="@string/content_item_wine_chilling_content1" />
 
         <TextView
+            style="@style/content_item_title"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wine_chilling_title2"
-            android:textColor="@color/black"
-            android:textSize="40sp"
-            android:textStyle="bold" />
+            android:text="@string/content_item_wine_chilling_title2" />
 
         <TextView
+            style="@style/content_item_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wine_chilling_content2"
-            android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:text="@string/content_item_wine_chilling_content2" />
 
         <TextView
+            style="@style/content_item_title"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wine_chilling_title3"
-            android:textColor="@color/black"
-            android:textSize="40sp"
-            android:textStyle="bold" />
+            android:text="@string/content_item_wine_chilling_title3" />
 
         <TextView
+            style="@style/content_item_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wine_chilling_content3"
-            android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:text="@string/content_item_wine_chilling_content3" />
 
         <TextView
+            style="@style/content_item_title"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wine_chilling_title4"
-            android:textColor="@color/black"
-            android:textSize="40sp"
-            android:textStyle="bold" />
+            android:text="@string/content_item_wine_chilling_title4" />
 
         <TextView
+            style="@style/content_item_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wine_chilling_content4"
-            android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:text="@string/content_item_wine_chilling_content4" />
 
     </LinearLayout>
 

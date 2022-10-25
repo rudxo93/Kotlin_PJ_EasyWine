@@ -28,9 +28,6 @@
             android:name=".ui.view.activity.information.WineChillingActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.view.activity.information.BrokenCorkActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.view.activity.information.NoOpenerActivity"
             android:exported="false" />
         <activity

@@ -9,80 +9,60 @@
         android:orientation="vertical">
 
         <TextView
+            style="@style/content_item_title"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wo_wineOpen_title1"
-            android:textColor="@color/black"
-            android:textSize="40sp"
-            android:textStyle="bold"/>
+            android:text="@string/content_item_wo_wineOpen_title1" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/wine_open1_remove"/>
+            android:src="@drawable/wine_open1_remove" />
 
         <TextView
+            style="@style/content_item_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wo_wineOpen_content1"
-            android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:text="@string/content_item_wo_wineOpen_content1" />
 
         <TextView
+            style="@style/content_item_title"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wo_wineOpen_title2"
-            android:textColor="@color/black"
-            android:textSize="40sp"
-            android:textStyle="bold"/>
+            android:text="@string/content_item_wo_wineOpen_title2" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/wine_open2_remove"/>
+            android:src="@drawable/wine_open2_remove" />
 
         <TextView
+            style="@style/content_item_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wo_wineOpen_content2"
-            android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:text="@string/content_item_wo_wineOpen_content2" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/wine_open3_remove"/>
+            android:src="@drawable/wine_open3_remove" />
 
         <TextView
+            style="@style/content_item_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wo_wineOpen_content3"
-            android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:text="@string/content_item_wo_wineOpen_content3" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/wine_open4_remove"/>
+            android:src="@drawable/wine_open4_remove" />
 
         <TextView
+            style="@style/content_item_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wo_wineOpen_content4"
-            android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:text="@string/content_item_wo_wineOpen_content4" />
 
     </LinearLayout>
 

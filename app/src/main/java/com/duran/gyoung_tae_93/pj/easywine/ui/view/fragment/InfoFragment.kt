@@ -1,7 +1,9 @@
 package com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,8 +28,14 @@ class InfoFragment : Fragment(), View.OnClickListener {
 
     private val TAG = InfoFragment::class.java.simpleName
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        Log.e(TAG, "Start onAttach Fragment")
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.e(TAG, "Start onCreate Fragment")
     }
 
     override fun onCreateView(
@@ -35,11 +43,14 @@ class InfoFragment : Fragment(), View.OnClickListener {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_info, container, false)
+        Log.e(TAG, "Start onCreateView Fragment")
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        Log.e(TAG, "Start onViewCreated Fragment")
 
         wineGlass.setOnClickListener(this)
         wineOpen.setOnClickListener(this)
@@ -90,6 +101,26 @@ class InfoFragment : Fragment(), View.OnClickListener {
 
             }
         }
+    }
+
+    override fun onViewStateRestored(savedInstanceState: Bundle?) {
+        super.onViewStateRestored(savedInstanceState)
+        Log.e(TAG, "Start onViewStateRestored Fragment")
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.e(TAG, "Start onStart Fragment")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.e(TAG, "Start onResume Fragment")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.e(TAG, "Start onPause Fragment")
     }
 
 }

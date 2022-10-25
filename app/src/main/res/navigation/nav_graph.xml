@@ -15,9 +15,6 @@
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.InfoFragment"
         android:label="fragment_info"
         tools:layout="@layout/fragment_info" >
-        <action
-            android:id="@+id/action_fragment_info_to_wineGlassFragment"
-            app:destination="@id/wineGlassFragment"/>
     </fragment>
     <fragment
         android:id="@+id/fragment_search"
@@ -29,9 +26,4 @@
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.NoteFragment"
         android:label="fragment_note"
         tools:layout="@layout/fragment_note" />
-    <fragment
-        android:id="@+id/wineGlassFragment"
-        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.WineGlassFragment"
-        android:label="fragment_wine_glass"
-        tools:layout="@layout/fragment_wine_glass" />
 </navigation>

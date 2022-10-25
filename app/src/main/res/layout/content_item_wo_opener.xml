@@ -6,14 +6,10 @@
 
     <TextView
         android:id="@+id/tv_item_wo_title"
+        style="@style/content_item_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:fontFamily="@font/nanumhand"
         android:text="@string/content_item_wo_opener_title1"
-        android:textColor="@color/black"
-        android:textSize="40sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,23 +32,16 @@
         app:layout_constraintTop_toBottomOf="@+id/iv_wine_opener">
 
         <TextView
+            style="@style/content_item_title"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wo_opener_title2"
-            android:textColor="@color/black"
-            android:textSize="40sp"
-            android:textStyle="bold"/>
+            android:text="@string/content_item_wo_opener_title2" />
 
         <TextView
+            style="@style/content_item_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/nanumhand"
-            android:text="@string/content_item_wo_opener_content1"
-            android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:text="@string/content_item_wo_opener_content1" />
 
     </LinearLayout>
 

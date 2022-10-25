@@ -15,7 +15,7 @@ import com.duran.gyoung_tae_93.pj.easywine.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var navController: NavController
+    /*private lateinit var navController: NavController*/
 
     private val bottomNav by lazy { binding.bottomNavigation }
     private val topToolbar by lazy { binding.topToolbar }
@@ -32,9 +32,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupJetpackNavigation() {
         val host = supportFragmentManager
-            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment? ?: return
-        navController = host.navController
+            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = host.navController
         bottomNav.setupWithNavController(navController)
+
+
     }
 
     /**
@@ -53,10 +55,5 @@ class MainActivity : AppCompatActivity() {
             }
         }
         return super.onOptionsItemSelected(item)
-    }
-
-    override fun onBackPressed() {
-        super.onBackPressed()
-
     }
 }
