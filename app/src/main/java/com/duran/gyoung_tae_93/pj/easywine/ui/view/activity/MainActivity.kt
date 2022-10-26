@@ -1,10 +1,10 @@
 package com.duran.gyoung_tae_93.pj.easywine.ui.view.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -15,7 +15,7 @@ import com.duran.gyoung_tae_93.pj.easywine.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    /*private lateinit var navController: NavController*/
+    private lateinit var navController: NavController
 
     private val bottomNav by lazy { binding.bottomNavigation }
     private val topToolbar by lazy { binding.topToolbar }
@@ -31,11 +31,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupJetpackNavigation() {
-        val host = supportFragmentManager
-            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-        val navController = host.navController
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        navController = navHostFragment.navController
         bottomNav.setupWithNavController(navController)
-
 
     }
 

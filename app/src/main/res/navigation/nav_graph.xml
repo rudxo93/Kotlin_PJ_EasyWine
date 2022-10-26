@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/fragment_info">
+    app:startDestination="@id/fragment_note">
 
     <fragment
         android:id="@+id/fragment_favorite"
@@ -14,8 +14,7 @@
         android:id="@+id/fragment_info"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.InfoFragment"
         android:label="fragment_info"
-        tools:layout="@layout/fragment_info" >
-    </fragment>
+        tools:layout="@layout/fragment_info"/>
     <fragment
         android:id="@+id/fragment_search"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.SearchFragment"

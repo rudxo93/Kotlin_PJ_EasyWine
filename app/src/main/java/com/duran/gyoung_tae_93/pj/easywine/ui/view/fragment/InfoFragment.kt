@@ -1,6 +1,5 @@
 package com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -10,32 +9,32 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.duran.gyoung_tae_93.pj.easywine.R
+import com.duran.gyoung_tae_93.pj.easywine.data.model.InfoTitleModel
 import com.duran.gyoung_tae_93.pj.easywine.databinding.FragmentInfoBinding
+import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.InfoLVAdapter
 import com.duran.gyoung_tae_93.pj.easywine.ui.view.activity.information.*
 
-class InfoFragment : Fragment(), View.OnClickListener {
+class InfoFragment : Fragment() {
 
     private lateinit var binding: FragmentInfoBinding
-
-    private val wineGlass by lazy { binding.linearTitle1 }
-    private val wineOpen by lazy { binding.linearTitle2 }
-    private val champagneOpen by lazy { binding.linearTitle3 }
-    private val noOpener by lazy { binding.linearTitle4 }
-    private val wineChilling by lazy { binding.linearTitle5 }
-    private val wineDrink by lazy { binding.linearTitle6 }
-    private val wineOrder by lazy { binding.linearTitle7 }
-    private val wineKeep by lazy { binding.linearTitle8 }
+    private val infoLV by lazy { binding.lvInfo }
 
     private val TAG = InfoFragment::class.java.simpleName
+    lateinit var lvAdapter: InfoLVAdapter
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        Log.e(TAG, "Start onAttach Fragment")
-    }
+    val items = mutableListOf<InfoTitleModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.e(TAG, "Start onCreate Fragment")
+        Log.d(TAG, "Create InfoFragment")
+        items.add(InfoTitleModel(0, "와인 글라스 선택하기"))
+        items.add(InfoTitleModel(1, "와인 오픈하는 법"))
+        items.add(InfoTitleModel(2, "샴페인 오픈하는 법"))
+        items.add(InfoTitleModel(3, "오프너가 없을 때"))
+        items.add(InfoTitleModel(4, "와인 빠르게 칠링하는 법"))
+        items.add(InfoTitleModel(5, "와인 즐기는 방법"))
+        items.add(InfoTitleModel(6, "와인 마시는 순서"))
+        items.add(InfoTitleModel(7, "남은 와인 보관하기"))
     }
 
     override fun onCreateView(
@@ -43,84 +42,65 @@ class InfoFragment : Fragment(), View.OnClickListener {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_info, container, false)
-        Log.e(TAG, "Start onCreateView Fragment")
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        Log.e(TAG, "Start onViewCreated Fragment")
-
-        wineGlass.setOnClickListener(this)
-        wineOpen.setOnClickListener(this)
-        champagneOpen.setOnClickListener(this)
-        noOpener.setOnClickListener(this)
-        wineChilling.setOnClickListener(this)
-        wineDrink.setOnClickListener(this)
-        wineOrder.setOnClickListener(this)
-        wineKeep.setOnClickListener(this)
-
+        getListViewSetting()
     }
 
-    override fun onClick(v: View?) {
-        if (v != null) {
-            when (v.id) {
-                R.id.linear_title_1 -> {
+    private fun getListViewSetting() {
+        lvAdapter = InfoLVAdapter(items)
+        infoLV.adapter = lvAdapter
+
+        infoLV.setOnItemClickListener { parent, view, position, id ->
+            Log.e(TAG, id.toString())
+            when (id.toInt()) {
+                0 -> {
+                    Log.d(TAG, "Move InfoFragment to WineGlassActivity")
                     val intent = Intent(context, WineGlassActivity::class.java)
                     startActivity(intent)
                 }
-                R.id.linear_title_2 -> {
+                1 -> {
+                    Log.d(TAG, "Move InfoFragment to WineOpenActivity")
                     val intent = Intent(context, WineOpenActivity::class.java)
                     startActivity(intent)
                 }
-                R.id.linear_title_3 -> {
+                2 -> {
+                    Log.d(TAG, "Move InfoFragment to ChampagneOpenActivity")
                     val intent = Intent(context, ChampagneOpenActivity::class.java)
                     startActivity(intent)
                 }
-                R.id.linear_title_4 -> {
+                3 -> {
+                    Log.d(TAG, "Move InfoFragment to NoOpenerActivity")
                     val intent = Intent(context, NoOpenerActivity::class.java)
                     startActivity(intent)
                 }
-                R.id.linear_title_5 -> {
+                4 -> {
+                    Log.d(TAG, "Move InfoFragment to WineChillingActivity")
                     val intent = Intent(context, WineChillingActivity::class.java)
                     startActivity(intent)
                 }
-                R.id.linear_title_6 -> {
+                5 -> {
+                    Log.d(TAG, "Move InfoFragment to WineDrinkActivity")
                     val intent = Intent(context, WineDrinkActivity::class.java)
                     startActivity(intent)
                 }
-                R.id.linear_title_7 -> {
+                6 -> {
+                    Log.d(TAG, "Move InfoFragment to WineOrderActivity")
                     val intent = Intent(context, WineOrderActivity::class.java)
                     startActivity(intent)
                 }
-                R.id.linear_title_8 -> {
+                7 -> {
+                    Log.d(TAG, "Move InfoFragment to WineKeepActivity")
                     val intent = Intent(context, WineKeepActivity::class.java)
                     startActivity(intent)
                 }
 
             }
         }
-    }
-
-    override fun onViewStateRestored(savedInstanceState: Bundle?) {
-        super.onViewStateRestored(savedInstanceState)
-        Log.e(TAG, "Start onViewStateRestored Fragment")
-    }
-
-    override fun onStart() {
-        super.onStart()
-        Log.e(TAG, "Start onStart Fragment")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Log.e(TAG, "Start onResume Fragment")
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Log.e(TAG, "Start onPause Fragment")
     }
 
 }

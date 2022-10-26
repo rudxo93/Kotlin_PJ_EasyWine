@@ -61,4 +61,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore-ktx:24.2.2'
     // Import the BoM for the Firebase platform
     implementation platform('com.google.firebase:firebase-bom:30.4.0')
+    // Navigation
+    implementation('androidx.navigation:navigation-fragment-ktx:2.5.1')
+    implementation('androidx.navigation:navigation-ui-ktx:2.5.1')
 }
