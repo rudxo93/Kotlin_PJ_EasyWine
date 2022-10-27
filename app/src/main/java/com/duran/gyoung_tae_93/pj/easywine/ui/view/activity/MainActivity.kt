@@ -15,26 +15,22 @@ import com.duran.gyoung_tae_93.pj.easywine.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var navController: NavController
-
-    private val bottomNav by lazy { binding.bottomNavigation }
-    private val topToolbar by lazy { binding.topToolbar }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        bottomNav.itemIconTintList = null // custom한 icon이 나오도록
+        binding.bottomNavigation.itemIconTintList = null // custom한 icon이 나오도록
 
         setupJetpackNavigation()
-        setSupportActionBar(topToolbar)
+        setSupportActionBar(binding.topToolbar)
     }
 
     private fun setupJetpackNavigation() {
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-        navController = navHostFragment.navController
-        bottomNav.setupWithNavController(navController)
+        val navController = navHostFragment.navController
+        binding.bottomNavigation.setupWithNavController(navController)
 
     }
 

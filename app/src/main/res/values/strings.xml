@@ -18,8 +18,82 @@
     <!-- Toolbar Menu -->
     <string name="menu_item_1">내정보</string>
 
+    <!-- Toolbar Menu -->
+    <string name="menu_note_item_1">저장</string>
+
     <!-- Activity Main -->
     <string name="main_toolbar_title">My Wine Cellar</string>
+
+    <!-- Fragment Note -->
+    <string name="note_float_btn_title">노트 작성</string>
+
+    <!-- Activity Edit Note -->
+    <string name="edit_note_toolbar_title">와인 기록 쓰기</string>
+    <string name="edit_note_add_photo">사진을 추가해주세요</string>
+    <string name="edit_note_name">와인명:</string>
+    <string name="edit_note_type">종류:</string>
+    <string name="edit_note_type_hint">ex)레드와인</string>
+    <string name="edit_note_country">국가:</string>
+    <string name="edit_note_area">지역:</string>
+    <string name="edit_note_variety">품종:</string>
+    <string name="edit_note_variety_hint">ex)까르베네 쇼비뇽</string>
+    <string name="edit_note_vintage">빈티지:</string>
+    <string name="edit_note_alcohol">알코올:</string>
+    <string name="edit_note_alcohol_unit">% vol</string>
+    <string name="edit_note_buy_date">구입시기:</string>
+    <string name="edit_note_drink_date">시음일자:</string>
+    <string name="edit_note_price">구입가격:</string>
+    <string name="edit_note_etc">참고사항</string>
+    <string name="edit_note_sweetness">당도</string>
+    <string name="edit_note_sweetness_seekbar_1">Dry</string>
+    <string name="edit_note_sweetness_seekbar_2">O-dry</string>
+    <string name="edit_note_sweetness_seekbar_3">M-dry</string>
+    <string name="edit_note_sweetness_seekbar_4">M-sweet</string>
+    <string name="edit_note_sweetness_seekbar_5">Sweet</string>
+    <string name="edit_note_acidity">산도</string>
+    <string name="edit_note_acidity_seekbar_1">낮은</string>
+    <string name="edit_note_acidity_seekbar_2">부드러운</string>
+    <string name="edit_note_acidity_seekbar_3">적당한</string>
+    <string name="edit_note_acidity_seekbar_4">높은</string>
+    <string name="edit_note_acidity_seekbar_5">강한</string>
+    <string name="edit_note_tannin">타닌</string>
+    <string name="edit_note_tannin_seekbar_1">약한</string>
+    <string name="edit_note_tannin_seekbar_2">부드러운</string>
+    <string name="edit_note_tannin_seekbar_3">적당한</string>
+    <string name="edit_note_tannin_seekbar_4">견고한</string>
+    <string name="edit_note_tannin_seekbar_5">강한</string>
+    <string name="edit_note_body">바디</string>
+    <string name="edit_note_body_seekbar_1">Light</string>
+    <string name="edit_note_body_seekbar_2">M-Light</string>
+    <string name="edit_note_body_seekbar_3">Medium</string>
+    <string name="edit_note_body_seekbar_4">M-full</string>
+    <string name="edit_note_body_seekbar_5">Full</string>
+    <string name="edit_note_alcohol_2">알코올</string>
+    <string name="edit_note_alcohol_seekbar_1">낮은</string>
+    <string name="edit_note_alcohol_seekbar_2">부드러운</string>
+    <string name="edit_note_alcohol_seekbar_3">적당한</string>
+    <string name="edit_note_alcohol_seekbar_4">높은</string>
+    <string name="edit_note_alcohol_seekbar_5">강한</string>
+    <string name="edit_note_aroma">향의 강도</string>
+    <string name="edit_note_aroma_seekbar_1">아주 약함</string>
+    <string name="edit_note_aroma_seekbar_2">약함</string>
+    <string name="edit_note_aroma_seekbar_3">보통</string>
+    <string name="edit_note_aroma_seekbar_4">강함</string>
+    <string name="edit_note_aroma_seekbar_5">아주 강함</string>
+    <string name="edit_note_aroma_memo">향의 특징</string>
+    <string name="edit_note_balance">균형</string>
+    <string name="edit_note_balance_seekbar_1">불균형</string>
+    <string name="edit_note_balance_seekbar_2">그런대로</string>
+    <string name="edit_note_balance_seekbar_3">괜찮은</string>
+    <string name="edit_note_balance_seekbar_4">좋은</string>
+    <string name="edit_note_balance_seekbar_5">훌륭한</string>
+    <string name="edit_note_likable">호감도</string>
+    <string name="edit_note_likable_seekbar_1">비호감</string>
+    <string name="edit_note_likable_seekbar_2">별로</string>
+    <string name="edit_note_likable_seekbar_3">보통</string>
+    <string name="edit_note_likable_seekbar_4">호감</string>
+    <string name="edit_note_likable_seekbar_5">매우호감</string>
+    <string name="edit_note_taste">맛 표현</string>
 
     <!-- Content item Wine Glass RedWine -->
     <string name="content_item_wg_redWine_title1">Red Wine</string>

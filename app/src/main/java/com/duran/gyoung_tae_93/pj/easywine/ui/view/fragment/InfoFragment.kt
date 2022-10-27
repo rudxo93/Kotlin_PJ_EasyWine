@@ -17,7 +17,6 @@ import com.duran.gyoung_tae_93.pj.easywine.ui.view.activity.information.*
 class InfoFragment : Fragment() {
 
     private lateinit var binding: FragmentInfoBinding
-    private val infoLV by lazy { binding.lvInfo }
 
     private val TAG = InfoFragment::class.java.simpleName
     lateinit var lvAdapter: InfoLVAdapter
@@ -51,11 +50,14 @@ class InfoFragment : Fragment() {
         getListViewSetting()
     }
 
+    /**
+     *  Info 탭 ListView Adapter 연결, 이동 구현
+     */
     private fun getListViewSetting() {
         lvAdapter = InfoLVAdapter(items)
-        infoLV.adapter = lvAdapter
+        binding.lvInfo.adapter = lvAdapter
 
-        infoLV.setOnItemClickListener { parent, view, position, id ->
+        binding.lvInfo.setOnItemClickListener { parent, view, position, id ->
             Log.e(TAG, id.toString())
             when (id.toInt()) {
                 0 -> {
