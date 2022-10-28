@@ -30,7 +30,7 @@ class EditNoteActivity : AppCompatActivity() {
     private val etNoteEtc by lazy { binding.etNoteEtc }
     private val etNoteAroma by lazy { binding.etNoteAromaMemo }
     private val etNoteTaste by lazy { binding.etNoteTaste }
-    /* SeekBar */
+    /* SeekBar & Result */
     private val sbSweetness by lazy { binding.sbNoteSweetness }
     private var resultSweetness = 0
     private val sbAcidity by lazy { binding.sbNoteAcidity }

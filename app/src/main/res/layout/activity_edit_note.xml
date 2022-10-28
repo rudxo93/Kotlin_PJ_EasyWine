@@ -102,9 +102,9 @@
                             android:layout_height="match_parent"
                             android:layout_marginStart="10dp"
                             android:layout_marginEnd="3dp"
-                            android:paddingStart="5dp"
                             android:inputType="text"
                             android:maxLines="1"
+                            android:paddingStart="5dp"
                             android:textSize="15sp"
                             tools:ignore="Autofill,LabelFor,RtlSymmetry,TextFields" />
 
@@ -139,9 +139,9 @@
                                 android:layout_marginStart="10dp"
                                 android:layout_marginEnd="3dp"
                                 android:hint="@string/edit_note_type_hint"
-                                android:paddingStart="5dp"
                                 android:inputType="text"
                                 android:maxLines="1"
+                                android:paddingStart="5dp"
                                 android:textSize="15sp"
                                 tools:ignore="Autofill,RtlSymmetry,TextFields" />
 
@@ -169,9 +169,9 @@
                                 android:layout_height="match_parent"
                                 android:layout_marginStart="10dp"
                                 android:layout_marginEnd="3dp"
-                                android:paddingStart="5dp"
                                 android:inputType="text"
                                 android:maxLines="1"
+                                android:paddingStart="5dp"
                                 android:textSize="15sp"
                                 tools:ignore="Autofill,RtlSymmetry,TextFields" />
 
@@ -200,9 +200,9 @@
                             android:layout_height="match_parent"
                             android:layout_marginStart="10dp"
                             android:layout_marginEnd="3dp"
-                            android:paddingStart="5dp"
                             android:inputType="text"
                             android:maxLines="1"
+                            android:paddingStart="5dp"
                             android:textSize="15sp"
                             tools:ignore="Autofill,RtlSymmetry,TextFields" />
 
@@ -230,9 +230,9 @@
                             android:layout_marginStart="10dp"
                             android:layout_marginEnd="3dp"
                             android:hint="@string/edit_note_variety_hint"
-                            android:paddingStart="5dp"
                             android:inputType="text"
                             android:maxLines="1"
+                            android:paddingStart="5dp"
                             android:textSize="15sp"
                             tools:ignore="Autofill,RtlSymmetry,TextFields" />
 
@@ -267,8 +267,8 @@
                                 android:layout_marginStart="10dp"
                                 android:layout_marginEnd="3dp"
                                 android:inputType="number"
-                                android:paddingStart="5dp"
                                 android:maxLines="1"
+                                android:paddingStart="5dp"
                                 android:textSize="15sp"
                                 tools:ignore="Autofill,RtlSymmetry" />
 
@@ -300,8 +300,8 @@
                                 android:layout_marginEnd="3dp"
                                 android:layout_weight="3"
                                 android:inputType="number"
-                                android:paddingStart="5dp"
                                 android:maxLines="1"
+                                android:paddingStart="5dp"
                                 android:textSize="15sp"
                                 tools:ignore="Autofill,RtlSymmetry" />
 
@@ -435,9 +435,9 @@
                             android:layout_height="match_parent"
                             android:layout_marginStart="10dp"
                             android:layout_marginEnd="3dp"
-                            android:paddingStart="5dp"
                             android:inputType="text"
                             android:maxLines="1"
+                            android:paddingStart="5dp"
                             android:textSize="15sp"
                             tools:ignore="Autofill,RtlSymmetry,TextFields" />
 
@@ -1212,14 +1212,14 @@
 
                     <Button
                         android:id="@+id/btn_save_note"
-                        android:layout_marginTop="20dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
                         android:layout_marginStart="8dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="5dp"
                         android:backgroundTint="@color/main_wine_color"
-                        android:text="@string/edit_note_btn_save"/>
+                        android:text="@string/edit_note_btn_save" />
 
                 </LinearLayout>
 
