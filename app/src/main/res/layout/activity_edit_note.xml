@@ -103,7 +103,8 @@
                             android:layout_marginStart="10dp"
                             android:layout_marginEnd="3dp"
                             android:paddingStart="5dp"
-                            android:singleLine="true"
+                            android:inputType="text"
+                            android:maxLines="1"
                             android:textSize="15sp"
                             tools:ignore="Autofill,LabelFor,RtlSymmetry,TextFields" />
 
@@ -139,7 +140,8 @@
                                 android:layout_marginEnd="3dp"
                                 android:hint="@string/edit_note_type_hint"
                                 android:paddingStart="5dp"
-                                android:singleLine="true"
+                                android:inputType="text"
+                                android:maxLines="1"
                                 android:textSize="15sp"
                                 tools:ignore="Autofill,RtlSymmetry,TextFields" />
 
@@ -168,7 +170,8 @@
                                 android:layout_marginStart="10dp"
                                 android:layout_marginEnd="3dp"
                                 android:paddingStart="5dp"
-                                android:singleLine="true"
+                                android:inputType="text"
+                                android:maxLines="1"
                                 android:textSize="15sp"
                                 tools:ignore="Autofill,RtlSymmetry,TextFields" />
 
@@ -198,7 +201,8 @@
                             android:layout_marginStart="10dp"
                             android:layout_marginEnd="3dp"
                             android:paddingStart="5dp"
-                            android:singleLine="true"
+                            android:inputType="text"
+                            android:maxLines="1"
                             android:textSize="15sp"
                             tools:ignore="Autofill,RtlSymmetry,TextFields" />
 
@@ -227,7 +231,8 @@
                             android:layout_marginEnd="3dp"
                             android:hint="@string/edit_note_variety_hint"
                             android:paddingStart="5dp"
-                            android:singleLine="true"
+                            android:inputType="text"
+                            android:maxLines="1"
                             android:textSize="15sp"
                             tools:ignore="Autofill,RtlSymmetry,TextFields" />
 
@@ -263,7 +268,7 @@
                                 android:layout_marginEnd="3dp"
                                 android:inputType="number"
                                 android:paddingStart="5dp"
-                                android:singleLine="true"
+                                android:maxLines="1"
                                 android:textSize="15sp"
                                 tools:ignore="Autofill,RtlSymmetry" />
 
@@ -296,7 +301,7 @@
                                 android:layout_weight="3"
                                 android:inputType="number"
                                 android:paddingStart="5dp"
-                                android:singleLine="true"
+                                android:maxLines="1"
                                 android:textSize="15sp"
                                 tools:ignore="Autofill,RtlSymmetry" />
 
@@ -431,7 +436,8 @@
                             android:layout_marginStart="10dp"
                             android:layout_marginEnd="3dp"
                             android:paddingStart="5dp"
-                            android:singleLine="true"
+                            android:inputType="text"
+                            android:maxLines="1"
                             android:textSize="15sp"
                             tools:ignore="Autofill,RtlSymmetry,TextFields" />
 
@@ -462,7 +468,6 @@
                             android:ellipsize="end"
                             android:gravity="top|left"
                             android:lines="6"
-                            android:maxLines="6"
                             android:paddingStart="5dp"
                             android:textSize="15sp"
                             tools:ignore="Autofill,RtlHardcoded,RtlSymmetry,TextFields" />
@@ -1000,7 +1005,6 @@
                             android:ellipsize="end"
                             android:gravity="top|left"
                             android:lines="2"
-                            android:maxLines="2"
                             android:paddingStart="5dp"
                             android:textSize="15sp"
                             tools:ignore="Autofill,RtlHardcoded,RtlSymmetry,TextFields" />
@@ -1199,14 +1203,23 @@
                             android:layout_marginEnd="3dp"
                             android:ellipsize="end"
                             android:gravity="top|left"
-                            android:inputType="textMultiLine"
                             android:lines="6"
-                            android:maxLines="6"
                             android:paddingStart="5dp"
                             android:textSize="15sp"
                             tools:ignore="Autofill,RtlHardcoded,RtlSymmetry" />
 
                     </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_save_note"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="@color/main_wine_color"
+                        android:text="@string/edit_note_btn_save"/>
 
                 </LinearLayout>
 

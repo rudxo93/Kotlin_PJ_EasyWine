@@ -94,6 +94,7 @@
     <string name="edit_note_likable_seekbar_4">호감</string>
     <string name="edit_note_likable_seekbar_5">매우호감</string>
     <string name="edit_note_taste">맛 표현</string>
+    <string name="edit_note_btn_save">저장하기</string>
 
     <!-- Content item Wine Glass RedWine -->
     <string name="content_item_wg_redWine_title1">Red Wine</string>
