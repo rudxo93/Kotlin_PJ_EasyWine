@@ -43,6 +43,7 @@
     <string name="edit_note_buy_date">구입시기:</string>
     <string name="edit_note_drink_date">시음일자:</string>
     <string name="edit_note_price">구입가격:</string>
+    <string name="edit_note_price_unit">원</string>
     <string name="edit_note_etc">참고사항</string>
     <string name="edit_note_sweetness">당도</string>
     <string name="edit_note_sweetness_seekbar_1">Dry</string>
