@@ -34,7 +34,7 @@ class SplashActivity : AppCompatActivity() {
      * 현재 사용자의 uid를 사용해서 닉네임이 있는지 조회 -> 없다면 intro 이동 닉네임 생성 / 있다면 intro 생략 main 이동
      */
     private fun initGetUserNk() {
-        val docRef = FBDocRef.fsDB.collection("user").document(FBAuth.getUid())
+        val docRef = FBDocRef.fbDB.collection("user").document(FBAuth.getUid())
         docRef.get()
             .addOnSuccessListener { document ->
                 if (document.data != null) { // data가 조회되었다면 mainActivity

@@ -20,6 +20,6 @@ class FBRepository {
         userModel.nickname = nickname
         userModel.timestamp = System.currentTimeMillis()
 
-        FBDocRef.fsDB.collection("user").document(FBAuth.getUid()).set(userModel)
+        FBDocRef.fbDB.collection("user").document(FBAuth.getUid()).set(userModel)
     }
 }

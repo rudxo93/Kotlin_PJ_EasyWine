@@ -5,6 +5,9 @@ import android.app.DatePickerDialog
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
+import android.graphics.drawable.BitmapDrawable
+import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.text.Editable
@@ -16,11 +19,23 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.SeekBar
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 import com.duran.gyoung_tae_93.pj.easywine.R
+import com.duran.gyoung_tae_93.pj.easywine.data.model.NoteInfoModel
 import com.duran.gyoung_tae_93.pj.easywine.databinding.ActivityEditNoteBinding
+import com.duran.gyoung_tae_93.pj.easywine.ui.viewmodel.NoteViewModel
+import com.duran.gyoung_tae_93.pj.easywine.util.FBAuth
+import com.duran.gyoung_tae_93.pj.easywine.util.FBRef
+import com.duran.gyoung_tae_93.pj.easywine.util.FBSrg
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import java.io.ByteArrayOutputStream
+import java.text.SimpleDateFormat
 import java.util.*
 
 class EditNoteActivity : AppCompatActivity() {
@@ -73,6 +88,10 @@ class EditNoteActivity : AppCompatActivity() {
     private val btnSave by lazy { binding.btnSaveNote }
 
     private var isImageUpload = false
+    private lateinit var photoUri: Uri
+    private lateinit var imageFileName: String
+
+    private val viewModel by lazy { ViewModelProvider(this).get(NoteViewModel::class.java) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -84,119 +103,121 @@ class EditNoteActivity : AppCompatActivity() {
         getSeekBarSetting()
         getAddPhotoBtn()
 
+        getSaveBtnClick()
+    }
+
+    private fun getSaveBtnClick() {
+        val key = FBRef.noteNote.push().key.toString()
+
         btnSave.setOnClickListener {
-            Log.e(
-                "result",
-                "=========================================================================="
+            initEmptyCheck(key)
+        }
+    }
+
+    private fun initEmptyCheck(key: String) {
+        when {
+            etWineName.text.isEmpty() -> {
+                Toast.makeText(this, "와인명이 비어있습니다.", Toast.LENGTH_SHORT).show()
+                etWineName.requestFocus()
+            }
+            etWineType.text.isEmpty() -> {
+                Toast.makeText(this, "종류가 비어있습니다.", Toast.LENGTH_SHORT).show()
+                etWineType.requestFocus()
+            }
+            etCountry.text.isEmpty() -> {
+                Toast.makeText(this, "국가가 비어있습니다.", Toast.LENGTH_SHORT).show()
+                etCountry.requestFocus()
+            }
+            etArea.text.isEmpty() -> {
+                Toast.makeText(this, "지역이 비어있습니다.", Toast.LENGTH_SHORT).show()
+                etArea.requestFocus()
+            }
+            etVariety.text.isEmpty() -> {
+                Toast.makeText(this, "품종이 비어있습니다.", Toast.LENGTH_SHORT).show()
+                etVariety.requestFocus()
+            }
+            etVintage.text.isEmpty() -> {
+                Toast.makeText(this, "빈티지가 비어있습니다.", Toast.LENGTH_SHORT).show()
+                etVintage.requestFocus()
+            }
+            etAlcohol.text.isEmpty() -> {
+                Toast.makeText(this, "알코올이 비어있습니다.", Toast.LENGTH_SHORT).show()
+                etAlcohol.requestFocus()
+            }
+            buyDate.text.isEmpty() -> {
+                Toast.makeText(this, "구입시기가 비어있습니다.", Toast.LENGTH_SHORT).show()
+            }
+            drinkDate.text.isEmpty() -> {
+                Toast.makeText(this, "시음일자가 비어있습니다.", Toast.LENGTH_SHORT).show()
+            }
+            etPrice.text.isEmpty() -> {
+                Toast.makeText(this, "구입가격이 비어있습니다.", Toast.LENGTH_SHORT).show()
+                etPrice.requestFocus()
+            }
+            else -> {
+                getSaveNote(key)
+                if(isImageUpload == true) {
+                    imageUpload(key)
+                }
+            }
+        }
+    }
+
+    private fun getSaveNote(key: String) {
+        // NoteInfo
+        val wineName = etWineName.text.toString()
+        val wineType = etWineType.text.toString()
+        val wineCountry = etCountry.text.toString()
+        val wineArea = etArea.text.toString()
+        val wineVariety = etVariety.text.toString()
+        val wineVintage = etVintage.text.toString()
+        val wineAlcohol = etAlcohol.text.toString()
+        val wineBuyDate = buyDate.text.toString()
+        val wineDrinkDate = drinkDate.text.toString()
+        val winePrice = etPrice.text.toString()
+        val saveDate = SimpleDateFormat("yyyyMMdd").format(System.currentTimeMillis())
+        // NoteContent
+        val wineNoteEtc = etNoteEtc.text.toString()
+        val wineSbSweetness = resultSweetness
+        val wineSbAcidity = resultAcidity
+        val wineSbTannin = resultTannin
+        val wineSbBody = resultBody
+        val wineSbAlcohol = resultAlcohol
+        val wineSbAroma = resultAroma
+        val wineNoteAroma = etNoteAroma.text.toString()
+        val wineBalance = resultBalance
+        val wineLikable = resultLikable
+        val wineNoteTaste = etNoteTaste.text.toString()
+        CoroutineScope(Dispatchers.IO).launch {
+            val noteInfo = NoteInfoModel(
+                FBAuth.getUid(),
+                wineName,
+                wineType,
+                wineCountry,
+                wineArea,
+                wineVariety,
+                wineVintage,
+                wineAlcohol,
+                wineBuyDate,
+                wineDrinkDate,
+                winePrice,
+                wineNoteEtc,
+                wineSbSweetness,
+                wineSbAcidity,
+                wineSbTannin,
+                wineSbBody,
+                wineSbAlcohol,
+                wineSbAroma,
+                wineNoteAroma,
+                wineBalance,
+                wineLikable,
+                wineNoteTaste,
+                saveDate,
+                false
             )
-            Log.e("resultEtWineName", etWineName.text.toString())
-            Log.e("resultEtWineType", etWineType.text.toString())
-            Log.e("resultEtCountry", etCountry.text.toString())
-            Log.e("resultEtArea", etArea.text.toString())
-            Log.e("resultEtVariety", etVariety.text.toString())
-            Log.e("resultEtVintage", etVintage.text.toString())
-            Log.e("resultEtAlcohol", etAlcohol.text.toString())
+            viewModel.insertNoteInfo(noteInfo, key)
 
-            Log.e("resultBuyDate", buyDate.text.toString())
-            Log.e("resultDrinkDate", drinkDate.text.toString())
-
-            Log.e("resultEtPrice", etPrice.text.toString())
-            Log.e("resultEtNoteEtc", etNoteEtc.text.toString())
-
-            Log.e("resultSweetness", resultSweetness.toString())
-            Log.e("resultAcidity", resultAcidity.toString())
-            Log.e("resultTannin", resultTannin.toString())
-            Log.e("resultBody", resultBody.toString())
-            Log.e("resultAlcohol", resultAlcohol.toString())
-            Log.e("resultAroma", resultAroma.toString())
-
-            Log.e("resultEtNoteAroma", etNoteAroma.text.toString())
-
-            Log.e("resultBalance", resultBalance.toString())
-            Log.e("resultLikable", resultLikable.toString())
-
-            Log.e("resultEtNoteTaste", etNoteTaste.text.toString())
-            Log.e(
-                "result",
-                "=========================================================================="
-            )
-        }
-    }
-
-    /**
-     *  STORAGE 권한 얻기 -> STORAGE 이동
-     */
-    private fun getAddPhotoBtn() {
-        btnImageAdd.setOnClickListener {
-            when {
-                ContextCompat.checkSelfPermission( // 1. 사용할 권한이 주어졌는지 check
-                    this,
-                    android.Manifest.permission.READ_EXTERNAL_STORAGE
-                ) == PackageManager.PERMISSION_GRANTED -> {
-                    // 권한이 부여되어 있다면 갤러리에서 사진 선택 기능
-                    getPhotoStorage()
-                }
-                // 권한 수락이 거절 -> 팝업 띄워주기
-                shouldShowRequestPermissionRationale(android.Manifest.permission.READ_EXTERNAL_STORAGE) -> {
-                    showPermissionPopup()
-                }
-
-                else -> {
-                    // 권한 요청 작업 -> 요청할 권한 배열로 담아서 요청
-                    requestPermissions(
-                        arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE),
-                        1000
-                    )
-                }
-            }
-        }
-
-    }
-
-    // 권한 수락 거절 시 팝업 띄워주기
-    private fun showPermissionPopup() {
-        AlertDialog.Builder(this)
-            .setTitle("권한이 필요합니다.")
-            .setMessage("와인 사진을 불러오기 위해 권한이 필요합니다.")
-            .setPositiveButton("동의") { _, _ ->
-                // 권한 요청 팝업
-                requestPermissions(arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE), 1000)
-            }
-            .setNegativeButton("취소") { _, _ -> }
-            .create()
-            .show()
-    }
-
-    // 권한 수락, 거절 시 호출 -> 수락 시 STORAGE 접근 허용 / 거절 시 간단한 Toast
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        when (requestCode) {
-            1000 -> {
-                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    // 권한이 부여 됬을 때
-                    getPhotoStorage()
-                } else {
-                    Toast.makeText(this, "권한을 거부하셨습니다.", Toast.LENGTH_SHORT).show()
-                }
-            }
-        }
-    }
-
-    private fun getPhotoStorage() {
-        val gallery = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
-        startActivityForResult(gallery, 2000)
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == RESULT_OK && requestCode == 2000) {
-            btnImageAdd.setImageURI(data?.data)
-            photoImage.visibility = View.GONE
-            photoImageTitle.visibility = View.GONE
+            finish()
         }
     }
 
@@ -222,6 +243,108 @@ class EditNoteActivity : AppCompatActivity() {
     }
 
     /**
+     *  STORAGE 권한 얻기 -> STORAGE 이동
+     */
+    private fun getAddPhotoBtn() {
+        btnImageAdd.setOnClickListener {
+            when {
+                ContextCompat.checkSelfPermission( // 1. 사용할 권한이 주어졌는지 check
+                    this,
+                    android.Manifest.permission.READ_EXTERNAL_STORAGE
+                ) == PackageManager.PERMISSION_GRANTED -> {
+                    // 권한이 부여되어 있다면 갤러리에서 사진 선택 기능
+                    getPhotoStorage()
+                }
+                // 권한 수락이 거절 -> 팝업 띄워주기
+                shouldShowRequestPermissionRationale(android.Manifest.permission.READ_EXTERNAL_STORAGE) -> {
+                    Log.d(TAG, "Permossion Refuse. Open PopUp Dialog")
+                    showPermissionPopup()
+                }
+
+                else -> {
+                    // 권한 요청 작업 -> 요청할 권한 배열로 담아서 요청
+                    requestPermissions(
+                        arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE),
+                        100
+                    )
+                }
+            }
+        }
+
+    }
+
+    // 권한 수락 거절 시 팝업 띄워주기
+    private fun showPermissionPopup() {
+        AlertDialog.Builder(this)
+            .setTitle("권한이 필요합니다.")
+            .setMessage("와인 사진을 불러오기 위해 권한이 필요합니다.")
+            .setPositiveButton("동의") { _, _ ->
+                // 권한 요청 팝업
+                requestPermissions(arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE), 100)
+            }
+            .setNegativeButton("취소") { _, _ -> }
+            .create()
+            .show()
+    }
+
+    // 권한 수락, 거절 시 호출 -> 수락 시 STORAGE 접근 허용 / 거절 시 간단한 Toast
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        when (requestCode) {
+            100 -> {
+                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    // 권한이 부여 됬을 때
+                    getPhotoStorage()
+                } else {
+                    Toast.makeText(this, "권한을 거부하셨습니다.", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+    }
+
+    /**
+     *  Storage 접근 -> 이미지 가져오기
+     */
+    private fun getPhotoStorage() {
+        Log.d(TAG, "Access the Storage.")
+        val gallery = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
+        photoResult.launch(gallery)
+        isImageUpload = true
+    }
+
+    var photoResult =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            // 사진 받는 부분
+            photoUri = result.data?.data!! // 이미지 경로 넘어옴
+            btnImageAdd.setImageURI(photoUri) // 선택한 이미지 넣어주기
+            photoImage.visibility = View.GONE
+            photoImageTitle.visibility = View.GONE
+        }
+
+    private fun imageUpload(key : String) {
+        val mountainsRef = FBSrg.storageRef.child(key + ".png")
+        // Get the data from an ImageView as bytes
+        btnImageAdd.isDrawingCacheEnabled = true
+        btnImageAdd.buildDrawingCache()
+        val bitmap = (btnImageAdd.drawable as BitmapDrawable).bitmap
+        val baos = ByteArrayOutputStream()
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
+        val data = baos.toByteArray()
+
+        var uploadTask = mountainsRef.putBytes(data)
+        uploadTask.addOnFailureListener {
+            // Handle unsuccessful uploads
+        }.addOnSuccessListener { taskSnapshot ->
+            // taskSnapshot.metadata contains file metadata such as size, content-type, etc.
+            // ...
+        }
+    }
+
+    /**
      * 구입시기와 시음일자 DatePickerDialog 기능 구현
      */
     private fun getDatePickerDialog() {
@@ -231,6 +354,7 @@ class EditNoteActivity : AppCompatActivity() {
         val myCalendar = Calendar.getInstance()
         /* 구입시기 */
         btnBuyDate.setOnClickListener {
+            Log.d(TAG, "Open Buy DatePicker")
             val buyDatePicker = DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
                 val dateString = "${year}/${month + 1}/${dayOfMonth}"
                 buyDate.text = dateString
@@ -242,6 +366,7 @@ class EditNoteActivity : AppCompatActivity() {
         }
         /* 시음일자 */
         btnDrinkDate.setOnClickListener {
+            Log.d(TAG, "Open Drink DatePicker")
             val drinkDatePicker = DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
                 val dateString = "${year}/${month + 1}/${dayOfMonth}"
                 drinkDate.text = dateString
@@ -329,201 +454,73 @@ class EditNoteActivity : AppCompatActivity() {
     }
 
     private fun getSeekBarSetting() {
-        /* 당도 result 1 -> Dry, 2 -> O-dry, 3 -> M-dry, 4 -> M-sweet, 5 -> Sweet */
+        /* 당도 progress 0-20 -> Dry, 21-40 -> O-dry, 41-60 -> M-dry, 61-80 -> M-sweet, 81-100 -> Sweet */
         sbSweetness.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                when (progress) {
-                    in 0..20 -> {
-                        resultSweetness = 1
-                    }
-                    in 21..40 -> {
-                        resultSweetness = 2
-                    }
-                    in 41..60 -> {
-                        resultSweetness = 3
-                    }
-                    in 61..80 -> {
-                        resultSweetness = 4
-                    }
-                    in 81..100 -> {
-                        resultSweetness = 5
-                    }
-                }
+                resultSweetness = progress
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
-        /* 산도 result 1 -> 낮은, 2 -> 부드러운, 3 -> 적당한, 4 -> 높은, 5 -> 강한 */
+        /* 산도 progress 0-20 -> 낮은, 21-40 -> 부드러운, 41-60 -> 적당한, 61-80 -> 높은, 81-100 -> 강한 */
         sbAcidity.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                when (progress) {
-                    in 0..20 -> {
-                        resultAcidity = 1
-                    }
-                    in 21..40 -> {
-                        resultAcidity = 2
-                    }
-                    in 41..60 -> {
-                        resultAcidity = 3
-                    }
-                    in 61..80 -> {
-                        resultAcidity = 4
-                    }
-                    in 81..100 -> {
-                        resultAcidity = 5
-                    }
-                }
+                resultAcidity = progress
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
-        /* 타닌 result 1 -> 약한, 2 -> 부드러운, 3 -> 적당한, 4 -> 견고한, 5 -> 강한 */
+        /* 타닌 progress 0-20 -> 약한, 21-40 -> 부드러운, 41-60 -> 적당한, 61-80 -> 견고한, 81-100 -> 강한 */
         sbTannin.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                when (progress) {
-                    in 0..20 -> {
-                        resultTannin = 1
-                    }
-                    in 21..40 -> {
-                        resultTannin = 2
-                    }
-                    in 41..60 -> {
-                        resultTannin = 3
-                    }
-                    in 61..80 -> {
-                        resultTannin = 4
-                    }
-                    in 81..100 -> {
-                        resultTannin = 5
-                    }
-                }
+                resultTannin = progress
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
-        /* 바디 result 1 -> Light, 2 -> M-Light, 3 -> Medium, 4 -> M-full, 5 -> Full */
+        /* 바디 progress 0-20 -> Light, 21-40 -> M-Light, 41-60 -> Medium, 61-80 -> M-full, 81-100 -> Full */
         sbBody.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                when (progress) {
-                    in 0..20 -> {
-                        resultBody = 1
-                    }
-                    in 21..40 -> {
-                        resultBody = 2
-                    }
-                    in 41..60 -> {
-                        resultBody = 3
-                    }
-                    in 61..80 -> {
-                        resultBody = 4
-                    }
-                    in 81..100 -> {
-                        resultBody = 5
-                    }
-                }
+                resultBody = progress
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
-        /* 알코올 result 1 -> 낮은, 2 -> 부드러운, 3 -> 적당한, 4 -> 높은, 5 -> 강한 */
+        /* 알코올 progress 0-20 -> 낮은, 21-40 -> 부드러운, 41-60 -> 적당한, 61-80 -> 높은, 81-100 -> 강한 */
         sbAlcohol.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                when (progress) {
-                    in 0..20 -> {
-                        resultAlcohol = 1
-                    }
-                    in 21..40 -> {
-                        resultAlcohol = 2
-                    }
-                    in 41..60 -> {
-                        resultAlcohol = 3
-                    }
-                    in 61..80 -> {
-                        resultAlcohol = 4
-                    }
-                    in 81..100 -> {
-                        resultAlcohol = 5
-                    }
-                }
+                resultAlcohol = progress
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
-        /* 향의 강도 result 1 -> 아주 약함, 2 -> 약함, 3 -> 보통, 4 -> 강함, 5 -> 아주 강함 */
+        /* 향의 강도 progress 0-20 -> 아주 약함, 21-40 -> 약함, 41-60 -> 보통, 61-80 -> 강함, 81-100 -> 아주 강함 */
         sbAroma.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                when (progress) {
-                    in 0..20 -> {
-                        resultAroma = 1
-                    }
-                    in 21..40 -> {
-                        resultAroma = 2
-                    }
-                    in 41..60 -> {
-                        resultAroma = 3
-                    }
-                    in 61..80 -> {
-                        resultAroma = 4
-                    }
-                    in 81..100 -> {
-                        resultAroma = 5
-                    }
-                }
+                resultAroma = progress
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
-        /* 균형 result 1 -> 불균형, 2 -> 그런대로, 3 -> 괜찮은, 4 -> 좋은, 5 -> 훌륭한 */
+        /* 균형 progress 0-20 -> 불균형, 21-40 -> 그런대로, 41-60 -> 괜찮은, 61-80 -> 좋은, 81-100 -> 훌륭한 */
         sbBalance.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                when (progress) {
-                    in 0..20 -> {
-                        resultBalance = 1
-                    }
-                    in 21..40 -> {
-                        resultBalance = 2
-                    }
-                    in 41..60 -> {
-                        resultBalance = 3
-                    }
-                    in 61..80 -> {
-                        resultBalance = 4
-                    }
-                    in 81..100 -> {
-                        resultBalance = 5
-                    }
-                }
+                resultBalance = progress
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
-        /* 호감도 result 1 -> 비호감, 2 -> 별로, 3 -> 보통, 4 -> 호감, 5 -> 매우호감 */
+        /* 호감도 progress 0-20 -> 비호감, 21-40 -> 별로, 41-60 -> 보통, 61-80 -> 호감, 81-100 -> 매우호감 */
         sbLikable.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                when (progress) {
-                    in 0..20 -> {
-                        resultLikable = 1
-                    }
-                    in 21..40 -> {
-                        resultLikable = 2
-                    }
-                    in 41..60 -> {
-                        resultLikable = 3
-                    }
-                    in 61..80 -> {
-                        resultLikable = 4
-                    }
-                    in 81..100 -> {
-                        resultLikable = 5
-                    }
-                }
+                resultLikable = progress
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
