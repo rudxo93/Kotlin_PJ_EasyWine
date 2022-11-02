@@ -106,6 +106,9 @@ class EditNoteActivity : AppCompatActivity() {
         getSaveBtnClick()
     }
 
+    /**
+     *  노트작성 저장하기 버튼 클릭
+     */
     private fun getSaveBtnClick() {
         val key = FBRef.noteNote.push().key.toString()
 
@@ -114,6 +117,9 @@ class EditNoteActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     *  필요한 최소한의 컨텐츠가 비었는지 확인 후 채워졌다면 저장하기 이동
+     */
     private fun initEmptyCheck(key: String) {
         when {
             etWineName.text.isEmpty() -> {
@@ -156,7 +162,7 @@ class EditNoteActivity : AppCompatActivity() {
             }
             else -> {
                 getSaveNote(key)
-                if(isImageUpload == true) {
+                if (isImageUpload == true) {
                     imageUpload(key)
                 }
             }
@@ -325,7 +331,7 @@ class EditNoteActivity : AppCompatActivity() {
             photoImageTitle.visibility = View.GONE
         }
 
-    private fun imageUpload(key : String) {
+    private fun imageUpload(key: String) {
         val mountainsRef = FBSrg.storageRef.child(key + ".png")
         // Get the data from an ImageView as bytes
         btnImageAdd.isDrawingCacheEnabled = true
@@ -453,6 +459,9 @@ class EditNoteActivity : AppCompatActivity() {
         })
     }
 
+    /**
+     *  SeekBar 세팅하기
+     */
     private fun getSeekBarSetting() {
         /* 당도 progress 0-20 -> Dry, 21-40 -> O-dry, 41-60 -> M-dry, 61-80 -> M-sweet, 81-100 -> Sweet */
         sbSweetness.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {

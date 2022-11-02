@@ -7,10 +7,9 @@ class FBRef {
 
     companion object {
 
-        val database = Firebase.database
+        private val database = Firebase.database
 
         val noteNote = database.getReference("wine_note")
-
 
     }
 

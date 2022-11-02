@@ -71,5 +71,8 @@ dependencies {
     implementation('androidx.navigation:navigation-ui-ktx:2.5.1')
     // ViewModelScope
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.14.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.14.1'
 
 }

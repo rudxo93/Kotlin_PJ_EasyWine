@@ -7,7 +7,7 @@ class FBSrg {
 
     companion object {
 
-        val storage = Firebase.storage
+        private val storage = Firebase.storage
         val storageRef = storage.reference
 
     }
