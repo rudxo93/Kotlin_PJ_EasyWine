@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.duran.gyoung_tae_93.pj.easywine.data.model.NoteInfoModel
 import com.duran.gyoung_tae_93.pj.easywine.data.repository.NoteRepository
+import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.NoteRVAdapter
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -21,8 +22,8 @@ class NoteViewModel: ViewModel() {
         return mutableData
     }
 
-    fun insertNoteInfo(noteInfo: NoteInfoModel, key: String) = viewModelScope.launch(Dispatchers.IO) {
-        noteRepository.insertNoteInfo(noteInfo, key)
+    fun insertNoteInfo(noteInfo: NoteInfoModel) = viewModelScope.launch(Dispatchers.IO) {
+        noteRepository.insertNoteInfo(noteInfo)
     }
 
 }

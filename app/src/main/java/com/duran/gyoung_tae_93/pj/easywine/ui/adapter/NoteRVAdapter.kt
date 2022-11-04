@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.duran.gyoung_tae_93.pj.easywine.R
 import com.duran.gyoung_tae_93.pj.easywine.data.model.NoteInfoModel
 
@@ -29,6 +30,7 @@ class NoteRVAdapter(val context: Context) : RecyclerView.Adapter<NoteRVAdapter.V
         holder.title.text = noteInfo.wineName
         holder.drinkDate.text = noteInfo.wineDrinkDate
         holder.noteEtc.text = noteInfo.wineNoteEtc
+        Glide.with(holder.itemView.context).load(noteList[position].imageUrl).into(holder.image)
     }
 
     override fun getItemCount(): Int {
@@ -37,10 +39,10 @@ class NoteRVAdapter(val context: Context) : RecyclerView.Adapter<NoteRVAdapter.V
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        val image = itemView.findViewById<ImageView>(R.id.iv_item_rv_note_image)
-        val title = itemView.findViewById<TextView>(R.id.tv_item_rv_note_title)
-        val drinkDate = itemView.findViewById<TextView>(R.id.tv_item_rv_note_drink_date)
-        val noteEtc = itemView.findViewById<TextView>(R.id.tv_item_rv_note_etc)
+        val image: ImageView = itemView.findViewById(R.id.iv_item_rv_note_image)
+        val title: TextView = itemView.findViewById(R.id.tv_item_rv_note_title)
+        val drinkDate: TextView = itemView.findViewById(R.id.tv_item_rv_note_drink_date)
+        val noteEtc: TextView = itemView.findViewById(R.id.tv_item_rv_note_etc)
 
     }
 

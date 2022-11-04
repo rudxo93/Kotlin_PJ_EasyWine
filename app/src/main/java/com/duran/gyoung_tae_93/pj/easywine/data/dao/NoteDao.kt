@@ -4,63 +4,36 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.duran.gyoung_tae_93.pj.easywine.data.model.NoteInfoModel
-import com.duran.gyoung_tae_93.pj.easywine.data.model.NoteKeyModel
-import com.duran.gyoung_tae_93.pj.easywine.util.FBRef
+import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.NoteRVAdapter
+import com.duran.gyoung_tae_93.pj.easywine.util.FBDocRef
 import com.google.android.gms.tasks.Task
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.ValueEventListener
 
 class NoteDao {
 
-    fun insertNoteInfo(noteInfo: NoteInfoModel, key: String): Task<Void> {
-        return FBRef.noteNote.child(key).setValue(noteInfo)
+    fun insertNoteInfo(noteInfo: NoteInfoModel): Task<Void> {
+        return FBDocRef.fbDB.collection("note_info").document().set(noteInfo)
     }
 
     fun getNoteData(): LiveData<MutableList<NoteInfoModel>> {
         val mutableData = MutableLiveData<MutableList<NoteInfoModel>>()
 
-        FBRef.noteNote.addValueEventListener(object : ValueEventListener {
-            val noteListData = mutableListOf<NoteInfoModel>()
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
+        FBDocRef.fbDB.collection("note_info").orderBy("saveTime")
+            .addSnapshotListener { value, _ ->
+                val noteListData = mutableListOf<NoteInfoModel>()
+                /*Log.e("++++++++++++++++++++++++++++++++++++++++++++++++", noteListData.toString())*/
+
                 noteListData.clear()
-
-                for (dataModel in dataSnapshot.children) {
-                    val item = dataModel.getValue(NoteInfoModel::class.java)
-                    val itemKey = dataModel.key.toString()
-                    Log.e("dddddd", itemKey)
-                    noteListData.add(item!!)
+                for (dataModel in value!!.documentChanges) {
+                    val item = dataModel.document.toObject(NoteInfoModel::class.java)
+                    noteListData.add(item)
                     mutableData.value = noteListData
-
+                    /*Log.e("============================================================", noteListData.toString())*/
                 }
 
                 noteListData.reverse()
             }
 
-            override fun onCancelled(error: DatabaseError) {
-
-            }
-        })
-
         return mutableData
-    }
-
-    fun getNoteKey() {
-        val mutableData = MutableLiveData<MutableList<NoteKeyModel>>()
-        FBRef.noteNote.addValueEventListener(object  : ValueEventListener{
-            val noteKey = mutableListOf<NoteKeyModel>()
-            override fun onDataChange(snapshot: DataSnapshot) {
-                noteKey.clear()
-
-                for (key in snapshot.children) {
-
-                }
-            }
-            override fun onCancelled(error: DatabaseError) {
-
-            }
-        })
-
     }
 
 }

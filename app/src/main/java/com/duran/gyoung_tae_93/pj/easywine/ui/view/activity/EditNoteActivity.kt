@@ -1,12 +1,11 @@
 package com.duran.gyoung_tae_93.pj.easywine.ui.view.activity
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.graphics.Bitmap
-import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
@@ -29,12 +28,11 @@ import com.duran.gyoung_tae_93.pj.easywine.data.model.NoteInfoModel
 import com.duran.gyoung_tae_93.pj.easywine.databinding.ActivityEditNoteBinding
 import com.duran.gyoung_tae_93.pj.easywine.ui.viewmodel.NoteViewModel
 import com.duran.gyoung_tae_93.pj.easywine.util.FBAuth
-import com.duran.gyoung_tae_93.pj.easywine.util.FBRef
 import com.duran.gyoung_tae_93.pj.easywine.util.FBSrg
+import com.google.android.gms.tasks.Task
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import java.io.ByteArrayOutputStream
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -89,7 +87,6 @@ class EditNoteActivity : AppCompatActivity() {
 
     private var isImageUpload = false
     private lateinit var photoUri: Uri
-    private lateinit var imageFileName: String
 
     private val viewModel by lazy { ViewModelProvider(this).get(NoteViewModel::class.java) }
 
@@ -110,17 +107,15 @@ class EditNoteActivity : AppCompatActivity() {
      *  노트작성 저장하기 버튼 클릭
      */
     private fun getSaveBtnClick() {
-        val key = FBRef.noteNote.push().key.toString()
-
         btnSave.setOnClickListener {
-            initEmptyCheck(key)
+            initEmptyCheck()
         }
     }
 
     /**
      *  필요한 최소한의 컨텐츠가 비었는지 확인 후 채워졌다면 저장하기 이동
      */
-    private fun initEmptyCheck(key: String) {
+    private fun initEmptyCheck() {
         when {
             etWineName.text.isEmpty() -> {
                 Toast.makeText(this, "와인명이 비어있습니다.", Toast.LENGTH_SHORT).show()
@@ -161,16 +156,34 @@ class EditNoteActivity : AppCompatActivity() {
                 etPrice.requestFocus()
             }
             else -> {
-                getSaveNote(key)
                 if (isImageUpload == true) {
-                    imageUpload(key)
+                    imageUpload()
                 }
             }
         }
     }
 
-    private fun getSaveNote(key: String) {
+    @SuppressLint("SimpleDateFormat")
+    private fun imageUpload() {
+        // 이미지 저장 날싸와 시간(파일명이 중복되지 않도록 날짜와 시간으로)
+        val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
+        // 파일 저장 이름 만들기 -> IMAGE_저장날짜.png
+        val imageFileName = "IMAGE_" + timeStamp + ".png"
+
+        val storagePath = FBSrg.storageRef.child("images").child(imageFileName)
+
+        storagePath.putFile(photoUri).continueWithTask {
+            return@continueWithTask storagePath.downloadUrl
+        }.addOnCompleteListener { downloadUrl ->
+            getSaveNote(downloadUrl)
+        }
+    }
+
+    @SuppressLint("SimpleDateFormat")
+    private fun getSaveNote(downloadUrl: Task<Uri>) {
+
         // NoteInfo
+        val wineImageUrl = downloadUrl.result.toString()
         val wineName = etWineName.text.toString()
         val wineType = etWineType.text.toString()
         val wineCountry = etCountry.text.toString()
@@ -181,7 +194,7 @@ class EditNoteActivity : AppCompatActivity() {
         val wineBuyDate = buyDate.text.toString()
         val wineDrinkDate = drinkDate.text.toString()
         val winePrice = etPrice.text.toString()
-        val saveDate = SimpleDateFormat("yyyyMMdd").format(System.currentTimeMillis())
+        val saveDate = System.currentTimeMillis()
         // NoteContent
         val wineNoteEtc = etNoteEtc.text.toString()
         val wineSbSweetness = resultSweetness
@@ -197,6 +210,7 @@ class EditNoteActivity : AppCompatActivity() {
         CoroutineScope(Dispatchers.IO).launch {
             val noteInfo = NoteInfoModel(
                 FBAuth.getUid(),
+                wineImageUrl,
                 wineName,
                 wineType,
                 wineCountry,
@@ -221,7 +235,7 @@ class EditNoteActivity : AppCompatActivity() {
                 saveDate,
                 false
             )
-            viewModel.insertNoteInfo(noteInfo, key)
+            viewModel.insertNoteInfo(noteInfo)
 
             finish()
         }
@@ -315,10 +329,12 @@ class EditNoteActivity : AppCompatActivity() {
     /**
      *  Storage 접근 -> 이미지 가져오기
      */
+    @SuppressLint("IntentReset")
     private fun getPhotoStorage() {
         Log.d(TAG, "Access the Storage.")
-        val gallery = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
-        photoResult.launch(gallery)
+        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
+        intent.type = "image/*"
+        photoResult.launch(intent)
         isImageUpload = true
     }
 
@@ -330,25 +346,6 @@ class EditNoteActivity : AppCompatActivity() {
             photoImage.visibility = View.GONE
             photoImageTitle.visibility = View.GONE
         }
-
-    private fun imageUpload(key: String) {
-        val mountainsRef = FBSrg.storageRef.child(key + ".png")
-        // Get the data from an ImageView as bytes
-        btnImageAdd.isDrawingCacheEnabled = true
-        btnImageAdd.buildDrawingCache()
-        val bitmap = (btnImageAdd.drawable as BitmapDrawable).bitmap
-        val baos = ByteArrayOutputStream()
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
-        val data = baos.toByteArray()
-
-        var uploadTask = mountainsRef.putBytes(data)
-        uploadTask.addOnFailureListener {
-            // Handle unsuccessful uploads
-        }.addOnSuccessListener { taskSnapshot ->
-            // taskSnapshot.metadata contains file metadata such as size, content-type, etc.
-            // ...
-        }
-    }
 
     /**
      * 구입시기와 시음일자 DatePickerDialog 기능 구현
