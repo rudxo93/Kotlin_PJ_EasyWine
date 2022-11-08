@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.view.activity.note.EditNoteActivity">
+    tools:context=".ui.view.activity.note.InfoNoteActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,6 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
+            app:popupTheme="@style/Theme.PopupOverlay.Menu"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -50,31 +51,6 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="ContentDescription" />
 
-                <ImageView
-                    android:id="@+id/iv_add_photo_camera"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/ic_camera"
-                    android:visibility="visible"
-                    app:layout_constraintBottom_toBottomOf="@+id/iv_add_photo"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/iv_add_photo"
-                    tools:ignore="ContentDescription" />
-
-                <TextView
-                    android:id="@+id/tv_add_photo_camera_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/edit_note_add_photo"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:visibility="visible"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/iv_add_photo_camera" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -99,17 +75,16 @@
                             android:textColor="@color/black"
                             android:textSize="15sp" />
 
-                        <EditText
-                            android:id="@+id/et_note_name"
+                        <TextView
+                            android:id="@+id/tv_note_name"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginStart="10dp"
                             android:layout_marginEnd="3dp"
-                            android:inputType="text"
-                            android:maxLines="1"
+                            android:gravity="start|center"
                             android:paddingStart="5dp"
                             android:textSize="15sp"
-                            tools:ignore="Autofill,LabelFor,RtlSymmetry,TextFields" />
+                            tools:ignore="RtlSymmetry" />
 
                     </LinearLayout>
 
@@ -135,14 +110,13 @@
                                 android:textColor="@color/black"
                                 android:textSize="15sp" />
 
-                            <EditText
-                                android:id="@+id/et_note_type"
+                            <TextView
+                                android:id="@+id/tv_note_type"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginStart="10dp"
                                 android:layout_marginEnd="3dp"
-                                android:hint="@string/edit_note_type_hint"
-                                android:inputType="text"
+                                android:gravity="start|center"
                                 android:maxLines="1"
                                 android:paddingStart="5dp"
                                 android:textSize="15sp"
@@ -166,17 +140,16 @@
                                 android:textColor="@color/black"
                                 android:textSize="15sp" />
 
-                            <EditText
-                                android:id="@+id/et_note_country"
+                            <TextView
+                                android:id="@+id/tv_note_country"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginStart="10dp"
                                 android:layout_marginEnd="3dp"
-                                android:inputType="text"
-                                android:maxLines="1"
+                                android:gravity="start|center"
                                 android:paddingStart="5dp"
                                 android:textSize="15sp"
-                                tools:ignore="Autofill,RtlSymmetry,TextFields" />
+                                tools:ignore="RtlSymmetry" />
 
                         </LinearLayout>
 
@@ -197,17 +170,16 @@
                             android:textColor="@color/black"
                             android:textSize="15sp" />
 
-                        <EditText
-                            android:id="@+id/et_note_area"
+                        <TextView
+                            android:id="@+id/tv_note_area"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginStart="10dp"
                             android:layout_marginEnd="3dp"
-                            android:inputType="text"
-                            android:maxLines="1"
+                            android:gravity="start|center"
                             android:paddingStart="5dp"
                             android:textSize="15sp"
-                            tools:ignore="Autofill,RtlSymmetry,TextFields" />
+                            tools:ignore="RtlSymmetry" />
 
                     </LinearLayout>
 
@@ -226,18 +198,17 @@
                             android:textColor="@color/black"
                             android:textSize="15sp" />
 
-                        <EditText
-                            android:id="@+id/et_note_variety"
+                        <TextView
+                            android:id="@+id/tv_note_variety"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginStart="10dp"
                             android:layout_marginEnd="3dp"
-                            android:hint="@string/edit_note_variety_hint"
-                            android:inputType="text"
+                            android:gravity="start|center"
                             android:maxLines="1"
                             android:paddingStart="5dp"
                             android:textSize="15sp"
-                            tools:ignore="Autofill,RtlSymmetry,TextFields" />
+                            tools:ignore="RtlSymmetry" />
 
                     </LinearLayout>
 
@@ -263,17 +234,16 @@
                                 android:textColor="@color/black"
                                 android:textSize="15sp" />
 
-                            <EditText
-                                android:id="@+id/et_note_vintage"
+                            <TextView
+                                android:id="@+id/tv_note_vintage"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_marginStart="10dp"
                                 android:layout_marginEnd="3dp"
-                                android:inputType="number"
-                                android:maxLines="1"
+                                android:gravity="start|center"
                                 android:paddingStart="5dp"
                                 android:textSize="15sp"
-                                tools:ignore="Autofill,RtlSymmetry" />
+                                tools:ignore="RtlSymmetry" />
 
                         </LinearLayout>
 
@@ -295,18 +265,17 @@
                                 android:textSize="15sp"
                                 tools:ignore="NestedWeights" />
 
-                            <EditText
-                                android:id="@+id/et_note_alcohol"
+                            <TextView
+                                android:id="@+id/tv_note_alcohol"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="10dp"
                                 android:layout_marginEnd="3dp"
                                 android:layout_weight="3"
-                                android:inputType="number"
-                                android:maxLines="1"
+                                android:gravity="start|center"
                                 android:paddingStart="5dp"
                                 android:textSize="15sp"
-                                tools:ignore="Autofill,RtlSymmetry" />
+                                tools:ignore="RtlSymmetry" />
 
                             <TextView
                                 android:layout_width="0dp"
@@ -351,23 +320,12 @@
                                 android:id="@+id/tv_note_buy_date"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:gravity="center"
+                                android:gravity="start|center"
                                 android:textSize="15sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toStartOf="@+id/iv_note_buy_date_icon"
+                                app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toEndOf="@+id/tv_note_buy_date_title"
                                 app:layout_constraintTop_toTopOf="parent" />
-
-                            <ImageView
-                                android:id="@+id/iv_note_buy_date_icon"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:src="@drawable/ic_calendar"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                tools:ignore="ContentDescription" />
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -394,24 +352,12 @@
                                 android:id="@+id/tv_note_drink_date"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:gravity="center"
+                                android:gravity="start|center"
                                 android:textSize="15sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toStartOf="@+id/iv_note_drink_date_icon"
+                                app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toEndOf="@+id/tv_note_drink_date_title"
                                 app:layout_constraintTop_toTopOf="parent" />
-
-                            <ImageView
-                                android:id="@+id/iv_note_drink_date_icon"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="right"
-                                android:layout_margin="3dp"
-                                android:src="@drawable/ic_calendar"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                tools:ignore="ContentDescription,RtlHardcoded" />
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -432,17 +378,16 @@
                             android:textColor="@color/black"
                             android:textSize="15sp" />
 
-                        <EditText
-                            android:id="@+id/et_note_price"
-                            android:layout_width="200dp"
+                        <TextView
+                            android:id="@+id/tv_note_price"
+                            android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginStart="10dp"
                             android:layout_marginEnd="3dp"
-                            android:inputType="number"
-                            android:maxLines="1"
+                            android:gravity="start|center"
                             android:paddingStart="5dp"
                             android:textSize="15sp"
-                            tools:ignore="Autofill,RtlSymmetry,TextFields" />
+                            tools:ignore="RtlSymmetry" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -468,18 +413,18 @@
                             android:textColor="@color/black"
                             android:textSize="15sp" />
 
-                        <EditText
-                            android:id="@+id/et_note_etc"
+                        <TextView
+                            android:id="@+id/tv_note_etc"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginStart="10dp"
                             android:layout_marginEnd="3dp"
-                            android:ellipsize="end"
+                            android:layout_marginBottom="3dp"
                             android:gravity="top|left"
                             android:lines="6"
                             android:paddingStart="5dp"
                             android:textSize="15sp"
-                            tools:ignore="Autofill,RtlHardcoded,RtlSymmetry,TextFields" />
+                            tools:ignore="RtlHardcoded,RtlSymmetry" />
 
                     </LinearLayout>
 
@@ -504,7 +449,6 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:max="100"
-                            android:progress="0"
                             android:progressDrawable="@drawable/seek_bar_progress"
                             android:thumb="@drawable/ic_seek_bar_wine_thumb" />
 
@@ -588,7 +532,6 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:max="100"
-                            android:progress="0"
                             android:progressDrawable="@drawable/seek_bar_progress"
                             android:thumb="@drawable/ic_seek_bar_wine_thumb" />
 
@@ -673,7 +616,6 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:max="100"
-                            android:progress="0"
                             android:progressDrawable="@drawable/seek_bar_progress"
                             android:thumb="@drawable/ic_seek_bar_wine_thumb" />
 
@@ -758,7 +700,6 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:max="100"
-                            android:progress="0"
                             android:progressDrawable="@drawable/seek_bar_progress"
                             android:thumb="@drawable/ic_seek_bar_wine_thumb" />
 
@@ -843,7 +784,6 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:max="100"
-                            android:progress="0"
                             android:progressDrawable="@drawable/seek_bar_progress"
                             android:thumb="@drawable/ic_seek_bar_wine_thumb" />
 
@@ -927,7 +867,6 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:max="100"
-                            android:progress="0"
                             android:progressDrawable="@drawable/seek_bar_progress"
                             android:thumb="@drawable/ic_seek_bar_wine_thumb" />
 
@@ -1005,8 +944,8 @@
                             android:textColor="@color/black"
                             android:textSize="15sp" />
 
-                        <EditText
-                            android:id="@+id/et_note_aroma_memo"
+                        <TextView
+                            android:id="@+id/tv_note_aroma_memo"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="5dp"
@@ -1041,7 +980,6 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:max="100"
-                            android:progress="0"
                             android:progressDrawable="@drawable/seek_bar_progress"
                             android:thumb="@drawable/ic_seek_bar_wine_thumb" />
 
@@ -1125,7 +1063,6 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:max="100"
-                            android:progress="0"
                             android:progressDrawable="@drawable/seek_bar_progress"
                             android:thumb="@drawable/ic_seek_bar_wine_thumb" />
 
@@ -1204,8 +1141,8 @@
                             android:textColor="@color/black"
                             android:textSize="15sp" />
 
-                        <EditText
-                            android:id="@+id/et_note_taste"
+                        <TextView
+                            android:id="@+id/tv_note_taste"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginStart="10dp"
@@ -1218,17 +1155,6 @@
                             tools:ignore="Autofill,RtlHardcoded,RtlSymmetry" />
 
                     </LinearLayout>
-
-                    <Button
-                        android:id="@+id/btn_save_note"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="5dp"
-                        android:backgroundTint="@color/main_wine_color"
-                        android:text="@string/edit_note_btn_save" />
 
                 </LinearLayout>
 

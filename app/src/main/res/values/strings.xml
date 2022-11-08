@@ -18,6 +18,10 @@
     <!-- Toolbar Menu -->
     <string name="menu_item_1">내정보</string>
 
+    <!-- Toolbar Note Info -->
+    <string name="menu_note_info_item_1">수정하기</string>
+    <string name="menu_note_info_item_2">삭제하기</string>
+
     <!-- Toolbar Menu -->
     <string name="menu_note_item_1">저장</string>
 

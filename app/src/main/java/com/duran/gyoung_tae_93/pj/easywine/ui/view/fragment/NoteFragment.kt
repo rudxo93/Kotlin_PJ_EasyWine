@@ -1,24 +1,31 @@
 package com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.duran.gyoung_tae_93.pj.easywine.R
+import com.duran.gyoung_tae_93.pj.easywine.data.model.NoteInfoModel
 import com.duran.gyoung_tae_93.pj.easywine.databinding.FragmentNoteBinding
 import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.NoteRVAdapter
-import com.duran.gyoung_tae_93.pj.easywine.ui.view.activity.EditNoteActivity
+import com.duran.gyoung_tae_93.pj.easywine.ui.view.activity.note.EditNoteActivity
+import com.duran.gyoung_tae_93.pj.easywine.ui.view.activity.note.InfoNoteActivity
 import com.duran.gyoung_tae_93.pj.easywine.ui.viewmodel.NoteViewModel
+import com.duran.gyoung_tae_93.pj.easywine.util.FBAuth
+import com.duran.gyoung_tae_93.pj.easywine.util.FBDocRef
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.coroutineScope
 
 class NoteFragment : Fragment() {
 
@@ -26,15 +33,12 @@ class NoteFragment : Fragment() {
     private lateinit var viewModel: NoteViewModel
     lateinit var rvAdapter: NoteRVAdapter
 
+    var currentUid = FBAuth.getUid()
+
     private val TAG = NoteFragment::class.java.simpleName
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        Log.e("dddddd", "onAttach")
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.e("dddddd", "onCreate")
     }
 
     override fun onCreateView(
@@ -42,20 +46,16 @@ class NoteFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_note, container, false)
-        Log.e("dddddd", "onCreateView")
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Log.e("dddddd", "onViewCreated")
 
         viewModel =  ViewModelProvider(this)[NoteViewModel::class.java]
 
         initMoveNoteEdit()
         getRVSetting()
-        /*observerData()*/
-
     }
 
     /**
@@ -67,6 +67,30 @@ class NoteFragment : Fragment() {
         rvAdapter = NoteRVAdapter(requireContext())
         rv.adapter = rvAdapter
         rv.layoutManager = LinearLayoutManager(context)
+
+        // 컨텐츠 클릭 시 -> Inside 이동
+        rvAdapter.setItemClickListener(object : NoteRVAdapter.ItemClickListener {
+            override fun onClick(view: View, position: Int, imageUrl: String?) {
+                var noteData = NoteInfoModel()
+
+                FBDocRef.fbDB.collection("note_info").whereEqualTo("uid", currentUid).whereEqualTo("imageUrl", imageUrl)
+                    .get().addOnSuccessListener { result ->
+
+                        if(result == null) return@addOnSuccessListener
+
+                        for(dataModel in result.documents){
+                            val data = dataModel.toObject(NoteInfoModel::class.java)
+                            if (data != null) {
+                                noteData = data
+                            }
+                        }
+
+                        val intent = Intent(activity, InfoNoteActivity::class.java)
+                        intent.putExtra("noteData", noteData)
+                        startActivity(intent)
+                    }
+            }
+        })
     }
 
     /**
@@ -89,7 +113,8 @@ class NoteFragment : Fragment() {
 
     @SuppressLint("NotifyDataSetChanged")
     private fun observerData() {
-        viewModel.getNoteData().observe(viewLifecycleOwner, Observer {
+        currentUid = FBAuth.getUid()
+        viewModel.getNoteData(currentUid).observe(viewLifecycleOwner, Observer {
             rvAdapter.setListData(it)
             rvAdapter.notifyDataSetChanged()
         })

@@ -1,4 +1,4 @@
-package com.duran.gyoung_tae_93.pj.easywine.ui.view.activity
+package com.duran.gyoung_tae_93.pj.easywine.ui.view.activity.note
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
@@ -88,7 +88,7 @@ class EditNoteActivity : AppCompatActivity() {
     private var isImageUpload = false
     private lateinit var photoUri: Uri
 
-    private val viewModel by lazy { ViewModelProvider(this).get(NoteViewModel::class.java) }
+    private val viewModel by lazy { ViewModelProvider(this)[NoteViewModel::class.java] }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

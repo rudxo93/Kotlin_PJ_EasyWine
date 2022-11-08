@@ -1,5 +1,8 @@
 package com.duran.gyoung_tae_93.pj.easywine.data.model
 
+import java.io.Serializable
+import java.text.SimpleDateFormat
+
 data class NoteInfoModel(
     var uid: String? = null,
     var imageUrl: String? = null,
@@ -26,4 +29,4 @@ data class NoteInfoModel(
     var wineNoteTaste: String? = null,
     var saveTime: Long? = null,
     var isChecked: Boolean = false
-)
+): Serializable
