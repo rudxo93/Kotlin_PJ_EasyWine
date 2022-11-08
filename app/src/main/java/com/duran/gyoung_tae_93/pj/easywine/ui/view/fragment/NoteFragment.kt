@@ -7,10 +7,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -24,8 +22,6 @@ import com.duran.gyoung_tae_93.pj.easywine.ui.view.activity.note.InfoNoteActivit
 import com.duran.gyoung_tae_93.pj.easywine.ui.viewmodel.NoteViewModel
 import com.duran.gyoung_tae_93.pj.easywine.util.FBAuth
 import com.duran.gyoung_tae_93.pj.easywine.util.FBDocRef
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.coroutineScope
 
 class NoteFragment : Fragment() {
 
@@ -91,6 +87,44 @@ class NoteFragment : Fragment() {
                     }
             }
         })
+
+        // Favorite CheckBox 클릭 시
+        rvAdapter.setItemFavoriteClickListener( object : NoteRVAdapter.ItemFavoriteClickListener {
+            override fun onClick(view: View, position: Int, imageUrl: String?) {
+                var noteId = ""
+                FBDocRef.fbDB.collection("note_info").whereEqualTo("uid", currentUid).whereEqualTo("imageUrl", imageUrl)
+                    .get().addOnSuccessListener { result ->
+
+                        for(item in result.documentChanges) {
+                            noteId = item.document.id
+                        }
+
+                        getEventFavorite(noteId)
+                    }
+
+            }
+        })
+    }
+
+    /**
+     *  Note Favorite 클릭시 isChecked 값 Setting
+     */
+    private fun getEventFavorite(noteId: String?) {
+        val tsDoc = FBDocRef.fbDB.collection("note_info").document(noteId!!)
+
+        FBDocRef.fbDB.runTransaction {
+                transition ->
+            val dataModel = transition.get(tsDoc).toObject(NoteInfoModel::class.java)
+
+            if(dataModel!!.isChecked == 0) { // false
+                dataModel.isChecked = dataModel.isChecked + 1
+            } else {
+                dataModel.isChecked = dataModel.isChecked - 1
+            }
+
+            transition.set(tsDoc, dataModel)
+
+        }
     }
 
     /**

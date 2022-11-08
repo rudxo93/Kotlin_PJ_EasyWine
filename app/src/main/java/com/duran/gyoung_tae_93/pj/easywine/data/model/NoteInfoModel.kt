@@ -28,5 +28,5 @@ data class NoteInfoModel(
     var wineLikable: Int = 0,
     var wineNoteTaste: String? = null,
     var saveTime: Long? = null,
-    var isChecked: Boolean = false
+    var isChecked: Int = 0
 ): Serializable

@@ -4,9 +4,11 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.duran.gyoung_tae_93.pj.easywine.R
@@ -16,6 +18,8 @@ class NoteRVAdapter(val context: Context) : RecyclerView.Adapter<NoteRVAdapter.V
     private var noteList = mutableListOf<NoteInfoModel>()
 
     private lateinit var itemClickListner: ItemClickListener
+
+    private lateinit var itemFavoriteClickListner: ItemFavoriteClickListener
 
     fun setListData(data: MutableList<NoteInfoModel>) {
         noteList = data
@@ -28,15 +32,15 @@ class NoteRVAdapter(val context: Context) : RecyclerView.Adapter<NoteRVAdapter.V
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val noteInfo: NoteInfoModel = noteList[position]
-
-        holder.title.text = noteInfo.wineName
-        holder.drinkDate.text = noteInfo.wineDrinkDate
-        holder.noteEtc.text = noteInfo.wineNoteEtc
+        holder.onBind(noteList[position])
         Glide.with(holder.itemView.context).load(noteList[position].imageUrl).into(holder.image)
 
         holder.content.setOnClickListener {
             itemClickListner.onClick(it, position, noteList[position].imageUrl)
+        }
+
+        holder.favorite.setOnClickListener {
+            itemFavoriteClickListner.onClick(it, position, noteList[position].imageUrl)
         }
     }
 
@@ -46,11 +50,25 @@ class NoteRVAdapter(val context: Context) : RecyclerView.Adapter<NoteRVAdapter.V
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        val content: LinearLayout = itemView.findViewById(R.id.linear_wine_note_content)
+        private val drinkDate: TextView = itemView.findViewById(R.id.tv_item_rv_note_drink_date)
+        private val noteEtc: TextView = itemView.findViewById(R.id.tv_item_rv_note_etc)
+        val content: LinearLayout = itemView.findViewById(R.id.linear_item_rv_content)
         val image: ImageView = itemView.findViewById(R.id.iv_item_rv_note_image)
         val title: TextView = itemView.findViewById(R.id.tv_item_rv_note_title)
-        val drinkDate: TextView = itemView.findViewById(R.id.tv_item_rv_note_drink_date)
-        val noteEtc: TextView = itemView.findViewById(R.id.tv_item_rv_note_etc)
+        val favorite: CheckBox = itemView.findViewById(R.id.iv_item_rv_note_favorite)
+
+        fun onBind(data: NoteInfoModel) {
+            title.text = data.wineName
+            drinkDate.text = data.wineDrinkDate
+            noteEtc.text = data.wineNoteEtc
+
+            if(data.isChecked == 0) { // false
+                favorite.isChecked = false
+            } else {
+                favorite.isChecked = true
+            }
+
+        }
 
     }
 
@@ -63,5 +81,16 @@ class NoteRVAdapter(val context: Context) : RecyclerView.Adapter<NoteRVAdapter.V
 
     fun setItemClickListener(itemClickListener: ItemClickListener) {
         this.itemClickListner = itemClickListener
+    }
+
+    /**
+     *  Favorite Click
+     */
+    interface ItemFavoriteClickListener {
+        fun onClick(view: View, position: Int, imageUrl: String?)
+    }
+
+    fun setItemFavoriteClickListener(itemFavoriteClickListener: ItemFavoriteClickListener) {
+        this.itemFavoriteClickListner = itemFavoriteClickListener
     }
 }

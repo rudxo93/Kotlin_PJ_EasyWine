@@ -1,5 +1,6 @@
 package com.duran.gyoung_tae_93.pj.easywine.data.dao
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.duran.gyoung_tae_93.pj.easywine.data.model.NoteInfoModel
