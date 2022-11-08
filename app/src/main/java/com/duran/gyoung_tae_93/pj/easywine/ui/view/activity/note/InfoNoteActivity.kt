@@ -88,37 +88,22 @@ class InfoNoteActivity : AppCompatActivity() {
     private fun setSeekBarSetting() {
 
         sbSweetness.progress = noteInfo.wineSbSweetness
-        sbSweetness.setOnTouchListener(OnTouchListener { view, event -> // 터치 이벤트 제거
-            true
-        })
+        // 터치 이벤트 제거
+        sbSweetness.setOnTouchListener(OnTouchListener { view, event -> true })
         sbAcidity.progress = noteInfo.wineSbAcidity
-        sbAcidity.setOnTouchListener(OnTouchListener { view, event ->
-            true
-        })
+        sbAcidity.setOnTouchListener(OnTouchListener { view, event -> true })
         sbTannin.progress = noteInfo.wineSbTannin
-        sbTannin.setOnTouchListener(OnTouchListener { view, event ->
-            true
-        })
+        sbTannin.setOnTouchListener(OnTouchListener { view, event -> true })
         sbBody.progress = noteInfo.wineSbBody
-        sbBody.setOnTouchListener(OnTouchListener { view, event ->
-            true
-        })
+        sbBody.setOnTouchListener(OnTouchListener { view, event -> true })
         sbAlcohol.progress = noteInfo.wineSbAlcohol
-        sbAlcohol.setOnTouchListener(OnTouchListener { view, event ->
-            true
-        })
+        sbAlcohol.setOnTouchListener(OnTouchListener { view, event -> true })
         sbAroma.progress = noteInfo.wineSbAroma
-        sbAroma.setOnTouchListener(OnTouchListener { view, event ->
-            true
-        })
+        sbAroma.setOnTouchListener(OnTouchListener { view, event -> true })
         sbBalance.progress = noteInfo.wineBalance
-        sbBalance.setOnTouchListener(OnTouchListener { view, event ->
-            true
-        })
+        sbBalance.setOnTouchListener(OnTouchListener { view, event -> true })
         sbLikable.progress = noteInfo.wineLikable
-        sbLikable.setOnTouchListener(OnTouchListener { view, event ->
-            true
-        })
+        sbLikable.setOnTouchListener(OnTouchListener { view, event -> true })
     }
 
     /**
