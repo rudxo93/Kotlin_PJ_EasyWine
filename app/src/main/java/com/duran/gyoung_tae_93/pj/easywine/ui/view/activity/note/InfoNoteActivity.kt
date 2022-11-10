@@ -1,6 +1,7 @@
 package com.duran.gyoung_tae_93.pj.easywine.ui.view.activity.note
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -129,12 +130,12 @@ class InfoNoteActivity : AppCompatActivity() {
                 return true
             }
             R.id.menu_update -> {
-                Toast.makeText(this, "수정하기", Toast.LENGTH_SHORT).show()
-                return true
+                val intent = Intent(baseContext, UpdateNoteActivity::class.java)
+                intent.putExtra("noteData", noteInfo)
+                startActivity(intent)
             }
             R.id.menu_delete -> {
                 Toast.makeText(this, "삭제하기", Toast.LENGTH_SHORT).show()
-                return true
             }
         }
         return super.onOptionsItemSelected(item)

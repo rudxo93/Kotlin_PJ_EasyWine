@@ -1,6 +1,7 @@
 package com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -91,9 +92,9 @@ class NoteFragment : Fragment() {
         // Favorite CheckBox 클릭 시
         rvAdapter.setItemFavoriteClickListener( object : NoteRVAdapter.ItemFavoriteClickListener {
             override fun onClick(view: View, position: Int, imageUrl: String?) {
-                var noteId = ""
                 FBDocRef.fbDB.collection("note_info").whereEqualTo("uid", currentUid).whereEqualTo("imageUrl", imageUrl)
                     .get().addOnSuccessListener { result ->
+                        var noteId = ""
 
                         for(item in result.documentChanges) {
                             noteId = item.document.id

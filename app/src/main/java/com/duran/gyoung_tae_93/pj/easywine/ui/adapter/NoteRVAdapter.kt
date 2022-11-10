@@ -62,11 +62,7 @@ class NoteRVAdapter(val context: Context) : RecyclerView.Adapter<NoteRVAdapter.V
             drinkDate.text = data.wineDrinkDate
             noteEtc.text = data.wineNoteEtc
 
-            if(data.isChecked == 0) { // false
-                favorite.isChecked = false
-            } else {
-                favorite.isChecked = true
-            }
+            favorite.isChecked = data.isChecked != 0
 
         }
 

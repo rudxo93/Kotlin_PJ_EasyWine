@@ -22,25 +22,21 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
 import com.duran.gyoung_tae_93.pj.easywine.R
 import com.duran.gyoung_tae_93.pj.easywine.data.model.NoteInfoModel
-import com.duran.gyoung_tae_93.pj.easywine.databinding.ActivityEditNoteBinding
-import com.duran.gyoung_tae_93.pj.easywine.ui.viewmodel.NoteViewModel
+import com.duran.gyoung_tae_93.pj.easywine.databinding.ActivityUpdateNoteBinding
+import com.duran.gyoung_tae_93.pj.easywine.ui.view.activity.MainActivity
 import com.duran.gyoung_tae_93.pj.easywine.util.FBAuth
+import com.duran.gyoung_tae_93.pj.easywine.util.FBDocRef
 import com.duran.gyoung_tae_93.pj.easywine.util.FBSrg
-import com.google.android.gms.tasks.Task
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.*
 
-class EditNoteActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityEditNoteBinding
+class UpdateNoteActivity : AppCompatActivity() {
 
-    private val TAG = EditNoteActivity::class.java.simpleName
+    private lateinit var binding: ActivityUpdateNoteBinding
 
     private val btnImageAdd by lazy { binding.ivAddPhoto }
     private val photoImage by lazy { binding.ivAddPhotoCamera }
@@ -83,31 +79,44 @@ class EditNoteActivity : AppCompatActivity() {
     private val sbLikable by lazy { binding.sbNoteLikable }
     private var resultLikable = 0
 
-    private val btnSave by lazy { binding.btnSaveNote }
+    private val btnUpdateBtn by lazy { binding.btnUpdateNote }
 
+    private val TAG = UpdateNoteActivity::class.java.simpleName
     private var isImageUpload = false
     private lateinit var photoUri: Uri
-
-    private val viewModel by lazy { ViewModelProvider(this)[NoteViewModel::class.java] }
+    private lateinit var noteInfo: NoteInfoModel
+    private var currentUid = FBAuth.getUid()
+    private lateinit var currentImageUrlSubString: String
+    private lateinit var currentImageUrl: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_edit_note)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_update_note)
 
-        getToolbarSetting()
+        noteInfo = intent.getSerializableExtra("noteData") as NoteInfoModel
+
+        currentImageUrlSubString = noteInfo.imageUrl!!.substring(82, 107)
+        currentImageUrl = noteInfo.imageUrl.toString()
+
+        getToolbarSetting() // Toolbar
+        // Data Setting
+        setNoteImage()
+        setNoteData()
+        setSeekBarSetting()
+
+        getAddPhotoBtn()
         getDatePickerDialog()
         getEditTextMaxLines()
         getSeekBarSetting()
-        getAddPhotoBtn()
-
-        getSaveBtnClick()
+        // 변경하기 Button Click
+        getUpdateBtnClick()
     }
 
     /**
-     *  노트작성 저장하기 버튼 클릭
+     *  노트작성 업데이트 버튼 클릭
      */
-    private fun getSaveBtnClick() {
-        btnSave.setOnClickListener {
+    private fun getUpdateBtnClick() {
+        btnUpdateBtn.setOnClickListener {
             initEmptyCheck()
         }
     }
@@ -156,34 +165,52 @@ class EditNoteActivity : AppCompatActivity() {
                 etPrice.requestFocus()
             }
             else -> {
-                if (isImageUpload == true) {
-                    imageUpload()
+                // 이미지를 변경했는지?
+                if (!isImageUpload) {
+                    val imageUrl = noteInfo.imageUrl.toString()
+                    getSaveNote(imageUrl, currentImageUrl)
+                } else {
+                    imageDelete()
                 }
             }
         }
     }
 
+    /**
+     *  기존에 저장되어있는 Image 는 삭제
+     */
+    private fun imageDelete() {
+
+        val storagePath = FBSrg.storageRef.child("images").child(currentImageUrlSubString)
+
+        storagePath.delete().addOnSuccessListener { imageUpload(currentImageUrl) }
+    }
+
+    /**
+     *   다시 Image 를 저장한다.
+     */
     @SuppressLint("SimpleDateFormat")
-    private fun imageUpload() {
+    private fun imageUpload(currentImageUrl: String) {
         // 이미지 저장 날싸와 시간(파일명이 중복되지 않도록 날짜와 시간으로)
         val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
         // 파일 저장 이름 만들기 -> IMAGE_저장날짜.png
-        val imageFileName = "IMAGE_" + timeStamp + ".png"
+        val imageFileName = "IMAGE_$timeStamp.png"
 
         val storagePath = FBSrg.storageRef.child("images").child(imageFileName)
 
         storagePath.putFile(photoUri).continueWithTask {
             return@continueWithTask storagePath.downloadUrl
         }.addOnCompleteListener { downloadUrl ->
-            getSaveNote(downloadUrl)
+            val imageUrl = downloadUrl.result.toString()
+            getSaveNote(imageUrl, currentImageUrl)
         }
     }
 
     @SuppressLint("SimpleDateFormat")
-    private fun getSaveNote(downloadUrl: Task<Uri>) {
+    private fun getSaveNote(imageUrl: String, currentImageUrl: String) {
 
         // NoteInfo
-        val wineImageUrl = downloadUrl.result.toString()
+        val wineImageUrl = imageUrl
         val wineName = etWineName.text.toString()
         val wineType = etWineType.text.toString()
         val wineCountry = etCountry.text.toString()
@@ -194,7 +221,7 @@ class EditNoteActivity : AppCompatActivity() {
         val wineBuyDate = buyDate.text.toString()
         val wineDrinkDate = drinkDate.text.toString()
         val winePrice = etPrice.text.toString()
-        val saveDate = System.currentTimeMillis()
+        val saveDate = noteInfo.saveTime
         // NoteContent
         val wineNoteEtc = etNoteEtc.text.toString()
         val wineSbSweetness = resultSweetness
@@ -207,38 +234,129 @@ class EditNoteActivity : AppCompatActivity() {
         val wineBalance = resultBalance
         val wineLikable = resultLikable
         val wineNoteTaste = etNoteTaste.text.toString()
-        CoroutineScope(Dispatchers.IO).launch {
-            val noteInfo = NoteInfoModel(
-                FBAuth.getUid(),
-                wineImageUrl,
-                wineName,
-                wineType,
-                wineCountry,
-                wineArea,
-                wineVariety,
-                wineVintage,
-                wineAlcohol,
-                wineBuyDate,
-                wineDrinkDate,
-                winePrice,
-                wineNoteEtc,
-                wineSbSweetness,
-                wineSbAcidity,
-                wineSbTannin,
-                wineSbBody,
-                wineSbAlcohol,
-                wineSbAroma,
-                wineNoteAroma,
-                wineBalance,
-                wineLikable,
-                wineNoteTaste,
-                saveDate,
-                0
-            )
-            viewModel.insertNoteInfo(noteInfo)
+        val isChecked = noteInfo.isChecked
 
-            finish()
+        val noteUpdate = NoteInfoModel(
+            FBAuth.getUid(),
+            wineImageUrl,
+            wineName,
+            wineType,
+            wineCountry,
+            wineArea,
+            wineVariety,
+            wineVintage,
+            wineAlcohol,
+            wineBuyDate,
+            wineDrinkDate,
+            winePrice,
+            wineNoteEtc,
+            wineSbSweetness,
+            wineSbAcidity,
+            wineSbTannin,
+            wineSbBody,
+            wineSbAlcohol,
+            wineSbAroma,
+            wineNoteAroma,
+            wineBalance,
+            wineLikable,
+            wineNoteTaste,
+            saveDate,
+            isChecked
+        )
+
+        getCurrentId(noteUpdate, currentImageUrl)
+
+    }
+
+    private fun getCurrentId(noteUpdate: NoteInfoModel, currentImageUrl: String) {
+        FBDocRef.fbDB.collection("note_info").whereEqualTo("uid", currentUid)
+            .whereEqualTo("imageUrl", currentImageUrl)
+            .get().addOnSuccessListener { result ->
+                var noteId = ""
+
+                for (item in result.documentChanges) noteId = item.document.id
+
+                getUpdateNote(noteId, noteUpdate)
+            }
+    }
+
+    private fun getUpdateNote(noteId: String, noteUpdate: NoteInfoModel) {
+        val tsDoc = FBDocRef.fbDB.collection("note_info").document(noteId)
+        FBDocRef.fbDB.runTransaction { transition ->
+            val dataModel = transition.get(tsDoc).toObject(NoteInfoModel::class.java)
+
+            dataModel!!.imageUrl = noteUpdate.imageUrl
+            dataModel.wineName = noteUpdate.wineName
+            dataModel.wineType = noteUpdate.wineType
+            dataModel.wineCountry = noteUpdate.wineCountry
+            dataModel.wineArea = noteUpdate.wineArea
+            dataModel.wineVariety = noteUpdate.wineVariety
+            dataModel.wineVintage = noteUpdate.wineVintage
+            dataModel.wineAlcohol = noteUpdate.wineAlcohol
+            dataModel.wineBuyDate = noteUpdate.wineBuyDate
+            dataModel.wineDrinkDate = noteUpdate.wineDrinkDate
+            dataModel.winePrice = noteUpdate.winePrice
+            dataModel.saveTime = noteUpdate.saveTime
+            dataModel.wineNoteEtc = noteUpdate.wineNoteEtc
+            dataModel.wineSbSweetness = noteUpdate.wineSbSweetness
+            dataModel.wineSbAcidity = noteUpdate.wineSbAcidity
+            dataModel.wineSbTannin = noteUpdate.wineSbTannin
+            dataModel.wineSbBody = noteUpdate.wineSbBody
+            dataModel.wineSbAlcohol = noteUpdate.wineSbAlcohol
+            dataModel.wineSbAroma = noteUpdate.wineSbAroma
+            dataModel.wineNoteAroma = noteUpdate.wineNoteAroma
+            dataModel.wineBalance = noteUpdate.wineBalance
+            dataModel.wineLikable = noteUpdate.wineLikable
+            dataModel.wineNoteTaste = noteUpdate.wineNoteTaste
+            dataModel.isChecked = noteUpdate.isChecked
+
+            transition.set(tsDoc, dataModel)
+
         }
+        Toast.makeText(this, "변경되었습니다.", Toast.LENGTH_SHORT).show()
+        /*finish()*/
+
+        val intent = Intent(this, MainActivity::class.java)
+        intent.flags =
+            Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP //액티비티 스택제거
+        startActivity(intent)
+    }
+
+    /**
+     *  넘어온 Data Setting
+     */
+    private fun setNoteImage() {
+
+        Glide.with(this).load(noteInfo.imageUrl).into(btnImageAdd)
+        photoImage.visibility = View.GONE
+        photoImageTitle.visibility = View.GONE
+    }
+
+    private fun setNoteData() {
+        etWineName.setText(noteInfo.wineName)
+        etWineType.setText(noteInfo.wineType)
+        etCountry.setText(noteInfo.wineCountry)
+        etArea.setText(noteInfo.wineArea)
+        etVariety.setText(noteInfo.wineVariety)
+        etVintage.setText(noteInfo.wineVintage)
+        etAlcohol.setText(noteInfo.wineAlcohol)
+        etPrice.setText(noteInfo.winePrice)
+        buyDate.text = noteInfo.wineBuyDate
+        drinkDate.text = noteInfo.wineDrinkDate
+        etNoteEtc.setText(noteInfo.wineNoteEtc)
+        etNoteAroma.setText(noteInfo.wineNoteAroma)
+        etNoteTaste.setText(noteInfo.wineNoteTaste)
+    }
+
+    private fun setSeekBarSetting() {
+        sbSweetness.progress = noteInfo.wineSbSweetness
+        sbAcidity.progress = noteInfo.wineSbAcidity
+        sbTannin.progress = noteInfo.wineSbTannin
+        sbBody.progress = noteInfo.wineSbBody
+        sbAlcohol.progress = noteInfo.wineSbAlcohol
+        sbAroma.progress = noteInfo.wineSbAroma
+        sbBalance.progress = noteInfo.wineBalance
+        sbLikable.progress = noteInfo.wineLikable
     }
 
     /**
@@ -271,10 +389,7 @@ class EditNoteActivity : AppCompatActivity() {
                 ContextCompat.checkSelfPermission( // 1. 사용할 권한이 주어졌는지 check
                     this,
                     android.Manifest.permission.READ_EXTERNAL_STORAGE
-                ) == PackageManager.PERMISSION_GRANTED -> {
-                    // 권한이 부여되어 있다면 갤러리에서 사진 선택 기능
-                    getPhotoStorage()
-                }
+                ) == PackageManager.PERMISSION_GRANTED -> getPhotoStorage()
                 // 권한 수락이 거절 -> 팝업 띄워주기
                 shouldShowRequestPermissionRationale(android.Manifest.permission.READ_EXTERNAL_STORAGE) -> {
                     Log.d(TAG, "Permossion Refuse. Open PopUp Dialog")
@@ -289,6 +404,7 @@ class EditNoteActivity : AppCompatActivity() {
                     )
                 }
             }
+            // 권한이 부여되어 있다면 갤러리에서 사진 선택 기능
         }
 
     }
@@ -338,7 +454,7 @@ class EditNoteActivity : AppCompatActivity() {
         isImageUpload = true
     }
 
-    var photoResult =
+    private var photoResult =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             when (result.resultCode) {
                 RESULT_OK -> {
@@ -540,5 +656,4 @@ class EditNoteActivity : AppCompatActivity() {
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
     }
-
 }
