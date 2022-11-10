@@ -191,11 +191,9 @@ class UpdateNoteActivity : AppCompatActivity() {
      */
     @SuppressLint("SimpleDateFormat")
     private fun imageUpload(currentImageUrl: String) {
-        // 이미지 저장 날싸와 시간(파일명이 중복되지 않도록 날짜와 시간으로)
-        val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
-        // 파일 저장 이름 만들기 -> IMAGE_저장날짜.png
-        val imageFileName = "IMAGE_$timeStamp.png"
 
+        val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
+        val imageFileName = "IMAGE_$timeStamp.png"
         val storagePath = FBSrg.storageRef.child("images").child(imageFileName)
 
         storagePath.putFile(photoUri).continueWithTask {
@@ -264,11 +262,11 @@ class UpdateNoteActivity : AppCompatActivity() {
             isChecked
         )
 
-        getCurrentId(noteUpdate, currentImageUrl)
+        getCurrentDocId(noteUpdate, currentImageUrl)
 
     }
 
-    private fun getCurrentId(noteUpdate: NoteInfoModel, currentImageUrl: String) {
+    private fun getCurrentDocId(noteUpdate: NoteInfoModel, currentImageUrl: String) {
         FBDocRef.fbDB.collection("note_info").whereEqualTo("uid", currentUid)
             .whereEqualTo("imageUrl", currentImageUrl)
             .get().addOnSuccessListener { result ->
@@ -282,6 +280,7 @@ class UpdateNoteActivity : AppCompatActivity() {
 
     private fun getUpdateNote(noteId: String, noteUpdate: NoteInfoModel) {
         val tsDoc = FBDocRef.fbDB.collection("note_info").document(noteId)
+
         FBDocRef.fbDB.runTransaction { transition ->
             val dataModel = transition.get(tsDoc).toObject(NoteInfoModel::class.java)
 
@@ -314,7 +313,6 @@ class UpdateNoteActivity : AppCompatActivity() {
 
         }
         Toast.makeText(this, "변경되었습니다.", Toast.LENGTH_SHORT).show()
-        /*finish()*/
 
         val intent = Intent(this, MainActivity::class.java)
         intent.flags =

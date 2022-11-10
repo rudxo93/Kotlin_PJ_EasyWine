@@ -6,13 +6,16 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View.OnTouchListener
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.bumptech.glide.Glide
 import com.duran.gyoung_tae_93.pj.easywine.R
 import com.duran.gyoung_tae_93.pj.easywine.data.model.NoteInfoModel
 import com.duran.gyoung_tae_93.pj.easywine.databinding.ActivityInfoNoteBinding
+import com.duran.gyoung_tae_93.pj.easywine.ui.view.activity.MainActivity
+import com.duran.gyoung_tae_93.pj.easywine.util.FBAuth
+import com.duran.gyoung_tae_93.pj.easywine.util.FBDocRef
+import com.duran.gyoung_tae_93.pj.easywine.util.FBSrg
 
 
 class InfoNoteActivity : AppCompatActivity() {
@@ -47,12 +50,17 @@ class InfoNoteActivity : AppCompatActivity() {
     private val TAG = InfoNoteActivity::class.java.simpleName
 
     lateinit var noteInfo: NoteInfoModel
+    private lateinit var currentImageUrlSubString: String
+    private lateinit var currentImageUrl: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_info_note)
 
         noteInfo = intent.getSerializableExtra("noteData") as NoteInfoModel
+
+        currentImageUrlSubString = noteInfo.imageUrl!!.substring(82, 107)
+        currentImageUrl = noteInfo.imageUrl.toString()
 
         getToolbarSetting()
         setNoteInfo()
@@ -135,9 +143,47 @@ class InfoNoteActivity : AppCompatActivity() {
                 startActivity(intent)
             }
             R.id.menu_delete -> {
-                Toast.makeText(this, "삭제하기", Toast.LENGTH_SHORT).show()
+                getCurrentDocId()
             }
         }
         return super.onOptionsItemSelected(item)
     }
+
+    /**
+     *  해당 글의 document Id 가져오기 -> Storage 삭제 -> Firestore Data 삭제
+     */
+    private fun getCurrentDocId() {
+        val currentUid = FBAuth.getUid()
+
+        FBDocRef.fbDB.collection("note_info").whereEqualTo("uid", currentUid)
+            .whereEqualTo("imageUrl", currentImageUrl)
+            .get().addOnSuccessListener { result ->
+                var noteId = ""
+
+                for (item in result.documentChanges) noteId = item.document.id
+
+                getDeleteImage(noteId)
+            }
+    }
+
+    private fun getDeleteImage(noteId: String) {
+
+        val storagePath = FBSrg.storageRef.child("images").child(currentImageUrlSubString)
+        storagePath.delete().addOnSuccessListener { getDeleteData(noteId) }
+
+    }
+
+    private fun getDeleteData(noteId: String) {
+
+        FBDocRef.fbDB.collection("note_info").document(noteId)
+            .delete()
+            .addOnSuccessListener {
+
+                val intent = Intent(this, MainActivity::class.java)
+                intent.flags =
+                    Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP //액티비티 스택제거
+                startActivity(intent)
+        }
+    }
+
 }
