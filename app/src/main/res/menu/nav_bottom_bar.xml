@@ -12,7 +12,7 @@
         android:title="@string/bottom_navi_note" />
 
     <item
-        android:id="@+id/fragment_search"
+        android:id="@+id/fragment_type"
         android:icon="@drawable/ic_search"
         android:title="@string/bottom_navi_search" />
 

@@ -1,11 +1,10 @@
 package com.duran.gyoung_tae_93.pj.easywine.ui.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.duran.gyoung_tae_93.pj.easywine.data.model.NoteInfoModel
+import com.duran.gyoung_tae_93.pj.easywine.data.model.note.NoteInfoModel
 import com.duran.gyoung_tae_93.pj.easywine.data.repository.NoteRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

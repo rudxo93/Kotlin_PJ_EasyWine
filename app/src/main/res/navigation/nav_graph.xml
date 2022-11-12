@@ -16,13 +16,80 @@
         android:label="fragment_info"
         tools:layout="@layout/fragment_info"/>
     <fragment
-        android:id="@+id/fragment_search"
-        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.SearchFragment"
-        android:label="fragment_search"
-        tools:layout="@layout/fragment_search" />
+        android:id="@+id/fragment_type"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.TypeFragment"
+        android:label="fragment_type"
+        tools:layout="@layout/fragment_type" >
+        <action
+            android:id="@+id/action_fragment_type_to_areaFragment"
+            app:destination="@id/areaFragment" />
+        <action
+            android:id="@+id/action_fragment_type_to_foodFragment"
+            app:destination="@id/foodFragment" />
+        <action
+            android:id="@+id/action_fragment_type_to_styleFragment"
+            app:destination="@id/styleFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fragment_note"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.NoteFragment"
         android:label="fragment_note"
         tools:layout="@layout/fragment_note" />
+    <fragment
+        android:id="@+id/areaFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.AreaFragment"
+        android:label="fragment_area"
+        tools:layout="@layout/fragment_area" />
+    <fragment
+        android:id="@+id/foodFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.food.FoodFragment"
+        android:label="fragment_food"
+        tools:layout="@layout/fragment_food" />
+    <fragment
+        android:id="@+id/styleFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.StyleFragment"
+        android:label="fragment_style"
+        tools:layout="@layout/fragment_style" >
+        <action
+            android:id="@+id/action_styleFragment_to_sparklingFragment"
+            app:destination="@id/sparklingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sparklingFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.sparkling.SparklingFragment"
+        android:label="fragment_sparkling"
+        tools:layout="@layout/fragment_sparkling" >
+        <action
+            android:id="@+id/action_sparklingFragment_to_cavaFragment"
+            app:destination="@id/cavaFragment" />
+        <action
+            android:id="@+id/action_sparklingFragment_to_champagneFragment"
+            app:destination="@id/champagneFragment" />
+        <action
+            android:id="@+id/action_sparklingFragment_to_lambruscoFragment"
+            app:destination="@id/lambruscoFragment" />
+        <action
+            android:id="@+id/action_sparklingFragment_to_proseccoFragment"
+            app:destination="@id/proseccoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cavaFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.sparkling.CavaFragment"
+        android:label="fragment_cava"
+        tools:layout="@layout/fragment_cava" />
+    <fragment
+        android:id="@+id/champagneFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.sparkling.ChampagneFragment"
+        android:label="fragment_champagne"
+        tools:layout="@layout/fragment_champagne" />
+    <fragment
+        android:id="@+id/lambruscoFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.sparkling.LambruscoFragment"
+        android:label="fragment_lambrusco"
+        tools:layout="@layout/fragment_lambrusco" />
+    <fragment
+        android:id="@+id/proseccoFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.sparkling.ProseccoFragment"
+        android:label="fragment_prosecco"
+        tools:layout="@layout/fragment_prosecco" />
 </navigation>

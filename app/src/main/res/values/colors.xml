@@ -8,6 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="main_wine_color">#4C032B</color>
+    <color name="white_wine_color">#F5D76E</color>
+    <color name="rose_wine_color">#EE737A</color>
     <!-- Splash Activity Color -->
     <color name="wine_label">#F2EFDE</color>
     <color name="wine_bottle">#353F0B</color>

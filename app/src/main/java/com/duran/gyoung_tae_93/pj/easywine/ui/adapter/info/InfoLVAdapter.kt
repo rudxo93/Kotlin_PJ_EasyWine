@@ -1,15 +1,13 @@
-package com.duran.gyoung_tae_93.pj.easywine.ui.adapter
+package com.duran.gyoung_tae_93.pj.easywine.ui.adapter.info
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import android.widget.LinearLayout
 import android.widget.TextView
 import com.duran.gyoung_tae_93.pj.easywine.R
-import com.duran.gyoung_tae_93.pj.easywine.data.model.InfoTitleModel
+import com.duran.gyoung_tae_93.pj.easywine.data.model.info.InfoTitleModel
 
 class InfoLVAdapter(val items: MutableList<InfoTitleModel>) : BaseAdapter() {
 

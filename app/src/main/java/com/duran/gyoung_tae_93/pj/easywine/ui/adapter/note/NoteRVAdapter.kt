@@ -1,4 +1,4 @@
-package com.duran.gyoung_tae_93.pj.easywine.ui.adapter
+package com.duran.gyoung_tae_93.pj.easywine.ui.adapter.note
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,11 +8,10 @@ import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.duran.gyoung_tae_93.pj.easywine.R
-import com.duran.gyoung_tae_93.pj.easywine.data.model.NoteInfoModel
+import com.duran.gyoung_tae_93.pj.easywine.data.model.note.NoteInfoModel
 
 class NoteRVAdapter(val context: Context) : RecyclerView.Adapter<NoteRVAdapter.ViewHolder>() {
     private var noteList = mutableListOf<NoteInfoModel>()

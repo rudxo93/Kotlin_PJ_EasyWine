@@ -1,10 +1,8 @@
 package com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,9 +13,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.duran.gyoung_tae_93.pj.easywine.R
-import com.duran.gyoung_tae_93.pj.easywine.data.model.NoteInfoModel
+import com.duran.gyoung_tae_93.pj.easywine.data.model.note.NoteInfoModel
 import com.duran.gyoung_tae_93.pj.easywine.databinding.FragmentNoteBinding
-import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.NoteRVAdapter
+import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.note.NoteRVAdapter
 import com.duran.gyoung_tae_93.pj.easywine.ui.view.activity.note.EditNoteActivity
 import com.duran.gyoung_tae_93.pj.easywine.ui.view.activity.note.InfoNoteActivity
 import com.duran.gyoung_tae_93.pj.easywine.ui.viewmodel.NoteViewModel

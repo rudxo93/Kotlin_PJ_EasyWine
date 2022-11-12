@@ -12,7 +12,7 @@
     <!-- Bottom Bar Navigation -->
     <string name="bottom_navi_info">와인정보</string>
     <string name="bottom_navi_note">와인노트</string>
-    <string name="bottom_navi_search">와인검색</string>
+    <string name="bottom_navi_search">와인분류</string>
     <string name="bottom_navi_favorite">와인북마크</string>
 
     <!-- Toolbar Menu -->
@@ -402,5 +402,18 @@
         전체적으로 10~17℃ 정도의 온도에서 보관하면 좋습니다.\n
         보통 냉장고에 와인을 보관하는데 냉장고의 온도는 약 4℃로 냉장 보관은 좋지 않은 보관방법 입니다.\n
     </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Fragment Type -->
+    <string name="type_info_btn_content">
+        와인 색, 와인의 지역, 음식과 어울리는 와인은 어떤것이 있는지 알아보고 와인을 구매함에 있어 편의를 도와줍니다.\n
+        평소에 선호하던, 관심이 갔던 와인의 지역 또는 준비한 음식과 어떤 와인이 어울리는지 알아보고 즐겨찾기에 추가하여
+        마트나 장터에서 와인 선택시 고민을 덜 수 있습니다.
+    </string>
+
+    <string name="type_title_1">스타일</string>
+    <string name="type_title_2">생산지</string>
+    <string name="type_title_3">음식</string>
 
 </resources>

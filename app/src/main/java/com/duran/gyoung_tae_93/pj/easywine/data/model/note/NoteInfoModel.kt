@@ -1,4 +1,4 @@
-package com.duran.gyoung_tae_93.pj.easywine.data.model
+package com.duran.gyoung_tae_93.pj.easywine.data.model.note
 
 import java.io.Serializable
 import java.text.SimpleDateFormat

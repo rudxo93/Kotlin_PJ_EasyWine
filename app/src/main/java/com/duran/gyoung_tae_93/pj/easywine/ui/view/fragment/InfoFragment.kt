@@ -9,9 +9,9 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.duran.gyoung_tae_93.pj.easywine.R
-import com.duran.gyoung_tae_93.pj.easywine.data.model.InfoTitleModel
+import com.duran.gyoung_tae_93.pj.easywine.data.model.info.InfoTitleModel
 import com.duran.gyoung_tae_93.pj.easywine.databinding.FragmentInfoBinding
-import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.InfoLVAdapter
+import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.info.InfoLVAdapter
 import com.duran.gyoung_tae_93.pj.easywine.ui.view.activity.information.*
 
 class InfoFragment : Fragment() {

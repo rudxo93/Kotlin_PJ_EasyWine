@@ -24,7 +24,7 @@ import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import com.bumptech.glide.Glide
 import com.duran.gyoung_tae_93.pj.easywine.R
-import com.duran.gyoung_tae_93.pj.easywine.data.model.NoteInfoModel
+import com.duran.gyoung_tae_93.pj.easywine.data.model.note.NoteInfoModel
 import com.duran.gyoung_tae_93.pj.easywine.databinding.ActivityUpdateNoteBinding
 import com.duran.gyoung_tae_93.pj.easywine.ui.view.activity.MainActivity
 import com.duran.gyoung_tae_93.pj.easywine.util.FBAuth
