@@ -411,9 +411,43 @@
         평소에 선호하던, 관심이 갔던 와인의 지역 또는 준비한 음식과 어떤 와인이 어울리는지 알아보고 즐겨찾기에 추가하여
         마트나 장터에서 와인 선택시 고민을 덜 수 있습니다.
     </string>
-
     <string name="type_title_1">스타일</string>
     <string name="type_title_2">생산지</string>
     <string name="type_title_3">음식</string>
+
+    <!-- Fragment Cava -->
+    <string name="type_style_sparkling_cava_title1">까바</string>
+    <string name="type_style_sparkling_cava_title2">Cava</string>
+
+    <string name="type_style_sparkling_cava_rating_title1">개요</string>
+    <string name="type_style_sparkling_cava_rating_title2">과실 풍미</string>
+    <string name="type_style_sparkling_cava_rating_title3">바디</string>
+    <string name="type_style_sparkling_cava_rating_title4">당도</string>
+    <string name="type_style_sparkling_cava_rating_title5">산도</string>
+    <string name="type_style_sparkling_cava_rating_title6">알코올</string>
+
+    <string name="type_style_sparkling_cava_aroma1">주요 향</string>
+    <string name="type_style_sparkling_cava_aroma_content1">모과 ㅡ 라임 ㅡ 노란사과 ㅡ 배 ㅡ 아몬드</string>
+
+    <string name="type_style_sparkling_cava_aroma2">가능한 향</string>
+    <string name="type_style_sparkling_cava_aroma_title1">허브향 / 꽃향</string>
+    <string name="type_style_sparkling_cava_aroma_content2">사과 꽃, 인동덩굴, 아니스, 시나몬</string>
+    <string name="type_style_sparkling_cava_aroma_title2">감귤류 과일</string>
+    <string name="type_style_sparkling_cava_aroma_content3">라임, 감귤류 껍질, 오렌지</string>
+    <string name="type_style_sparkling_cava_aroma_title3">과실 나무 / 멜론</string>
+    <string name="type_style_sparkling_cava_aroma_content4">모과, 풋사과, 노란 사과, 멍든 사과, 설익은 배, 살구</string>
+    <string name="type_style_sparkling_cava_aroma_title4">레드 과일</string>
+    <string name="type_style_sparkling_cava_aroma_content5">버찌 체리, 딸기</string>
+    <string name="type_style_sparkling_cava_aroma_title5">건과일</string>
+    <string name="type_style_sparkling_cava_aroma_content6">무화과</string>
+    <string name="type_style_sparkling_cava_aroma_title6">토양 / 기타</string>
+    <string name="type_style_sparkling_cava_aroma_content7">분필, 조개 껍질</string>
+    <string name="type_style_sparkling_cava_aroma_title7">이스트</string>
+    <string name="type_style_sparkling_cava_aroma_content8">빵, 발효 반죽 이스트</string>
+    <string name="type_style_sparkling_cava_aroma_title8">오크</string>
+    <string name="type_style_sparkling_cava_aroma_content9">버터, 스모크, 너트맥(육두구)</string>
+    <string name="type_style_sparkling_cava_aroma_title9">3차향</string>
+    <string name="type_style_sparkling_cava_aroma_content10">브리오슈, 토스트, 아몬드</string>
+
 
 </resources>

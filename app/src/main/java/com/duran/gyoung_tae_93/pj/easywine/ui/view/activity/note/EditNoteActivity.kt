@@ -83,8 +83,6 @@ class EditNoteActivity : AppCompatActivity() {
     private val sbLikable by lazy { binding.sbNoteLikable }
     private var resultLikable = 0
 
-    private val btnSave by lazy { binding.btnSaveNote }
-
     private var isImageUpload = false
     private lateinit var photoUri: Uri
 
@@ -107,7 +105,7 @@ class EditNoteActivity : AppCompatActivity() {
      *  노트작성 저장하기 버튼 클릭
      */
     private fun getSaveBtnClick() {
-        btnSave.setOnClickListener {
+        binding.btnSaveNote.setOnClickListener {
             initEmptyCheck()
         }
     }
