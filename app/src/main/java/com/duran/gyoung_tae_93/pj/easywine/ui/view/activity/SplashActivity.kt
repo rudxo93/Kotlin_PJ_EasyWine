@@ -2,24 +2,19 @@ package com.duran.gyoung_tae_93.pj.easywine.ui.view.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.duran.gyoung_tae_93.pj.easywine.R
-import com.duran.gyoung_tae_93.pj.easywine.ui.viewmodel.AuthViewModel
-import com.duran.gyoung_tae_93.pj.easywine.ui.viewmodel.FBViewModel
 import com.duran.gyoung_tae_93.pj.easywine.util.FBAuth
 import com.duran.gyoung_tae_93.pj.easywine.util.FBDocRef
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.ktx.Firebase
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
 
-    private val handler = Handler()
+    private val handler = Handler(Looper.getMainLooper())
     private var SPLASH_TIME: Long = 3000
     private var TAG = SplashActivity::class.java.simpleName
 

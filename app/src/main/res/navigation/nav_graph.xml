@@ -52,7 +52,11 @@
         tools:layout="@layout/fragment_style" >
         <action
             android:id="@+id/action_styleFragment_to_sparklingFragment"
-            app:destination="@id/sparklingFragment" />
+            app:destination="@id/sparklingFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/sparklingFragment"
@@ -61,35 +65,91 @@
         tools:layout="@layout/fragment_sparkling" >
         <action
             android:id="@+id/action_sparklingFragment_to_cavaFragment"
-            app:destination="@id/cavaFragment" />
+            app:destination="@id/cavaFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_sparklingFragment_to_champagneFragment"
-            app:destination="@id/champagneFragment" />
+            app:destination="@id/champagneFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_sparklingFragment_to_lambruscoFragment"
-            app:destination="@id/lambruscoFragment" />
+            app:destination="@id/lambruscoFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_sparklingFragment_to_proseccoFragment"
-            app:destination="@id/proseccoFragment" />
+            app:destination="@id/proseccoFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/cavaFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.sparkling.CavaFragment"
         android:label="fragment_cava"
-        tools:layout="@layout/fragment_cava" />
+        tools:layout="@layout/fragment_cava" >
+        <action
+            android:id="@+id/action_cavaFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/champagneFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.sparkling.ChampagneFragment"
         android:label="fragment_champagne"
-        tools:layout="@layout/fragment_champagne" />
+        tools:layout="@layout/fragment_champagne" >
+        <action
+            android:id="@+id/action_champagneFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/lambruscoFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.sparkling.LambruscoFragment"
         android:label="fragment_lambrusco"
-        tools:layout="@layout/fragment_lambrusco" />
+        tools:layout="@layout/fragment_lambrusco" >
+        <action
+            android:id="@+id/action_lambruscoFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/proseccoFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.sparkling.ProseccoFragment"
         android:label="fragment_prosecco"
-        tools:layout="@layout/fragment_prosecco" />
+        tools:layout="@layout/fragment_prosecco" >
+        <action
+            android:id="@+id/action_proseccoFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

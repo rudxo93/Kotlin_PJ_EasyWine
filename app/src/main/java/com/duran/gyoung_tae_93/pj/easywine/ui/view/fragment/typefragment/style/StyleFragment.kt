@@ -49,7 +49,7 @@ class StyleFragment : Fragment() {
         val item1 = arguments?.getString("item1")
 
         setHideBar()
-        getListView()
+        getListView(item1)
     }
 
     /**
@@ -65,14 +65,14 @@ class StyleFragment : Fragment() {
     /**
      *  ListView setting, Navigation 이동 구현
      */
-    private fun getListView() {
+    private fun getListView(item1: String?) {
         lvAdapter = TypeStyleLVAdapter(items)
         binding.lvTypeStyle.adapter = lvAdapter
 
         binding.lvTypeStyle.setOnItemClickListener { parent, view, position, id ->
             when(id.toInt()) {
                 0 -> {
-                    view.findNavController().navigate(R.id.action_styleFragment_to_sparklingFragment, bundleOf("item1" to "스타일", "item2" to "스파클링 와인"))
+                    view.findNavController().navigate(R.id.action_styleFragment_to_sparklingFragment, bundleOf("item1" to item1, "item2" to "스파클링 와인"))
                 }
                 1 -> {
 

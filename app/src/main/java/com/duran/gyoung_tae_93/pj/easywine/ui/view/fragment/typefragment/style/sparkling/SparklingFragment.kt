@@ -1,19 +1,16 @@
 package com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.sparkling
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.duran.gyoung_tae_93.pj.easywine.R
-import com.duran.gyoung_tae_93.pj.easywine.data.model.type.TypeStyleModel
 import com.duran.gyoung_tae_93.pj.easywine.data.model.type.style.SparklingModel
 import com.duran.gyoung_tae_93.pj.easywine.databinding.FragmentSparklingBinding
-import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.type.TypeStyleLVAdapter
 import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.type.style.StyleSparklingLVAdapter
 
 class SparklingFragment : Fragment() {
@@ -44,29 +41,32 @@ class SparklingFragment : Fragment() {
         val item1 = arguments?.getString("item1")
         val item2 = arguments?.getString("item2")
 
-        getListView()
+        getListView(item1, item2)
     }
 
     /**
      *  ListView setting, Navigation 이동 구현
      */
-    private fun getListView() {
+    private fun getListView(item1: String?, item2: String?) {
         lvAdapter = StyleSparklingLVAdapter(items)
         binding.lvTypeStyleSparkling.adapter = lvAdapter
 
         binding.lvTypeStyleSparkling.setOnItemClickListener { parent, view, position, id ->
-            when(id.toInt()) {
+            when (id.toInt()) {
                 0 -> {
-                    view.findNavController().navigate(R.id.action_sparklingFragment_to_cavaFragment, bundleOf("item1" to "스타일", "item2" to "스파클링 와인", "item3" to "까바"))
+                    view.findNavController().navigate(R.id.action_sparklingFragment_to_cavaFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "까바"))
                 }
                 1 -> {
-                    view.findNavController().navigate(R.id.action_sparklingFragment_to_champagneFragment, bundleOf("item1" to "스타일", "item2" to "스파클링 와인", "item3" to "샴페인"))
+                    view.findNavController()
+                        .navigate(R.id.action_sparklingFragment_to_champagneFragment)
                 }
                 2 -> {
-                    view.findNavController().navigate(R.id.action_sparklingFragment_to_lambruscoFragment, bundleOf("item1" to "스타일", "item2" to "스파클링 와인", "item3" to "람브루스코"))
+                    view.findNavController()
+                        .navigate(R.id.action_sparklingFragment_to_lambruscoFragment)
                 }
                 3 -> {
-                    view.findNavController().navigate(R.id.action_sparklingFragment_to_proseccoFragment, bundleOf("item1" to "스타일", "item2" to "스파클링 와인", "item3" to "프로세코"))
+                    view.findNavController()
+                        .navigate(R.id.action_sparklingFragment_to_proseccoFragment)
                 }
             }
         }
