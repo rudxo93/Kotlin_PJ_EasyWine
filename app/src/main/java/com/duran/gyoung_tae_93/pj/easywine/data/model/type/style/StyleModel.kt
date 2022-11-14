@@ -4,8 +4,7 @@ import java.io.Serializable
 
 data class StyleModel(
     var uid: String? = null,
-    var wineTitle1: String? = null,
-    var wineTitle2: String? = null,
+    var wineTitle: String? = null,
     var aroma: String? = null,
     var ratingFlavor: Float = 0.0F,
     var ratingBody: Float = 0.0F,

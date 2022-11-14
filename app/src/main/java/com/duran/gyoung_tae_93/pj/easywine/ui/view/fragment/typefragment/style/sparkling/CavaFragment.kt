@@ -135,8 +135,7 @@ class CavaFragment : Fragment() {
 
     // 즐겨찾기 추가
     private fun getSaveStyle() {
-        val title1 = item3.toString()
-        val title2 = binding.tvWineTitle.text.toString()
+        val title = item3.toString()
         val aroma = binding.tvWineAroma.text.toString()
         val ratingFlavor = binding.wineRatingFlavor.rating
         val ratingBody = binding.wineRatingBody.rating
@@ -148,8 +147,7 @@ class CavaFragment : Fragment() {
         CoroutineScope(Dispatchers.IO).launch {
             val wineType = StyleModel(
                 FBAuth.getUid(),
-                title1,
-                title2,
+                title,
                 aroma,
                 ratingFlavor,
                 ratingBody,
