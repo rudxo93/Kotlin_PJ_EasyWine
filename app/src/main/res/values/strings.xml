@@ -415,39 +415,81 @@
     <string name="type_title_2">생산지</string>
     <string name="type_title_3">음식</string>
 
+    <!-- About Style -->
+    <string name="type_style_top">Type : </string>
+
+    <string name="type_style_rating_title1">개요</string>
+    <string name="type_style_rating_title2">과실 풍미</string>
+    <string name="type_style_rating_title3">바디</string>
+    <string name="type_style_rating_title4">당도</string>
+    <string name="type_style_rating_title5">산도</string>
+    <string name="type_style_rating_title6">알코올</string>
+
+    <string name="type_style_aroma1">주요 향</string>
+    <string name="type_style_aroma2">가능한 향</string>
+
+    <string name="type_style_aroma_herb">허브향 / 꽃향</string>
+    <string name="type_style_aroma_citrus">감귤류 과일</string>
+    <string name="type_style_aroma_fruit">과실 나무 / 멜론</string>
+    <string name="type_style_aroma_tropical_fruit">열대 과일</string>
+    <string name="type_style_aroma_red_fruit">레드 과일</string>
+    <string name="type_style_aroma_black_fruit">블랙 과일</string>
+    <string name="type_style_aroma_dried_fruit">건과일</string>
+    <string name="type_style_aroma_soil_and_etc">토양 / 기타</string>
+    <string name="type_style_aroma_second">2차 향</string>
+    <string name="type_style_aroma_oak">오크</string>
+    <string name="type_style_aroma_third">3차향</string>
     <!-- Fragment Cava -->
-    <string name="type_style_sparkling_cava_title1">까바</string>
-    <string name="type_style_sparkling_cava_title2">Cava</string>
+    <string name="type_style_sparkling_cava_title">Cava</string>
 
-    <string name="type_style_sparkling_cava_rating_title1">개요</string>
-    <string name="type_style_sparkling_cava_rating_title2">과실 풍미</string>
-    <string name="type_style_sparkling_cava_rating_title3">바디</string>
-    <string name="type_style_sparkling_cava_rating_title4">당도</string>
-    <string name="type_style_sparkling_cava_rating_title5">산도</string>
-    <string name="type_style_sparkling_cava_rating_title6">알코올</string>
-
-    <string name="type_style_sparkling_cava_aroma1">주요 향</string>
     <string name="type_style_sparkling_cava_aroma_content1">모과 ㅡ 라임 ㅡ 노란사과 ㅡ 배 ㅡ 아몬드</string>
 
-    <string name="type_style_sparkling_cava_aroma2">가능한 향</string>
-    <string name="type_style_sparkling_cava_aroma_title1">허브향 / 꽃향</string>
     <string name="type_style_sparkling_cava_aroma_content2">사과 꽃, 인동덩굴, 아니스, 시나몬</string>
-    <string name="type_style_sparkling_cava_aroma_title2">감귤류 과일</string>
     <string name="type_style_sparkling_cava_aroma_content3">라임, 감귤류 껍질, 오렌지</string>
-    <string name="type_style_sparkling_cava_aroma_title3">과실 나무 / 멜론</string>
     <string name="type_style_sparkling_cava_aroma_content4">모과, 풋사과, 노란 사과, 멍든 사과, 설익은 배, 살구</string>
-    <string name="type_style_sparkling_cava_aroma_title4">레드 과일</string>
     <string name="type_style_sparkling_cava_aroma_content5">버찌 체리, 딸기</string>
-    <string name="type_style_sparkling_cava_aroma_title5">건과일</string>
     <string name="type_style_sparkling_cava_aroma_content6">무화과</string>
-    <string name="type_style_sparkling_cava_aroma_title6">토양 / 기타</string>
     <string name="type_style_sparkling_cava_aroma_content7">분필, 조개 껍질</string>
-    <string name="type_style_sparkling_cava_aroma_title7">이스트</string>
     <string name="type_style_sparkling_cava_aroma_content8">빵, 발효 반죽 이스트</string>
-    <string name="type_style_sparkling_cava_aroma_title8">오크</string>
     <string name="type_style_sparkling_cava_aroma_content9">버터, 스모크, 너트맥(육두구)</string>
-    <string name="type_style_sparkling_cava_aroma_title9">3차향</string>
     <string name="type_style_sparkling_cava_aroma_content10">브리오슈, 토스트, 아몬드</string>
 
+    <!-- Fragment Champagne -->
+    <string name="type_style_sparkling_champagne_title">Champagne</string>
+
+    <string name="type_style_sparkling_champagne_aroma_content1">감귤류 ㅡ 복숭아 ㅡ 화이트 체리 ㅡ 아몬드 ㅡ 토스트</string>
+
+    <string name="type_style_sparkling_champagne_aroma_content2">백합, 캐모마일, 인동덩굴, 아몬드</string>
+    <string name="type_style_sparkling_champagne_aroma_content3">레몬 속껍질, 레몬, 자몽, 오렌지 껍질, 레몬 커드</string>
+    <string name="type_style_sparkling_champagne_aroma_content4">모과, 배, 허니듀 멜론, 노란 사과, 살구, 복숭아</string>
+    <string name="type_style_sparkling_champagne_aroma_content5">딸기, 화이트 체리, 라즈베리, 레드 커런트, 레드 자두</string>
+    <string name="type_style_sparkling_champagne_aroma_content6">무화과, 건포도, 건살구</string>
+    <string name="type_style_sparkling_champagne_aroma_content7">꿀, 생강, 젖은 자갈, 분필 먼지, 스모크</string>
+    <string name="type_style_sparkling_champagne_aroma_content8">크림</string>
+    <string name="type_style_sparkling_champagne_aroma_content9">바닐라, 마지팬, 코코넛, 페이스트리</string>
+    <string name="type_style_sparkling_champagne_aroma_content10">아몬드, 잣, 헤이즐럿, 비스킷, 브리오슈, 비스코티, 토스트</string>
+
+    <!-- Fragment Lambrusco -->
+    <string name="type_style_sparkling_lambrusco_title">Lambrusco</string>
+
+    <string name="type_style_sparkling_lambrusco_aroma_content1">딸기 ㅡ 체리 ㅡ 보이젠베리 ㅡ 루바브 ㅡ 히비스커스</string>
+
+    <string name="type_style_sparkling_lambrusco_aroma_content2">히비스커스, 아이리스, 장미, 제비꽃, 루바브, 오레가노, 아니스</string>
+    <string name="type_style_sparkling_lambrusco_aroma_content3">레드 커런트, 빙체리, 체리 콜라, 산딸기, 라즈베리</string>
+    <string name="type_style_sparkling_lambrusco_aroma_content4">보이젠베리, 블랙베리, 블루베리, 베리 소스</string>
+    <string name="type_style_sparkling_lambrusco_aroma_content5">화분용 영양토</string>
+    <string name="type_style_sparkling_lambrusco_aroma_content6">신선한 크림</string>
+
+    <!-- Fragment Prosecco -->
+    <string name="type_style_sparkling_prosecco_title">Prosecco</string>
+
+    <string name="type_style_sparkling_prosecco_aroma_content1">풋사과 ㅡ 허니듀 멜론 ㅡ 배 ㅡ 인동덩굴 ㅡ 크림</string>
+
+    <string name="type_style_sparkling_prosecco_aroma_content2">레몬, 레몬 속껍질, 자몽, 오렌지 껍질</string>
+    <string name="type_style_sparkling_prosecco_aroma_content3">모과, 풋사과, 배, 노란 사과, 허니듀 멜론, 백도, 살구</string>
+    <string name="type_style_sparkling_prosecco_aroma_content4">키위, 파인애플, 프루트 컵</string>
+    <string name="type_style_sparkling_prosecco_aroma_content5">아카시아, 인동덩굴, 치자, 감귤류 꽃</string>
+    <string name="type_style_sparkling_prosecco_aroma_content6">꿀, 염분</string>
+    <string name="type_style_sparkling_prosecco_aroma_content7">크림</string>
 
 </resources>

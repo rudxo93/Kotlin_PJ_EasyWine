@@ -26,10 +26,10 @@ class CavaFragment : Fragment() {
     lateinit var style: StyleModel
     var noteId = ""
 
-    private val title1 by lazy { binding.tvWineTitle1 }
-    private val title2 by lazy { binding.tvWineTitle2 }
-
     var topType: String? = null
+    var item1: String? = null
+    var item2: String? = null
+    var item3: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +38,7 @@ class CavaFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_cava, container, false)
         return binding.root
     }
@@ -48,13 +48,19 @@ class CavaFragment : Fragment() {
 
         binding.fg = this
 
-        val item1 = arguments?.getString("item1")
-        val item2 = arguments?.getString("item2")
-        val item3 = arguments?.getString("item3")
+        item1 = arguments?.getString("item1")
+        item2 = arguments?.getString("item2")
+        item3 = arguments?.getString("item3")
 
-        topType = "$item1  >  $item2  >  $item3"
-
+        setTopType()
         setFabButton()
+    }
+
+    /**
+     *  상단 Type text
+     */
+    private fun setTopType() {
+        topType = "$item1  >  $item2  >  $item3"
     }
 
     /**
@@ -96,7 +102,7 @@ class CavaFragment : Fragment() {
     private fun setFavoriteClick() {
         // 즐겨찾기가 등록되있는지 조회
         FBDocRef.fbDB.collection("wine_type").document(FBAuth.getUid())
-            .collection("style").whereEqualTo("wineTitle1", title1.text.toString()).get()
+            .collection("style").whereEqualTo("wineTitle1", item3.toString()).get()
             .addOnSuccessListener { result ->
 
                 if (result.documentChanges.isEmpty()) {
@@ -110,7 +116,7 @@ class CavaFragment : Fragment() {
     // 즐겨찾기에 해당 와인이 존재 -> DocumentId를 찾아서 삭제
     private fun getStyleDocId() {
         FBDocRef.fbDB.collection("wine_type").document(FBAuth.getUid())
-            .collection("style").whereEqualTo("wineTitle1", title1.text.toString()).get()
+            .collection("style").whereEqualTo("wineTitle1", item3.toString()).get()
             .addOnSuccessListener { result ->
 
                 for (item in result.documentChanges) noteId = item.document.id
@@ -129,8 +135,8 @@ class CavaFragment : Fragment() {
 
     // 즐겨찾기 추가
     private fun getSaveStyle() {
-        val title1 = title1.text.toString()
-        val title2 = title2.text.toString()
+        val title1 = item3.toString()
+        val title2 = binding.tvWineTitle.text.toString()
         val aroma = binding.tvWineAroma.text.toString()
         val ratingFlavor = binding.wineRatingFlavor.rating
         val ratingBody = binding.wineRatingBody.rating

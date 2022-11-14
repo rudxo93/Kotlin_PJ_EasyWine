@@ -69,7 +69,7 @@ class StyleFragment : Fragment() {
         lvAdapter = TypeStyleLVAdapter(items)
         binding.lvTypeStyle.adapter = lvAdapter
 
-        binding.lvTypeStyle.setOnItemClickListener { parent, view, position, id ->
+        binding.lvTypeStyle.setOnItemClickListener { _, view, _, id ->
             when(id.toInt()) {
                 0 -> {
                     view.findNavController().navigate(R.id.action_styleFragment_to_sparklingFragment, bundleOf("item1" to item1, "item2" to "스파클링 와인"))

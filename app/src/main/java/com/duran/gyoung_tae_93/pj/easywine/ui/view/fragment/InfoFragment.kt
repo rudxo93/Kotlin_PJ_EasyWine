@@ -57,7 +57,7 @@ class InfoFragment : Fragment() {
         lvAdapter = InfoLVAdapter(items)
         binding.lvInfo.adapter = lvAdapter
 
-        binding.lvInfo.setOnItemClickListener { parent, view, position, id ->
+        binding.lvInfo.setOnItemClickListener { _, _, _, id ->
             Log.e(TAG, id.toString())
             when (id.toInt()) {
                 0 -> {

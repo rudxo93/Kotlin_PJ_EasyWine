@@ -51,22 +51,23 @@ class SparklingFragment : Fragment() {
         lvAdapter = StyleSparklingLVAdapter(items)
         binding.lvTypeStyleSparkling.adapter = lvAdapter
 
-        binding.lvTypeStyleSparkling.setOnItemClickListener { parent, view, position, id ->
+        binding.lvTypeStyleSparkling.setOnItemClickListener { _, view, _, id ->
             when (id.toInt()) {
                 0 -> {
-                    view.findNavController().navigate(R.id.action_sparklingFragment_to_cavaFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "까바"))
+                    view.findNavController()
+                        .navigate(R.id.action_sparklingFragment_to_cavaFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "까바"))
                 }
                 1 -> {
                     view.findNavController()
-                        .navigate(R.id.action_sparklingFragment_to_champagneFragment)
+                        .navigate(R.id.action_sparklingFragment_to_champagneFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "샴페인"))
                 }
                 2 -> {
                     view.findNavController()
-                        .navigate(R.id.action_sparklingFragment_to_lambruscoFragment)
+                        .navigate(R.id.action_sparklingFragment_to_lambruscoFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "람브루스코"))
                 }
                 3 -> {
                     view.findNavController()
-                        .navigate(R.id.action_sparklingFragment_to_proseccoFragment)
+                        .navigate(R.id.action_sparklingFragment_to_proseccoFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "프로세코"))
                 }
             }
         }
