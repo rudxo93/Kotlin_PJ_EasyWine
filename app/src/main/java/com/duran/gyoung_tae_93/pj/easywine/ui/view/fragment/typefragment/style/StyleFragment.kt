@@ -75,7 +75,7 @@ class StyleFragment : Fragment() {
                     view.findNavController().navigate(R.id.action_styleFragment_to_sparklingFragment, bundleOf("item1" to item1, "item2" to "스파클링 와인"))
                 }
                 1 -> {
-
+                    view.findNavController().navigate(R.id.action_styleFragment_to_lightBodyWhiteFragment, bundleOf("item1" to item1, "item2" to "라이트 바디 화이트 와인"))
                 }
                 2 -> {
 

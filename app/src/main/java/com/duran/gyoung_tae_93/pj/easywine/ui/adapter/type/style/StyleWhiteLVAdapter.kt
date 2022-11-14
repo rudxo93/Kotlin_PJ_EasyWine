@@ -11,7 +11,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.duran.gyoung_tae_93.pj.easywine.R
 import com.duran.gyoung_tae_93.pj.easywine.data.model.type.style.VarietyModel
 
-class StyleSparklingLVAdapter(val items: MutableList<VarietyModel>) : BaseAdapter() {
+class StyleWhiteLVAdapter(val items: MutableList<VarietyModel>) : BaseAdapter() {
 
     override fun getCount(): Int {
         return items.size
@@ -36,7 +36,7 @@ class StyleSparklingLVAdapter(val items: MutableList<VarietyModel>) : BaseAdapte
 
         layout?.setBackgroundResource(R.drawable.radius_type_style_white_wine)
         title!!.text = items[position].title
-        icon!!.setImageResource(R.drawable.ic_sparkling_wine_icon)
+        icon!!.setImageResource(R.drawable.ic_white_wine_icon)
 
         return v
     }

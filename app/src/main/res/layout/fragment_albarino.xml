@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.view.fragment.typefragment.style.sparkling.CavaFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.view.fragment.typefragment.style.lbodywhite.AlbarinoFragment">
 
     <data>
         <variable
             name="fg"
-            type="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.sparkling.CavaFragment" />
+            type="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.lbodywhite.AlbarinoFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -61,7 +61,7 @@
             android:layout_width="230dp"
             android:layout_height="230dp"
             android:layout_marginTop="70dp"
-            android:src="@drawable/wine_cava_label"
+            android:src="@drawable/wine_albarino_label"
             android:scaleType="fitEnd"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -84,7 +84,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_sparkling_wine_icon"
+                    android:src="@drawable/ic_white_wine_icon"
                     tools:ignore="ContentDescription" />
 
                 <TextView
@@ -170,7 +170,7 @@
                         android:layout_height="20dp"
                         android:numStars="5"
                         android:progressTint="@color/main_wine_color"
-                        android:rating="3"
+                        android:rating="4"
                         android:stepSize="1" />
 
                     <RatingBar
@@ -203,7 +203,7 @@
                         android:layout_marginTop="5dp"
                         android:numStars="5"
                         android:progressTint="@color/main_wine_color"
-                        android:rating="4"
+                        android:rating="5"
                         android:stepSize="1" />
 
                     <RatingBar
@@ -214,7 +214,7 @@
                         android:layout_marginTop="5dp"
                         android:numStars="5"
                         android:progressTint="@color/main_wine_color"
-                        android:rating="2"
+                        android:rating="3"
                         android:stepSize="1" />
 
                 </LinearLayout>
@@ -236,7 +236,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_sparkling_wine_icon"
+                        android:src="@drawable/ic_white_wine_icon"
                         tools:ignore="ContentDescription" />
 
                     <TextView
@@ -257,7 +257,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:gravity="start|center"
-                    android:text="@string/type_style_sparkling_cava_aroma_content1"
+                    android:text="@string/type_style_white_albarino_aroma_content1"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -278,7 +278,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_sparkling_wine_icon"
+                        android:src="@drawable/ic_white_wine_icon"
                         tools:ignore="ContentDescription" />
 
                     <TextView
@@ -316,7 +316,7 @@
                             android:layout_marginStart="5dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/type_style_sparkling_cava_aroma_content2"
+                            android:text="@string/type_style_white_albarino_aroma_content2"
                             android:textColor="@color/black"
                             android:textSize="13sp" />
 
@@ -340,7 +340,7 @@
                             android:layout_marginStart="5dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/type_style_sparkling_cava_aroma_content3"
+                            android:text="@string/type_style_white_albarino_aroma_content3"
                             android:textColor="@color/black"
                             android:textSize="13sp" />
 
@@ -364,7 +364,7 @@
                             android:layout_marginStart="5dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/type_style_sparkling_cava_aroma_content4"
+                            android:text="@string/type_style_white_albarino_aroma_content4"
                             android:textColor="@color/black"
                             android:textSize="13sp" />
 
@@ -380,7 +380,7 @@
                             android:layout_width="100dp"
                             android:layout_height="20dp"
                             android:gravity="start|center"
-                            android:text="@string/type_style_aroma_red_fruit"
+                            android:text="@string/type_style_aroma_tropical_fruit"
                             android:textColor="@color/black"
                             android:textSize="13sp" />
 
@@ -388,31 +388,7 @@
                             android:layout_marginStart="5dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/type_style_sparkling_cava_aroma_content5"
-                            android:textColor="@color/black"
-                            android:textSize="13sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="100dp"
-                            android:layout_height="20dp"
-                            android:gravity="start|center"
-                            android:text="@string/type_style_aroma_dried_fruit"
-                            android:textColor="@color/black"
-                            android:textSize="13sp" />
-
-                        <TextView
-                            android:layout_marginStart="5dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/type_style_sparkling_cava_aroma_content6"
+                            android:text="@string/type_style_white_albarino_aroma_content5"
                             android:textColor="@color/black"
                             android:textSize="13sp" />
 
@@ -436,79 +412,7 @@
                             android:layout_marginStart="5dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/type_style_sparkling_cava_aroma_content7"
-                            android:textColor="@color/black"
-                            android:textSize="13sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="100dp"
-                            android:layout_height="20dp"
-                            android:gravity="start|center"
-                            android:text="@string/type_style_aroma_second"
-                            android:textColor="@color/black"
-                            android:textSize="13sp" />
-
-                        <TextView
-                            android:layout_marginStart="5dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/type_style_sparkling_cava_aroma_content8"
-                            android:textColor="@color/black"
-                            android:textSize="13sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="100dp"
-                            android:layout_height="20dp"
-                            android:gravity="start|center"
-                            android:text="@string/type_style_aroma_oak"
-                            android:textColor="@color/black"
-                            android:textSize="13sp" />
-
-                        <TextView
-                            android:layout_marginStart="5dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/type_style_sparkling_cava_aroma_content9"
-                            android:textColor="@color/black"
-                            android:textSize="13sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="100dp"
-                            android:layout_height="20dp"
-                            android:gravity="start|center"
-                            android:text="@string/type_style_aroma_third"
-                            android:textColor="@color/black"
-                            android:textSize="13sp" />
-
-                        <TextView
-                            android:layout_marginStart="5dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/type_style_sparkling_cava_aroma_content10"
+                            android:text="@string/type_style_white_albarino_aroma_content6"
                             android:textColor="@color/black"
                             android:textSize="13sp" />
 

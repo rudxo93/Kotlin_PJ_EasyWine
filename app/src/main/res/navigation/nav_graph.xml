@@ -57,6 +57,13 @@
             app:exitAnim="@android:anim/slide_out_right"
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_styleFragment_to_lightBodyWhiteFragment"
+            app:destination="@id/lightBodyWhiteFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/sparklingFragment"
@@ -144,6 +151,166 @@
         tools:layout="@layout/fragment_prosecco" >
         <action
             android:id="@+id/action_proseccoFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/lightBodyWhiteFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.lbodywhite.LightBodyWhiteFragment"
+        android:label="fragment_light_body_white"
+        tools:layout="@layout/fragment_light_body_white" >
+        <action
+            android:id="@+id/action_lightBodyWhiteFragment_to_albarinoFragment"
+            app:destination="@id/albarinoFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_lightBodyWhiteFragment_to_gruenerFragment"
+            app:destination="@id/gruenerFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_lightBodyWhiteFragment_to_muscadetFragment"
+            app:destination="@id/muscadetFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_lightBodyWhiteFragment_to_pinotGrisFragment"
+            app:destination="@id/pinotGrisFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_lightBodyWhiteFragment_to_sauvignonBlancFragment"
+            app:destination="@id/sauvignonBlancFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_lightBodyWhiteFragment_to_soaveFragment"
+            app:destination="@id/soaveFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_lightBodyWhiteFragment_to_vermentinoFragment"
+            app:destination="@id/vermentinoFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/albarinoFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.lbodywhite.AlbarinoFragment"
+        android:label="fragment_albarino"
+        tools:layout="@layout/fragment_albarino" >
+        <action
+            android:id="@+id/action_albarinoFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/gruenerFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.lbodywhite.GruenerFragment"
+        android:label="fragment_gruener"
+        tools:layout="@layout/fragment_gruener" >
+        <action
+            android:id="@+id/action_gruenerFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/muscadetFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.lbodywhite.MuscadetFragment"
+        android:label="fragment_muscadet"
+        tools:layout="@layout/fragment_muscadet" >
+        <action
+            android:id="@+id/action_muscadetFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/pinotGrisFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.lbodywhite.PinotGrisFragment"
+        android:label="fragment_pinot_gris"
+        tools:layout="@layout/fragment_pinot_gris" >
+        <action
+            android:id="@+id/action_pinotGrisFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/sauvignonBlancFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.lbodywhite.SauvignonBlancFragment"
+        android:label="fragment_sauvignon_blanc"
+        tools:layout="@layout/fragment_sauvignon_blanc" >
+        <action
+            android:id="@+id/action_sauvignonBlancFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/soaveFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.lbodywhite.SoaveFragment"
+        android:label="fragment_soave"
+        tools:layout="@layout/fragment_soave" >
+        <action
+            android:id="@+id/action_soaveFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/vermentinoFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.lbodywhite.VermentinoFragment"
+        android:label="fragment_vermentino"
+        tools:layout="@layout/fragment_vermentino" >
+        <action
+            android:id="@+id/action_vermentinoFragment_to_fragment_type"
             app:destination="@id/fragment_type"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right"

@@ -9,7 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.duran.gyoung_tae_93.pj.easywine.R
-import com.duran.gyoung_tae_93.pj.easywine.data.model.type.style.SparklingModel
+import com.duran.gyoung_tae_93.pj.easywine.data.model.type.style.VarietyModel
 import com.duran.gyoung_tae_93.pj.easywine.databinding.FragmentSparklingBinding
 import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.type.style.StyleSparklingLVAdapter
 
@@ -18,14 +18,14 @@ class SparklingFragment : Fragment() {
     private lateinit var binding: FragmentSparklingBinding
 
     lateinit var lvAdapter: StyleSparklingLVAdapter
-    val items = mutableListOf<SparklingModel>()
+    val items = mutableListOf<VarietyModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        items.add(SparklingModel(0, "까바"))
-        items.add(SparklingModel(1, "샴페인"))
-        items.add(SparklingModel(2, "람브루스코"))
-        items.add(SparklingModel(3, "프로세코"))
+        items.add(VarietyModel(0, "까바"))
+        items.add(VarietyModel(1, "샴페인"))
+        items.add(VarietyModel(2, "람브루스코"))
+        items.add(VarietyModel(3, "프로세코"))
     }
 
     override fun onCreateView(
