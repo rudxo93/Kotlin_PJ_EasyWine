@@ -438,7 +438,7 @@
     <string name="type_style_aroma_soil_and_etc">토양 / 기타</string>
     <string name="type_style_aroma_second">2차 향</string>
     <string name="type_style_aroma_oak">오크</string>
-    <string name="type_style_aroma_third">3차향</string>
+    <string name="type_style_aroma_third">3차 향</string>
     <!-- Fragment Cava -->
     <string name="type_style_sparkling_cava_aroma_content1">모과 ㅡ 라임 ㅡ 노란사과 ㅡ 배 ㅡ 아몬드</string>
 
@@ -554,5 +554,101 @@
     <string name="type_style_white_vermentino_aroma_content4">풋사과, 노란 사과, 배, 백도</string>
     <string name="type_style_white_vermentino_aroma_content5">그린 파인애플, 망고, 파인애플</string>
     <string name="type_style_white_vermentino_aroma_content6">아몬드, 염분, 비 냄새</string>
+
+    <!-- Fragment Chardonnay -->
+    <string name="type_style_white_chardonnay_aroma_content1">노란 사과 ㅡ 스타푸르트 ㅡ 파인애플 ㅡ 버터 ㅡ 분필</string>
+
+    <string name="type_style_white_chardonnay_aroma_content2">감귤류 꽃</string>
+    <string name="type_style_white_chardonnay_aroma_content3">메이어 레몬, 라임 껍질</string>
+    <string name="type_style_white_chardonnay_aroma_content4">노란 사과, 허니듀 멜론, 동양 배, 배, 백도, 살구</string>
+    <string name="type_style_white_chardonnay_aroma_content5">스타프루트, 망고, 파인애플</string>
+    <string name="type_style_white_chardonnay_aroma_content6">분필, 염분, 으깬 자갈</string>
+    <string name="type_style_white_chardonnay_aroma_content7">버섯, 버터, 커드(응유), 신선한 크림, 토스트</string>
+    <string name="type_style_white_chardonnay_aroma_content8">바닐라, 파이 크러스트, 베이킹 양념, 토피, 탄 카라멜, 크렘 브륄레</string>
+    <string name="type_style_white_chardonnay_aroma_content9">헤이즐넛, 아몬드</string>
+
+    <!-- Fragment Marsanne -->
+    <string name="type_style_white_marsanne_aroma_content1">모과 ㅡ 만다린 오렌지 ㅡ 살구 ㅡ 아카시아 ㅡ 밀랍</string>
+
+    <string name="type_style_white_marsanne_aroma_content2">자스민, 수선화, 감귤류 꽃, 인동덩굴, 아카시아, 그린 아몬드, 어린 잎 채소</string>
+    <string name="type_style_white_marsanne_aroma_content3">메이어 레몬, 만다린 오렌지, 레몬 껍질, 마멀레이드</string>
+    <string name="type_style_white_marsanne_aroma_content4">모과, 그린 사과, 아시안 배, 구운 사과, 허니듀 멜론, 복숭아, 살구</string>
+    <string name="type_style_white_marsanne_aroma_content5">그릴 파인애플</string>
+    <string name="type_style_white_marsanne_aroma_content6">밀랍, 꿀, 생강</string>
+    <string name="type_style_white_marsanne_aroma_content7">크림, 기름</string>
+    <string name="type_style_white_marsanne_aroma_content8">카라멜, 버터, 브리오슈, 바닐라</string>
+
+    <!-- Fragment Semillon -->
+    <string name="type_style_white_semillon_aroma_content1">레몬 ㅡ 밀랍 ㅡ 황도 ㅡ 카모마일 ㅡ 염분</string>
+
+    <string name="type_style_white_semillon_aroma_content2">카모마일, 인동덩굴, 아카시아, 짚</string>
+    <string name="type_style_white_semillon_aroma_content3">키 라임, 레몬, 레몬 껍질, 자몽, 오렌지 껍질</string>
+    <string name="type_style_white_semillon_aroma_content4">그린 무화과, 멜론 껍질, 그린 사과, 그린 배, 황도, 살구</string>
+    <string name="type_style_white_semillon_aroma_content5">파파야</string>
+    <string name="type_style_white_semillon_aroma_content6">염분, 꿀, 생강, 밀랍</string>
+    <string name="type_style_white_semillon_aroma_content7">기름, 레몬 커드, 라놀린</string>
+    <string name="type_style_white_semillon_aroma_content8">바닐라, 마카다미아, 버터 팝콘, 크렘 브륄레, 파이 껍질</string>
+
+    <!-- Fragment Viognier -->
+    <string name="type_style_white_viognier_aroma_content1">탠저린 ㅡ 복숭아 ㅡ 망고 ㅡ 인동덩굴 ㅡ 장미</string>
+
+    <string name="type_style_white_viognier_aroma_content2">인동덩굴, 제비꽃, 오렌지 꽃, 장미, 장미수, 포푸리, 백 후추, 아니스</string>
+    <string name="type_style_white_viognier_aroma_content3">라임, 레몬, 오렌지, 탠저린</string>
+    <string name="type_style_white_viognier_aroma_content4">허니듀 멜론, 승도 복숭아, 복숭아, 살구</string>
+    <string name="type_style_white_viognier_aroma_content5">망고, 파인애플</string>
+    <string name="type_style_white_viognier_aroma_content6">분필, 으깬 자갈</string>
+    <string name="type_style_white_viognier_aroma_content7">기름, 아몬드, 크림</string>
+    <string name="type_style_white_viognier_aroma_content8">바닐라, 카라멜, 갈색 버터, 메이스, 올스파이스</string>
+
+    <!-- Fragment Chenin Blanc -->
+    <string name="type_style_white_chenin_blanc_aroma_content1">레몬 ㅡ 노란 사과 ㅡ 배 ㅡ 꿀 ㅡ 카모마일</string>
+
+    <string name="type_style_white_chenin_blanc_aroma_content2">인동덩굴, 카모마일, 감귤류 꽃, 자스민, 아카시아</string>
+    <string name="type_style_white_chenin_blanc_aroma_content3">라임, 레몬, 레몬 껍질, 포멜로(중국 자몽)</string>
+    <string name="type_style_white_chenin_blanc_aroma_content4">그린 무화과, 허니듀 멜론, 노란 사과, 배, 백도</string>
+    <string name="type_style_white_chenin_blanc_aroma_content5">파인애플, 패션 프루트</string>
+    <string name="type_style_white_chenin_blanc_aroma_content6">노란 포도</string>
+    <string name="type_style_white_chenin_blanc_aroma_content7">꿀, 마지팬, 모든 양념, 생강, 분필</string>
+    <string name="type_style_white_chenin_blanc_aroma_content8">빵 이스트, 크림, 오일, 소금 버터, 레몬 커드</string>
+    <string name="type_style_white_chenin_blanc_aroma_content9">헤이즐넛</string>
+
+    <!-- Fragment Gewurztraminer -->
+    <string name="type_style_white_gewurztraminer_aroma_content1">리치 ㅡ 장미 ㅡ 핑크 자몽 ㅡ 탠저린 ㅡ 구아바</string>
+
+    <string name="type_style_white_gewurztraminer_aroma_content2">장미, 아카시아, 포푸리, 시나몬 원액, 달콤한 생강, 타라곤</string>
+    <string name="type_style_white_gewurztraminer_aroma_content3">레몬 껍질, 오렌지 껍질, 핑크 자몽, 탠저린</string>
+    <string name="type_style_white_gewurztraminer_aroma_content4">백도, 미라벨 자두</string>
+    <string name="type_style_white_gewurztraminer_aroma_content5">구아바, 리치, 망고</string>
+    <string name="type_style_white_gewurztraminer_aroma_content6">소금, 강한 담배향, 꿀, 이국적 향신료</string>
+    <string name="type_style_white_gewurztraminer_aroma_content7">오일, 크림</string>
+
+    <!-- Fragment Muscat Blanc -->
+    <string name="type_style_white_muscat_blanc_aroma_content1">메이어 레몬 ㅡ 만다린 오렌지 ㅡ 배 ㅡ 오렌지 꽃 ㅡ 인동덩굴</string>
+
+    <string name="type_style_white_muscat_blanc_aroma_content2">향수, 인동덩굴, 오렌지 꽃, 바닐라 콩, 고수, 너트맥(육두구)</string>
+    <string name="type_style_white_muscat_blanc_aroma_content3">메이어 레몬, 만다린 오렌지, 탠저린</string>
+    <string name="type_style_white_muscat_blanc_aroma_content4">모과, 신선한 포도, 허니듀 멜론, 연분홍 사과, 배, 복숭아, 살구</string>
+    <string name="type_style_white_muscat_blanc_aroma_content5">리치, 파인애플</string>
+    <string name="type_style_white_muscat_blanc_aroma_content6">포도</string>
+    <string name="type_style_white_muscat_blanc_aroma_content7">생강, 꿀</string>
+
+    <!-- Fragment Riesling -->
+    <string name="type_style_white_riesling_aroma_content1">라임 ㅡ 풋사과 ㅡ 밀랍 ㅡ 자스민 ㅡ 석유</string>
+
+    <string name="type_style_white_riesling_aroma_content2">자스민, 인동덩굴, 바닐라, 너트맥(육두구), 시나몬, 백 후추, 타이 바질, 로즈마리</string>
+    <string name="type_style_white_riesling_aroma_content3">라임, 레몬, 감귤류 껍질, 핑크 자몽</string>
+    <string name="type_style_white_riesling_aroma_content4">풋사과, 배, 칸탈루프 멜론, 승도 복숭아, 살구</string>
+    <string name="type_style_white_riesling_aroma_content5">구아바, 망고, 그린 파파야, 스타프루트</string>
+    <string name="type_style_white_riesling_aroma_content6">딸기, 화이트 체리</string>
+    <string name="type_style_white_riesling_aroma_content7">밀랍, 생강, 석유, 젖은 석판, 분필</string>
+
+    <!-- Fragment Torrontes -->
+    <string name="type_style_white_torrontes_aroma_content1">메이어 레몬 ㅡ 복숭아 ㅡ 레몬 껍질 ㅡ 장미꽃잎 ㅡ 제라늄</string>
+
+    <string name="type_style_white_torrontes_aroma_content2">자스민, 제라늄, 장미꽃잎, 사과 꽃, 신선한 풀, 감초, 펜넬</string>
+    <string name="type_style_white_torrontes_aroma_content3">메이어 레몬, 레몬 껍질, 자몽, 탠저린</string>
+    <string name="type_style_white_torrontes_aroma_content4">허니듀 멜론, 풋무화과, 배, 아시안 배, 백도, 캔 복숭아, 살구</string>
+    <string name="type_style_white_torrontes_aroma_content5">파인해플, 구아바</string>
+    <string name="type_style_white_torrontes_aroma_content6">염분</string>
 
 </resources>

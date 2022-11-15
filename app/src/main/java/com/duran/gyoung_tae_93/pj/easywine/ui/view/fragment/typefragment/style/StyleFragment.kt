@@ -78,10 +78,10 @@ class StyleFragment : Fragment() {
                     view.findNavController().navigate(R.id.action_styleFragment_to_lightBodyWhiteFragment, bundleOf("item1" to item1, "item2" to "라이트 바디 화이트 와인"))
                 }
                 2 -> {
-
+                    view.findNavController().navigate(R.id.action_styleFragment_to_fullBodyWhiteFragment, bundleOf("item1" to item1, "item2" to "풀 바디 화이트 와인"))
                 }
                 3-> {
-
+                    view.findNavController().navigate(R.id.action_styleFragment_to_aromaticWhiteFragment, bundleOf("item1" to item1, "item2" to "아로마틱 화이트 와인"))
                 }
                 4 -> {
 
