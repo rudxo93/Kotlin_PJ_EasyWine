@@ -65,55 +65,55 @@ class FullBodyRedFragment : Fragment() {
             when (id.toInt()) {
                 0 -> {
                     view.findNavController()
-                        .navigate(R.id.action_mediumBodyRedFragment_to_barberaFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "알리아니코"))
+                        .navigate(R.id.action_fullBodyRedFragment_to_aglianicoFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "알리아니코"))
                 }
                 1 -> {
                     view.findNavController()
-                        .navigate(R.id.action_mediumBodyRedFragment_to_cabernetFrancFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "보르도 블렌드"))
+                        .navigate(R.id.action_fullBodyRedFragment_to_bordeauxFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "보르도 블렌드"))
                 }
                 2 -> {
                     view.findNavController()
-                        .navigate(R.id.action_mediumBodyRedFragment_to_carignanFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "까베르네 쇼비뇽"))
+                        .navigate(R.id.action_fullBodyRedFragment_to_cabernetSauvignonFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "까베르네 쇼비뇽"))
                 }
                 3 -> {
                     view.findNavController()
-                        .navigate(R.id.action_mediumBodyRedFragment_to_carmenereFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "말벡"))
+                        .navigate(R.id.action_fullBodyRedFragment_to_malbecFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "말벡"))
                 }
                 4 -> {
                     view.findNavController()
-                        .navigate(R.id.action_mediumBodyRedFragment_to_grenacheFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "무르베드르"))
+                        .navigate(R.id.action_fullBodyRedFragment_to_mourvedreFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "무르베드르"))
                 }
                 5 -> {
                     view.findNavController()
-                        .navigate(R.id.action_mediumBodyRedFragment_to_menciaFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "네비올라"))
+                        .navigate(R.id.action_fullBodyRedFragment_to_nebbioloFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "네비올라"))
                 }
                 6 -> {
                     view.findNavController()
-                        .navigate(R.id.action_mediumBodyRedFragment_to_merlotFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "네로 다볼라"))
+                        .navigate(R.id.action_fullBodyRedFragment_to_nerodAvolaFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "네로 다볼라"))
                 }
                 7 -> {
                     view.findNavController()
-                        .navigate(R.id.action_mediumBodyRedFragment_to_montepulcianoFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "쁘띠 베르도"))
+                        .navigate(R.id.action_fullBodyRedFragment_to_petitVerdotFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "쁘띠 베르도"))
                 }
                 8 -> {
                     view.findNavController()
-                        .navigate(R.id.action_mediumBodyRedFragment_to_negroamaroFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "쁘띠 쉬라"))
+                        .navigate(R.id.action_fullBodyRedFragment_to_petiteSirahFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "쁘띠 쉬라"))
                 }
                 9 -> {
                     view.findNavController()
-                        .navigate(R.id.action_mediumBodyRedFragment_to_rhoneFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "피노타지"))
+                        .navigate(R.id.action_fullBodyRedFragment_to_pinotageFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "피노타지"))
                 }
                 10 -> {
                     view.findNavController()
-                        .navigate(R.id.action_mediumBodyRedFragment_to_sangioveseFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "쉬라"))
+                        .navigate(R.id.action_fullBodyRedFragment_to_syrahFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "쉬라"))
                 }
                 11 -> {
                     view.findNavController()
-                        .navigate(R.id.action_mediumBodyRedFragment_to_valpolicellaFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "템프라니오"))
+                        .navigate(R.id.action_fullBodyRedFragment_to_tempranilloFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "템프라니오"))
                 }
                 12 -> {
                     view.findNavController()
-                        .navigate(R.id.action_mediumBodyRedFragment_to_zinfandelFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "토우리가 나시오날"))
+                        .navigate(R.id.action_fullBodyRedFragment_to_tourigaNacionalFragment, bundleOf("item1" to item1, "item2" to item2, "item3" to "토우리가 나시오날"))
                 }
 
             }

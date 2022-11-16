@@ -72,11 +72,14 @@
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/content_item_wo_wine_open.xml" value="0.3651041666666667" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/content_wg_whitewine.xml" value="0.3651041666666667" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/content_wineglass.xml" value="0.3651041666666667" />
+        <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_aglianico.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_albarino.xml" value="0.3619791666666667" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_area.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_aromatic_white.xml" value="0.3515625" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_barbera.xml" value="0.36614583333333334" />
+        <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_bordeaux.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_cabernet_franc.xml" value="0.36614583333333334" />
+        <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_cabernet_sauvignon.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_carignan.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_carmenere.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_cava.xml" value="0.33" />
@@ -96,18 +99,25 @@
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_lambrusco.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_light_body_red.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_light_body_white.xml" value="0.3619791666666667" />
+        <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_malbec.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_marsanne.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_medium_body_red.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_mencia.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_merlot.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_montepulciano.xml" value="0.36614583333333334" />
+        <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_mourvedre.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_muscadet.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_muscat_blanc.xml" value="0.36614583333333334" />
+        <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_nebbiolo.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_negroamaro.xml" value="0.36614583333333334" />
+        <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_nerod_avola.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_note.xml" value="0.3515625" />
+        <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_petit_verdot.xml" value="0.36614583333333334" />
+        <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_petite_sirah.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_pinot_grigio.xml" value="0.3619791666666667" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_pinot_gris.xml" value="0.3619791666666667" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_pinot_noir.xml" value="0.36614583333333334" />
+        <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_pinotage.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_prosecco.xml" value="0.3515625" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_rhone.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_riesling.xml" value="0.36614583333333334" />
@@ -120,7 +130,10 @@
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_soave.xml" value="0.3619791666666667" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_sparkling.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_style.xml" value="0.36614583333333334" />
+        <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_syrah.xml" value="0.36614583333333334" />
+        <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_tempranillo.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_torrontes.xml" value="0.36614583333333334" />
+        <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_touriga_nacional.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_type.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_valpolicella.xml" value="0.36614583333333334" />
         <entry key="..\:/android_workspace/Kotlin_PJ_EasyWine/app/src/main/res/layout/fragment_vermentino.xml" value="0.3619791666666667" />
