@@ -96,7 +96,7 @@ class StyleFragment : Fragment() {
                     view.findNavController().navigate(R.id.action_styleFragment_to_fullBodyRedFragment, bundleOf("item1" to item1, "item2" to "풀 바디 레드 와인"))
                 }
                 8 -> {
-
+                    view.findNavController().navigate(R.id.action_styleFragment_to_dessertFragment, bundleOf("item1" to item1, "item2" to "디저트 와인"))
                 }
             }
         }

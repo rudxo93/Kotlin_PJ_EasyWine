@@ -915,7 +915,7 @@
     <string name="type_style_red_pinotage_aroma_content7">당밀, 말린 잎</string>
 
     <!-- Fragment Syrah -->
-    <string name="type_style_red_syrah_aroma_content1" >블루베리 - 자두 - 밀크 초콜릿 - 담배 - 그린 페퍼콘</string>
+    <string name="type_style_red_syrah_aroma_content1">블루베리 - 자두 - 밀크 초콜릿 - 담배 - 그린 페퍼콘</string>
 
     <string name="type_style_red_syrah_aroma_content2">블랙 후추, 그린 페퍼콘, 세이지, 라벤더, 유칼립투스, 스타 아니스, 감초</string>
     <string name="type_style_red_syrah_aroma_content3">레드 자두, 레드 체리</string>
@@ -926,7 +926,7 @@
     <string name="type_style_red_syrah_aroma_content8">정향, 올스파이스, 바닐라 콩, 밀크 초콜릿, 에스프레소, 담배, 녹나무, 사사프러스, 시가 박스, 스모크</string>
 
     <!-- Fragment Tempranillo -->
-    <string name="type_style_red_tempranillo_aroma_content1" >체리 - 말린 무화과 - 삼나무 - 담배 - 딜</string>
+    <string name="type_style_red_tempranillo_aroma_content1">체리 - 말린 무화과 - 삼나무 - 담배 - 딜</string>
 
     <string name="type_style_red_tempranillo_aroma_content2">말린 장미, 말린 잎, 월계수 잎, 삼나무, 겨자씨, 블랙 후추, 말린 로즈마리</string>
     <string name="type_style_red_tempranillo_aroma_content3">신 버찌, 신 체리, 딸기 소스</string>
@@ -937,12 +937,83 @@
     <string name="type_style_red_tempranillo_aroma_content8">시가 박스, 담배, 코코아, 우드 버너, 초콜릿, 시나몬, 바닐라, 삼나무, 딜</string>
 
     <!-- Fragment Touriga Nacional -->
-    <string name="type_style_red_touriga_nacional_aroma_content1" >제비꽃 - 블루베리 - 자두 - 민트 - 젖은 슬레이트</string>
+    <string name="type_style_red_touriga_nacional_aroma_content1">제비꽃 - 블루베리 - 자두 - 민트 - 젖은 슬레이트</string>
 
     <string name="type_style_red_touriga_nacional_aroma_content2">제비꽃, 라일락, 민트, 홍차, 베르가못</string>
     <string name="type_style_red_touriga_nacional_aroma_content3">신 자두, 블랙 라즈베리, 블랙 커런트, 단 자두, 블랙베리, 블랙 자두, 블루베리</string>
     <string name="type_style_red_touriga_nacional_aroma_content4">흑연, 화강암 먼지, 젖은 슬레이트, 리튬 구리스</string>
     <string name="type_style_red_touriga_nacional_aroma_content5">빵</string>
     <string name="type_style_red_touriga_nacional_aroma_content6">바닐라, 구운 마시멜로우, 베이킹 초콜릿, 넛매그(육두구)</string>
+
+    <!-- Fragment Madeira -->
+    <string name="type_style_dessert_madeira_aroma_content1">그을린 카라멜 - 호두 오일 - 복숭아 - 헤이즐넛 - 오렌지 껍질</string>
+
+    <string name="type_style_dessert_madeira_aroma_content2">구운 파프리카, 말린 칠리 후추, 신선한 풀, 사천 페퍼콘, 커리 스파이스, 건초</string>
+    <string name="type_style_dessert_madeira_aroma_content3">레몬 껍질, 오렌지 껍질, 마멀레이드</string>
+    <string name="type_style_dessert_madeira_aroma_content4">복숭아</string>
+    <string name="type_style_dessert_madeira_aroma_content5">카라멜 팝콘, 염분, 처트니, 해선장, 고무 접착제</string>
+    <string name="type_style_dessert_madeira_aroma_content6">스모크, 그을린 카라멜, 헤이즐넛, 땅콩캔디, 땅콩 껍질, 메이플 시럽, 시나몬, 바닐라, 피칸, 블랙 호두, 호두 오일</string>
+
+    <!-- Fragment Marsala -->
+    <string name="type_style_dessert_marsala_aroma_content1">진한 살구 - 바닐라 - 타마린드 - 갈색 설탕 - 담배</string>
+
+    <string name="type_style_dessert_marsala_aroma_content2">감초, 향나무</string>
+    <string name="type_style_dessert_marsala_aroma_content3">오렌지 껍질</string>
+    <string name="type_style_dessert_marsala_aroma_content4">사과, 진한 살구</string>
+    <string name="type_style_dessert_marsala_aroma_content5">타마린드</string>
+    <string name="type_style_dessert_marsala_aroma_content6">버찌 체리, 자두 소스</string>
+    <string name="type_style_dessert_marsala_aroma_content7">과일 케이크, 말린 살구, 말린 자두</string>
+    <string name="type_style_dessert_marsala_aroma_content8">꿀, 염분, 가죽</string>
+    <string name="type_style_dessert_marsala_aroma_content9">바닐라, 담배</string>
+    <string name="type_style_dessert_marsala_aroma_content10">당밀, 갈색 설탕, 호두, 밤나무</string>
+
+    <!-- Fragment Port -->
+    <string name="type_style_dessert_port_aroma_content1">익은 블랙베리 - 라즈베리 소스 - 시나몬 - 캔디 애플 - 스타 아니스</string>
+
+    <string name="type_style_dessert_port_aroma_content2">말린 레드 칠리, 레드 감초, 생강, 시나몬, 스타 아니스, 주니퍼베리</string>
+    <string name="type_style_dessert_port_aroma_content3">오렌지 껍질, 레몬 껍질, 마멀레이드</string>
+    <string name="type_style_dessert_port_aroma_content4">복숭아, 살구 잼</string>
+    <string name="type_style_dessert_port_aroma_content5">라즈베리 소스, 소스 체리 파이</string>
+    <string name="type_style_dessert_port_aroma_content6">해선장, 블루베리, 익은 블랙베리, 블랙 커런트</string>
+    <string name="type_style_dessert_port_aroma_content7">말린 살구</string>
+    <string name="type_style_dessert_port_aroma_content8">흑연, 으깬 자갈, 염분</string>
+    <string name="type_style_dessert_port_aroma_content9">바닐라, 밀크 초콜릿, 코코아, 모카, 향, 카라멜, 토피, 버터스카치, 담배 잎, 베이킹 향신료</string>
+    <string name="type_style_dessert_port_aroma_content10">에스프레소, 5가지 향신료 파우더, 헤이즐넛, 피칸</string>
+
+    <!-- Fragment Sauterne -->
+    <string name="type_style_dessert_sauterne_aroma_content1">레몬 커드 - 살구 - 모과 - 꿀 - 생강</string>
+
+    <string name="type_style_dessert_sauterne_aroma_content2">아카시아, 목련, 인동덩굴, 사향</string>
+    <string name="type_style_dessert_sauterne_aroma_content3">라임, 레몬, 마멀레이드, 오렌지 껍질</string>
+    <string name="type_style_dessert_sauterne_aroma_content4">풋무화과, 모과, 사과, 아시안 배, 양념된 배, 백도, 봉숭아 잼, 살구</string>
+    <string name="type_style_dessert_sauterne_aroma_content5">파인애플, 망고, 펀치 음료, 파파야</string>
+    <string name="type_style_dessert_sauterne_aroma_content6">말린 살구, 모과 반죽</string>
+    <string name="type_style_dessert_sauterne_aroma_content7">생강, 꿀, 벌집, 염분, 으깬 자갈</string>
+    <string name="type_style_dessert_sauterne_aroma_content8">오일, 버터, 크림</string>
+    <string name="type_style_dessert_sauterne_aroma_content9">브리오슈, 밀 크래커, 스모크, 레몬 커드</string>
+    <string name="type_style_dessert_sauterne_aroma_content10">아몬드, 마지팬, 헤이즐넛 크림</string>
+
+    <!-- Fragment Sherry -->
+    <string name="type_style_dessert_sherry_aroma_content1">잭프루트 - 염도 - 레몬 잼 - 브라질 너트 - 아몬드</string>
+
+    <string name="type_style_dessert_sherry_aroma_content2">아기 숨, 카스텔베트라노, 생강 빵, 회향씨앗, 그린 카다몬, 노간주 나무</string>
+    <string name="type_style_dessert_sherry_aroma_content3">레몬 잼, 레몬 껍질, 오렌지 껍질</string>
+    <string name="type_style_dessert_sherry_aroma_content4">풋사과, 멍든 사과, 살구</string>
+    <string name="type_style_dessert_sherry_aroma_content5">잭프루트</string>
+    <string name="type_style_dessert_sherry_aroma_content6">건포도, 무화과, 과일 케이크, 대추</string>
+    <string name="type_style_dessert_sherry_aroma_content7">염분, 라놀린, 우롱차, 나무 칠</string>
+    <string name="type_style_dessert_sherry_aroma_content8">신선한 빵</string>
+    <string name="type_style_dessert_sherry_aroma_content9">퍼지, 바닐라, 카라멜, 초콜릿, 토피, 코코넛 오일, 향</string>
+    <string name="type_style_dessert_sherry_aroma_content10">땅콩, 브라질 너트, 블랙 호두, 당밀, 쓴 아몬드, 아몬드</string>
+
+    <!-- Fragment Vinsanto -->
+    <string name="type_style_dessert_vinsanto_aroma_content1">향수 - 무화과 - 건포도 - 아몬드 - 토피</string>
+
+    <string name="type_style_dessert_vinsanto_aroma_content2">포푸리, 오렌지 꽃, 향수, 말린 장미, 라벤더, 타임</string>
+    <string name="type_style_dessert_vinsanto_aroma_content3">오렌지 껍질</string>
+    <string name="type_style_dessert_vinsanto_aroma_content4">무화과, 말린 살구, 건포도, 대추, 타마린 캔디</string>
+    <string name="type_style_dessert_vinsanto_aroma_content5">꿀</string>
+    <string name="type_style_dessert_vinsanto_aroma_content6">토피, 크림</string>
+    <string name="type_style_dessert_vinsanto_aroma_content7">그을린 설탕, 카라멜, 구운 아몬드, 호두, 헤이즐넛</string>
 
 </resources>
