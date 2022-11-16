@@ -14,12 +14,12 @@
         android:id="@+id/fragment_info"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.InfoFragment"
         android:label="fragment_info"
-        tools:layout="@layout/fragment_info"/>
+        tools:layout="@layout/fragment_info" />
     <fragment
         android:id="@+id/fragment_type"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.TypeFragment"
         android:label="fragment_type"
-        tools:layout="@layout/fragment_type" >
+        tools:layout="@layout/fragment_type">
         <action
             android:id="@+id/action_fragment_type_to_areaFragment"
             app:destination="@id/areaFragment" />
@@ -49,7 +49,7 @@
         android:id="@+id/styleFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.StyleFragment"
         android:label="fragment_style"
-        tools:layout="@layout/fragment_style" >
+        tools:layout="@layout/fragment_style">
         <action
             android:id="@+id/action_styleFragment_to_sparklingFragment"
             app:destination="@id/sparklingFragment"
@@ -78,12 +78,40 @@
             app:exitAnim="@android:anim/slide_out_right"
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_styleFragment_to_roseFragment"
+            app:destination="@id/roseFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_styleFragment_to_lightBodyRedFragment"
+            app:destination="@id/lightBodyRedFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_styleFragment_to_mediumBodyRedFragment"
+            app:destination="@id/mediumBodyRedFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_styleFragment_to_fullBodyRedFragment"
+            app:destination="@id/fullBodyRedFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/sparklingFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.sparkling.SparklingFragment"
         android:label="fragment_sparkling"
-        tools:layout="@layout/fragment_sparkling" >
+        tools:layout="@layout/fragment_sparkling">
         <action
             android:id="@+id/action_sparklingFragment_to_cavaFragment"
             app:destination="@id/cavaFragment"
@@ -117,7 +145,7 @@
         android:id="@+id/cavaFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.sparkling.CavaFragment"
         android:label="fragment_cava"
-        tools:layout="@layout/fragment_cava" >
+        tools:layout="@layout/fragment_cava">
         <action
             android:id="@+id/action_cavaFragment_to_fragment_type"
             app:destination="@id/fragment_type"
@@ -132,7 +160,7 @@
         android:id="@+id/champagneFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.sparkling.ChampagneFragment"
         android:label="fragment_champagne"
-        tools:layout="@layout/fragment_champagne" >
+        tools:layout="@layout/fragment_champagne">
         <action
             android:id="@+id/action_champagneFragment_to_fragment_type"
             app:destination="@id/fragment_type"
@@ -147,7 +175,7 @@
         android:id="@+id/lambruscoFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.sparkling.LambruscoFragment"
         android:label="fragment_lambrusco"
-        tools:layout="@layout/fragment_lambrusco" >
+        tools:layout="@layout/fragment_lambrusco">
         <action
             android:id="@+id/action_lambruscoFragment_to_fragment_type"
             app:destination="@id/fragment_type"
@@ -162,7 +190,7 @@
         android:id="@+id/proseccoFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.sparkling.ProseccoFragment"
         android:label="fragment_prosecco"
-        tools:layout="@layout/fragment_prosecco" >
+        tools:layout="@layout/fragment_prosecco">
         <action
             android:id="@+id/action_proseccoFragment_to_fragment_type"
             app:destination="@id/fragment_type"
@@ -177,7 +205,7 @@
         android:id="@+id/lightBodyWhiteFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.lbodywhite.LightBodyWhiteFragment"
         android:label="fragment_light_body_white"
-        tools:layout="@layout/fragment_light_body_white" >
+        tools:layout="@layout/fragment_light_body_white">
         <action
             android:id="@+id/action_lightBodyWhiteFragment_to_albarinoFragment"
             app:destination="@id/albarinoFragment"
@@ -232,7 +260,7 @@
         android:id="@+id/albarinoFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.lbodywhite.AlbarinoFragment"
         android:label="fragment_albarino"
-        tools:layout="@layout/fragment_albarino" >
+        tools:layout="@layout/fragment_albarino">
         <action
             android:id="@+id/action_albarinoFragment_to_fragment_type"
             app:destination="@id/fragment_type"
@@ -247,7 +275,7 @@
         android:id="@+id/gruenerFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.lbodywhite.GruenerFragment"
         android:label="fragment_gruener"
-        tools:layout="@layout/fragment_gruener" >
+        tools:layout="@layout/fragment_gruener">
         <action
             android:id="@+id/action_gruenerFragment_to_fragment_type"
             app:destination="@id/fragment_type"
@@ -262,7 +290,7 @@
         android:id="@+id/muscadetFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.lbodywhite.MuscadetFragment"
         android:label="fragment_muscadet"
-        tools:layout="@layout/fragment_muscadet" >
+        tools:layout="@layout/fragment_muscadet">
         <action
             android:id="@+id/action_muscadetFragment_to_fragment_type"
             app:destination="@id/fragment_type"
@@ -277,7 +305,7 @@
         android:id="@+id/pinotGrisFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.lbodywhite.PinotGrisFragment"
         android:label="fragment_pinot_gris"
-        tools:layout="@layout/fragment_pinot_gris" >
+        tools:layout="@layout/fragment_pinot_gris">
         <action
             android:id="@+id/action_pinotGrisFragment_to_fragment_type"
             app:destination="@id/fragment_type"
@@ -292,7 +320,7 @@
         android:id="@+id/sauvignonBlancFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.lbodywhite.SauvignonBlancFragment"
         android:label="fragment_sauvignon_blanc"
-        tools:layout="@layout/fragment_sauvignon_blanc" >
+        tools:layout="@layout/fragment_sauvignon_blanc">
         <action
             android:id="@+id/action_sauvignonBlancFragment_to_fragment_type"
             app:destination="@id/fragment_type"
@@ -307,7 +335,7 @@
         android:id="@+id/soaveFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.lbodywhite.SoaveFragment"
         android:label="fragment_soave"
-        tools:layout="@layout/fragment_soave" >
+        tools:layout="@layout/fragment_soave">
         <action
             android:id="@+id/action_soaveFragment_to_fragment_type"
             app:destination="@id/fragment_type"
@@ -322,7 +350,7 @@
         android:id="@+id/vermentinoFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.lbodywhite.VermentinoFragment"
         android:label="fragment_vermentino"
-        tools:layout="@layout/fragment_vermentino" >
+        tools:layout="@layout/fragment_vermentino">
         <action
             android:id="@+id/action_vermentinoFragment_to_fragment_type"
             app:destination="@id/fragment_type"
@@ -337,7 +365,7 @@
         android:id="@+id/fullBodyWhiteFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.fbodywhite.FullBodyWhiteFragment"
         android:label="fragment_full_body_white"
-        tools:layout="@layout/fragment_full_body_white" >
+        tools:layout="@layout/fragment_full_body_white">
         <action
             android:id="@+id/action_fullBodyWhiteFragment_to_chardonnayFragment"
             app:destination="@id/chardonnayFragment"
@@ -371,7 +399,7 @@
         android:id="@+id/chardonnayFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.fbodywhite.ChardonnayFragment"
         android:label="fragment_chardonnay"
-        tools:layout="@layout/fragment_chardonnay" >
+        tools:layout="@layout/fragment_chardonnay">
         <action
             android:id="@+id/action_chardonnayFragment_to_fragment_type"
             app:destination="@id/fragment_type"
@@ -386,7 +414,7 @@
         android:id="@+id/marsanneFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.fbodywhite.MarsanneFragment"
         android:label="fragment_marsanne"
-        tools:layout="@layout/fragment_marsanne" >
+        tools:layout="@layout/fragment_marsanne">
         <action
             android:id="@+id/action_marsanneFragment_to_fragment_type"
             app:destination="@id/fragment_type"
@@ -401,7 +429,7 @@
         android:id="@+id/semillonFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.fbodywhite.SemillonFragment"
         android:label="fragment_semillon"
-        tools:layout="@layout/fragment_semillon" >
+        tools:layout="@layout/fragment_semillon">
         <action
             android:id="@+id/action_semillonFragment_to_fragment_type"
             app:destination="@id/fragment_type"
@@ -416,7 +444,7 @@
         android:id="@+id/viognierFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.fbodywhite.ViognierFragment"
         android:label="fragment_viognier"
-        tools:layout="@layout/fragment_viognier" >
+        tools:layout="@layout/fragment_viognier">
         <action
             android:id="@+id/action_viognierFragment_to_fragment_type"
             app:destination="@id/fragment_type"
@@ -430,48 +458,48 @@
         android:id="@+id/aromaticWhiteFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.aromaticwhite.AromaticWhiteFragment"
         android:label="fragment_aromatic_white"
-        tools:layout="@layout/fragment_aromatic_white" >
+        tools:layout="@layout/fragment_aromatic_white">
         <action
             android:id="@+id/action_aromaticWhiteFragment_to_cheninBlancFragment"
             app:destination="@id/cheninBlancFragment"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right"
             app:popEnterAnim="@android:anim/slide_in_left"
-            app:popExitAnim="@android:anim/slide_out_right"/>
+            app:popExitAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_aromaticWhiteFragment_to_gewurztraminerFragment"
             app:destination="@id/gewurztraminerFragment"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right"
             app:popEnterAnim="@android:anim/slide_in_left"
-            app:popExitAnim="@android:anim/slide_out_right"/>
+            app:popExitAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_aromaticWhiteFragment_to_muscatBlancFragment"
             app:destination="@id/muscatBlancFragment"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right"
             app:popEnterAnim="@android:anim/slide_in_left"
-            app:popExitAnim="@android:anim/slide_out_right"/>
+            app:popExitAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_aromaticWhiteFragment_to_rieslingFragment"
             app:destination="@id/rieslingFragment"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right"
             app:popEnterAnim="@android:anim/slide_in_left"
-            app:popExitAnim="@android:anim/slide_out_right"/>
+            app:popExitAnim="@android:anim/slide_out_right" />
         <action
             android:id="@+id/action_aromaticWhiteFragment_to_torrontesFragment"
             app:destination="@id/torrontesFragment"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right"
             app:popEnterAnim="@android:anim/slide_in_left"
-            app:popExitAnim="@android:anim/slide_out_right"/>
+            app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/cheninBlancFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.aromaticwhite.CheninBlancFragment"
         android:label="fragment_chenin_blanc"
-        tools:layout="@layout/fragment_chenin_blanc" >
+        tools:layout="@layout/fragment_chenin_blanc">
         <action
             android:id="@+id/action_cheninBlancFragment_to_fragment_type"
             app:destination="@id/fragment_type"
@@ -486,7 +514,7 @@
         android:id="@+id/gewurztraminerFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.aromaticwhite.GewurztraminerFragment"
         android:label="fragment_gewurztraminer"
-        tools:layout="@layout/fragment_gewurztraminer" >
+        tools:layout="@layout/fragment_gewurztraminer">
         <action
             android:id="@+id/action_gewurztraminerFragment_to_fragment_type"
             app:destination="@id/fragment_type"
@@ -495,13 +523,13 @@
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right"
             app:popUpTo="@id/fragment_type"
-            app:popUpToInclusive="true"/>
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/muscatBlancFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.aromaticwhite.MuscatBlancFragment"
         android:label="fragment_muscat_blanc"
-        tools:layout="@layout/fragment_muscat_blanc" >
+        tools:layout="@layout/fragment_muscat_blanc">
         <action
             android:id="@+id/action_muscatBlancFragment_to_fragment_type"
             app:destination="@id/fragment_type"
@@ -510,13 +538,13 @@
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right"
             app:popUpTo="@id/fragment_type"
-            app:popUpToInclusive="true"/>
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/rieslingFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.aromaticwhite.RieslingFragment"
         android:label="fragment_riesling"
-        tools:layout="@layout/fragment_riesling" >
+        tools:layout="@layout/fragment_riesling">
         <action
             android:id="@+id/action_rieslingFragment_to_fragment_type"
             app:destination="@id/fragment_type"
@@ -525,13 +553,13 @@
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right"
             app:popUpTo="@id/fragment_type"
-            app:popUpToInclusive="true"/>
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/torrontesFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.aromaticwhite.TorrontesFragment"
         android:label="fragment_torrontes"
-        tools:layout="@layout/fragment_torrontes" >
+        tools:layout="@layout/fragment_torrontes">
         <action
             android:id="@+id/action_torrontesFragment_to_fragment_type"
             app:destination="@id/fragment_type"
@@ -540,6 +568,381 @@
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right"
             app:popUpTo="@id/fragment_type"
-            app:popUpToInclusive="true"/>
+            app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/roseFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.rose.RoseFragment"
+        android:label="fragment_rose"
+        tools:layout="@layout/fragment_rose">
+        <action
+            android:id="@+id/action_roseFragment_to_roseWineFragment"
+            app:destination="@id/roseWineFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/roseWineFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.rose.RoseWineFragment"
+        android:label="fragment_rose_wine"
+        tools:layout="@layout/fragment_rose_wine">
+        <action
+            android:id="@+id/action_roseWineFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/lightBodyRedFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.lbodyred.LightBodyRedFragment"
+        android:label="fragment_light_body_red"
+        tools:layout="@layout/fragment_light_body_red">
+        <action
+            android:id="@+id/action_lightBodyRedFragment_to_gamayFragment"
+            app:destination="@id/gamayFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_lightBodyRedFragment_to_pinotNoirFragment"
+            app:destination="@id/pinotNoirFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/gamayFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.lbodyred.GamayFragment"
+        android:label="fragment_gamay"
+        tools:layout="@layout/fragment_gamay">
+        <action
+            android:id="@+id/action_gamayFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/pinotNoirFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.lbodyred.PinotNoirFragment"
+        android:label="fragment_pinot_noir"
+        tools:layout="@layout/fragment_pinot_noir">
+        <action
+            android:id="@+id/action_pinotNoirFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/mediumBodyRedFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.mbodyred.MediumBodyRedFragment"
+        android:label="fragment_medium_body_red"
+        tools:layout="@layout/fragment_medium_body_red">
+        <action
+            android:id="@+id/action_mediumBodyRedFragment_to_barberaFragment"
+            app:destination="@id/barberaFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mediumBodyRedFragment_to_cabernetFrancFragment"
+            app:destination="@id/cabernetFrancFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mediumBodyRedFragment_to_carignanFragment"
+            app:destination="@id/carignanFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mediumBodyRedFragment_to_carmenereFragment"
+            app:destination="@id/carmenereFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mediumBodyRedFragment_to_grenacheFragment"
+            app:destination="@id/grenacheFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mediumBodyRedFragment_to_menciaFragment"
+            app:destination="@id/menciaFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mediumBodyRedFragment_to_merlotFragment"
+            app:destination="@id/merlotFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mediumBodyRedFragment_to_montepulcianoFragment"
+            app:destination="@id/montepulcianoFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mediumBodyRedFragment_to_negroamaroFragment"
+            app:destination="@id/negroamaroFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mediumBodyRedFragment_to_rhoneFragment"
+            app:destination="@id/rhoneFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mediumBodyRedFragment_to_sangioveseFragment"
+            app:destination="@id/sangioveseFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mediumBodyRedFragment_to_valpolicellaFragment"
+            app:destination="@id/valpolicellaFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mediumBodyRedFragment_to_zinfandelFragment"
+            app:destination="@id/zinfandelFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/barberaFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.mbodyred.BarberaFragment"
+        android:label="fragment_barbera"
+        tools:layout="@layout/fragment_barbera">
+        <action
+            android:id="@+id/action_barberaFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/cabernetFrancFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.mbodyred.CabernetFrancFragment"
+        android:label="fragment_cabernet_franc"
+        tools:layout="@layout/fragment_cabernet_franc">
+        <action
+            android:id="@+id/action_cabernetFrancFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/carignanFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.mbodyred.CarignanFragment"
+        android:label="fragment_carignan"
+        tools:layout="@layout/fragment_carignan">
+        <action
+            android:id="@+id/action_carignanFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/carmenereFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.mbodyred.CarmenereFragment"
+        android:label="fragment_carmenere"
+        tools:layout="@layout/fragment_carmenere">
+        <action
+            android:id="@+id/action_carmenereFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/grenacheFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.mbodyred.GrenacheFragment"
+        android:label="fragment_grenache"
+        tools:layout="@layout/fragment_grenache">
+        <action
+            android:id="@+id/action_grenacheFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/menciaFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.mbodyred.MenciaFragment"
+        android:label="fragment_mencia"
+        tools:layout="@layout/fragment_mencia">
+        <action
+            android:id="@+id/action_menciaFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/merlotFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.mbodyred.MerlotFragment"
+        android:label="fragment_merlot"
+        tools:layout="@layout/fragment_merlot">
+        <action
+            android:id="@+id/action_merlotFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/montepulcianoFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.mbodyred.MontepulcianoFragment"
+        android:label="fragment_montepulciano"
+        tools:layout="@layout/fragment_montepulciano">
+        <action
+            android:id="@+id/action_montepulcianoFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/negroamaroFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.mbodyred.NegroamaroFragment"
+        android:label="fragment_negroamaro"
+        tools:layout="@layout/fragment_negroamaro">
+        <action
+            android:id="@+id/action_negroamaroFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/rhoneFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.mbodyred.RhoneFragment"
+        android:label="fragment_rhone"
+        tools:layout="@layout/fragment_rhone">
+        <action
+            android:id="@+id/action_rhoneFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/sangioveseFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.mbodyred.SangioveseFragment"
+        android:label="fragment_sangiovese"
+        tools:layout="@layout/fragment_sangiovese">
+        <action
+            android:id="@+id/action_sangioveseFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/valpolicellaFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.mbodyred.ValpolicellaFragment"
+        android:label="fragment_valpolicella"
+        tools:layout="@layout/fragment_valpolicella">
+        <action
+            android:id="@+id/action_valpolicellaFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/zinfandelFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.mbodyred.ZinfandelFragment"
+        android:label="fragment_zinfandel"
+        tools:layout="@layout/fragment_zinfandel">
+        <action
+            android:id="@+id/action_zinfandelFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/fullBodyRedFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.fbodyred.FullBodyRedFragment"
+        android:label="fragment_full_body_red"
+        tools:layout="@layout/fragment_full_body_red" />
 </navigation>

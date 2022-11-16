@@ -84,16 +84,16 @@ class StyleFragment : Fragment() {
                     view.findNavController().navigate(R.id.action_styleFragment_to_aromaticWhiteFragment, bundleOf("item1" to item1, "item2" to "아로마틱 화이트 와인"))
                 }
                 4 -> {
-
+                    view.findNavController().navigate(R.id.action_styleFragment_to_roseFragment, bundleOf("item1" to item1, "item2" to "로제 와인"))
                 }
                 5 -> {
-
+                    view.findNavController().navigate(R.id.action_styleFragment_to_lightBodyRedFragment, bundleOf("item1" to item1, "item2" to "라이트 바디 레드 와인"))
                 }
                 6 -> {
-
+                    view.findNavController().navigate(R.id.action_styleFragment_to_mediumBodyRedFragment, bundleOf("item1" to item1, "item2" to "미디움 바디 레드 와인"))
                 }
                 7 -> {
-
+                    view.findNavController().navigate(R.id.action_styleFragment_to_fullBodyRedFragment, bundleOf("item1" to item1, "item2" to "풀 바디 레드 와인"))
                 }
                 8 -> {
 
