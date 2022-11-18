@@ -13,7 +13,6 @@
     <!-- Splash Activity Color -->
     <color name="wine_label">#F2EFDE</color>
     <color name="wine_bottle">#353F0B</color>
-    <color name="wine_cork">#D9B580</color>
     <color name="view_division">#e0e0e0</color>
     <color name="note_edit_img">#CCC8BD</color>
 </resources>

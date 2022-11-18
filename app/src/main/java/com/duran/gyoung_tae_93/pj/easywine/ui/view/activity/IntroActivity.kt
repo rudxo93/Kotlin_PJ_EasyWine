@@ -12,6 +12,7 @@ import com.duran.gyoung_tae_93.pj.easywine.R
 import com.duran.gyoung_tae_93.pj.easywine.databinding.ActivityIntroBinding
 import com.duran.gyoung_tae_93.pj.easywine.ui.viewmodel.AuthViewModel
 import com.duran.gyoung_tae_93.pj.easywine.util.FBAuth
+import com.duran.gyoung_tae_93.pj.easywine.util.FBDocRef
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -78,13 +79,26 @@ class IntroActivity : AppCompatActivity() {
                     val account = task.getResult(ApiException::class.java)!!
                     viewModel.getUser(account.idToken!!)
                     Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show()
-                    moveNickname(FBAuth.getCurrentUser())
+                    nicknameCheck()
 
                 } catch (e: ApiException) {
                     Toast.makeText(this, e.localizedMessage, Toast.LENGTH_SHORT).show()
                 }
             }
         }
+
+    private fun nicknameCheck() {
+        FBDocRef.fbDB.collection("user").whereEqualTo("uid", FBAuth.getUid())
+            .get().addOnSuccessListener { document ->
+                if (document.documents != null) { // data가 조회
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                } else { // data가 조회 x
+                    moveNickname(FBAuth.getCurrentUser())
+                }
+        }
+    }
 
     /**
      *  Google Login Success -> Move Create Nickname Activity

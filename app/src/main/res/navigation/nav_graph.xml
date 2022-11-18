@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/fragment_note">
+    app:startDestination="@id/fragment_info">
 
     <fragment
         android:id="@+id/fragment_favorite"
@@ -39,7 +39,43 @@
         android:id="@+id/areaFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.AreaFragment"
         android:label="fragment_area"
-        tools:layout="@layout/fragment_area" />
+        tools:layout="@layout/fragment_area">
+        <action
+            android:id="@+id/action_areaFragment_to_africaFragment"
+            app:destination="@id/africaFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_areaFragment_to_europeFragment"
+            app:destination="@id/europeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_areaFragment_to_northAmericaFragment"
+            app:destination="@id/northAmericaFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_areaFragment_to_oceaniaFragment"
+            app:destination="@id/oceaniaFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_areaFragment_to_southAmericaFragment"
+            app:destination="@id/southAmericaFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
     <fragment
         android:id="@+id/foodFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.food.FoodFragment"
@@ -1369,6 +1405,188 @@
         tools:layout="@layout/fragment_vinsanto">
         <action
             android:id="@+id/action_vinsantoFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/africaFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.africa.AfricaFragment"
+        android:label="fragment_africa"
+        tools:layout="@layout/fragment_africa" />
+    <fragment
+        android:id="@+id/europeFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.europe.EuropeFragment"
+        android:label="fragment_europe"
+        tools:layout="@layout/fragment_europe" />
+    <fragment
+        android:id="@+id/northAmericaFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.northamerica.NorthAmericaFragment"
+        android:label="fragment_north_america"
+        tools:layout="@layout/fragment_north_america">
+        <action
+            android:id="@+id/action_northAmericaFragment_to_USACaliforniaFragment"
+            app:destination="@id/USACaliforniaFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_northAmericaFragment_to_USANorthwestFragment"
+            app:destination="@id/USANorthwestFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_northAmericaFragment_to_USAFragment"
+            app:destination="@id/USAFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/oceaniaFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.oceania.OceaniaFragment"
+        android:label="fragment_oceania"
+        tools:layout="@layout/fragment_oceania">
+        <action
+            android:id="@+id/action_oceaniaFragment_to_australiaFragment"
+            app:destination="@id/australiaFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_oceaniaFragment_to_newZealandFragment"
+            app:destination="@id/newZealandFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/southAmericaFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.southamerica.SouthAmericaFragment"
+        android:label="fragment_south_america"
+        tools:layout="@layout/fragment_south_america">
+        <action
+            android:id="@+id/action_southAmericaFragment_to_argentinaFragment"
+            app:destination="@id/argentinaFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_southAmericaFragment_to_chileFragment"
+            app:destination="@id/chileFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/australiaFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.oceania.AustraliaFragment"
+        android:label="fragment_australia"
+        tools:layout="@layout/fragment_australia">
+        <action
+            android:id="@+id/action_australiaFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/newZealandFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.oceania.NewZealandFragment"
+        android:label="fragment_new_zealand"
+        tools:layout="@layout/fragment_new_zealand">
+        <action
+            android:id="@+id/action_newZealandFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/USACaliforniaFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.northamerica.USACaliforniaFragment"
+        android:label="fragment_u_s_a_california"
+        tools:layout="@layout/fragment_u_s_a_california">
+        <action
+            android:id="@+id/action_USACaliforniaFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/USANorthwestFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.northamerica.USANorthwestFragment"
+        android:label="fragment_u_s_a_northwest"
+        tools:layout="@layout/fragment_u_s_a_northwest">
+        <action
+            android:id="@+id/action_USANorthwestFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/USAFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.northamerica.USAFragment"
+        android:label="fragment_u_s_a"
+        tools:layout="@layout/fragment_u_s_a">
+        <action
+            android:id="@+id/action_USAFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/argentinaFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.southamerica.ArgentinaFragment"
+        android:label="fragment_argentina"
+        tools:layout="@layout/fragment_argentina">
+        <action
+            android:id="@+id/action_argentinaFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/chileFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.southamerica.ChileFragment"
+        android:label="fragment_chile"
+        tools:layout="@layout/fragment_chile">
+        <action
+            android:id="@+id/action_chileFragment_to_fragment_type"
             app:destination="@id/fragment_type"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right"

@@ -9,9 +9,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.duran.gyoung_tae_93.pj.easywine.R
-import com.duran.gyoung_tae_93.pj.easywine.data.model.type.TypeStyleModel
+import com.duran.gyoung_tae_93.pj.easywine.data.model.type.TypeModel
 
-class TypeStyleLVAdapter(val items: MutableList<TypeStyleModel>) : BaseAdapter() {
+class TypeStyleLVAdapter(val items: MutableList<TypeModel>) : BaseAdapter() {
 
     override fun getCount(): Int {
         return items.size

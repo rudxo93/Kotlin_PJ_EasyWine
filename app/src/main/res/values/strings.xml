@@ -7,7 +7,6 @@
     <!-- Activity Create Nickname -->
     <string name="create_nickname_title">닉네임이 필요해요!</string>
     <string name="create_nickname_title2">로 시작하기</string>
-    <string name="btn_success_nickname">시작하기! > </string>
 
     <!-- Bottom Bar Navigation -->
     <string name="bottom_navi_info">와인정보</string>
@@ -16,7 +15,6 @@
     <string name="bottom_navi_favorite">와인북마크</string>
 
     <!-- Toolbar Menu -->
-    <string name="menu_item_1">내정보</string>
 
     <!-- Toolbar Note Info -->
     <string name="menu_note_info_item_1">수정하기</string>
@@ -417,6 +415,7 @@
 
     <!-- About Style -->
     <string name="type_style_top">Type : </string>
+    <string name="type_area_top">Area : </string>
 
     <string name="type_style_rating_title1">개요</string>
     <string name="type_style_rating_title2">과실 풍미</string>
@@ -439,6 +438,7 @@
     <string name="type_style_aroma_second">2차 향</string>
     <string name="type_style_aroma_oak">오크</string>
     <string name="type_style_aroma_third">3차 향</string>
+
     <!-- Fragment Cava -->
     <string name="type_style_sparkling_cava_aroma_content1">모과 - 라임 - 노란사과 - 배 - 아몬드</string>
 
@@ -1015,5 +1015,298 @@
     <string name="type_style_dessert_vinsanto_aroma_content5">꿀</string>
     <string name="type_style_dessert_vinsanto_aroma_content6">토피, 크림</string>
     <string name="type_style_dessert_vinsanto_aroma_content7">그을린 설탕, 카라멜, 구운 아몬드, 호두, 헤이즐넛</string>
+
+    <!-- About Area -->
+    <!-- Fragment Australia -->
+    <string name="type_area_australia_wine_produce_content1">쇼비뇽 블랑, 샤르도네, 리슬링, 세미용, 스파클링 와인</string>
+    <string name="type_area_australia_wine_produce_content2">까베르네 쇼비뇽, 멜롯 블렌드, 쉬라즈, GSM 블렌드, 피노 누아</string>
+    <string name="type_area_australia_top_title_content">
+        호주는 과실향이 풍부하고 스모키하며 리치한 스타일의 쉬라즈 품종이 생산되는 것으로 유명합니다.\n
+        호주는 기후가 뚜렷하게 차이나는 세 지역에 의해 와인 특징이 구별됩니다.
+    </string>
+    <string name="type_area_australia_zone_title1">웨스턴 오스트레일리아</string>
+    <string name="type_area_australia_zone_content1">
+        웨스턴 오스트레일리아는 오크에 숙성시키지 않은 샤르도네로 유명합니다.\n
+        반면에 잘 익은 블랙 과실향과 지속적인 산도가 있는 가벼운 바디의 까베르네 쇼비뇽도 생산합니다.
+    </string>
+    <string name="type_area_australia_zone_content1_wine1">오크 숙성시키지 않은 샤르도네</string>
+    <string name="type_area_australia_zone_content1_wine2">쇼비뇽 블랑</string>
+    <string name="type_area_australia_zone_content1_wine3">우아한 까베르네와 멜롯 블렌드</string>
+
+    <string name="type_area_australia_zone_title2">사우스 지역과 센트럴 지역</string>
+    <string name="type_area_australia_zone_content2">
+        호주에서 가장 넓은 지역으로 스모키하고 풍부한 쉬라즈, 세미용, 샤르도네 생산 지역으로 유명합니다.\n
+        시원한 기후에서는 품질이 우수하고 드라이한 리슬링과 복숭아향이 나는 쇼비뇽 블랑을 생산합니다.
+    </string>
+    <string name="type_area_australia_zone_content2_wine1">드라이한 리슬링</string>
+    <string name="type_area_australia_zone_content2_wine2">버터리한 샤르도네</string>
+    <string name="type_area_australia_zone_content2_wine3">볼드한 쉬라즈</string>
+
+    <string name="type_area_australia_zone_title3">빅토리아, 태즈메이니아</string>
+    <string name="type_area_australia_zone_content3">
+        서늘한 지역에서는 산도감이 우수한 피노누아와 샤르도네를 생산합니다.\n
+        이 지역은 좀 더 탄탄하고, 우아한 레드 와인이 만들어집니다.
+    </string>
+    <string name="type_area_australia_zone_content3_wine1">시트러스한 쇼비뇽 블랑</string>
+    <string name="type_area_australia_zone_content3_wine2">크리미한 샤르도네</string>
+    <string name="type_area_australia_zone_content3_wine3">자두 빛의 피노누아</string>
+
+    <!-- Fragment NewZealand -->
+    <string name="type_area_new_zealand_wine_produce_content1">샤르도네, 피노 그리, 쇼비뇽 블랑, 리슬링</string>
+    <string name="type_area_new_zealand_wine_produce_content2">보르도 블렌드, 피노 누아, </string>
+    <string name="type_area_new_zealand_top_title_content">
+        뉴질랜드에서는 시원한 기후의 영향으로 풍미가 진한 쇼비뇽 블랑 품종이 생산됩니다.\n
+        라이트 바디에 산도가 있고, 우아한 스타일의 와인을 생산합니다.
+    </string>
+    <string name="type_area_new_zealand_zone_title">뉴질랜드의 주요 와인</string>
+
+    <string name="type_area_new_zealand_zone_wine1">쇼비뇽 블랑</string>
+    <string name="type_area_new_zealand_zone_wine1_content1">
+        뉴질랜드에서 생산되는 유명한 쇼비뇽 블랑 품종은 구즈베리, 열대 과일, 라임, 토마토 줄기, 자몽향이 납니다.
+    </string>
+    <string name="type_area_new_zealand_zone_wine2">피노 누아</string>
+    <string name="type_area_new_zealand_zone_wine1_content2">
+        말보로 지역에서 생산되는 피노 누아 품종은 산도 있는 레드 과실향이 나며, 센트럴 오타고 지역에서
+        생산되는 피노 누아 품종은 잘 익은 라즈베리향이 특징입니다.
+    </string>
+    <string name="type_area_new_zealand_zone_wine3">샤르도네</string>
+    <string name="type_area_new_zealand_zone_wine1_content3">
+        크리스피한 산도와 레몬과 열대 과실향이 풍부한 샤르도네가 생산됩니다.\n
+        오크 터치를 하여 부드러운 느낌을 주는 바닐라향과 구운 카라멜향이 나기도 합니다.
+    </string>
+    <string name="type_area_new_zealand_zone_wine4">피노 그리</string>
+    <string name="type_area_new_zealand_zone_wine1_content4">
+        드라이, 오프-드라이한 스타일로 사과, 배, 향신료가 첨가된 빵, 인동 덩굴 향이 납니다.
+    </string>
+    <string name="type_area_new_zealand_zone_wine5">리슬링</string>
+    <string name="type_area_new_zealand_zone_wine1_content5">
+        라임 노트를 가진 드라이한 타입부터 살구향과 꿀 노트가 느껴지는 맛이 좋은 스위트 와인을 생산합니다.
+    </string>
+    <string name="type_area_new_zealand_zone_wine6">보르도 블렌드</string>
+    <string name="type_area_new_zealand_zone_wine1_content6">
+        가벼운 스타일의 레드 와인으로 익은 블랙베리, 베이킹 향신료, 커피향이 납니다.
+    </string>
+
+    <!-- Fragment USA -->
+    <string name="type_area_usa_wine_produce_content1">샤르도네, 리슬링, 피노 그리, 로제</string>
+    <string name="type_area_usa_wine_produce_content2">까베르네 쇼비뇽, 멜롯, 진판델, 피노 누아, 보르도 블렌드, 콩코드, 니아가라</string>
+    <string name="type_area_usa_top_title_content">
+        미국은 무겁과 과실향이 풍부한 레드 와인과 화이트 와인을 생산하는 것으로 유명합니다.\n
+        세 지역은 미국의 주요 와인 생산지역입니다.
+    </string>
+    <string name="type_area_usa_zone_ava">AVA란 무엇인가?</string>
+    <string name="type_area_usa_zone_ava_content">
+        미국 포도 재배 지역(AVA)은 와인이 생상되는 지역, 즉 지리적인 명시를 중심으로한 규정으로 와인이 생상된 지역에 따라 와인은 독특한
+        풍미와 품질을 준다고 구별시켜주는 제도입니다.\n
+        20개의 AVA가 있습니다.
+    </string>
+
+    <string name="type_area_usa_zone_title1">캘리포니아</string>
+    <string name="type_area_usa_zone_content1">
+        캘리포니아의 와인은 풍부하고 잘 익은 과실 향과 미디엄 산도로 잘 알려져 있습니다.\n
+        해변가 지역은 서늘하여 피노 누아와 샤르도네를 생산하는데 잘 맞는 기후를 가지고 있습니다.
+    </string>
+    <string name="type_area_usa_zone_content1_wine1">샤르도네</string>
+    <string name="type_area_usa_zone_content1_wine2">까베르네 쇼비뇽</string>
+    <string name="type_area_usa_zone_content1_wine3">멜롯</string>
+    <string name="type_area_usa_zone_content1_wine4">피노 누아</string>
+    <string name="type_area_usa_zone_content1_wine5">진판델</string>
+
+    <string name="type_area_usa_zone_title2">북서부</string>
+    <string name="type_area_usa_zone_content2">
+        캘리포니아보다 약간 더 서늘한 기후는 높은 산도와 잘 익은 과실향이 있는 와인을 생산합니다.
+    </string>
+    <string name="type_area_usa_zone_content2_wine1">보르도 블렌드</string>
+    <string name="type_area_usa_zone_content2_wine2">피노 누아</string>
+    <string name="type_area_usa_zone_content2_wine3">샤르도네</string>
+    <string name="type_area_usa_zone_content2_wine4">리슬링</string>
+    <string name="type_area_usa_zone_content2_wine5">피노 그리</string>
+
+    <string name="type_area_usa_zone_title3">북동부</string>
+    <string name="type_area_usa_zone_content3">
+        시원한 기후 지역은 추운 겨울에도 잘 견딜 수 있는 미국식 교배종을 생산하는 것으로 잘 알려져 있습니다.\n
+        레드 와인은 다소 스위트한 와인부터 드라이한 와인까지 다양하게 생산됩니다.\n
+        화이트 와인의 경우에는 강한 풍미를 가집니다.
+    </string>
+    <string name="type_area_usa_zone_content3_wine1">콩코드</string>
+    <string name="type_area_usa_zone_content3_wine2">니아가라</string>
+    <string name="type_area_usa_zone_content3_wine3">로제</string>
+    <string name="type_area_usa_zone_content3_wine4">멜롯</string>
+    <string name="type_area_usa_zone_content3_wine5">리슬링</string>
+
+    <!-- Fragment USA California -->
+    <string name="type_area_usa_california_wine_produce_content1">샤르도네, 스파클링 와인</string>
+    <string name="type_area_usa_california_wine_produce_content2">까베르네 쇼비뇽, 피노 누아, 진판델, 바바라, 쉬라, 쁘띠 쉬라, 블렌디 품종, 꼬뜨 뒤 론 블렌드</string>
+    <string name="type_area_usa_california_top_title_content">
+        캘리포니아 지역은 무거운 과실 향기를 지닌 와인으로 넓고 다양한 와인 생산 지역으로 알려져 있습니다.\n
+        세 지역은 캘리포니아의 와인 대부분을 생산하며 각 지역은 다양한 와인들을 생산하고 있습니다.
+    </string>
+    <string name="type_area_usa_california_zone_title">캘리포니아의 주요 생산 지역</string>
+
+    <string name="type_area_usa_california_zone_title_area1">북부 해안</string>
+    <string name="type_area_usa_california_zone_title_area1_content">
+        북부 해안은 나파와 소노마 지역을 포함하고 있으며 두 기후로 나누어져 있습니다.\n
+        시원한 해안가 지역과 내륙의 따뜻한 밸리나 언덕 쪽 지역입니다.
+    </string>
+    <string name="type_area_usa_california_zone_title_area1_content_title1">따뜻한 기후</string>
+    <string name="type_area_usa_california_zone_title_area1_content_title1_content1">
+        나파, 소노마, 레이크 카운티의 내륙 지역
+    </string>
+    <string name="type_area_usa_california_zone_title_area1_content_title1_content1_wine1">까베르네 쇼비뇽</string>
+    <string name="type_area_usa_california_zone_title_area1_content_title1_content1_wine2">진판델</string>
+    <string name="type_area_usa_california_zone_title_area1_content_title1_content1_wine3">쉬라</string>
+
+    <string name="type_area_usa_california_zone_title_area1_content_title2">냉랭한 기후</string>
+    <string name="type_area_usa_california_zone_title_area1_content_title1_content2">
+        소노마, 나파, 멘토시노 카운티의 해안가 지역
+    </string>
+    <string name="type_area_usa_california_zone_title_area1_content_title1_content2_wine1">까베르네 쇼비뇽</string>
+    <string name="type_area_usa_california_zone_title_area1_content_title1_content2_wine2">진판델</string>
+    <string name="type_area_usa_california_zone_title_area1_content_title1_content2_wine3">쉬라</string>
+
+    <string name="type_area_usa_california_zone_title_area2">센트럴 해안</string>
+    <string name="type_area_usa_california_zone_title_area2_content">
+        센트럴 해안가는 2개의 뚜렷한 지역으로 나뉘는데 아침 안개의 영향을 받는 해안밸리와 덥고 드라이한 내륙 지역입니다.
+    </string>
+    <string name="type_area_usa_california_zone_title_area2_content_title1">더운 기후</string>
+    <string name="type_area_usa_california_zone_title_area2_content_title1_content1">
+        산타 바바라, 파소 노블스 같은 내륙 지역
+    </string>
+    <string name="type_area_usa_california_zone_title_area2_content_title1_content1_wine1">까베르네 쇼비뇽</string>
+    <string name="type_area_usa_california_zone_title_area2_content_title1_content1_wine2">쉬라</string>
+    <string name="type_area_usa_california_zone_title_area2_content_title1_content1_wine3">진판델</string>
+
+    <string name="type_area_usa_california_zone_title_area2_content_title2">냉랭한 기후</string>
+    <string name="type_area_usa_california_zone_title_area2_content_title1_content2">
+        산 루이스 오비스포, 산타 바바라의 해안가 지역
+    </string>
+    <string name="type_area_usa_california_zone_title_area2_content_title1_content2_wine1">피노 누아</string>
+    <string name="type_area_usa_california_zone_title_area2_content_title1_content2_wine2">샤르도네</string>
+    <string name="type_area_usa_california_zone_title_area2_content_title1_content2_wine3">멜롯</string>
+
+    <string name="type_area_usa_california_zone_title_area3">내륙 밸리</string>
+    <string name="type_area_usa_california_zone_title_area3_content">
+        내륙 밸리는 덥고 건조한 지역으로 대량의 상업 와인이 생산되는 지역입니다.\n
+        마데라나 로디 지역의 AVA는 이 지역의 75% 와인을 생산합니다.\n
+        이 지역은 오래된 포도나무에서 생산되는 진판델, 쁘띠 쉬라, 토우리가 나시오날 같은 포르투갈 알렉산드리아 뮈스카 품종이 있으며, 잠재력이 있는 와인이 생산됩니다.
+    </string>
+    <string name="type_area_usa_california_zone_title_area3_content_wine1">진판델</string>
+    <string name="type_area_usa_california_zone_title_area3_content_wine2">쁘띠 쉬라</string>
+    <string name="type_area_usa_california_zone_title_area3_content_wine3">알렉산드리아</string>
+    <string name="type_area_usa_california_zone_title_area3_content_wine4">뮈스카 브랜드 품종</string>
+
+    <!-- Fragment USA NorthWest -->
+    <string name="type_area_usa_northwest_wine_produce_content1">쇼비뇽 블랑, 리슬링, 샤르도네, 피노 그리, 스파클링 와인</string>
+    <string name="type_area_usa_northwest_wine_produce_content2">까베르네 쇼비뇽, 멜롯, 쉬라, 피노 누아</string>
+    <string name="type_area_usa_northwest_top_title_content">
+        북서부 지역은 적당한 산도와 과실 향이 많은 와인이 생산됩니다.\n
+        이 지역은 기후에 의해 두 지역으로 구분됩니다.
+    </string>
+    <string name="type_area_usa_northwest_zone_title1">오리건 지역의 주요 와인</string>
+    <string name="type_area_usa_northwest_zone_title1_wine1">피노 누아</string>
+    <string name="type_area_usa_northwest_zone_title1_wine1_content">
+        품질이 우수한 피노 누아는 귤 향기의 섬세한 노트를 지니며 크랜베리, 체리, 바닐라의 풍부하고 스파이시한 향이 납니다.\n
+        가장 좋은 와인은 위라메트 밸리의 아펠라시옹에서 찾아볼 수 있습니다.
+    </string>
+    <string name="type_area_usa_northwest_zone_title1_wine2">피노 그리</string>
+    <string name="type_area_usa_northwest_zone_title1_wine2_content">
+        오리건 피노 그리는 배, 흰 복숭아, 모란의 섬세한 아로마향이 납니다.\n
+        전형적으로 드라이한 스타일로 만들어진 이러한 와인들은 강한 풍미와 신선한 느낌을 줍니다.
+    </string>
+    <string name="type_area_usa_northwest_zone_title1_wine3">샤르도네</string>
+    <string name="type_area_usa_northwest_zone_title1_wine3_content">
+        위라메트 밸리의 서늘한 기후에서 생산되는 샤르도네는 오크 숙성을 통해 크리미한 풍미와 노란 사과, 레몬, 파인애플향을 지닙니다.
+    </string>
+
+    <string name="type_area_usa_northwest_zone_title2">워싱턴 지역의 주요 와인</string>
+    <string name="type_area_usa_northwest_zone_title2_wine1">보르도 블렌드</string>
+    <string name="type_area_usa_northwest_zone_title2_wine1_content">
+        따뜻한 콜롬비아 밸리에서 생산되는 보르도 블렌드의 와인은 주로 라즈베리, 블랙베리, 밀크 초콜릿과 민트향이 납니다.\n
+        높은 산도를 지니면서 가벼운 바디의 와인을 생산합니다.\n
+        우수한 품질의 보르도 스타일의 블렌딩 와인은 10년 숙성이 가능합니다.
+    </string>
+    <string name="type_area_usa_northwest_zone_title2_wine2">리슬링</string>
+    <string name="type_area_usa_northwest_zone_title2_wine2_content">
+        드라이한 것부터 스위트한 와인까지 워싱턴 리슬링 지역은 산도가 강렬하고 잘 익은 복숭아와 꿀 라임에이드향이 납니다.
+    </string>
+    <string name="type_area_usa_northwest_zone_title2_wine3">쉬라</string>
+    <string name="type_area_usa_northwest_zone_title2_wine3_content">
+        워싱턴 쉬라는 올리브, 블랙 후추, 바닐라, 정향 베이컨 등 묵직한 블랙베리향이 납니다.\n
+        이 지역은 그르나쉬와 무르베드르의 론 블렌드 와인을 생산하기도 합니다.
+    </string>
+
+    <!-- Fragment Argentina -->
+    <string name="type_area_argentina_wine_produce_content1">토론테스, 샤르도네, 쇼비뇽 블랑</string>
+    <string name="type_area_argentina_wine_produce_content2">말벡, 쉬라, 보나르다, 까베르네 쇼비뇽, 피노 누아</string>
+    <string name="type_area_argentina_top_title_content">
+        아르헨티나는 묵직하고 과실향이 풍부한 말벡을 생산하는 신대륙 와인 국가입니다.\n
+        전 세계 말벡 생산량의 75%를 차지합니다.
+    </string>
+    <string name="type_area_argentina_zone_title">아르헨티나의 주요 와인</string>
+
+    <string name="type_area_argentina_zone_wine1">말벡</string>
+    <string name="type_area_argentina_zone_wine1_content1">
+        아르헨티나의 주요 와인 생산 품종인 말벡은 빈티지, 품질, 오크 숙성 기간에 따라 라즈베리 과실향이
+        풍부한 스타일부터 담배향이 나는 스타일의 와인으로 생산합니다.
+    </string>
+    <string name="type_area_argentina_zone_wine2">까베르네 쇼비뇽</string>
+    <string name="type_area_argentina_zone_wine1_content2">
+        아르헨티나의 까베르네 쇼비뇽은 적당한 타닌과 산도가 있는 스타일로 생산되며 풍부한 블랙 라즈베리, 모카, 담배향이 납니다.
+    </string>
+    <string name="type_area_argentina_zone_wine3">보나르다(두스 누아)</string>
+    <string name="type_area_argentina_zone_wine1_content3">
+        캘리포니아에서 카보로로 알려진 보나르다 품종은 아르헨티나에서 2번째로 많이 생산되는 품종입니다.\n
+        블랙 커런트와 감초, 건초 허브향이 납니다.
+    </string>
+    <string name="type_area_argentina_zone_wine4">쉬라</string>
+    <string name="type_area_argentina_zone_wine1_content4">
+        아르헨티나의 쉬라는 감초, 자두, 보이젠베리, 코코아향이 나는 풀 바디 스타일로 생산됩니다.\n
+        이러한 스타일의 쉬라가 생산되는 대표적인 지역은 고도가 높은 소지역들 입니다.
+    </string>
+    <string name="type_area_argentina_zone_wine5">토론테스</string>
+    <string name="type_area_argentina_zone_wine1_content5">
+        아르헨티나의 토종 품종인 토론테스는 드라이하고 시트러스한 향부터 복숭아와 구아바의 풍부한 향까지 느껴집니다.
+    </string>
+    <string name="type_area_argentina_zone_wine6">피노 누아</string>
+    <string name="type_area_argentina_zone_wine1_content6">
+        아르헨티나의 피노 누아는 잘 익은 라즈베리, 루바브, 미네랄, 자두향이 납니다.
+    </string>
+
+    <!-- Fragment Chile -->
+    <string name="type_area_chile_wine_produce_content1">피스코(브랜디), 샤르도네, 쇼비뇽 블랑</string>
+    <string name="type_area_chile_wine_produce_content2">쉬라, 피노 누아, 보르도 블렌드, 까르메네르, 까리네라(까리냥), 쁘띠 베르도, 빠이스</string>
+    <string name="type_area_chile_top_title_content">
+        칠레는 서늘한 기후에 과실향이 풍부한 보르도 블렌드 스타일의 와인을 생산하는 것으로 유명합니다.\n
+        칠레의 주요 와인 생산 지역은 해변가에서 안데스 산맥까지 세 지역으로 구분됩니다.
+    </string>
+    <string name="type_area_chile_zone_title1">칠레 해안가</string>
+    <string name="type_area_chile_zone_content1">
+        해안 지역의 와인 생산 지역은 냉랭한 훔볼트 기류에 의해 서늘한 기후 영향을 많이 받습니다.\n
+        기후 영향으로 이 지역에서는 다소 염분이 있는 시트러스 계열의 화이트와인이 생산되며, 레드 와인의 경우에는 과실향이 풍부한 피노 누아가 생산됩니다.
+    </string>
+    <string name="type_area_chile_zone_content1_wine1">샤르도네</string>
+    <string name="type_area_chile_zone_content1_wine2">쇼비뇽 블랑</string>
+    <string name="type_area_chile_zone_content1_wine3">피노 누아</string>
+
+    <string name="type_area_chile_zone_title2">내륙 밸리</string>
+    <string name="type_area_chile_zone_content2">
+        센트럴 벨리를 포함한 내륙 벨리에서는 스타일이 우아한 레드 와인들이 생산됩니다.\n
+        이 지역에서는 과실향이 풍부하고 높은 산도를 보이는 보르도 블렌드 스타일의 와인들이 만들어집니다.
+    </string>
+    <string name="type_area_chile_zone_content2_wine1">보르도 블렌드</string>
+    <string name="type_area_chile_zone_content2_wine2">쁘띠 베르도</string>
+    <string name="type_area_chile_zone_content2_wine3">쉬라</string>
+    <string name="type_area_chile_zone_content2_wine4">까르메네르</string>
+    <string name="type_area_chile_zone_content2_wine5">까리네라(까리냥)</string>
+
+    <string name="type_area_chile_zone_title3">안데스</string>
+    <string name="type_area_chile_zone_content3">
+        안데스 작은 언덕에 있는 고도 높은 포도밭에서는 타닌 구조가 단단한 레드 와인을 생산하고 있으며 좋은 빈티지의 해에는 높은 산도를 따라
+        풍부한 과실향이 있는 와인들을 만듭니다.
+    </string>
+    <string name="type_area_chile_zone_content3_wine1">쉬라</string>
+    <string name="type_area_chile_zone_content3_wine2">까르베네 쇼비뇽</string>
+    <string name="type_area_chile_zone_content3_wine3">까베르네 프랑</string>
+    <string name="type_area_chile_zone_content3_wine4">까르메네르</string>
 
 </resources>

@@ -9,7 +9,7 @@ import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.duran.gyoung_tae_93.pj.easywine.R
-import com.duran.gyoung_tae_93.pj.easywine.data.model.type.TypeStyleModel
+import com.duran.gyoung_tae_93.pj.easywine.data.model.type.TypeModel
 import com.duran.gyoung_tae_93.pj.easywine.databinding.FragmentStyleBinding
 import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.type.TypeStyleLVAdapter
 import com.duran.gyoung_tae_93.pj.easywine.ui.view.activity.MainActivity
@@ -20,19 +20,19 @@ class StyleFragment : Fragment() {
     private lateinit var binding: FragmentStyleBinding
 
     lateinit var lvAdapter: TypeStyleLVAdapter
-    val items = mutableListOf<TypeStyleModel>()
+    val items = mutableListOf<TypeModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        items.add(TypeStyleModel(0, "스파클링 와인"))
-        items.add(TypeStyleModel(1, "라이트 바디 화이트 와인"))
-        items.add(TypeStyleModel(2, "풀 바디 화이트 와인"))
-        items.add(TypeStyleModel(3, "아로마틱 화이트 와인"))
-        items.add(TypeStyleModel(4, "로제 와인"))
-        items.add(TypeStyleModel(5, "라이트 바디 레드 와인"))
-        items.add(TypeStyleModel(6, "미디엄 바디 레드 와인"))
-        items.add(TypeStyleModel(7, "풀 바디 레드 와인"))
-        items.add(TypeStyleModel(8, "디저트 와인"))
+        items.add(TypeModel(0, "스파클링 와인"))
+        items.add(TypeModel(1, "라이트 바디 화이트 와인"))
+        items.add(TypeModel(2, "풀 바디 화이트 와인"))
+        items.add(TypeModel(3, "아로마틱 화이트 와인"))
+        items.add(TypeModel(4, "로제 와인"))
+        items.add(TypeModel(5, "라이트 바디 레드 와인"))
+        items.add(TypeModel(6, "미디엄 바디 레드 와인"))
+        items.add(TypeModel(7, "풀 바디 레드 와인"))
+        items.add(TypeModel(8, "디저트 와인"))
     }
 
     override fun onCreateView(
