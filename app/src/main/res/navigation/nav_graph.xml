@@ -1417,12 +1417,91 @@
         android:id="@+id/africaFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.africa.AfricaFragment"
         android:label="fragment_africa"
-        tools:layout="@layout/fragment_africa" />
+        tools:layout="@layout/fragment_africa">
+        <action
+            android:id="@+id/action_africaFragment_to_southAfricaFragment"
+            app:destination="@id/southAfricaFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
     <fragment
         android:id="@+id/europeFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.europe.EuropeFragment"
         android:label="fragment_europe"
-        tools:layout="@layout/fragment_europe" />
+        tools:layout="@layout/fragment_europe">
+        <action
+            android:id="@+id/action_europeFragment_to_austriaFragment"
+            app:destination="@id/austriaFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_europeFragment_to_franceFragment"
+            app:destination="@id/franceFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_europeFragment_to_franceBordeauxFragment"
+            app:destination="@id/franceBordeauxFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_europeFragment_to_franceBourgogneFragment"
+            app:destination="@id/franceBourgogneFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_europeFragment_to_franceRhoneFragment"
+            app:destination="@id/franceRhoneFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_europeFragment_to_germanyFragment"
+            app:destination="@id/germanyFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_europeFragment_to_italiaFragment"
+            app:destination="@id/italiaFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_europeFragment_to_italiaToscanaFragment"
+            app:destination="@id/italiaToscanaFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_europeFragment_to_portugalFragment"
+            app:destination="@id/portugalFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_europeFragment_to_spainFragment"
+            app:destination="@id/spainFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
     <fragment
         android:id="@+id/northAmericaFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.northamerica.NorthAmericaFragment"
@@ -1587,6 +1666,171 @@
         tools:layout="@layout/fragment_chile">
         <action
             android:id="@+id/action_chileFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/southAfricaFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.africa.SouthAfricaFragment"
+        android:label="fragment_south_africa"
+        tools:layout="@layout/fragment_south_africa">
+        <action
+            android:id="@+id/action_southAfricaFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/austriaFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.europe.AustriaFragment"
+        android:label="fragment_austria"
+        tools:layout="@layout/fragment_austria">
+        <action
+            android:id="@+id/action_austriaFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/franceFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.europe.FranceFragment"
+        android:label="fragment_france"
+        tools:layout="@layout/fragment_france">
+        <action
+            android:id="@+id/action_franceFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/franceBordeauxFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.europe.FranceBordeauxFragment"
+        android:label="fragment_france_bordeaux"
+        tools:layout="@layout/fragment_france_bordeaux">
+        <action
+            android:id="@+id/action_franceBordeauxFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/franceBourgogneFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.europe.FranceBourgogneFragment"
+        android:label="fragment_france_bourgogne"
+        tools:layout="@layout/fragment_france_bourgogne">
+        <action
+            android:id="@+id/action_franceBourgogneFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/franceRhoneFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.europe.FranceRhoneFragment"
+        android:label="fragment_france_rhone"
+        tools:layout="@layout/fragment_france_rhone">
+        <action
+            android:id="@+id/action_franceRhoneFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/germanyFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.europe.GermanyFragment"
+        android:label="fragment_germany"
+        tools:layout="@layout/fragment_germany">
+        <action
+            android:id="@+id/action_germanyFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/italiaFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.europe.ItaliaFragment"
+        android:label="fragment_italia"
+        tools:layout="@layout/fragment_italia">
+        <action
+            android:id="@+id/action_italiaFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/italiaToscanaFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.europe.ItaliaToscanaFragment"
+        android:label="fragment_italia_toscana"
+        tools:layout="@layout/fragment_italia_toscana">
+        <action
+            android:id="@+id/action_italiaToscanaFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/portugalFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.europe.PortugalFragment"
+        android:label="fragment_portugal"
+        tools:layout="@layout/fragment_portugal">
+        <action
+            android:id="@+id/action_portugalFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/spainFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area.europe.SpainFragment"
+        android:label="fragment_spain"
+        tools:layout="@layout/fragment_spain">
+        <action
+            android:id="@+id/action_spainFragment_to_fragment_type"
             app:destination="@id/fragment_type"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right"

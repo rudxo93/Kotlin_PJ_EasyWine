@@ -1309,4 +1309,445 @@
     <string name="type_area_chile_zone_content3_wine3">까베르네 프랑</string>
     <string name="type_area_chile_zone_content3_wine4">까르메네르</string>
 
+    <!-- Fragment South Africa -->
+    <string name="type_area_south_africa_wine_produce_content1">슈냉 블랑, 샤르도네, 쇼비뇽 블랑</string>
+    <string name="type_area_south_africa_wine_produce_content2">브랜디 품종, 쉬라, 까베르네 쇼비뇽, 피노타지, 보르도 블렌딩, 피노 누아</string>
+    <string name="type_area_south_africa_top_title_content">
+        남아프리카는 무더운 기후로 인해 풀 바디 레드 와인과 과실향이 풍부한 화이트 와인이 생산됩니다.\n
+        남아프리카에서 생산되는 많은 포도 품종은 브랜디를 생산하는데 사용됩니다.
+    </string>
+    <string name="type_area_south_africa_zone_title">남아프리카의 주요 와인</string>
+
+    <string name="type_area_south_africa_zone_wine1">슈냉 블랑</string>
+    <string name="type_area_south_africa_zone_wine1_content1">
+        남아프리카에서 생산되는 유명한 슈냉 블랑 품종은 6가지 특징을 지닙니다.\n
+        신선한 &amp; 과실향, 풍부한 &amp; 언오크, 풍부한 &amp; 오크, 풍부한 &amp; 달콤한, 매우 달콤한, 캡 끌라시코라고 불리는 스파클링 와인 스타일
+    </string>
+    <string name="type_area_south_africa_zone_wine2">까베르네 쇼비뇽</string>
+    <string name="type_area_south_africa_zone_wine1_content2">
+        묵직하며 허베이셔스 풀향이 납니다.\n
+        블랙 후추, 블랙 커런트, 흑연이나 진흙같은 토양향이 나기도 합니다.
+    </string>
+    <string name="type_area_south_africa_zone_wine3">피노타지</string>
+    <string name="type_area_south_africa_zone_wine1_content3">
+        우수한 와인 메이커들은 블랙베리, 라즈베리, 말린 자두향이 풍부하고 피니시에 담배향이 느껴지는 피노타지 품종을 생산합니다.
+    </string>
+    <string name="type_area_south_africa_zone_wine4">쉬라즈 / 쉬라</string>
+    <string name="type_area_south_africa_zone_wine1_content4">
+        무거운 쉬라 와인은 스파이시한 검은 후추, 감초, 라즈베리 건자두 소스향의 풍미를 지닙니다.
+    </string>
+    <string name="type_area_south_africa_zone_wine5">샤르도네</string>
+    <string name="type_area_south_africa_zone_wine1_content5">
+        샤르도네 품종은 시원한 지역에서 생산됩니다.\n
+        와인은 구운 사과향, 레몬 껍질, 오크 숙성의 경우 바닐라향이 납니다.
+    </string>
+    <string name="type_area_south_africa_zone_wine6">세미용</string>
+    <string name="type_area_south_africa_zone_wine1_content6">
+        세미용 품종은 레몬향, 사과향, 왁스향, 크리미한 헤이즐넛향이 느껴지는 풀 바디하고 리치한 스타일로 생산됩니다.
+    </string>
+
+    <!-- Fragment Austria -->
+    <string name="type_area_austria_wine_produce_content1">그뤼너 펠트리너, 리슬링, 피노 블랑, 쇼비뇽 블랑, 뮬러 트루가우</string>
+    <string name="type_area_austria_wine_produce_content2">블라우어 포르투기저, 블라우프랭키쉬, 쯔바이겔트</string>
+    <string name="type_area_austria_top_title_content">
+        오스트리아는 서늘한 기후에서 자라는 그뤼너 펠트리너 품종 와인 생산으로 유명합니다.\n
+        오스트리아는 미네랄이 많은 화이트 와인과 스파이시한 레드 와인이 생산됩니다.
+    </string>
+    <string name="type_area_austria_zone_title">오스트리아의 주요 와인</string>
+
+    <string name="type_area_austria_zone_wine1">그뤼너 펠트리너</string>
+    <string name="type_area_austria_zone_wine1_content1">
+        오스트리아에서 생산되는 유명한 대표적인 품종인 그뤼너 펠트리너는 가벼운 후추향의 시트러스 스타일부터 오크에서 숙성되어 열대
+        과실향이 풍부한 스타일로 생산됩니다.
+    </string>
+    <string name="type_area_austria_zone_wine2">쯔바이겔트</string>
+    <string name="type_area_austria_zone_wine1_content2">
+        풍부한 체리향이 나는 라이트 바디의 츠바이겔트 품종에서는 허베이셔스 풀 노트의 피니시가 느껴집니다.\n
+        이 품종으로 생산된 로제는 과실향이 풍부합니다.
+    </string>
+    <string name="type_area_austria_zone_wine3">블라우프랭키쉬</string>
+    <string name="type_area_austria_zone_wine1_content3">
+        이 품종 와인은 야생 딸기향이 나며 미디엄 바디의 드라이한 타닌을 보입니다.
+    </string>
+    <string name="type_area_austria_zone_wine4">블라우어 포르투기저</string>
+    <string name="type_area_austria_zone_wine1_content4">
+        이 품종으로 생산된 와인은 가벼운 타닌과 산도를 띄며 산딸기향과 나무 허프향이 풍부하게 납니다.
+    </string>
+    <string name="type_area_austria_zone_wine5">피노 블랑</string>
+    <string name="type_area_austria_zone_wine1_content5">
+        바이스부르군더라고 불리는 이 품종으로 생산되는 와인은 꽃향을 띄며 드라이한 미네랄 허브향이 납니다.
+    </string>
+
+    <!-- Fragment France -->
+    <string name="type_area_france_wine_produce_content1">
+        샴페인, 뮈스카데, 쇼비뇽 블랑, 슈냉 블랑, 피노 그리, 리슬링, 게브르츠트라미너, 크레망 달자스, 샤르도네,
+        끄레망 드 부르고뉴, 비오니에, 로제, 끄레망 드 리무, 쥐랑송, 세미용 블렌드
+    </string>
+    <string name="type_area_france_wine_produce_content2">
+        까베르네 프랑, 피노 누아, 쉬라, 꼬뜨 뒤 론, 무르베드르, 그르나쉬 블렌드, 까리냥 브렌드, 말벡(까오르), 보르도 블렌드
+    </string>
+    <string name="type_area_france_top_title_content">
+        프랑스에서는 높은 산도의 토양과 미네랄향이 느껴지는 와인이 생산됩니다.\n
+        프랑스는 기후에 의해 생산 지역이 세 지역으로 나뉘어집니다.
+    </string>
+    <string name="type_area_france_zone_title1">프랑스 북부</string>
+    <string name="type_area_france_zone_content1">
+        프랑스 북부 지역으로는 루아르 밸리, 샹파뉴, 알자스, 버건디가 있습니다.\n
+        프랑스 북부 지역에서는 높은 산도, 풍부한 과실향, 미네랄향이 느껴지는 와인이 생산됩니다.
+    </string>
+    <string name="type_area_france_zone_content1_wine1">샴페인</string>
+    <string name="type_area_france_zone_content1_wine2">뮈스카데</string>
+    <string name="type_area_france_zone_content1_wine3">루아르 쇼비뇽 블랑</string>
+    <string name="type_area_france_zone_content1_wine4">버건디 샤르도네</string>
+    <string name="type_area_france_zone_content1_wine5">루아르 슈냉 블랑</string>
+    <string name="type_area_france_zone_content1_wine6">알자스 리슬링</string>
+    <string name="type_area_france_zone_content1_wine7">버건디 피노 누아</string>
+
+    <string name="type_area_france_zone_title2">프랑스 중부</string>
+    <string name="type_area_france_zone_content2">
+        프랑스 중부 지역으로는 보졸레, 보르도, 론 밸리, 남서부지역이 있습니다.\n
+        프랑스 중부에서는 적당한 산도와 풍부한 과실향, 토양향의 와인이 생산됩니다.
+    </string>
+    <string name="type_area_france_zone_content2_wine1">보르도 세미용</string>
+    <string name="type_area_france_zone_content2_wine2">보졸레 가메</string>
+    <string name="type_area_france_zone_content2_wine3">레드 보르도 블렌드</string>
+    <string name="type_area_france_zone_content2_wine4">북부 론 쉬라</string>
+    <string name="type_area_france_zone_content2_wine5">소테른</string>
+
+    <string name="type_area_france_zone_title3">프랑스 지중해 지역</string>
+    <string name="type_area_france_zone_content3">
+        프랑스 지중해 지역으로는 론 밸리, 남서부 지역, 랑그독 루씨옹, 프로방스, 코르시카가 있습니다.\n
+        프랑스 지중해 지역에서 생산되는 와인은 미디엄 산도와 잘 익은 과실향, 시골 토양향이 나는 와인이 생산된다.
+    </string>
+    <string name="type_area_france_zone_content3_wine1">리무 스파클링</string>
+    <string name="type_area_france_zone_content3_wine2">프로방스 로제</string>
+    <string name="type_area_france_zone_content3_wine3">론 / GSM 블렌드</string>
+    <string name="type_area_france_zone_content3_wine4">꼬르비에르 까리냥 / GSM</string>
+    <string name="type_area_france_zone_content3_wine5">까오르 말벡</string>
+
+    <!-- Fragment France Bordeaux -->
+    <string name="type_area_france_bordeaux_wine_produce_content1">쇼비뇽 블랑, 세미용, 로제, 끌레레, 크레앙 드 보르도, 보르도 블랑</string>
+    <string name="type_area_france_bordeaux_wine_produce_content2">까베르네 쇼비뇽, 멜롯, 쁘띠 베르도, 까베르네 프랑, 꼬뜨 드 보르도, 쏘떼네, 보르도 슈페리에르, 보르도</string>
+    <string name="type_area_france_bordeaux_top_title_content">
+        보르도 지역이 원산지인 카베르네 쇼비뇽과 멜롯 품종의 블렌딩은 "보르도 블렌드"라는 명칭으로 불립니다.\n
+        이 지역에서는 생산되는 와인 90% 이상이 레드 와인입니다.
+    </string>
+    <string name="type_area_france_bordeaux_zone_title">보르도의 주요 와인</string>
+
+    <string name="type_area_france_bordeaux_zone_wine1">좌완 보르도</string>
+    <string name="type_area_france_bordeaux_zone_wine1_content1">
+        가론강의 서쪽 지역에서 생산되는 주요 품종은까베르네 쇼비뇽입니다.\n
+        타닌이 구조감 있게 느껴지는 와인이 주로 생산되며 와인의 주요 풍미는 블랙 커런트, 연필심, 제비꽃, 담배, 코코아, 감초향이 납니다.\n
+        20년이상 숙성이 가능합니다.
+    </string>
+    <string name="type_area_france_bordeaux_zone_wine2">우완 보르도</string>
+    <string name="type_area_france_bordeaux_zone_wine1_content2">
+        가론강의 동쪽 지역에서 생산되는 주요 품종은 까베르네 프랑과 멜롯이 블렌딩된 와인입니다.\n
+        와인은 가죽향과 딸기, 무화과, 자두, 바닐라, 구운 아몬드, 스모크향이 나며 부드럽고 세련된 타닌의 풍미가 느껴집니다.\n
+        몇몇의 와인은 30년 이상 숙성이 가능합니다.
+    </string>
+    <string name="type_area_france_bordeaux_zone_wine3">꼬뜨 드 보르도</string>
+    <string name="type_area_france_bordeaux_zone_wine1_content3">
+        강가 근처 지역은 꼬뜨라고 불리는데 언덕이란 의미입니다.\n
+        와인은 멜롯이 주된 블렌딩 품종이며 스파이시한 레드 과일 풍미, 그린 파프리카, 허브향을 줍니다.\n
+        10년 정도 숙성이 가능합니다.
+    </string>
+    <string name="type_area_france_bordeaux_zone_wine4">보르도 블랑</string>
+    <string name="type_area_france_bordeaux_zone_wine1_content4">
+        보르도 블랑은 주로 세미옹과 쇼비뇽 블랑으로 주로 블렌딩되며, 시트러스, 샤모마일, 자몽, 밀랍향이 납니다.\n
+        페삭 레오냥과 그라브 지역에서 생산되는 무거운 보르도 화이트 와인이 생산되며 앙트르 두 메흐 지역에서는 가벼운 화이트 와인이 만들어집니다.
+    </string>
+    <string name="type_area_france_bordeaux_zone_wine5">로제와 끌레레</string>
+    <string name="type_area_france_bordeaux_zone_wine1_content5">
+        풍부하고 깊은 컬러의 드라이한 로제 와인은 레드 커런트, 야생 딸기, 모란, 로즈힙향이 나는 진한 드라이 스타일의 로제 와인이 생산됩니다.\n
+        끌레레 와인은 18세기와 19세기 동안 보르도에서 생산된 와인의 전형적인 스타일을 일컫는 말이다.
+    </string>
+    <string name="type_area_france_bordeaux_zone_wine6">소테른</string>
+    <string name="type_area_france_bordeaux_zone_wine1_content6">
+        가론강을 따라 생산되는 다른 와인으로는 디저트 와인들이 있습니다.\n
+        일정한 품질을 유지하는 아펠라시옹 중 가장 큰 지역은 소테른입니다.\n
+        이 지역에서는 세미용 품종이 주가 되어 점성이 있고, 꿀향이 나며, 복숭아향이 나는 디저트 와인이 생산됩니다.
+    </string>
+
+    <!-- Fragment France Bourgogne -->
+    <string name="type_area_france_bourgogne_wine_produce_content1">샤르도네, 알리고떼, 샤블리, 크레망 드 부르고뉴</string>
+    <string name="type_area_france_bourgogne_wine_produce_content2">피노 누아</string>
+    <string name="type_area_france_bourgogne_top_title_content">
+        샤르도네 품종과 부르고뉴 품종은 부르고뉴가 원산지입니다.\n
+        이 지역의 생산량 60% 이상이 샤르도네 품종이나 부르고뉴 지역은 과실향이 풍부하고 토양향이 느껴지는 피노 누아를 생산하는 것으로 유명합니다.
+    </string>
+    <string name="type_area_france_bourgogne_zone_title">부르고뉴의 주요 와인</string>
+
+    <string name="type_area_france_bourgogne_zone_wine1">샤블리</string>
+    <string name="type_area_france_bourgogne_zone_wine1_content1">
+        샤블리는 주로 오크 숙성되지 않은 샤르도네로 생산됩니다.\n
+        샤블리 와인은 높은 산도의 사과, 열대 과일, 시트러스향이 풍부합니다.\n
+        그랑크뤼 등급의 샤블리는 오크 숙성하여 토스트한 견과류 풍미를 띕니다.
+    </string>
+    <string name="type_area_france_bourgogne_zone_wine2">피노 누아(꼬뜨 도르)</string>
+    <string name="type_area_france_bourgogne_zone_wine1_content2">
+        빌라지 급 마을 단위의 피노 누아 와인에서는 버섯, 영양토, 자극적인 베리향이 나며, 프뤼미에, 그랑크뤼
+        급의 피노 누아 와인에서는 말린 크랜베리, 달콤한 히비스커스, 바닐라, 로즈향이 납니다.
+    </string>
+    <string name="type_area_france_bourgogne_zone_wine3">샤르도네(꼬뜨 도르)</string>
+    <string name="type_area_france_bourgogne_zone_wine1_content3">
+        꼬뜨 도르 지역은 주로 오크에 숙성된 샤르도네를 생산합니다.\n
+        와인은 노란 사과 빛이 나며, 레몬 커드, 모과 타르트, 바닐라, 헤이즐넛향이 납니다.
+    </string>
+    <string name="type_area_france_bourgogne_zone_wine4">샤르도네(마코네즈)</string>
+    <string name="type_area_france_bourgogne_zone_wine1_content4">
+        마코네즈는 가볍고 오크에 숙성시키지 않은 샤르도네를 생산하는데, 레몬 껍질, 사과향, 강한 향을 주는 피니시와 더불어 익은 노란 사과의 풍미를 띕니다.\n
+        푸이 퓌세, 쌩 베랑, 비레 클레쎄가 가장 넓은 와인 생산 지역입니다.
+    </string>
+    <string name="type_area_france_bourgogne_zone_wine5">크레망 드 부르고뉴</string>
+    <string name="type_area_france_bourgogne_zone_wine1_content5">
+        부르고뉴 클레망은 샴페인 제조와 같은 방식으로 만들어져 버블이 풍부한 화이트와 로제 와인을 생산합니다.\n
+        이 지역에서 생산되는 클레망은 가성비가 훌륭한 스파클링으로 유명합니다.
+    </string>
+    <string name="type_area_france_bourgogne_zone_wine6">피노 누아(기타 지역)</string>
+    <string name="type_area_france_bourgogne_zone_wine1_content6">
+        꼬뜨 샬로네즈 지역에서는 마른 나뭇잎과 토양의 흙 냄새와 더불어 자두 과실감, 보이젠베리, 클로브향이 풍부한 피노 누아를 생산합니다.\n
+        지브리와 머큐리가 대표적입니다.
+    </string>
+
+    <!-- Fragment France Rhone -->
+    <string name="type_area_france_rhone_wine_produce_content1">마르산 블렌드, 비오니에, 로제, 뮈스카 블랑</string>
+    <string name="type_area_france_rhone_wine_produce_content2">쉬라, 론 / GSM 블렌드</string>
+    <string name="type_area_france_rhone_top_title_content">
+        론 지역은 가죽향과 과실향이 풍부한 와인을 생산하는 남부론과 허브 계열 향인 허베이셔스향과 블렌딩으로 유명한 북부 론으로 나뉩니다.
+    </string>
+    <string name="type_area_france_rhone_zone_title">론 지역의 주요 와인</string>
+
+    <string name="type_area_france_rhone_zone_wine1">꼬뜨 드 론 레드</string>
+    <string name="type_area_france_rhone_zone_wine1_content1">
+        가장 호평을 받고 있는 남부 론에서 생산되는 레드 와인은 블렌딩에서 높은 그르나쉬 블렌딩 비율을 보입니다.\n
+        이러한 와인은 묵직한 편이나 오크 숙성은 잘 볼 수 없습니다.\n
+        달콤한 라즈베리향에서 가죽과 기름진 베이컨향까지 다양한 향이 납니다.
+    </string>
+    <string name="type_area_france_rhone_zone_wine2">론 로제 &amp; 타블 로제</string>
+    <string name="type_area_france_rhone_zone_wine1_content2">
+        론에서 생산되는 로제 와인은 야생 딸기와 레드 커런트의 향이 납니다.\n
+        따블이라고 불리는 진한 컬러의 로제 와인은 유명 작가 헤밍웨이가 애호하는 와인으로 알려져 있습니다.
+    </string>
+    <string name="type_area_france_rhone_zone_wine3">꼬뜨 드 론 화이트</string>
+    <string name="type_area_france_rhone_zone_wine1_content3">
+        마르산과 비오니에는 론 화이트에서 가장 유명한 와인입니다.\n
+        이 품종의 와인들은 사과, 밀랍, 미네랄 같은 화강암향 노트를 줍니다.\n
+        북부 론 지역에서는 아몬드, 복숭아, 오렌지향을 주는 유명한 화이트 와인들이 생산됩니다.
+    </string>
+    <string name="type_area_france_rhone_zone_wine4">샤또네프 뒤 파프</string>
+    <string name="type_area_france_rhone_zone_wine1_content4">
+        가장 묵직하고 오랜 숙성 가치가 있는 남부 론 와인인 샤또네프 뒤 파프는 13개의 와인 품종으로 블렌딩된 와인입니다.\n
+        주요 블렌딩 품종으로는 그르나쉬, 쉬라, 무르베드르, 쌩쏘입니다.
+    </string>
+    <string name="type_area_france_rhone_zone_wine5">북부 론 쉬라</string>
+    <string name="type_area_france_rhone_zone_wine1_content5">
+        쉬라 품종의 탄생지로 알려진 북부 론에서는 진하고 풍부한 느낌의 쉬라를 생산합니다.\n
+        블랙 커런트, 감초, 자두, 올리브향에서 고기향까지 나는 강렬한 와인 스타일로 만들어집니다.\n
+        품질이 우수한 북부 론 와인은 20년 동안 숙성이 가능합니다.
+    </string>
+    <string name="type_area_france_rhone_zone_wine6">뮈스까 봄 드 브니스</string>
+    <string name="type_area_france_rhone_zone_wine1_content6">
+        쉽게 보기 어려운 뮈스까 블랑은 주정 강화 디저트 와인으로 생산됩니다.\n
+        프랑스어로 "뱅 두 나뛰렐" 혹은 VDN으로 불리며, 와인은 열대 과일, 꿀, 오렌지향이 풍부한 달콤한 스타일입니다.
+    </string>
+
+    <!-- Fragment Germany -->
+    <string name="type_area_germany_wine_produce_content1">리슬링, 뮬러 트루가우, 실바너, 게브르츠트라미너</string>
+    <string name="type_area_germany_wine_produce_content2">피노 누아, 도른펠더, 스키아바, 블라우프랭키쉬, </string>
+    <string name="type_area_germany_top_title_content">
+         독일은 서늘한 기후에서 주로 생산되는 리슬링 품종과 피노 누아 품종으로 유명합니다.
+    </string>
+    <string name="type_area_germany_zone_title">독일의 주요 와인</string>
+
+    <string name="type_area_germany_zone_wine1">리슬링</string>
+    <string name="type_area_germany_zone_wine1_content1">
+        독일에서 생산되는 우수한 와인 품종으로 알려진 리슬링은 아로마가 우수하며 드라이한 스타일부터 트로켄 혹은
+        아이스바인이라고 알려진 스위트한 스타일까지 다양하게 생산됩니다.
+    </string>
+    <string name="type_area_germany_zone_wine2">뮬러 투르가우</string>
+    <string name="type_area_germany_zone_wine1_content2">
+        이 품종은 복숭아와 꽃향 아로마가 풍부한 화이트 와인으로 생산됩니다.\n
+        풍부한 과실향으로 달콤하게 느껴지기도 합니다.
+    </string>
+    <string name="type_area_germany_zone_wine3">피노 누아</string>
+    <string name="type_area_germany_zone_wine1_content3">
+        독일에서 피노 누아(슈패트부르군더) 품종은 크랜베리, 체리, 미묘한 토양향을 내는 와인으로 생산됩니다.\n
+        이 와인의 특징은 부르고뉴의 주요 와인인 피노 누아와 비견되기도 합니다.
+    </string>
+    <string name="type_area_germany_zone_wine4">도른펠더</string>
+    <string name="type_area_germany_zone_wine1_content4">
+        이 품종은 풍부한 과실향과 풀향의 그린노트를 띄는 미디엄 바디 와인으로 생산됩니다.\n
+        미디엄 타닌과 스파이시한 산도도 느껴집니다.
+    </string>
+    <string name="type_area_germany_zone_wine5">피노 그리 &amp; 피노 블랑</string>
+    <string name="type_area_germany_zone_wine1_content5">
+        독일은 바이스부르군더라 불리는 풍부한 스타일의 피노 블랑 품종, 그라우버건더라고 불리는 복숭아, 시트러스, 벌집향이 나는 피노 그리 품종을 생산합니다.
+    </string>
+    <string name="type_area_germany_zone_wine6">실바네르</string>
+    <string name="type_area_germany_zone_wine1_content6">
+        가볍고 드라이한 스타일로 생산되는 실바네르 화이트 품종 와인은 높은 산도와 시트러스, 그린 사과향을 지닙니다.
+    </string>
+
+    <!-- Fragment Italia -->
+    <string name="type_area_italia_wine_produce_content1">
+        프티아르벵, 피노 그리지오, 프란치아코르타, 트렌토, 게뷔르츠트라미너, 쇼비뇽 블랑, 프라울라노, 소아베, 프로세코, 람브루스코, 트레비아노, 베르디키오, 그레코, 피아노, 팔랑기나,
+        오르비에토, 카타라토, 베르멘티노, 모스카토 다스티
+    </string>
+    <string name="type_area_italia_wine_produce_content2">
+        페팃 루즈, 피노 누아, 발텔리나, 멜롯, 발포리첼라, 산지오베제, 몬테풀치아노, 프리미티보, 네그로 아마로, 우바 디 트로이아,
+        갈리오뽀, 알리아니코, 체사네제, 빈 산토, 사그란티노, 끼안티, 슈퍼 투스칸, 바롤로, 바르바레스코, 바르베라, 돌체토, 네비올라, 까리냥, 칸노나우(그르나쉬), 네로 다볼라, 마르살라
+    </string>
+    <string name="type_area_italia_top_title_content">
+        이탈리아는 지역 색이 강한 와인을 생산하는 것으로 유명합니다.\n
+        이탈리아는 지역별로 다른 기후 영향에 의해 세 지역으로 나뉩니다.
+    </string>
+    <string name="type_area_italia_zone_title1">이탈리아 북부</string>
+    <string name="type_area_italia_zone_content1">
+        이탈리아 북부 지역에서 생산되는 와인은 산도가 높고 풍부한 과실향과 허브향이 풍부합니다.
+    </string>
+    <string name="type_area_italia_zone_content1_wine1">프로세코</string>
+    <string name="type_area_italia_zone_content1_wine2">모스카토 다스티</string>
+    <string name="type_area_italia_zone_content1_wine3">피노 그리지오</string>
+    <string name="type_area_italia_zone_content1_wine4">소아베</string>
+    <string name="type_area_italia_zone_content1_wine5">바르베라</string>
+    <string name="type_area_italia_zone_content1_wine6">적포도주</string>
+    <string name="type_area_italia_zone_content1_wine7">바롤로(네이올로)</string>
+
+    <string name="type_area_italia_zone_title2">이탈리아 중부</string>
+    <string name="type_area_italia_zone_content2">
+        이탈리아 중부 지역에서 생산되는 와인은 산도가 높고 잘 익은 과실향, 가죽향, 진륵 향이 납니다.
+    </string>
+    <string name="type_area_italia_zone_content2_wine1">람브루스코</string>
+    <string name="type_area_italia_zone_content2_wine2">베르멘티노</string>
+    <string name="type_area_italia_zone_content2_wine3">끼안티(산지오베제)</string>
+    <string name="type_area_italia_zone_content2_wine4">슈퍼 투스칸(보르도 블랜드)</string>
+    <string name="type_area_italia_zone_content2_wine5">몬테풀치아노</string>
+    <string name="type_area_italia_zone_content2_wine6">빈 산토</string>
+
+    <string name="type_area_italia_zone_title3">이탈리아 남부 / 섬</string>
+    <string name="type_area_italia_zone_content3">
+        이탈리아 남부 지역에서 생산되는 와인은 미디엄 산도에 달콤함 과실향, 가죽향이 납니다.
+    </string>
+    <string name="type_area_italia_zone_content3_wine1">베르멘티노</string>
+    <string name="type_area_italia_zone_content3_wine2">칸노나우(그르나쉬)</string>
+    <string name="type_area_italia_zone_content3_wine3">프라미티보</string>
+    <string name="type_area_italia_zone_content3_wine4">네그로 아마로</string>
+    <string name="type_area_italia_zone_content3_wine5">네로 다볼라</string>
+    <string name="type_area_italia_zone_content3_wine6">마르살라</string>
+
+    <!-- Fragment Italia Toscana -->
+    <string name="type_area_italia_toscana_wine_produce_content1">베르멘티노, 트레비아노, 샤르도네</string>
+    <string name="type_area_italia_toscana_wine_produce_content2">멜롯, 산지오베제, 빈 산토, 까베르네 쇼비뇽, 까베르네 프랑</string>
+    <string name="type_area_italia_toscana_top_title_content">
+        이탈리아 지역에서 가장 많이 생산되는 품종은 산지오베제입니다.\n
+        산지오베제로 만들어지는 와인은 스파이시하고 풀의 향기가 나며 숙성이 될수록 무화과향이 더 납니다.
+    </string>
+    <string name="type_area_italia_toscana_zone_title">토스카나의 주요 와인</string>
+
+    <string name="type_area_italia_toscana_zone_wine1">끼안티</string>
+    <string name="type_area_italia_toscana_zone_wine1_content1">
+        끼안티 지역에서 생산되는 와인의 주요 플렌딩 품종은 산지오베제입니다.\n
+        숙성된 끼안티 와인은 체리잼, 오레가노, 진흙, 발사믹, 에스프레소, 담배향이 납니다.\n
+        가성비가 뛰어난 끼안티 와인에서는 스파이시하고 풀향과 더불어 동물향, 레드 과일과 토마토 과실 노트가 납니다.
+    </string>
+    <string name="type_area_italia_toscana_zone_wine2">브루넬로 디 몬탈치노</string>
+    <string name="type_area_italia_toscana_zone_wine1_content2">
+        "프루뇰로 젠틸레"라 불리는 산지오베제 변종 품종으로 생산된 와인으로 4년 이상 숙성된 와인을 브루넬로 디 몬탈치노라고 일컫습니다.\n
+        와인은 감초, 삼나무, 바닐라, 무화과향이 나며 스파이시한 산도와 적당한 타닌을 포함합니다.
+    </string>
+    <string name="type_area_italia_toscana_zone_wine3">슈퍼 투스칸 블렌딩</string>
+    <string name="type_area_italia_toscana_zone_wine1_content3">
+        이탈리아 토착 품종이 아닌 멜롯과 까베르네 프랑과 같이 다름 품종이 블렌딩된 스타일을 일컫습니다.\n
+        이러한 슈퍼 투스칸 블렌딩 와인은 독특하게 만들어진 라벨에 의해 다른 토스카나 와인과 구별됩니다.
+    </string>
+    <string name="type_area_italia_toscana_zone_wine4">베르나차 디 산 지미냐노</string>
+    <string name="type_area_italia_toscana_zone_wine1_content4">
+        "피오레" 베르나챠 품종의 와인은 레몬, 배, 사과 꽃향이 나며 드라이하고 미네랄이 풍부합니다.\n
+        전통적으로 생산되는 와인들은 "피오레" 와인들과 스타일이 비슷하나 피니시에 아몬드향이 강하게 느껴집니다.
+    </string>
+    <string name="type_area_italia_toscana_zone_wine5">기타 투스칸 산지오베제</string>
+    <string name="type_area_italia_toscana_zone_wine1_content5">
+        끼안티와 브루넬로는 토스카나의 유명 품종인 산지오베제 생산 지역으로 유명합니다.\n
+        품질 좋은 산지오베제 품종을 생산하는 다른 지역들이 있습니다.
+    </string>
+
+    <!-- Fragment Portugal -->
+    <string name="type_area_portugal_wine_produce_content1">
+        비뇨 베르드, 알바리뉴(알바리뇨), 엔크루자도, 아린토, 바이라다 스파클링, 페르낭 피르스, 안타오 바즈, 쇼비뇽 블랑, 샤르도네, 따보라 베호자
+    </string>
+    <string name="type_area_portugal_wine_produce_content2">
+        하엔(멘시아), 토우리가 나시오날, 바이라다 틴토(레드), 트린카데라, 오칸떼 부쉐, 뮈스카텔 드 세투발, 카스텔랑, 쉬라, 알리칸트 부쉐, 아라고네즈(템프라니오),
+        틴토 로지오(템프라니오), 틴토(레드 블렌딩), 트라 오스 톤테스 틴토(레드), 포트
+    </string>
+    <string name="type_area_portugal_top_title_content">
+        포르투갈은 포트 와인 생산으로 가장 유명하지만 200개 이상의 토착 품종으로 생산된 품질 높은 드라이한 와인이 생산되기도 합니다.
+    </string>
+    <string name="type_area_portugal_zone_title">포르투갈의 주요 와인</string>
+
+    <string name="type_area_portugal_zone_wine1">토우리가 나시오날</string>
+    <string name="type_area_portugal_zone_wine1_content1">
+        포르투갈에서 가장 중요한 품종으로 포트 와인과 드라이한 레드 와인 블렌딩에 주로 사용됩니다.\n
+        와인은 블랙 자두, 블랙베리와 제비꽃의 풍미를 지닙니다.
+    </string>
+    <string name="type_area_portugal_zone_wine2">템프라니오</string>
+    <string name="type_area_portugal_zone_wine1_content2">
+        템프라니오는 포르투갈 남부에서는 아라고네즈라고 라벨링되며, 북부에서는 틴타로리즈라고 표시됩니다.\n
+        와인은 스모키한 레드 와인의 과실향과 시나몬향, 씁쓸하지만 달콤한 초콜릿향이 납니다.
+    </string>
+    <string name="type_area_portugal_zone_wine3">알리칸테 부쉐</string>
+    <string name="type_area_portugal_zone_wine1_content3">
+        알리칸테 품종은 다른 품종과 다르게 레드 껍질과 레드 알맹이를 생산합니다.\n
+        이 품종으로 생산된 와인은 블랙 과일의 과실향, 블랙 후추향, 담배향을 지닙니다.
+    </string>
+    <string name="type_area_portugal_zone_wine4">트링카데이라</string>
+    <string name="type_area_portugal_zone_wine1_content4">
+        레드 과실향, 바베큐 스모크, 히코리 나무향, 건자두 소스, 건포도, 등유, 초콜릿향이 납니다.
+    </string>
+    <string name="type_area_portugal_zone_wine5">아린토</string>
+    <string name="type_area_portugal_zone_wine1_content5">
+        빈티지한 영한 와인들은 시트러스의 안쪽 껍질향이 납니다.\n
+        와인이 숙성될수록 레몬, 아몬드, 벌집의 향이 더해집니다.\n
+        아린토 품종은 때때로 오크 숙성이 됩니다.
+    </string>
+    <string name="type_area_portugal_zone_wine6">페르나옹 피르스</string>
+    <string name="type_area_portugal_zone_wine1_content6">
+        페르나옹 피르스는 꽃향이 풍부하며 아로마가 느껴지는 와인들 생산합니다.\n
+        비오니에 품종과 블렌딩된 경우 복숭아와 벌집의 풍부한 향이 더해져 복합적인 향이 느껴집니다.
+    </string>
+
+    <!-- Fragment Spain -->
+    <string name="type_area_spain_wine_produce_content1">알바리뇨, 베르데호(루에다), 온다라비 주리, 까바, 아이렌, 팔로미노 피노</string>
+    <string name="type_area_spain_wine_produce_content2">멘시아, 템프라니오, 멘샤, 온다라비 블랙, 가르나차, 리오하, 보발, 모나스트렐, 리스탄 네그로, 쉬라, 까베르네 쇼비뇽</string>
+    <string name="type_area_spain_top_title_content">
+        스페인은 풀 바디의 과실향이 풍부한 와인을 생산하는 것으로 유명합니다.\n
+        섬세한 토양의 향을 띄는 와인이 생산되며, 스페인의 생산 지역은 기후에 따라 크게 세 지역으로 나누어집니다.
+    </string>
+    <string name="type_area_spain_zone_title1">스페인</string>
+    <string name="type_area_spain_zone_content1">
+        스페인 북서부의 해안가에서 높은 산도, 신선한 과실향, 미네랄향이 풍부한 와인이 생산됩니다.
+    </string>
+    <string name="type_area_spain_zone_content1_wine1">알바리뇨</string>
+    <string name="type_area_spain_zone_content1_wine2">멘시아</string>
+
+    <string name="type_area_spain_zone_title2">스페인 북부</string>
+    <string name="type_area_spain_zone_content2">
+        스페인 북부에서는 적당한 산도와잘 익은 과실향, 미네랄향이 풍부한 와인이 생산됩니다.
+    </string>
+    <string name="type_area_spain_zone_content2_wine1">까바</string>
+    <string name="type_area_spain_zone_content2_wine2">베르데호</string>
+    <string name="type_area_spain_zone_content2_wine3">가르나챠(그르나쉬)</string>
+    <string name="type_area_spain_zone_content2_wine4">까리냥</string>
+    <string name="type_area_spain_zone_content2_wine5">프리오랏</string>
+    <string name="type_area_spain_zone_content2_wine6">리오하(템프라니오)</string>
+    <string name="type_area_spain_zone_content2_wine7">리베라 델 듀에로(템프라니오)</string>
+
+    <string name="type_area_spain_zone_title3">스페인 남부</string>
+    <string name="type_area_spain_zone_content3">
+        스페인 남부에서 생산되는 와인은 적당한 산도, 달콤한 과실향, 점토 풍미가 납니다.
+    </string>
+    <string name="type_area_spain_zone_content3_wine1">가르나챠(그르나쉬)</string>
+    <string name="type_area_spain_zone_content3_wine2">모나스트렐(무르베드르)</string>
+    <string name="type_area_spain_zone_content3_wine3">쉐리</string>
+
 </resources>
