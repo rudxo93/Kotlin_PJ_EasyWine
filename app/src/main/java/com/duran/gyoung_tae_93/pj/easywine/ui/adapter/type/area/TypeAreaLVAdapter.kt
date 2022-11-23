@@ -1,4 +1,4 @@
-package com.duran.gyoung_tae_93.pj.easywine.ui.adapter.type
+package com.duran.gyoung_tae_93.pj.easywine.ui.adapter.type.area
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater

@@ -43,9 +43,10 @@
     <string name="edit_note_alcohol">알코올:</string>
     <string name="edit_note_alcohol_unit">% vol</string>
     <string name="edit_note_buy_date">구입시기:</string>
-    <string name="edit_note_drink_date">시음일자:</string>
-    <string name="edit_note_price">구입가격:</string>
-    <string name="edit_note_price_unit">원</string>
+    <string name="edit_note_drink_date">시음일자:</string>매운
+
+    <string name="edit_note_price">구입가격:</string>쓴맛
+    <string name="edit_note_price_unit">원</string>기름진
     <string name="edit_note_etc">참고사항</string>
     <string name="edit_note_sweetness">당도</string>
     <string name="edit_note_sweetness_seekbar_1">Dry</string>
@@ -1749,5 +1750,58 @@
     <string name="type_area_spain_zone_content3_wine1">가르나챠(그르나쉬)</string>
     <string name="type_area_spain_zone_content3_wine2">모나스트렐(무르베드르)</string>
     <string name="type_area_spain_zone_content3_wine3">쉐리</string>
+
+    <!-- About Food -->
+    <!-- Fragment Food -->
+    <string name="type_food_main_top_title">음식과 와인</string>
+    <string name="type_food_btn_move_dialog_info"><u>음식과 와인 매칭이란?</u></string>
+    <string name="type_food_wine_and_food_match_main_title">와인과 음식을 매칭시키는 방법</string>
+    <string name="type_food_wine_and_food_match_title_1">신 음식</string>
+    <string name="type_food_wine_and_food_match_content_1">
+        높은 산도의 음식을 산도가 낮은 와인과 매칭하게 되면 맛이 밋밋해집니다.\n
+        높은 산도의 음식을 높은 산도의 와인과 매칭시키면 됩니다.\n\n\n
+    </string>
+    <string name="type_food_wine_and_food_match_title_2">기름진 음식</string>
+    <string name="type_food_wine_and_food_match_content_2">
+        높은 타닌의 레드 와인은 풍부하고 기름진 음식으로 텁텁한 입안을 행궈주는 느낌을 줍니다.
+    </string>
+    <string name="type_food_wine_and_food_match_title_3">매운 음식</string>
+    <string name="type_food_wine_and_food_match_content_3">
+        낮은 알코올을 가진 차갑고 스위트한 와인은 음식의 매운 맛을 상쇄시켜 줍니다.
+    </string>
+    <string name="type_food_wine_and_food_match_title_4">쏘는 음식</string>
+    <string name="type_food_wine_and_food_match_content_4">
+        고르곤졸라와 같이 톡 쏘는 맛은 높은 산도와 높은 당도가 있는 와인과 잘 어울립니다.
+    </string>
+    <string name="type_food_wine_and_food_match_title_5">쓴 음식</string>
+    <string name="type_food_wine_and_food_match_content_5">
+        쓴맛이 나는 음식은 타닌의 쓴 맛을 더 강하게 해줍니다.\n
+        쓴맛이 나는 음식은 염도와 당도가 있으나 타닌이 거의 없는 와인과 매칭시키는 것이 좋습니다.
+    </string>
+    <string name="type_food_wine_and_food_match_title_6">단 음식</string>
+    <string name="type_food_wine_and_food_match_content_6">
+        달콤한 음식은 드라이한 와인의 맛을 더 쓰게 합니다.\n
+        단 음식은 스위트한 와인과 함께 매칭시키면 됩니다.
+    </string>
+    <string name="type_food_more_wine_match_btn_title">더 알아보기</string>
+
+    <!-- Fragment Dialog Food Info -->
+    <string name="type_dialog_food_info_title">음식과 와인의 매칭</string>
+    <string name="type_dialog_food_info_content">
+        와인과 음식을 함께 매칭하는 것을 마리아주(marriage) 혹은 페어링(pairing)이라고 합니다.\n
+        마리아주는 결혼이라는 뜻으로 음식과 와인의 만남은 결혼과 같습니다.\n
+        성공적인 매칭은 서로의 장점을 돋보이게 하고 훨씬 훌륭한 맛을 느낄 수 있게 해줍니다.\n
+        But! 실패한다면 음식과 와인이 따로 놀게되고 최악의 경우 서로의 장점마저 잃어버립니다.\n
+        와인과 음식을 조합할 때 참고하여 매칭해보고 사람마다 입맛과 취향이 다르기 때문에 꼭 따를 필요없이 새로운 시도를 하는것도 좋습니다.
+    </string>
+    <string name="type_dialog_food_info_btn_ok">OK</string>
+
+    <!-- Fragment Match -->
+    <string name="type_food_match_top_title">How to Match?</string>
+    <string name="type_food_match_title_1">음식과 매칭</string>
+    <string name="type_food_match_title_2">와인과 매칭</string>
+
+    <!-- Fragment Food Match -->
+    <string name="type_food_match_main_title">What food to match?</string>
 
 </resources>

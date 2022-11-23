@@ -11,7 +11,7 @@ import androidx.navigation.findNavController
 import com.duran.gyoung_tae_93.pj.easywine.R
 import com.duran.gyoung_tae_93.pj.easywine.data.model.type.TypeModel
 import com.duran.gyoung_tae_93.pj.easywine.databinding.FragmentOceaniaBinding
-import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.type.TypeAreaLVAdapter
+import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.type.area.TypeAreaLVAdapter
 
 class OceaniaFragment : Fragment() {
 

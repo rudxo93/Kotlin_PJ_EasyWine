@@ -80,7 +80,15 @@
         android:id="@+id/foodFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.food.FoodFragment"
         android:label="fragment_food"
-        tools:layout="@layout/fragment_food" />
+        tools:layout="@layout/fragment_food">
+        <action
+            android:id="@+id/action_foodFragment_to_matchFragment"
+            app:destination="@id/matchFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
     <fragment
         android:id="@+id/styleFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.style.StyleFragment"
@@ -1839,4 +1847,190 @@
             app:popUpTo="@id/fragment_type"
             app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/matchFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.food.MatchFragment"
+        android:label="fragment_match"
+        tools:layout="@layout/fragment_match">
+        <action
+            android:id="@+id/action_matchFragment_to_foodMatchFragment"
+            app:destination="@id/foodMatchFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_matchFragment_to_wineMatchFragment"
+            app:destination="@id/wineMatchFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodMatchFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.food.foodmatch.FoodMatchFragment"
+        android:label="fragment_food_match"
+        tools:layout="@layout/fragment_food_match" >
+        <action
+            android:id="@+id/action_foodMatchFragment_to_meatFragment"
+            app:destination="@id/meatFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_foodMatchFragment_to_poultryMeatFragment"
+            app:destination="@id/poultryMeatFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_foodMatchFragment_to_fishFragment"
+            app:destination="@id/fishFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_foodMatchFragment_to_shellFishFragment"
+            app:destination="@id/shellFishFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_foodMatchFragment_to_vegetableFragment"
+            app:destination="@id/vegetableFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_foodMatchFragment_to_spiceFragment"
+            app:destination="@id/spiceFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_foodMatchFragment_to_cheeseFragment"
+            app:destination="@id/cheeseFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/wineMatchFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.food.winematch.WineMatchFragment"
+        android:label="fragment_wine_match"
+        tools:layout="@layout/fragment_wine_match" />
+    <fragment
+        android:id="@+id/meatFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.food.foodmatch.MeatFragment"
+        android:label="fragment_meat"
+        tools:layout="@layout/fragment_meat" >
+        <action
+            android:id="@+id/action_meatFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/poultryMeatFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.food.foodmatch.PoultryMeatFragment"
+        android:label="fragment_poultry_meat"
+        tools:layout="@layout/fragment_poultry_meat" >
+        <action
+            android:id="@+id/action_poultryMeatFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/fishFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.food.foodmatch.FishFragment"
+        android:label="fragment_fish"
+        tools:layout="@layout/fragment_fish" >
+        <action
+            android:id="@+id/action_fishFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/shellFishFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.food.foodmatch.ShellFishFragment"
+        android:label="fragment_shell_fish"
+        tools:layout="@layout/fragment_shellfish" >
+        <action
+            android:id="@+id/action_shellFishFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/vegetableFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.food.foodmatch.VegetableFragment"
+        android:label="fragment_vegetable"
+        tools:layout="@layout/fragment_vegetable" >
+        <action
+            android:id="@+id/action_vegetableFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/spiceFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.food.foodmatch.SpiceFragment"
+        android:label="fragment_spice"
+        tools:layout="@layout/fragment_spice" >
+        <action
+            android:id="@+id/action_spiceFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/cheeseFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.food.foodmatch.CheeseFragment"
+        android:label="fragment_cheese"
+        tools:layout="@layout/fragment_cheese" >
+        <action
+            android:id="@+id/action_cheeseFragment_to_fragment_type"
+            app:destination="@id/fragment_type"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_type"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
 </navigation>

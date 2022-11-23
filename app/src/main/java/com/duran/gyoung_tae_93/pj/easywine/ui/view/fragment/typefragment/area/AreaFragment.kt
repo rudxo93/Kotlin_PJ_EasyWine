@@ -1,7 +1,6 @@
 package com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.area
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,8 +11,7 @@ import androidx.navigation.findNavController
 import com.duran.gyoung_tae_93.pj.easywine.R
 import com.duran.gyoung_tae_93.pj.easywine.data.model.type.TypeModel
 import com.duran.gyoung_tae_93.pj.easywine.databinding.FragmentAreaBinding
-import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.type.TypeAreaLVAdapter
-import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.type.TypeStyleLVAdapter
+import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.type.area.TypeAreaLVAdapter
 import com.duran.gyoung_tae_93.pj.easywine.ui.view.activity.MainActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
