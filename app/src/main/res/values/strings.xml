@@ -1804,4 +1804,148 @@
     <!-- Fragment Food Match -->
     <string name="type_food_match_main_title">What food to match?</string>
 
+    <!-- Fragment Meat -->
+    <string name="type_food_match_meat_main_title">고기요리</string>
+    <string name="type_food_match_meat_title_1">소고기</string>
+    <string name="type_food_match_meat_title_1_wine_1">로제(바비큐)</string>
+    <string name="type_food_match_meat_title_1_wine_2">부드러운 레드(조림, 그릴, 로스트)\n강한 레드</string>
+    <string name="type_food_match_meat_title_2">양고기 / 어린 양고기</string>
+    <string name="type_food_match_meat_title_2_wine_1">향이 풍부한 화이트(뇌요리)</string>
+    <string name="type_food_match_meat_title_2_wine_2">로제(메르게즈)\n소시지</string>
+    <string name="type_food_match_meat_title_2_wine_3">부드러운 레드(삶은 고기)\n강한 레드\n뱅 두 나튀렐</string>
+    <string name="type_food_match_meat_title_3">염장고기(햄, 소시지)</string>
+    <string name="type_food_match_meat_title_3_wine_1">상큼한 화이트</string>
+    <string name="type_food_match_meat_title_3_wine_2">로제</string>
+    <string name="type_food_match_meat_title_3_wine_3">가벼운 레드\n부드러운 레드</string>
+    <string name="type_food_match_meat_title_4">돼지고기</string>
+    <string name="type_food_match_meat_title_4_wine_1">상큼한 화이트(비곗살)\n향이 풍부한 화이트(내장요리)</string>
+    <string name="type_food_match_meat_title_4_wine_2">가벼운 레드(내장요리, 돼지갈비)\n부드러운 레드(로스트, 그릴)\n강한 레드(진한 향념, 그릴)</string>
+    <string name="type_food_match_meat_title_5">송아지 고기</string>
+    <string name="type_food_match_meat_title_5_wine_1">상큼한 화이트(비곗살)\n향이 풍부한 화이트(내장요리)\n강한 화이트(크림소스)</string>
+    <string name="type_food_match_meat_title_5_wine_2">로제</string>
+    <string name="type_food_match_meat_title_5_wine_3">가벼운 레드\n부드러운 레드(그릴)</string>
+
+    <!-- Fragment Poultry Meat -->
+    <string name="type_food_match_poultry_meat_main_title">가금육과 지비에</string>
+    <string name="type_food_match_poultry_meat_title_1">닭고기 / 칠면조고기</string>
+    <string name="type_food_match_poultry_meat_title_1_wine_1">강한 화이트(로스트, 크림소스)\n무알뢰, 리코뢰\n발포성 와인(크림소스)</string>
+    <string name="type_food_match_poultry_meat_title_1_wine_2">로제</string>
+    <string name="type_food_match_poultry_meat_title_1_wine_3">가벼운 레드(로스트)</string>
+    <string name="type_food_match_poultry_meat_title_2">오리고기</string>
+    <string name="type_food_match_poultry_meat_title_2_wine_1">무알뢰, 리코뢰(푸아그라)</string>
+    <string name="type_food_match_poultry_meat_title_2_wine_2">부드러운 레드(가슴살요리)\n강한 레드(로스트, 푸아그라)\n뱅 두 나튀렐(플랑베)</string>
+    <string name="type_food_match_poultry_meat_title_3">토끼고기</string>
+    <string name="type_food_match_poultry_meat_title_3_wine_1">향이 풍부한 화이트\n강한 화이트\n발포성 와인(크림소스)</string>
+    <string name="type_food_match_poultry_meat_title_3_wine_2">가벼운 레드</string>
+    <string name="type_food_match_poultry_meat_title_4">달걀</string>
+    <string name="type_food_match_poultry_meat_title_4_wine_1">상큼한 화이트(짭짤한 키슈)\n향이 풍부한 화이트(오믈렛)\n무알뢰, 리코뢰</string>
+    <string name="type_food_match_poultry_meat_title_4_wine_2">부드러운 레드(레드와인소스에 삶은 포치드에그)</string>
+    <string name="type_food_match_poultry_meat_title_5">지비에(야생조류)</string>
+    <string name="type_food_match_poultry_meat_title_5_wine_1">강한 화이트</string>
+    <string name="type_food_match_poultry_meat_title_5_wine_2">가벼운 레드, 부드러운 레드</string>
+    <string name="type_food_match_poultry_meat_title_6">지비에(야생동물)</string>
+    <string name="type_food_match_poultry_meat_title_6_wine_1">부드러운 레드(야생토끼요리)\n강한 레드(스튜, 소스 얹은 고기)</string>
+
+    <!-- Fragment Fish -->
+    <string name="type_food_match_fish_main_title">생선요리</string>
+    <string name="type_food_match_fish_title_1">참치</string>
+    <string name="type_food_match_fish_title_1_wine_1">향이 풍부한 화이트(스시)</string>
+    <string name="type_food_match_fish_title_1_wine_2">로제</string>
+    <string name="type_food_match_fish_title_1_wine_3">가벼운 레드</string>
+    <string name="type_food_match_fish_title_2">연어</string>
+    <string name="type_food_match_fish_title_2_wine_1">발포성 와인(스시)\n상큼한 화이트(스시)\n향이 풍부한 화이트</string>
+    <string name="type_food_match_fish_title_2_wine_2">로제</string>
+    <string name="type_food_match_fish_title_3">흰살생선</string>
+    <string name="type_food_match_fish_title_3_wine_1">상큼한 화이트\n향이 풍부한 화이트\n강한 화이트(리슈소스)</string>
+    <string name="type_food_match_fish_title_3_wine_2">로제(튀김, 그릴, 스프)</string>
+    <string name="type_food_match_fish_title_3_wine_3">부드러운 레드(노랑촉수)</string>
+    <string name="type_food_match_fish_title_4">민물고기</string>
+    <string name="type_food_match_fish_title_4_wine_1">향이 풍부한 화이트</string>
+    <string name="type_food_match_fish_title_4_wine_2">로제(그릴)</string>
+    <string name="type_food_match_fish_title_4_wine_3">부드러운 레드(보르도식 장어요리)</string>
+    <string name="type_food_match_fish_title_5">생선통조림</string>
+    <string name="type_food_match_fish_title_5_wine_1">상큼한 화이트\n향이 풍부한 화이트</string>
+    <string name="type_food_match_fish_title_6">훈제생선</string>
+    <string name="type_food_match_fish_title_6_wine_1">발포성 와인\n상큼한 화이트\n향이 풍부한 화이트</string>
+
+    <!-- Fragment Shellfish -->
+    <string name="type_food_match_shellfish_main_title">조개류와 갑각류</string>
+    <string name="type_food_match_shellfish_title_1">가리비</string>
+    <string name="type_food_match_shellfish_title_1_wine_1">발포성 와인\n향이 풍부한 화이트\n강한 화이트(크림소스)</string>
+    <string name="type_food_match_shellfish_title_2">굴 / 고둥</string>
+    <string name="type_food_match_shellfish_title_2_wine_1">발포성 와인\n상큼한 화이트\n무알뢰, 리코뢰</string>
+    <string name="type_food_match_shellfish_title_2_wine_2">부드러운 레드(익힌 굴)</string>
+    <string name="type_food_match_shellfish_title_3">홍합</string>
+    <string name="type_food_match_shellfish_title_3_wine_1">상큼한 화이트\n발포성 와인</string>
+    <string name="type_food_match_shellfish_title_4">게</string>
+    <string name="type_food_match_shellfish_title_4_wine_1">상큼한 화이트\n향이 풍부한 화이트</string>
+    <string name="type_food_match_shellfish_title_4_wine_2">로제</string>
+    <string name="type_food_match_shellfish_title_5">바닷가재</string>
+    <string name="type_food_match_shellfish_title_5_wine_1">향이 풍부한 화이트\n강한 화이트</string>
+    <string name="type_food_match_shellfish_title_5_wine_2">가벼운 레드(그릴)</string>
+    <string name="type_food_match_shellfish_title_6">새우</string>
+    <string name="type_food_match_shellfish_title_6_wine_1">상큼한 화이트\n향이 풍부한 화이트\n발포성 와인</string>
+    <string name="type_food_match_shellfish_title_6_wine_2">로제</string>
+
+    <!-- Fragment Vegetable -->
+    <string name="type_food_match_vegetable_main_title">채소요리</string>
+    <string name="type_food_match_vegetable_title_1">녹색채소</string>
+    <string name="type_food_match_vegetable_title_1_wine_1">상큼한 화이트\n향이 풍부한 화이트</string>
+    <string name="type_food_match_vegetable_title_2">전분이 들어있는 요리</string>
+    <string name="type_food_match_vegetable_title_2_wine_1">강한 화이트</string>
+    <string name="type_food_match_vegetable_title_2_wine_2">로제(쿠스쿠스, 파에야, 샐러드)</string>
+    <string name="type_food_match_vegetable_title_2_wine_3">부드러운 레드</string>
+    <string name="type_food_match_vegetable_title_3">콩류</string>
+    <string name="type_food_match_vegetable_title_3_wine_1">향이 풍부한 화이트</string>
+    <string name="type_food_match_vegetable_title_3_wine_2">가벼운 레드(퓌레, 스프)\n강한 레드</string>
+    <string name="type_food_match_vegetable_title_4">버섯류</string>
+    <string name="type_food_match_vegetable_title_4_wine_1">강한 화이트</string>
+    <string name="type_food_match_vegetable_title_4_wine_2">부드러운 레드\n강한 레드</string>
+    <string name="type_food_match_vegetable_title_5">뿌리채소</string>
+    <string name="type_food_match_vegetable_title_5_wine_1">향이 풍부한 화이트\n무알뢰, 리코뢰</string>
+    <string name="type_food_match_vegetable_title_6">과일채소</string>
+    <string name="type_food_match_vegetable_title_6_wine_1">상큼한 화이트(샐러드)</string>
+    <string name="type_food_match_vegetable_title_6_wine_2">로제(샐러드, 파르시, 라타투이, 그라탕)</string>
+    <string name="type_food_match_vegetable_title_6_wine_3">부드러운 레드(소스, 그라탕)</string>
+
+    <!-- Fragment Spice -->
+    <string name="type_food_match_spice_main_title">향신료가 강한요리</string>
+    <string name="type_food_match_spice_title_1">신선한 허브</string>
+    <string name="type_food_match_spice_title_1_wine_1">상큼한 화이트\n향이 풍부한 화이트</string>
+    <string name="type_food_match_spice_title_1_wine_2">로제(샐러드)</string>
+    <string name="type_food_match_spice_title_1_wine_3">부드러운 레드</string>
+    <string name="type_food_match_spice_title_2">드라이 허브</string>
+    <string name="type_food_match_spice_title_2_wine_1">향이 풍부한 화이트\n강한 화이트</string>
+    <string name="type_food_match_spice_title_2_wine_2">부드러운 레드\n강한 레드</string>
+    <string name="type_food_match_spice_title_3">매운 요리</string>
+    <string name="type_food_match_spice_title_3_wine_1">무알뢰, 리코뢰</string>
+    <string name="type_food_match_spice_title_4">진한 양념 요리</string>
+    <string name="type_food_match_spice_title_4_wine_1">강한 화이트\n무알뢰, 리코뢰\n뱅 두 나튀렐</string>
+    <string name="type_food_match_spice_title_4_wine_2">강한 레드</string>
+
+    <!-- Fragment Cheese -->
+    <string name="type_food_match_cheese_main_title">치즈와 디저트</string>
+    <string name="type_food_match_cheese_title_1">프레시 치즈(페타, 쎼브르, 브루스 등)</string>
+    <string name="type_food_match_cheese_title_1_wine_1">상큼한 화이트\n향이 풍부한 화이트\n발포성 와인</string>
+    <string name="type_food_match_cheese_title_2">푸른곰팡이 치즈(로크포르, 고르곤졸라 등)</string>
+    <string name="type_food_match_cheese_title_2_wine_1">무알뢰, 리코뢰\n뱅 두 나튀렐</string>
+    <string name="type_food_match_cheese_title_3">초콜릿</string>
+    <string name="type_food_match_cheese_title_3_wine_1">방 두 나튀렐</string>
+    <string name="type_food_match_cheese_title_3_wine_2">강한 레드</string>
+    <string name="type_food_match_cheese_title_4">하드 치즈(콩테, 고다, 그뤼에르 등)</string>
+    <string name="type_food_match_cheese_title_4_wine_1">향이 풍부한 화이트\n강한 화이트</string>
+    <string name="type_food_match_cheese_title_5">과자, 케이크</string>
+    <string name="type_food_match_cheese_title_5_wine_1">발포성 와인\n무알뢰, 리코뢰\n향이 풍부한 화이트</string>
+    <string name="type_food_match_cheese_title_6">크림</string>
+    <string name="type_food_match_cheese_title_6_wine_1">무알뢰, 리코뢰</string>
+    <string name="type_food_match_cheese_title_7">소프트 치즈(카망베르, 브리 드 모)</string>
+    <string name="type_food_match_cheese_title_7_wine_1">향이 풍부한 화이트\n발포성 와인</string>
+    <string name="type_food_match_cheese_title_7_wine_2">가벼운 레드\n부드러운 레드(숙성치즈)</string>
+    <string name="type_food_match_cheese_title_8">붉은색 과일</string>
+    <string name="type_food_match_cheese_title_8_wine_1">뱅 두 나튀렐</string>
+    <string name="type_food_match_cheese_title_8_wine_2">로제(생과일, 샐러드)</string>
+    <string name="type_food_match_cheese_title_8_wine_3">부드러운 레드\n강한 레드</string>
+    <string name="type_food_match_cheese_title_9">노란색 과일</string>
+    <string name="type_food_match_cheese_title_9_wine_1">향이 풍부한 화이트\n무알뢰, 리코뢰</string>
+
 </resources>

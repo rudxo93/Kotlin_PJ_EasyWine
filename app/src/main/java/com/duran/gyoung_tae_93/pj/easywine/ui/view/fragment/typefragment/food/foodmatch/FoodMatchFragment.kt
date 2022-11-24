@@ -1,19 +1,19 @@
 package com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.typefragment.food.foodmatch
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.duran.gyoung_tae_93.pj.easywine.R
 import com.duran.gyoung_tae_93.pj.easywine.databinding.FragmentFoodMatchBinding
-import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.note.NoteRVAdapter
 import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.type.food.TypeFoodRVAdapter
-import kotlin.collections.ArrayList
+
 
 class FoodMatchFragment : Fragment() {
 
@@ -48,6 +48,7 @@ class FoodMatchFragment : Fragment() {
         rvAdapter = TypeFoodRVAdapter(list)
         rv.adapter = rvAdapter
         rv.layoutManager = GridLayoutManager(context, 2)
+
 
         rvAdapter.setItemClickListener(object : TypeFoodRVAdapter.ItemClickListener {
             override fun onClick(view: View, position: Int) {

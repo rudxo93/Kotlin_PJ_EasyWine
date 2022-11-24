@@ -5,9 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.duran.gyoung_tae_93.pj.easywine.R
+import com.duran.gyoung_tae_93.pj.easywine.databinding.FragmentPoultryMeatBinding
 
 class PoultryMeatFragment : Fragment() {
+
+    private lateinit var binding: FragmentPoultryMeatBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,8 +22,23 @@ class PoultryMeatFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_poultry_meat, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_poultry_meat, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setFabButton()
+    }
+
+    /**
+     *  FloatingActionButton Setting
+     */
+    private fun setFabButton() {
+        binding.fabHome.setOnClickListener {
+            it.findNavController().navigate(R.id.action_poultryMeatFragment_to_fragment_type)
+        }
     }
 
 }
