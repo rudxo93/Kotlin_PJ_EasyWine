@@ -1,6 +1,5 @@
 package com.duran.gyoung_tae_93.pj.easywine.ui.adapter.type.food
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +8,6 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.duran.gyoung_tae_93.pj.easywine.R
-import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.note.NoteRVAdapter
 
 class TypeFoodRVAdapter(private val list: ArrayList<String>) : RecyclerView.Adapter<TypeFoodRVAdapter.ViewHolder>() {
 
@@ -37,7 +35,7 @@ class TypeFoodRVAdapter(private val list: ArrayList<String>) : RecyclerView.Adap
                 holder.image.setImageResource(R.drawable.ic_food_fish_icon)
             }
             3 -> {
-                holder.image.setImageResource(R.drawable.ic_food_sheelfish_icon)
+                holder.image.setImageResource(R.drawable.ic_food_shellfish_icon)
             }
             4 -> {
                 holder.image.setImageResource(R.drawable.ic_food_vegetable_icon)

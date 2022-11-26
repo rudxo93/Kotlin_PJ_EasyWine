@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="app_name">EasyWine</string>
 
     <!-- Activity Intro -->
@@ -1802,7 +1802,7 @@
     <string name="type_food_match_title_2">와인과 매칭</string>
 
     <!-- Fragment Food Match -->
-    <string name="type_food_match_main_title">What food to match?</string>
+    <string name="type_food_match_main_title1">What food to match?</string>
 
     <!-- Fragment Meat -->
     <string name="type_food_match_meat_main_title">고기요리</string>
@@ -1947,5 +1947,230 @@
     <string name="type_food_match_cheese_title_8_wine_3">부드러운 레드\n강한 레드</string>
     <string name="type_food_match_cheese_title_9">노란색 과일</string>
     <string name="type_food_match_cheese_title_9_wine_1">향이 풍부한 화이트\n무알뢰, 리코뢰</string>
+
+    <!-- Fragment Wine Match -->
+    <string name="type_food_match_main_title2">What wine to match?</string>
+
+    <!-- Fragment Match Sparkling -->
+    <string name="type_food_match_wine_sparkling_main_title">스파클링 와인</string>
+    <string name="type_food_match_wine_sparkling_bottle_title_1">품종</string>
+    <string name="type_food_match_wine_sparkling_bottle_content_1">
+        샤르도네, 피노누아, 피노 뫼니에\n피노 옥세루아, 리슬링, 슈냉\n뮈스카, 모자크, 여러 품종 블렌딩
+    </string>
+    <string name="type_food_match_wine_sparkling_bottle_title_2">AOC</string>
+    <string name="type_food_match_wine_sparkling_bottle_content_2">
+        샹파뉴, 크레망 뒤 쥐라\n크레망 달사스, 크레망 드 보르도\n크레망 드 부르고뉴, 그레망 드 리무\n크레망 드 루아르, 클레레트 드 디\n블랑케트 드 리무, 카바, 가야크\n스푸만테, 프로세코
+    </string>
+    <string name="type_food_match_wine_sparkling_title_1">생선요리</string>
+    <string name="type_food_match_wine_sparkling_content_1">연어(스시) / 훈제생선</string>
+    <string name="type_food_match_wine_sparkling_title_2">해산물요리</string>
+    <string name="type_food_match_wine_sparkling_content_2">굴, 고둥 등 / 가리비</string>
+    <string name="type_food_match_wine_sparkling_title_3">디저트</string>
+    <string name="type_food_match_wine_sparkling_content_3">과자, 케이크\n(너무 드라이하지 않은\n스파클링 와인)</string>
+    <string name="type_food_match_wine_sparkling_title_4">괜찮은매칭</string>
+    <string name="type_food_match_wine_sparkling_content_4">
+        닭, 칠면조 고기(크림소스)\n토끼고기(크림소스)\n홍합\n작은 새우와 큰 새우\n드라이 허브\n프래시 치즈\n소프트 시즈
+    </string>
+
+    <!-- Fragment Match Light White -->
+    <string name="type_food_match_wine_light_white_main_title">상큼한 화이트 와인</string>
+    <string name="type_food_match_wine_light_white_bottle_title_1">품종</string>
+    <string name="type_food_match_wine_light_white_bottle_content_1">
+        쇼비뇽, 믈롱 드 부르고뉴\n슈냉, 피노 블랑\n피노 옥세루아, 실바너\n샤슬라, 알리고테
+    </string>
+    <string name="type_food_match_wine_light_white_bottle_title_2">AOC</string>
+    <string name="type_food_match_wine_light_white_bottle_content_2">
+        상세르, 푸이퓌메, 뮈스카데\n앙주, 소뮈르, 알자스\n사부아, 부르고뉴 알리고테
+    </string>
+    <string name="type_food_match_wine_light_white_title_1">육류요리</string>
+    <string name="type_food_match_wine_light_white_content_1">돼지고기(비곗살)\n송아지고기(내장요리)\n염장, 돼지고기 가공육\n달걀(키슈)</string>
+    <string name="type_food_match_wine_light_white_title_2">생선요리</string>
+    <string name="type_food_match_wine_light_white_content_2">연어(스시), 흰살생선\n생선통조림, 훈제생선</string>
+    <string name="type_food_match_wine_light_white_title_3">향신료</string>
+    <string name="type_food_match_wine_light_white_content_3">신선한허브</string>
+    <string name="type_food_match_wine_light_white_title_4">해산물요리</string>
+    <string name="type_food_match_wine_light_white_content_4">굴, 고둥 등\n홍합, 게\n새우</string>
+    <string name="type_food_match_wine_light_white_title_5">채소요리</string>
+    <string name="type_food_match_wine_light_white_content_5">녹색채소\n과일채소</string>
+    <string name="type_food_match_wine_light_white_title_6">치즈,디저트</string>
+    <string name="type_food_match_wine_light_white_content_6">프레시 치즈</string>
+
+    <!-- Fragment Match Medium White -->
+    <string name="type_food_match_wine_medium_white_main_title">향이 풍부한 화이트 와인</string>
+    <string name="type_food_match_wine_medium_white_bottle_title_1">품종</string>
+    <string name="type_food_match_wine_medium_white_bottle_content_1">
+        나무향 없는 샤르도네\n게뷔르츠트라미너\n뮈스카, 리슬링, 베르멘티노\n비오니에, 사바냥, 그로 망상\n프티 망상
+    </string>
+    <string name="type_food_match_wine_medium_white_bottle_title_2">AOC</string>
+    <string name="type_food_match_wine_medium_white_bottle_content_2">
+        알자스, 콩드리외\n코르시카, 팔레트, 벨레\n쥐라, 쥐랑송, 가야크\n코토 뒤 랑그도크, 리무\n나무향 없는 부르고뉴\n어린 와인
+    </string>
+    <string name="type_food_match_wine_medium_white_title_1">육류요리</string>
+    <string name="type_food_match_wine_medium_white_content_1">돼지고기(내장요리)\n송아지고기(내장요리)\n양고기, 어린 양고기(뇌요리)\n토끼고기</string>
+    <string name="type_food_match_wine_medium_white_title_2">생선요리</string>
+    <string name="type_food_match_wine_medium_white_content_2">연어, 참치(스시)\n흰살생선, 민물생선\n생선통조림, 훈제생선</string>
+    <string name="type_food_match_wine_medium_white_title_3">향신료</string>
+    <string name="type_food_match_wine_medium_white_content_3">신선한 허브\n드라이 허브</string>
+    <string name="type_food_match_wine_medium_white_title_4">해산물요리</string>
+    <string name="type_food_match_wine_medium_white_content_4">가리비, 게\n바닷가재, 새우</string>
+    <string name="type_food_match_wine_medium_white_title_5">채소요리</string>
+    <string name="type_food_match_wine_medium_white_content_5">녹색채소, 콩류\n뿌리채소, 호박</string>
+    <string name="type_food_match_wine_medium_white_title_6">치즈,디저트</string>
+    <string name="type_food_match_wine_medium_white_content_6">프레시 치즈, 하드 치즈\n소프트 치즈\n노란색 과일 디저트</string>
+
+    <!-- Fragment Match Full White -->
+    <string name="type_food_match_wine_full_white_main_title">강한 화이트 와인</string>
+    <string name="type_food_match_wine_full_white_bottle_title_1">품종</string>
+    <string name="type_food_match_wine_full_white_bottle_content_1">
+        나무향 없는 샤르도네\n세미용, 마르산, 루산\n그르나슈 블랑, 사바냥
+    </string>
+    <string name="type_food_match_wine_full_white_bottle_title_2">AOC</string>
+    <string name="type_food_match_wine_full_white_bottle_content_2">
+        코트 드 본, 샤사뉴몽라세\n뫼르소, 샤블리 그랑 크뤼\n퓔리니몽라세, 마코네\n푸이퓌세, 그라브, 코트 뒤 론\n에르미타주, 샤토뇌프 뒤 파프\n코토 뒤 랑그도크\n캘리포니아 샤르도네\n어린 와인
+    </string>
+    <string name="type_food_match_wine_full_white_title_1">육류요리</string>
+    <string name="type_food_match_wine_full_white_content_1">닭고기, 칠면조 고기\n(로스트, 크림소스)\n송아지고기(크림소스)\n토끼고기</string>
+    <string name="type_food_match_wine_full_white_title_2">생선요리</string>
+    <string name="type_food_match_wine_full_white_content_2">흰살생선(리슈소스)</string>
+    <string name="type_food_match_wine_full_white_title_3">해산물요리</string>
+    <string name="type_food_match_wine_full_white_content_3">가리비(크림소스)\n바닷가재</string>
+    <string name="type_food_match_wine_full_white_title_4">채소요리</string>
+    <string name="type_food_match_wine_full_white_content_4">전분이 들어간 요리\n버섯류</string>
+    <string name="type_food_match_wine_full_white_title_5">향신료</string>
+    <string name="type_food_match_wine_full_white_content_5">드라이 허브\n양념이 진한 요리</string>
+    <string name="type_food_match_wine_full_white_title_6">치즈,디저트</string>
+    <string name="type_food_match_wine_full_white_content_6">하드 치즈</string>
+    <string name="type_food_match_wine_full_white_title_7">괜찮은매칭</string>
+    <string name="type_food_match_wine_full_white_content_7">지비에 야생조류</string>
+
+    <!-- Fragment Match Rose -->
+    <string name="type_food_match_wine_rose_main_title">로제 와인</string>
+    <string name="type_food_match_wine_rose_bottle_title_1">품종</string>
+    <string name="type_food_match_wine_rose_bottle_content_1">
+        피노 누아, 카베르네 프랑\n카페르네 쇼비뇽, 메를로\n그르냐슈, 시라, 생소\n무르베드르, 피노 도니스 등
+    </string>
+    <string name="type_food_match_wine_rose_bottle_title_2">AOC</string>
+    <string name="type_food_match_wine_rose_bottle_content_2">
+        코트 드 프로방스, 타벨\n코르시카, 앙주, 그리 드 툴\n보르도 로제, 부르고뉴 로제\n코토 뒤 방도무아\n그리 드 불라우안 등
+    </string>
+    <string name="type_food_match_wine_rose_title_1">육류요리</string>
+    <string name="type_food_match_wine_rose_content_1">
+        소고기(소시지, 메르게즈)\n송아지고기(내장요리)\n양고기 ,어린 양고기\n(메르게즈)\n닭고기, 칠면조고기\n염장고기(돼지고기 가공육)
+    </string>
+    <string name="type_food_match_wine_rose_title_2">생선요리</string>
+    <string name="type_food_match_wine_rose_content_2">연어, 참치\n흰살생선\n(튀김, 그릴, 스프)\n민물생선(그릴)</string>
+    <string name="type_food_match_wine_rose_title_3">해산물요리</string>
+    <string name="type_food_match_wine_rose_content_3">게, 새우</string>
+    <string name="type_food_match_wine_rose_title_4">채소요리</string>
+    <string name="type_food_match_wine_rose_content_4">전분이 들어간 요리\n(쿠스쿠스, 파에야, 샐러드)\과일채소\n(샐러드, 그라탕)</string>
+    <string name="type_food_match_wine_rose_title_5">향신료</string>
+    <string name="type_food_match_wine_rose_content_5">신선한 허브</string>
+    <string name="type_food_match_wine_rose_title_6">치즈,디저트</string>
+    <string name="type_food_match_wine_rose_content_6">붉은색 과일</string>
+
+    <!-- Fragment Match Light Red -->
+    <string name="type_food_match_wine_light_red_main_title">가벼운 레드 와인</string>
+    <string name="type_food_match_wine_light_red_bottle_title_1">품종</string>
+    <string name="type_food_match_wine_light_red_bottle_content_1">
+        피노 누아, 가메, 생소\n풀사르
+    </string>
+    <string name="type_food_match_wine_light_red_bottle_title_2">AOC</string>
+    <string name="type_food_match_wine_light_red_bottle_content_2">
+        보졸레, 시루블\n셍타모르, 부르고뉴\n코트 드 뉘이, 모레 생 드니\n샹볼뮈지니, 메르퀴레\n알자스, 상세르, 루렌\n생푸르생, 쥐라, 프로방스 등
+    </string>
+    <string name="type_food_match_wine_light_red_title_1">육류요리</string>
+    <string name="type_food_match_wine_light_red_content_1">
+        돼지고기\n(돼지갈비, 내장요리)\n송아지고기(내장요리)\n토끼고기\n닭고기, 칠면조고기\n(로스트)\n지비에 야생조류\n염장고기\n(돼지고기 가공육)
+    </string>
+    <string name="type_food_match_wine_light_red_title_2">생선요리</string>
+    <string name="type_food_match_wine_light_red_content_2">참치</string>
+    <string name="type_food_match_wine_light_red_title_3">채소요리</string>
+    <string name="type_food_match_wine_light_red_content_3">콩류(퓌레, 스프)</string>
+    <string name="type_food_match_wine_light_red_title_4">치즈,디저트</string>
+    <string name="type_food_match_wine_light_red_content_4">소프트 치즈</string>
+    <string name="type_food_match_wine_light_red_title_5">괜찮은매칭</string>
+    <string name="type_food_match_wine_light_red_content_5">바닷가재(그릴)</string>
+
+    <!-- Fragment Match Medium Red -->
+    <string name="type_food_match_wine_medium_red_main_title">부드러운 레드 와인</string>
+    <string name="type_food_match_wine_medium_red_bottle_title_1">품종</string>
+    <string name="type_food_match_wine_medium_red_bottle_content_1">
+        그르나슈, 메를로, 카리냥\n카르베네 프랑, 산지오베제\n진판델, 여러 품종 블렌딩
+    </string>
+    <string name="type_food_match_wine_medium_red_bottle_title_2">AOC</string>
+    <string name="type_food_match_wine_medium_red_bottle_content_2">
+        코트 뒤 론, 리라크, 지공다스\n바케라스, 샤토뇌프 뒤 파프\n코스티에르 드 님므, 생조제프\n생테밀리옹, 코토 뒤 랑그도크\n포므롤, 코트 드 블라유\n코트 드 부르,
+        보르도 쉬페리어\n코트 드 본, 코트 드 프로방스\n코르시카, 앙주, 쉬농\n부르괴이, 소뮈르샹피니\n토스카나, 시칠리아, 리오하\n나파 벨리, 칠레 와인 등
+    </string>
+    <string name="type_food_match_wine_medium_red_title_1">육류요리</string>
+    <string name="type_food_match_wine_medium_red_content_1">
+        돼지고기\n(로스트, 그릴)\n소고기(조림, 그릴)\n양고기, 어린양고기\n(삶은 고기)\n송아지고기(그릴)\n오리고기(가슴살요리)\n지비에 야생동물\n(야생토끼)\n지비에 야생조류\n햄
+    </string>
+    <string name="type_food_match_wine_medium_red_title_2">채소요리</string>
+    <string name="type_food_match_wine_medium_red_content_2">전분이 들어간 요리\n버섯류\n과일채소\n(소스, 그라탕)</string>
+    <string name="type_food_match_wine_medium_red_title_3">향신료</string>
+    <string name="type_food_match_wine_medium_red_content_3">신선한 허브\n드라이 허브</string>
+    <string name="type_food_match_wine_medium_red_title_4">치즈,디저트</string>
+    <string name="type_food_match_wine_medium_red_content_4">소프트 치즈(숙성치즈)\n붉은색 과일</string>
+    <string name="type_food_match_wine_medium_red_title_5">괜찮은매칭</string>
+    <string name="type_food_match_wine_medium_red_content_5">흰살생선(노랑촉수)\n민물생선\n(보르도식 장어요리)\n익힌 굴</string>
+
+    <!-- Fragment Match Full Red -->
+    <string name="type_food_match_wine_full_red_main_title">강한 레드 와인</string>
+    <string name="type_food_match_wine_full_red_bottle_title_1">품종</string>
+    <string name="type_food_match_wine_full_red_bottle_content_1">
+        타나트, 카베르네 쇼비뇽\n무르베드르, 말베크, 시라\n템프라니오, 네비올로\n네로 다볼라, 몬테풀차노
+    </string>
+    <string name="type_food_match_wine_full_red_bottle_title_2">AOC</string>
+    <string name="type_food_match_wine_full_red_bottle_content_2">
+        오메도크, 포야크, 마르고\n생테스테프, 생쥘리앵, 그라브\n코르비에르, 피투, 미네부아\n생시니앙, 포제르, 방돌, 뷔제\n 코트 뒤 루시용, 마디랑\n이룰레기, 프롱통, 카오르\n포마르, 에세조, 바르바레스코\n샹베르탱,
+        프리오라, 바롤로\n리베라 델 듀에로\n아르헨티나 와인\n오스트레일리아 쉬라즈 등
+    </string>
+    <string name="type_food_match_wine_full_red_title_1">육류요리</string>
+    <string name="type_food_match_wine_full_red_content_1">
+        돼지고기\n(진한 양념, 그릴)\n소고기\n양고기, 어린양고기\n오리고기(로스트)\n지비에 야생동물\n(스튜, 소스 얹은 요리)
+    </string>
+    <string name="type_food_match_wine_full_red_title_2">채소요리</string>
+    <string name="type_food_match_wine_full_red_content_2">콩류, 버섯류</string>
+    <string name="type_food_match_wine_full_red_title_3">향신료</string>
+    <string name="type_food_match_wine_full_red_content_3">드라이 허브\n양념이 진한 요리</string>
+    <string name="type_food_match_wine_full_red_title_4">괜찮은매칭</string>
+    <string name="type_food_match_wine_full_red_content_4">오리고기(푸아그라)\n붉은색 과일 디저트\n초콜릿 디저트</string>
+
+    <!-- Fragment Match Moelleux -->
+    <string name="type_food_match_wine_moelleux_main_title">무알뢰, 리코뢰 와인</string>
+    <string name="type_food_match_wine_moelleux_bottle_title_1">품종</string>
+    <string name="type_food_match_wine_moelleux_bottle_content_1">
+        슈냉, 세미용, 프티 망상\n그로 망상, 리슬링\n게뷔르츠트라미너\n피노 그리, 뮈스카\n푸르민트, 말부아지
+    </string>
+    <string name="type_food_match_wine_moelleux_bottle_title_2">AOC</string>
+    <string name="type_food_match_wine_moelleux_bottle_content_2">
+        알자스 방당주 타르디브\n알자스 셀레시옹 드 그랭노블\n바르사크, 소테른, 루피아크\n몽바지야크, 쥐랑송, 부브레\n파슈랑 뒤 빅빌, 본조, 몽루이\n캬르 드 숌, 코토 뒤 레용\n몽루이,
+        코토 뒤 레용\n뱅 드 파유, 아우스레제\n뱅 드 파스리아주\n헝가리 토카이, 아이스와인\n트로켄 베렌아우스레제
+    </string>
+    <string name="type_food_match_wine_moelleux_title_1">육류요리</string>
+    <string name="type_food_match_wine_moelleux_content_1">오리고기(푸아그라)</string>
+    <string name="type_food_match_wine_moelleux_title_2">향신료</string>
+    <string name="type_food_match_wine_moelleux_content_2">고추\n양념이 진한 요리</string>
+    <string name="type_food_match_wine_moelleux_title_3">치즈,디저트</string>
+    <string name="type_food_match_wine_moelleux_content_3">푸른곰팡이 치즈\n하얀색 과일\n노란색 과일\n과자, 케이크\n크림</string>
+    <string name="type_food_match_wine_moelleux_title_4">괜찮은매칭</string>
+    <string name="type_food_match_wine_moelleux_content_4">닭고기, 칠면조고기\n달걀\n굴, 고둥 등\n뿌리채소, 호박</string>
+
+    <!-- Fragment Match VDN -->
+    <string name="type_food_match_wine_v_d_n_main_title">뱅 두 나튀렐 와인</string>
+    <string name="type_food_match_wine_v_d_n_bottle_title_1">품종</string>
+    <string name="type_food_match_wine_v_d_n_bottle_content_1">
+        뮈스카, 그르나슈, 말부아지\n마카베오, 틴타 호리스\n투리가 나시오날&amp;프란세사\n세르시알, 베르델료\n부알 등
+    </string>
+    <string name="type_food_match_wine_v_d_n_bottle_title_2">AOC</string>
+    <string name="type_food_match_wine_v_d_n_bottle_content_2">
+        뮈스카 드 봄 드 브니즈\n뮈스카 드 리브잘트, 바뉠스\n뮈스카 드 프롱티냥, 모리\n뮈스카 뒤 캅 코로스, 라스토\n포르토, 헤레스, 말리가\n마데이라, 마르살라\n리쾨르 와인
+    </string>
+    <string name="type_food_match_wine_v_d_n_title_1">치즈,디저트</string>
+    <string name="type_food_match_wine_v_d_n_content_1">붉은색 과일\n초콜릿</string>
+    <string name="type_food_match_wine_v_d_n_title_2">괜찮은매칭</string>
+    <string name="type_food_match_wine_v_d_n_content_2">양고기, 어린양고기\n(소스 얹은 요리)\n오리고기(플랑베)\n지비에 야생동물\n양념이 진한 요리\n푸른곰팡이 치즈</string>
+
 
 </resources>
