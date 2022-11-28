@@ -232,7 +232,6 @@ class UpdateNoteActivity : AppCompatActivity() {
         val wineBalance = resultBalance
         val wineLikable = resultLikable
         val wineNoteTaste = etNoteTaste.text.toString()
-        val isChecked = noteInfo.isChecked
 
         val noteUpdate = NoteInfoModel(
             FBAuth.getUid(),
@@ -258,8 +257,7 @@ class UpdateNoteActivity : AppCompatActivity() {
             wineBalance,
             wineLikable,
             wineNoteTaste,
-            saveDate,
-            isChecked
+            saveDate
         )
 
         getCurrentDocId(noteUpdate, currentImageUrl)
@@ -307,7 +305,6 @@ class UpdateNoteActivity : AppCompatActivity() {
             dataModel.wineBalance = noteUpdate.wineBalance
             dataModel.wineLikable = noteUpdate.wineLikable
             dataModel.wineNoteTaste = noteUpdate.wineNoteTaste
-            dataModel.isChecked = noteUpdate.isChecked
 
             transition.set(tsDoc, dataModel)
 

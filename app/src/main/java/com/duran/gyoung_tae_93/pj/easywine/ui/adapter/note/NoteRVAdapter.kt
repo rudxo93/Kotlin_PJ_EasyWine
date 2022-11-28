@@ -4,7 +4,6 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -17,8 +16,6 @@ class NoteRVAdapter(val context: Context) : RecyclerView.Adapter<NoteRVAdapter.V
     private var noteList = mutableListOf<NoteInfoModel>()
 
     private lateinit var itemClickListner: ItemClickListener
-
-    private lateinit var itemFavoriteClickListner: ItemFavoriteClickListener
 
     fun setListData(data: MutableList<NoteInfoModel>) {
         noteList = data
@@ -37,10 +34,6 @@ class NoteRVAdapter(val context: Context) : RecyclerView.Adapter<NoteRVAdapter.V
         holder.content.setOnClickListener {
             itemClickListner.onClick(it, position, noteList[position].imageUrl)
         }
-
-        holder.favorite.setOnClickListener {
-            itemFavoriteClickListner.onClick(it, position, noteList[position].imageUrl)
-        }
     }
 
     override fun getItemCount(): Int {
@@ -54,14 +47,11 @@ class NoteRVAdapter(val context: Context) : RecyclerView.Adapter<NoteRVAdapter.V
         val content: LinearLayout = itemView.findViewById(R.id.linear_item_rv_content)
         val image: ImageView = itemView.findViewById(R.id.iv_item_rv_note_image)
         val title: TextView = itemView.findViewById(R.id.tv_item_rv_note_title)
-        val favorite: CheckBox = itemView.findViewById(R.id.iv_item_rv_note_favorite)
 
         fun onBind(data: NoteInfoModel) {
             title.text = data.wineName
             drinkDate.text = data.wineDrinkDate
             noteEtc.text = data.wineNoteEtc
-
-            favorite.isChecked = data.isChecked != 0
 
         }
 
@@ -76,16 +66,5 @@ class NoteRVAdapter(val context: Context) : RecyclerView.Adapter<NoteRVAdapter.V
 
     fun setItemClickListener(itemClickListener: ItemClickListener) {
         this.itemClickListner = itemClickListener
-    }
-
-    /**
-     *  Favorite Click
-     */
-    interface ItemFavoriteClickListener {
-        fun onClick(view: View, position: Int, imageUrl: String?)
-    }
-
-    fun setItemFavoriteClickListener(itemFavoriteClickListener: ItemFavoriteClickListener) {
-        this.itemFavoriteClickListner = itemFavoriteClickListener
     }
 }

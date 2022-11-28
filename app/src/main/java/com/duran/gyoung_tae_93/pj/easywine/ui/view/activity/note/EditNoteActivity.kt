@@ -231,7 +231,6 @@ class EditNoteActivity : AppCompatActivity() {
                 wineLikable,
                 wineNoteTaste,
                 saveDate,
-                0
             )
             viewModel.insertNoteInfo(noteInfo)
 

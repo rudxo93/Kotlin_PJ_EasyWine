@@ -30,8 +30,6 @@ class NoteFragment : Fragment() {
 
     var currentUid = FBAuth.getUid()
 
-    private val TAG = NoteFragment::class.java.simpleName
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -39,7 +37,7 @@ class NoteFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_note, container, false)
         return binding.root
     }
@@ -47,7 +45,7 @@ class NoteFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel =  ViewModelProvider(this)[NoteViewModel::class.java]
+        viewModel = ViewModelProvider(this)[NoteViewModel::class.java]
 
         initMoveNoteEdit()
         getRVSetting()
@@ -68,12 +66,13 @@ class NoteFragment : Fragment() {
             override fun onClick(view: View, position: Int, imageUrl: String?) {
                 var noteData = NoteInfoModel()
 
-                FBDocRef.fbDB.collection("note_info").whereEqualTo("uid", currentUid).whereEqualTo("imageUrl", imageUrl)
+                FBDocRef.fbDB.collection("note_info").whereEqualTo("uid", currentUid)
+                    .whereEqualTo("imageUrl", imageUrl)
                     .get().addOnSuccessListener { result ->
 
-                        if(result == null) return@addOnSuccessListener
+                        if (result == null) return@addOnSuccessListener
 
-                        for(dataModel in result.documents){
+                        for (dataModel in result.documents) {
                             val data = dataModel.toObject(NoteInfoModel::class.java)
                             if (data != null) {
                                 noteData = data
@@ -87,43 +86,6 @@ class NoteFragment : Fragment() {
             }
         })
 
-        // Favorite CheckBox 클릭 시
-        rvAdapter.setItemFavoriteClickListener( object : NoteRVAdapter.ItemFavoriteClickListener {
-            override fun onClick(view: View, position: Int, imageUrl: String?) {
-                FBDocRef.fbDB.collection("note_info").whereEqualTo("uid", currentUid).whereEqualTo("imageUrl", imageUrl)
-                    .get().addOnSuccessListener { result ->
-                        var noteId = ""
-
-                        for(item in result.documentChanges) {
-                            noteId = item.document.id
-                        }
-
-                        getEventFavorite(noteId)
-                    }
-
-            }
-        })
-    }
-
-    /**
-     *  Note Favorite 클릭시 isChecked 값 Setting
-     */
-    private fun getEventFavorite(noteId: String?) {
-        val tsDoc = FBDocRef.fbDB.collection("note_info").document(noteId!!)
-
-        FBDocRef.fbDB.runTransaction {
-                transition ->
-            val dataModel = transition.get(tsDoc).toObject(NoteInfoModel::class.java)
-
-            if(dataModel!!.isChecked == 0) { // false
-                dataModel.isChecked = dataModel.isChecked + 1
-            } else {
-                dataModel.isChecked = dataModel.isChecked - 1
-            }
-
-            transition.set(tsDoc, dataModel)
-
-        }
     }
 
     /**
