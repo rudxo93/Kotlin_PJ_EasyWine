@@ -9,10 +9,10 @@
     <string name="create_nickname_title2">로 시작하기</string>
 
     <!-- Bottom Bar Navigation -->
-    <string name="bottom_navi_info">와인정보</string>
+    <string name="bottom_navi_ready">와인준비</string>
     <string name="bottom_navi_note">와인노트</string>
     <string name="bottom_navi_search">와인분류</string>
-    <string name="bottom_navi_favorite">와인북마크</string>
+    <string name="bottom_navi_info">와인정보</string>
 
     <!-- Toolbar Menu -->
 

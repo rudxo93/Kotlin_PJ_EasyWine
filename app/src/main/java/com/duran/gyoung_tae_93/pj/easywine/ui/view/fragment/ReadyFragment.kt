@@ -11,14 +11,15 @@ import androidx.fragment.app.Fragment
 import com.duran.gyoung_tae_93.pj.easywine.R
 import com.duran.gyoung_tae_93.pj.easywine.data.model.info.InfoTitleModel
 import com.duran.gyoung_tae_93.pj.easywine.databinding.FragmentInfoBinding
+import com.duran.gyoung_tae_93.pj.easywine.databinding.FragmentReadyBinding
 import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.info.InfoLVAdapter
 import com.duran.gyoung_tae_93.pj.easywine.ui.view.activity.information.*
 
-class InfoFragment : Fragment() {
+class ReadyFragment : Fragment() {
 
-    private lateinit var binding: FragmentInfoBinding
+    private lateinit var binding: FragmentReadyBinding
 
-    private val TAG = InfoFragment::class.java.simpleName
+    private val TAG = ReadyFragment::class.java.simpleName
     lateinit var lvAdapter: InfoLVAdapter
 
     val items = mutableListOf<InfoTitleModel>()
@@ -40,7 +41,7 @@ class InfoFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_info, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_ready, container, false)
 
         return binding.root
     }

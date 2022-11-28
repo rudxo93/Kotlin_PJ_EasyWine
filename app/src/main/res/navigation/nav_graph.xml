@@ -3,18 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/fragment_info">
+    app:startDestination="@id/fragment_ready">
 
     <fragment
-        android:id="@+id/fragment_favorite"
+        android:id="@+id/fragment_info"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.FavoriteFragment"
         android:label="fragment_favorite"
-        tools:layout="@layout/fragment_favorite" />
-    <fragment
-        android:id="@+id/fragment_info"
-        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.InfoFragment"
-        android:label="fragment_info"
         tools:layout="@layout/fragment_info" />
+    <fragment
+        android:id="@+id/fragment_ready"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.ReadyFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_ready" />
     <fragment
         android:id="@+id/fragment_type"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.TypeFragment"

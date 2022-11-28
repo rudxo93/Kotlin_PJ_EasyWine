@@ -2,9 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/fragment_info"
-        android:icon="@drawable/ic_information"
-        android:title="@string/bottom_navi_info" />
+        android:id="@+id/fragment_ready"
+        android:icon="@drawable/ic_wine_glass_and_graph"
+        android:title="@string/bottom_navi_ready" />
 
     <item
         android:id="@+id/fragment_note"
@@ -17,8 +17,8 @@
         android:title="@string/bottom_navi_search" />
 
     <item
-        android:id="@+id/fragment_favorite"
-        android:icon="@drawable/ic_favorite_star"
-        android:title="@string/bottom_navi_favorite" />
+        android:id="@+id/fragment_info"
+        android:icon="@drawable/ic_information"
+        android:title="@string/bottom_navi_info" />
 
 </menu>
