@@ -54,7 +54,7 @@ class TypeStyleLVAdapter(val items: MutableList<TypeModel>) : BaseAdapter() {
                 layout?.setBackgroundResource(R.drawable.radius_type_style_white_wine)
             }
             4 -> {
-                icon?.setImageResource(R.drawable.ic_white_wine_icon)
+                icon?.setImageResource(R.drawable.ic_rose_wine_icon)
                 layout?.setBackgroundResource(R.drawable.radius_type_style_rose_wine)
             }
             5 -> {
