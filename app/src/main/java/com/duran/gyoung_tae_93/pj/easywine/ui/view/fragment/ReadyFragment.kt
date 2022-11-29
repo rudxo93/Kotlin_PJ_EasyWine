@@ -10,9 +10,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.duran.gyoung_tae_93.pj.easywine.R
 import com.duran.gyoung_tae_93.pj.easywine.data.model.info.InfoTitleModel
-import com.duran.gyoung_tae_93.pj.easywine.databinding.FragmentInfoBinding
 import com.duran.gyoung_tae_93.pj.easywine.databinding.FragmentReadyBinding
-import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.info.InfoLVAdapter
+import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.ready.ReadyLVAdapter
 import com.duran.gyoung_tae_93.pj.easywine.ui.view.activity.information.*
 
 class ReadyFragment : Fragment() {
@@ -20,7 +19,7 @@ class ReadyFragment : Fragment() {
     private lateinit var binding: FragmentReadyBinding
 
     private val TAG = ReadyFragment::class.java.simpleName
-    lateinit var lvAdapter: InfoLVAdapter
+    lateinit var lvAdapter: ReadyLVAdapter
 
     val items = mutableListOf<InfoTitleModel>()
 
@@ -55,7 +54,7 @@ class ReadyFragment : Fragment() {
      *  Info 탭 ListView Adapter 연결, 이동 구현
      */
     private fun getListViewSetting() {
-        lvAdapter = InfoLVAdapter(items)
+        lvAdapter = ReadyLVAdapter(items)
         binding.lvInfo.adapter = lvAdapter
 
         binding.lvInfo.setOnItemClickListener { _, _, _, id ->

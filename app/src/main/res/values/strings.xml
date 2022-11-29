@@ -2172,5 +2172,11 @@
     <string name="type_food_match_wine_v_d_n_title_2">괜찮은매칭</string>
     <string name="type_food_match_wine_v_d_n_content_2">양고기, 어린양고기\n(소스 얹은 요리)\n오리고기(플랑베)\n지비에 야생동물\n양념이 진한 요리\n푸른곰팡이 치즈</string>
 
+    <!-- Fragment Info -->
+    <string name="info_main_top_title">About Wine</string>
+
+    <!-- Fragment Tasting Terms -->
+    <string name="info_tasting_terms_top_title">테이스팅 용어</string>
+
 
 </resources>

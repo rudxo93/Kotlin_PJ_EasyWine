@@ -7,9 +7,16 @@
 
     <fragment
         android:id="@+id/fragment_info"
-        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.FavoriteFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.InfoFragment"
         android:label="fragment_favorite"
-        tools:layout="@layout/fragment_info" />
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_fragment_info_to_tastingTermsFragment"
+            app:destination="@id/tastingTermsFragment" />
+        <action
+            android:id="@+id/action_fragment_info_to_wineTermsFragment"
+            app:destination="@id/wineTermsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fragment_ready"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.ReadyFragment"
@@ -2253,5 +2260,15 @@
             app:popUpTo="@id/fragment_type"
             app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/tastingTermsFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.infofragment.TastingTermsFragment"
+        android:label="fragment_tasting_terms"
+        tools:layout="@layout/fragment_tasting_terms" />
+    <fragment
+        android:id="@+id/wineTermsFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.infofragment.WineTermsFragment"
+        android:label="fragment_wine_terms"
+        tools:layout="@layout/fragment_wine_terms" />
 
 </navigation>
