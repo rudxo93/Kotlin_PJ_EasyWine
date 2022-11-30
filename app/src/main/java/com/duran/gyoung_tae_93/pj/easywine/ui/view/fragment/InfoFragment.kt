@@ -1,11 +1,11 @@
 package com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.duran.gyoung_tae_93.pj.easywine.R
@@ -27,7 +27,7 @@ class InfoFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_info, container, false)
         return binding.root
     }
@@ -50,12 +50,14 @@ class InfoFragment : Fragment() {
 
         rvAdapter.setItemClickListener(object : InfoRVAdapter.ItemClickListener {
             override fun onClick(view: View, position: Int) {
-                when(position) {
+                when (position) {
                     0 -> {
-                        view.findNavController().navigate(R.id.action_fragment_info_to_tastingTermsFragment)
+                        view.findNavController()
+                            .navigate(R.id.action_fragment_info_to_tastingTermsFragment)
                     }
                     1 -> {
-                        view.findNavController().navigate(R.id.action_fragment_info_to_wineTermsFragment)
+                        view.findNavController()
+                            .navigate(R.id.action_fragment_info_to_wineTermsFragment)
                     }
                 }
             }

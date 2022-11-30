@@ -6,5 +6,5 @@
     android:background="@drawable/tab_background_selector"
     android:gravity="center"
     android:padding="8dp"
-    android:text="title"
+    android:text=""
     android:textColor="@color/tab_tasting_text_selector" />

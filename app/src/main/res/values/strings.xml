@@ -2176,7 +2176,110 @@
     <string name="info_main_top_title">About Wine</string>
 
     <!-- Fragment Tasting Terms -->
+    <!-- 타닌 -->
     <string name="info_tasting_terms_top_title">테이스팅 용어</string>
+    <string name="info_tasting_tannin_title_1">타닌(Tannin)이란?</string>
+    <string name="info_tasting_tannin_title_2">\'덜 익은 감을 먹을 때 느껴지는 떫은 맛\'</string>
+    <string name="info_tasting_tannin_content_1">\n와인을 입에 머금었을 때 특유의 떫은
+        \n맛을 느끼게 하는 물질입니다.
+        \n\n입안이 바짝 마르는 느낌이라고 하면
+        \n이해하기 쉽습니다.
+        \n\n탄 맛이나 쓴맛처럼 느껴지는 성분이
+        \n바로 <b>타닌</b>입니다.
+        \n\n포도를 먹다가 포도 씨앗을 잘 못 씹었을 때
+        \n찌르르하고 몸이 떨리는 바로 그 맛입니다.
+        \n\n커피나 차 종류에도 타닌이 성분이
+        \n함유되어 있다.
+        \n\n타닌에는 폴리페놀 성분이 있는데
+        \n이 성분은 심혈관 질환의 예방 효과가
+        \n있다고 알려져 있습니다.
+    </string>
+
+    <!-- 바디감 -->
+    <string name="info_tasting_body_title_1">바디감(Body)이란?</string>
+    <string name="info_tasting_body_title_2">\'와인을 머금었을 때 느껴지는 묵직함\'</string>
+    <string name="info_tasting_body_content_1">\n사람에게도 무게가 있듯이
+        \n와인에게도 무게감이 엄연히 존재합니다.
+        \n\n라이트 바디->미디엄 바디->풀 바디로 갈수록
+        \n무겁고 진한 맛의 와인이라고 할 수 있습니다.
+        \n\n라이트 바디가 마치 물 같다면
+        \n풀 바디는 우유와 같은 느낌이라고
+        \n볼 수도 있습니다.
+        \n\n미디엄 바디는 그 중간이 될 것입니다.
+        \n\n와인을 접한 지 얼마 되지 않았다면
+        \n풀 바디보다는 라이트한 바디감의 와인부터
+        \n마셔보는 것이 와인과 친해지는 데에
+        \n좀 더 수월합니다.
+        \n\n와인의 알코올과 산도가 바디감에
+        \n큰 영향을 주는 요소입니다.
+    </string>
+
+    <!-- 당도 -->
+    <string name="info_tasting_sweet_title_1">당도(Sweetness)이란?</string>
+    <string name="info_tasting_sweet_title_2">\'단맛, 달콤한 정도\'</string>
+    <string name="info_tasting_sweet_content_1">\n기본적으로 와인의 단맛은
+        \n원재료인 포도에서 나옵니다.
+        \n\n포도가 가지고 있는 고유의 당이 발효 과정을 거쳐
+        \n알코올로 분해된 다음 알코올 도수가 알맞게
+        \n생성되면 발효가 멈춰지는데 이 시점에서
+        \n남아있는 당의 함량에 따라
+        \n와인의 단맛이 결정됩니다.
+        \n\n가볍고 달콤한 맛의 와인은 저렴하다는 편견이
+        \n널려 퍼져 있기도 하지만, 와인을 구성하는
+        \n맛의 요소 중에서 맛의 풍미와 균형감을
+        \n결정하는 데에 큰 역할을 하는 것 또한
+        \n와인의 당도입니다.
+        \n\n단맛이 강한 와인 중
+        \n대표적인 포도 품종은 <b>모스카토</b> 와인입니다.
+        \n\n와인 초보자도 부담없이 마시기 좋은
+        \n와인이기도 합니다.
+    </string>
+
+    <!-- 산미 -->
+    <string name="info_tasting_acidity_title_1">산미(Acidity)란?</string>
+    <string name="info_tasting_acidity_title_2">\'식초와 비슷한 시큼한 맛\'</string>
+    <string name="info_tasting_acidity_content_1">\n와인의 맛에 생동감을 주며, 장기 숙성을
+        \n가능하게 하는 요소이기도 합니다.
+        \n\n품종별로 다르기는 하지만 와인은 평균적으로
+        \npH 3~4정도로 약산성을 띄는 음료입니다.
+        \n\n시큼한 맛이 약간 나는 와인부터 새콤하면서
+        \n상큼한 맛이 나는 와인, 날카롭게 톡 쏘는 와인까지
+        \n다양한 산도의 와인들이 존재합니다다.
+        \n\n와인 산도가 높으면 와인 빛깔에서
+        \n광채(은광)가 느껴지고, 숙성시키면
+        \n색이 잘 보존됩니다.
+        \n\n와인의 산도가 높으면 미생물 안정성도
+        \n확보할 수 있는데, 와인 산도가 pH 3.5 이상이면
+        \n와인을 병에 담은 이후에도
+        \n발효가 진행되기도 한답니다.
+    </string>
+
+    <!-- 도수 -->
+    <string name="info_tasting_alcohol_title_1">산미(Acidity)란?</string>
+    <string name="info_tasting_alcohol_title_2">\'알코올 함량, 즉 도수\'</string>
+    <string name="info_tasting_alcohol_content_1">\n와인의 원료인 포도의 당도가 높을수록
+        \n알코올 도수가 올라갑니다.
+        \n\n효모가 포도의 당분을 먹어치우면서
+        \n알코올과 이산화탄소를 만들어 내고, 이것이
+        \n알코올 발효로 이어지기 때문이랍니다.
+        \n\n라이트 바디감은 알코올 12.5도
+        \n미디엄 바디감은 알코올 12.5~13.5도
+        \n풀 바디는 13.5도 이상의 와인이라고 볼 수 있습니다.
+        \n\n와인의 알코올 도수는
+        \n평균적으로 11도~15도 사이인데
+        \n와인이 발효될 때 알코올이 되는 미생물이 15도 이상의
+        \n도수에서는 제 역할을 하지 못하기 때문입니다.
+        \n\n같은 발효주인 맥주, 청주, 막걸리 또한
+        \n그래서 15도를 넘지 않는 경우가 대부분입니다.
+        \n\n하지만 예외적으로 \'주정 강화 와인\'의 경우
+        \n와인의 발효 과정에서 브랜디를 섞었기 때문에
+        \n일반적인 와인보다는 도수가 높은 편입니다.
+        \n\n16~19도 정도이니, 일반 와인으로는 알코올이
+        \n부족하다 싶은 분들이 도전해 보시기 좋겠죠?
+        \n\n다만, 알코올이 너무 센 와인은 사람에 따라
+        \n맛과 향에서 불쾌함이 느껴질 수도 있으니 유의해 주세요.
+    </string>
+
 
 
 </resources>

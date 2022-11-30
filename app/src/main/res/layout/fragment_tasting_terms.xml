@@ -17,7 +17,7 @@
             android:fontFamily="@font/nanumhand"
             android:text="@string/info_tasting_terms_top_title"
             android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textSize="40sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

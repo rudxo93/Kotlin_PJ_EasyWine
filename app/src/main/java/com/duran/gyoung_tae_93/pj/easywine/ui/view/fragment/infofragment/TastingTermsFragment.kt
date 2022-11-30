@@ -1,8 +1,7 @@
 package com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.infofragment
 
-import android.graphics.Color
+import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,7 +12,6 @@ import com.duran.gyoung_tae_93.pj.easywine.R
 import com.duran.gyoung_tae_93.pj.easywine.databinding.FragmentTastingTermsBinding
 import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.info.TastingPagerAdapter
 import com.duran.gyoung_tae_93.pj.easywine.ui.view.activity.MainActivity
-import com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.infofragment.tasting.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -21,7 +19,7 @@ class TastingTermsFragment : Fragment() {
 
     private lateinit var binding: FragmentTastingTermsBinding
 
-    private val tabTitles = arrayListOf("타닌", "바디", "당도", "산도", "도수")
+    private val tabTitles = arrayListOf("타닌", "바디", "당도", "산미", "도수")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +28,7 @@ class TastingTermsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_tasting_terms, container, false)
         return binding.root
@@ -53,14 +51,16 @@ class TastingTermsFragment : Fragment() {
         navBar?.visibility = View.GONE
     }
 
+    @SuppressLint("InflateParams")
     private fun setTabWithViewPager() {
         binding.tastingViewPager.adapter = TastingPagerAdapter(this)
         TabLayoutMediator(binding.tabTastingTitle, binding.tastingViewPager) { tab, position ->
             tab.text = tabTitles[position]
         }.attach()
 
-        for(i in 0..4) {
-            val textView = LayoutInflater.from(requireContext()).inflate(R.layout.tab_tasting_title, null) as TextView
+        for (i in 0..4) {
+            val textView = LayoutInflater.from(requireContext())
+                .inflate(R.layout.tab_tasting_title, null) as TextView
 
             binding.tabTastingTitle.getTabAt(i)?.customView = textView
         }
