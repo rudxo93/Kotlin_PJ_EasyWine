@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.duran.gyoung_tae_93.pj.easywine.R
 import com.duran.gyoung_tae_93.pj.easywine.databinding.FragmentTastingTermsBinding
 import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.info.TastingPagerAdapter
@@ -19,6 +20,7 @@ class TastingTermsFragment : Fragment() {
 
     private lateinit var binding: FragmentTastingTermsBinding
 
+    private val closeBtn by lazy { binding.btnTastingClose }
     private val tabTitles = arrayListOf("타닌", "바디", "당도", "산미", "도수")
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,6 +39,7 @@ class TastingTermsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setCloseBtnClick()
         setTabWithViewPager()
         setHideBar()
     }
@@ -51,6 +54,9 @@ class TastingTermsFragment : Fragment() {
         navBar?.visibility = View.GONE
     }
 
+    /**
+     *  ViewPager & TabLayout Setting
+     */
     @SuppressLint("InflateParams")
     private fun setTabWithViewPager() {
         binding.tastingViewPager.adapter = TastingPagerAdapter(this)
@@ -63,6 +69,12 @@ class TastingTermsFragment : Fragment() {
                 .inflate(R.layout.tab_tasting_title, null) as TextView
 
             binding.tabTastingTitle.getTabAt(i)?.customView = textView
+        }
+    }
+
+    private fun setCloseBtnClick() {
+        closeBtn.setOnClickListener {
+            it.findNavController().navigate(R.id.action_tastingTermsFragment_to_fragment_info)
         }
     }
 
