@@ -9,7 +9,7 @@
         android:id="@+id/fragment_info"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.InfoFragment"
         android:label="fragment_favorite"
-        tools:layout="@layout/fragment_info" >
+        tools:layout="@layout/fragment_info">
         <action
             android:id="@+id/action_fragment_info_to_tastingTermsFragment"
             app:destination="@id/tastingTermsFragment" />
@@ -2264,7 +2264,7 @@
         android:id="@+id/tastingTermsFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.infofragment.TastingTermsFragment"
         android:label="fragment_tasting_terms"
-        tools:layout="@layout/fragment_tasting_terms" >
+        tools:layout="@layout/fragment_tasting_terms">
         <action
             android:id="@+id/action_tastingTermsFragment_to_fragment_info"
             app:destination="@id/fragment_info"
@@ -2279,6 +2279,16 @@
         android:id="@+id/wineTermsFragment"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.infofragment.WineTermsFragment"
         android:label="fragment_wine_terms"
-        tools:layout="@layout/fragment_wine_terms" />
+        tools:layout="@layout/fragment_wine_terms">
+        <action
+            android:id="@+id/action_wineTermsFragment_to_fragment_info"
+            app:destination="@id/fragment_info"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_info"
+            app:popUpToInclusive="true" />
+    </fragment>
 
 </navigation>
