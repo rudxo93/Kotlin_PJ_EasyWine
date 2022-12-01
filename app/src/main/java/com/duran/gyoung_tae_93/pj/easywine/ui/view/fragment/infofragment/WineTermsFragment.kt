@@ -20,8 +20,7 @@ class WineTermsFragment : Fragment() {
 
     private lateinit var binding: FragmentWineTermsBinding
 
-    private val closeBtn by lazy { binding.btnWineClose }
-    private val tabTitles = arrayListOf("빈티지", "디켄딩", "아로마&부케", "마리아주")
+    private val tabTitles = arrayListOf("빈티지", "디캔팅", "아로마&부케", "마리아주")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -72,7 +71,7 @@ class WineTermsFragment : Fragment() {
     }
 
     private fun setCloseBtnClick() {
-        closeBtn.setOnClickListener {
+        binding.btnWineClose.setOnClickListener {
             it.findNavController().navigate(R.id.action_wineTermsFragment_to_fragment_info)
         }
     }

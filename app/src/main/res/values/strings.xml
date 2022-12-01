@@ -2177,6 +2177,7 @@
 
     <!-- Fragment Tasting Terms -->
     <!-- 타닌 -->
+    <string name="info_terms_next_btn_title">더 알아보기</string>
     <string name="info_tasting_terms_top_title">테이스팅 용어</string>
     <string name="info_tasting_tannin_title_1">타닌(Tannin)이란?</string>
     <string name="info_tasting_tannin_title_2">\'덜 익은 감을 먹을 때 느껴지는 떫은 맛\'</string>
@@ -2302,7 +2303,7 @@
     </string>
 
     <!-- 디켄딩 -->
-    <string name="info_wine_decanting_title_1">디켄딩(Decanting)이란?</string>
+    <string name="info_wine_decanting_title_1">디캔팅(Decanting)이란?</string>
     <string name="info_wine_decanting_title_2">\'와인에서 침전물을 분리시키는 작업\'</string>
     <string name="info_wine_decanting_content_1">\n디캔팅이란 와인 병 안의 불순물을
         \n가라앉혀 침전물을 걸러내고 다른 용기에

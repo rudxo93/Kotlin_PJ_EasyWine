@@ -2274,6 +2274,9 @@
             app:popExitAnim="@android:anim/slide_out_right"
             app:popUpTo="@id/fragment_info"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_tastingTermsFragment_to_searchTermsFragment"
+            app:destination="@id/searchTermsFragment" />
     </fragment>
     <fragment
         android:id="@+id/wineTermsFragment"
@@ -2289,6 +2292,14 @@
             app:popExitAnim="@android:anim/slide_out_right"
             app:popUpTo="@id/fragment_info"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_wineTermsFragment_to_searchTermsFragment"
+            app:destination="@id/searchTermsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/searchTermsFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.infofragment.SearchTermsFragment"
+        android:label="fragment_search_terms"
+        tools:layout="@layout/fragment_search_terms" />
 
 </navigation>

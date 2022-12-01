@@ -20,7 +20,6 @@ class TastingTermsFragment : Fragment() {
 
     private lateinit var binding: FragmentTastingTermsBinding
 
-    private val closeBtn by lazy { binding.btnTastingClose }
     private val tabTitles = arrayListOf("타닌", "바디", "당도", "산미", "도수")
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -73,7 +72,7 @@ class TastingTermsFragment : Fragment() {
     }
 
     private fun setCloseBtnClick() {
-        closeBtn.setOnClickListener {
+        binding.btnTastingClose.setOnClickListener {
             it.findNavController().navigate(R.id.action_tastingTermsFragment_to_fragment_info)
         }
     }
