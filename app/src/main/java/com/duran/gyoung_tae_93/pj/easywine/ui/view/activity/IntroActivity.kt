@@ -26,8 +26,6 @@ class IntroActivity : AppCompatActivity() {
 
     private val TAG = IntroActivity::class.java.simpleName
 
-    private val btn_google by lazy { binding.googleLoginButton }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -54,7 +52,7 @@ class IntroActivity : AppCompatActivity() {
      *  Google Login Button Click
      */
     private fun initGoogleLoginBtn() {
-        btn_google.setOnClickListener {
+        binding.googleLoginButton.setOnClickListener {
             Log.d(TAG, "Google Login - Google Login Button Click -> Start Google Login")
             googleLogin()
         }
@@ -88,23 +86,30 @@ class IntroActivity : AppCompatActivity() {
         }
 
     private fun nicknameCheck() {
-        FBDocRef.fbDB.collection("user").whereEqualTo("uid", FBAuth.getUid())
-            .get().addOnSuccessListener { document ->
-                if (document.documents != null) { // data가 조회
+
+        FBDocRef.fbDB.collection("user").whereEqualTo("email", FBAuth.getEmail())
+            .get().addOnSuccessListener { task ->
+
+                if (task.isEmpty) {
+                    Log.e("dddddd", "닉네임 없음")
+                    moveNickname(FBAuth.getCurrentUser())
+                } else {
+                    Log.e("dddddd", "닉네임 있음")
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                     finish()
-                } else { // data가 조회 x
-                    moveNickname(FBAuth.getCurrentUser())
                 }
-        }
+
+            }
+
     }
 
     /**
      *  Google Login Success -> Move Create Nickname Activity
      */
     private fun moveNickname(user: String) {
-        if(user.isNotEmpty()) {
+
+        if (user.isNotEmpty()) {
             val intent = Intent(this, CreateNicknameActivity::class.java)
             startActivity(intent)
         }

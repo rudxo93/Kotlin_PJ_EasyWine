@@ -2347,4 +2347,14 @@
         \n와인을 추천해주기도 한다.
     </string>
 
+    <!-- Activity MyPage -->
+    <string name="my_page_main_top_title">마이페이지</string>
+    <string name="my_page_title_log_out">로그아웃</string>
+    <string name="my_page_title_delete_account">회원탈퇴</string>
+
+    <!-- Dialog Fragment Update Nickname -->
+    <string name="update_nick_name_top_title">닉네임 변경</string>
+    <string name="update_nick_name_btn_update">변경</string>
+    <string name="update_nick_name_btn_cancel">취소</string>
+
 </resources>
