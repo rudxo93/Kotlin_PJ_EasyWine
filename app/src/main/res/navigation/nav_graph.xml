@@ -21,7 +21,32 @@
         android:id="@+id/fragment_ready"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.ReadyFragment"
         android:label="fragment_info"
-        tools:layout="@layout/fragment_ready" />
+        tools:layout="@layout/fragment_ready">
+        <action
+            android:id="@+id/action_fragment_ready_to_champagneOpenFragment"
+            app:destination="@id/champagneOpenFragment" />
+        <action
+            android:id="@+id/action_fragment_ready_to_wineGlassFragment"
+            app:destination="@id/wineGlassFragment" />
+        <action
+            android:id="@+id/action_fragment_ready_to_wineOpenFragment"
+            app:destination="@id/wineOpenFragment" />
+        <action
+            android:id="@+id/action_fragment_ready_to_noOpenerFragment"
+            app:destination="@id/noOpenerFragment" />
+        <action
+            android:id="@+id/action_fragment_ready_to_wineChillingFragment"
+            app:destination="@id/wineChillingFragment" />
+        <action
+            android:id="@+id/action_fragment_ready_to_wineDrinkFragment"
+            app:destination="@id/wineDrinkFragment" />
+        <action
+            android:id="@+id/action_fragment_ready_to_wineOrderFragment"
+            app:destination="@id/wineOrderFragment" />
+        <action
+            android:id="@+id/action_fragment_ready_to_wineKeepFragment"
+            app:destination="@id/wineKeepFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fragment_type"
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.TypeFragment"
@@ -2301,5 +2326,125 @@
         android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.infofragment.SearchTermsFragment"
         android:label="fragment_search_terms"
         tools:layout="@layout/fragment_search_terms" />
+    <fragment
+        android:id="@+id/champagneOpenFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.readyfragment.ChampagneOpenFragment"
+        android:label="fragment_champagne_open"
+        tools:layout="@layout/fragment_champagne_open">
+        <action
+            android:id="@+id/action_champagneOpenFragment_to_fragment_ready"
+            app:destination="@id/fragment_ready"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_ready"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/wineGlassFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.readyfragment.WineGlassFragment"
+        android:label="fragment_wine_glass"
+        tools:layout="@layout/fragment_wine_glass">
+        <action
+            android:id="@+id/action_wineGlassFragment_to_fragment_ready"
+            app:destination="@id/fragment_ready"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_ready"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/wineOpenFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.readyfragment.WineOpenFragment"
+        android:label="fragment_wine_open"
+        tools:layout="@layout/fragment_wine_open">
+        <action
+            android:id="@+id/action_wineOpenFragment_to_fragment_ready"
+            app:destination="@id/fragment_ready"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_ready"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/noOpenerFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.readyfragment.NoOpenerFragment"
+        android:label="fragment_no_opener"
+        tools:layout="@layout/fragment_no_opener">
+        <action
+            android:id="@+id/action_noOpenerFragment_to_fragment_ready"
+            app:destination="@id/fragment_ready"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_ready"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/wineChillingFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.readyfragment.WineChillingFragment"
+        android:label="fragment_wine_chilling"
+        tools:layout="@layout/fragment_wine_chilling">
+        <action
+            android:id="@+id/action_wineChillingFragment_to_fragment_ready"
+            app:destination="@id/fragment_ready"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_ready"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/wineDrinkFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.readyfragment.WineDrinkFragment"
+        android:label="fragment_wine_drink"
+        tools:layout="@layout/fragment_wine_drink">
+        <action
+            android:id="@+id/action_wineDrinkFragment_to_fragment_ready"
+            app:destination="@id/fragment_ready"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_ready"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/wineKeepFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.readyfragment.WineKeepFragment"
+        android:label="fragment_wine_keep"
+        tools:layout="@layout/fragment_wine_keep">
+        <action
+            android:id="@+id/action_wineKeepFragment_to_fragment_ready"
+            app:destination="@id/fragment_ready"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_ready"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/wineOrderFragment"
+        android:name="com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment.readyfragment.WineOrderFragment"
+        android:label="fragment_wine_order"
+        tools:layout="@layout/fragment_wine_order">
+        <action
+            android:id="@+id/action_wineOrderFragment_to_fragment_ready"
+            app:destination="@id/fragment_ready"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/fragment_ready"
+            app:popUpToInclusive="true" />
+    </fragment>
 
 </navigation>

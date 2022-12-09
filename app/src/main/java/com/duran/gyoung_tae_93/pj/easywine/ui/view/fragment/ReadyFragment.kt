@@ -1,6 +1,5 @@
 package com.duran.gyoung_tae_93.pj.easywine.ui.view.fragment
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,11 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.duran.gyoung_tae_93.pj.easywine.R
 import com.duran.gyoung_tae_93.pj.easywine.data.model.info.InfoTitleModel
 import com.duran.gyoung_tae_93.pj.easywine.databinding.FragmentReadyBinding
 import com.duran.gyoung_tae_93.pj.easywine.ui.adapter.ready.ReadyLVAdapter
-import com.duran.gyoung_tae_93.pj.easywine.ui.view.activity.information.*
+import com.duran.gyoung_tae_93.pj.easywine.ui.view.activity.MainActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class ReadyFragment : Fragment() {
 
@@ -61,48 +62,48 @@ class ReadyFragment : Fragment() {
             Log.e(TAG, id.toString())
             when (id.toInt()) {
                 0 -> {
-                    Log.d(TAG, "Move InfoFragment to WineGlassActivity")
-                    val intent = Intent(context, WineGlassActivity::class.java)
-                    startActivity(intent)
+                    view?.findNavController()
+                        ?.navigate(R.id.action_fragment_ready_to_wineGlassFragment)
                 }
                 1 -> {
-                    Log.d(TAG, "Move InfoFragment to WineOpenActivity")
-                    val intent = Intent(context, WineOpenActivity::class.java)
-                    startActivity(intent)
+                    view?.findNavController()
+                        ?.navigate(R.id.action_fragment_ready_to_wineOpenFragment)
                 }
                 2 -> {
-                    Log.d(TAG, "Move InfoFragment to ChampagneOpenActivity")
-                    val intent = Intent(context, ChampagneOpenActivity::class.java)
-                    startActivity(intent)
+                    view?.findNavController()
+                        ?.navigate(R.id.action_fragment_ready_to_champagneOpenFragment)
                 }
                 3 -> {
-                    Log.d(TAG, "Move InfoFragment to NoOpenerActivity")
-                    val intent = Intent(context, NoOpenerActivity::class.java)
-                    startActivity(intent)
+                    view?.findNavController()
+                        ?.navigate(R.id.action_fragment_ready_to_noOpenerFragment)
                 }
                 4 -> {
-                    Log.d(TAG, "Move InfoFragment to WineChillingActivity")
-                    val intent = Intent(context, WineChillingActivity::class.java)
-                    startActivity(intent)
+                    view?.findNavController()
+                        ?.navigate(R.id.action_fragment_ready_to_wineChillingFragment)
                 }
                 5 -> {
-                    Log.d(TAG, "Move InfoFragment to WineDrinkActivity")
-                    val intent = Intent(context, WineDrinkActivity::class.java)
-                    startActivity(intent)
+                    view?.findNavController()
+                        ?.navigate(R.id.action_fragment_ready_to_wineDrinkFragment)
                 }
                 6 -> {
-                    Log.d(TAG, "Move InfoFragment to WineOrderActivity")
-                    val intent = Intent(context, WineOrderActivity::class.java)
-                    startActivity(intent)
+                    view?.findNavController()
+                        ?.navigate(R.id.action_fragment_ready_to_wineOrderFragment)
                 }
                 7 -> {
-                    Log.d(TAG, "Move InfoFragment to WineKeepActivity")
-                    val intent = Intent(context, WineKeepActivity::class.java)
-                    startActivity(intent)
+                    view?.findNavController()
+                        ?.navigate(R.id.action_fragment_ready_to_wineKeepFragment)
                 }
 
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        (requireActivity() as MainActivity).supportActionBar!!.show()
+
+        val navBar = activity?.findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        navBar?.visibility = View.VISIBLE
     }
 
 }
