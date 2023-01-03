@@ -506,71 +506,51 @@ class UpdateNoteActivity : AppCompatActivity() {
      * 참고사항, 향의 특징, 맛 표현 EditText 최대입력라인 setting
      */
     private fun getEditTextMaxLines() {
+        var previousString = ""
         /* 참고사항 */
         etNoteEtc.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                if (etNoteEtc.lineCount == 6) {
-                    etNoteEtc.setOnKeyListener(object : View.OnKeyListener {
-                        override fun onKey(v: View?, keyCode: Int, event: KeyEvent?): Boolean {
-                            if ((event?.action == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
-                                val imm =
-                                    getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-                                imm.hideSoftInputFromWindow(etNoteEtc.windowToken, 0)
-                                etNoteEtc.clearFocus()
-                                return true
-                            }
-                            return false
-                        }
-                    })
-                }
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+                previousString = s.toString()
             }
 
-            override fun afterTextChanged(s: Editable?) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+
+            override fun afterTextChanged(s: Editable?) {
+                if (etNoteEtc.lineCount >= 7) {
+                    etNoteEtc.setText(previousString)
+                    etNoteEtc.setSelection(etNoteEtc.length())
+                }
+            }
         })
         /* 향의 특징 */
         etNoteAroma.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                if (etNoteAroma.lineCount == 2) {
-                    etNoteAroma.setOnKeyListener(object : View.OnKeyListener {
-                        override fun onKey(v: View?, keyCode: Int, event: KeyEvent?): Boolean {
-                            if ((event?.action == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
-                                val imm =
-                                    getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-                                imm.hideSoftInputFromWindow(etNoteAroma.windowToken, 0)
-                                etNoteAroma.clearFocus()
-                                return true
-                            }
-                            return false
-                        }
-                    })
-                }
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+                previousString = s.toString()
             }
 
-            override fun afterTextChanged(s: Editable?) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+
+            override fun afterTextChanged(s: Editable?) {
+                if (etNoteAroma.lineCount >= 3) {
+                    etNoteAroma.setText(previousString)
+                    etNoteAroma.setSelection(etNoteAroma.length())
+                }
+            }
         })
         /* 맛 표현 */
         etNoteTaste.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                if (etNoteTaste.lineCount == 6) {
-                    etNoteTaste.setOnKeyListener(object : View.OnKeyListener {
-                        override fun onKey(v: View?, keyCode: Int, event: KeyEvent?): Boolean {
-                            if ((event?.action == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
-                                val imm =
-                                    getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-                                imm.hideSoftInputFromWindow(etNoteTaste.windowToken, 0)
-                                etNoteTaste.clearFocus()
-                                return true
-                            }
-                            return false
-                        }
-                    })
-                }
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+                previousString = s.toString()
             }
 
-            override fun afterTextChanged(s: Editable?) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+
+            override fun afterTextChanged(s: Editable?) {
+                if (etNoteTaste.lineCount >= 7) {
+                    etNoteTaste.setText(previousString)
+                    etNoteTaste.setSelection(etNoteTaste.length())
+                }
+            }
         })
     }
 
