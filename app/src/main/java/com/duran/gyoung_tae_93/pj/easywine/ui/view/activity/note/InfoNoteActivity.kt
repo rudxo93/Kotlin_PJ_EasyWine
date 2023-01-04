@@ -1,11 +1,15 @@
 package com.duran.gyoung_tae_93.pj.easywine.ui.view.activity.note
 
 import android.annotation.SuppressLint
+import android.app.Dialog
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View.OnTouchListener
+import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.bumptech.glide.Glide
@@ -155,6 +159,16 @@ class InfoNoteActivity : AppCompatActivity() {
     private fun getCurrentDocId() {
         val currentUid = FBAuth.getUid()
 
+        // 업로드 도중 화면 터치 막기
+        val dialog = Dialog(this)
+
+        dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT)) // 배경 투명하기
+        dialog.setContentView(ProgressBar(this)) // ProgressBar 위젯 생성
+        dialog.setCanceledOnTouchOutside(false) // 외부 터치 막기
+        dialog.setOnCancelListener { this.finish() } // 뒤로가기시 현재 엑티비티 종료
+
+        dialog.show()
+
         FBDocRef.fbDB.collection("note_info").whereEqualTo("uid", currentUid)
             .whereEqualTo("imageUrl", currentImageUrl)
             .get().addOnSuccessListener { result ->
@@ -162,22 +176,24 @@ class InfoNoteActivity : AppCompatActivity() {
 
                 for (item in result.documentChanges) noteId = item.document.id
 
-                getDeleteImage(noteId)
+                getDeleteImage(noteId, dialog)
             }
     }
 
-    private fun getDeleteImage(noteId: String) {
+    private fun getDeleteImage(noteId: String, dialog: Dialog) {
 
         val storagePath = FBSrg.storageRef.child("images").child(currentImageUrlSubString)
-        storagePath.delete().addOnSuccessListener { getDeleteData(noteId) }
+        storagePath.delete().addOnSuccessListener { getDeleteData(noteId, dialog) }
 
     }
 
-    private fun getDeleteData(noteId: String) {
+    private fun getDeleteData(noteId: String, dialog: Dialog) {
 
         FBDocRef.fbDB.collection("note_info").document(noteId)
             .delete()
             .addOnSuccessListener {
+
+                dialog.dismiss()
 
                 val intent = Intent(this, MainActivity::class.java)
                 intent.flags =

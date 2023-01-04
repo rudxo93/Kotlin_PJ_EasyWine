@@ -3,19 +3,20 @@ package com.duran.gyoung_tae_93.pj.easywine.ui.view.activity.note
 import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.app.DatePickerDialog
-import android.content.Context
+import android.app.Dialog
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
-import android.view.KeyEvent
 import android.view.MenuItem
 import android.view.View
-import android.view.inputmethod.InputMethodManager
+import android.widget.ProgressBar
 import android.widget.SeekBar
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
@@ -155,14 +156,24 @@ class EditNoteActivity : AppCompatActivity() {
             }
             else -> {
                 if (isImageUpload == true) {
-                    imageUpload()
+                    // 업로드 도중 화면 터치 막기
+                    val dialog = Dialog(this)
+
+                    dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT)) // 배경 투명하기
+                    dialog.setContentView(ProgressBar(this)) // ProgressBar 위젯 생성
+                    dialog.setCanceledOnTouchOutside(false) // 외부 터치 막기
+                    dialog.setOnCancelListener { this.finish() } // 뒤로가기시 현재 엑티비티 종료
+
+                    dialog.show()
+
+                    imageUpload(dialog)
                 }
             }
         }
     }
 
     @SuppressLint("SimpleDateFormat")
-    private fun imageUpload() {
+    private fun imageUpload(dialog: Dialog) {
         // 이미지 저장 날싸와 시간(파일명이 중복되지 않도록 날짜와 시간으로)
         val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
         // 파일 저장 이름 만들기 -> IMAGE_저장날짜.png
@@ -173,12 +184,12 @@ class EditNoteActivity : AppCompatActivity() {
         storagePath.putFile(photoUri).continueWithTask {
             return@continueWithTask storagePath.downloadUrl
         }.addOnCompleteListener { downloadUrl ->
-            getSaveNote(downloadUrl)
+            getSaveNote(downloadUrl, dialog)
         }
     }
 
     @SuppressLint("SimpleDateFormat")
-    private fun getSaveNote(downloadUrl: Task<Uri>) {
+    private fun getSaveNote(downloadUrl: Task<Uri>, dialog: Dialog) {
 
         // NoteInfo
         val wineImageUrl = downloadUrl.result.toString()
@@ -233,7 +244,7 @@ class EditNoteActivity : AppCompatActivity() {
                 saveDate,
             )
             viewModel.insertNoteInfo(noteInfo)
-
+            dialog.dismiss()
             finish()
         }
     }

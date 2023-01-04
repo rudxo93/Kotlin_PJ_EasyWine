@@ -3,19 +3,20 @@ package com.duran.gyoung_tae_93.pj.easywine.ui.view.activity.note
 import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.app.DatePickerDialog
-import android.content.Context
+import android.app.Dialog
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
-import android.view.KeyEvent
 import android.view.MenuItem
 import android.view.View
-import android.view.inputmethod.InputMethodManager
+import android.widget.ProgressBar
 import android.widget.SeekBar
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
@@ -168,9 +169,30 @@ class UpdateNoteActivity : AppCompatActivity() {
                 // 이미지를 변경했는지?
                 if (!isImageUpload) {
                     val imageUrl = noteInfo.imageUrl.toString()
-                    getSaveNote(imageUrl, currentImageUrl)
+
+                    // 업로드 도중 화면 터치 막기
+                    val dialog = Dialog(this)
+
+                    dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT)) // 배경 투명하기
+                    dialog.setContentView(ProgressBar(this)) // ProgressBar 위젯 생성
+                    dialog.setCanceledOnTouchOutside(false) // 외부 터치 막기
+                    dialog.setOnCancelListener { this.finish() } // 뒤로가기시 현재 엑티비티 종료
+
+                    dialog.show()
+
+                    getSaveNote(imageUrl, currentImageUrl, dialog)
                 } else {
-                    imageDelete()
+                    // 업로드 도중 화면 터치 막기
+                    val dialog = Dialog(this)
+
+                    dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT)) // 배경 투명하기
+                    dialog.setContentView(ProgressBar(this)) // ProgressBar 위젯 생성
+                    dialog.setCanceledOnTouchOutside(false) // 외부 터치 막기
+                    dialog.setOnCancelListener { this.finish() } // 뒤로가기시 현재 엑티비티 종료
+
+                    dialog.show()
+
+                    imageDelete(dialog)
                 }
             }
         }
@@ -179,18 +201,18 @@ class UpdateNoteActivity : AppCompatActivity() {
     /**
      *  기존에 저장되어있는 Image 는 삭제
      */
-    private fun imageDelete() {
+    private fun imageDelete(dialog: Dialog) {
 
         val storagePath = FBSrg.storageRef.child("images").child(currentImageUrlSubString)
 
-        storagePath.delete().addOnSuccessListener { imageUpload(currentImageUrl) }
+        storagePath.delete().addOnSuccessListener { imageUpload(currentImageUrl, dialog) }
     }
 
     /**
      *   다시 Image 를 저장한다.
      */
     @SuppressLint("SimpleDateFormat")
-    private fun imageUpload(currentImageUrl: String) {
+    private fun imageUpload(currentImageUrl: String, dialog: Dialog) {
 
         val timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
         val imageFileName = "IMAGE_$timeStamp.png"
@@ -200,12 +222,12 @@ class UpdateNoteActivity : AppCompatActivity() {
             return@continueWithTask storagePath.downloadUrl
         }.addOnCompleteListener { downloadUrl ->
             val imageUrl = downloadUrl.result.toString()
-            getSaveNote(imageUrl, currentImageUrl)
+            getSaveNote(imageUrl, currentImageUrl, dialog)
         }
     }
 
     @SuppressLint("SimpleDateFormat")
-    private fun getSaveNote(imageUrl: String, currentImageUrl: String) {
+    private fun getSaveNote(imageUrl: String, currentImageUrl: String, dialog: Dialog) {
 
         // NoteInfo
         val wineImageUrl = imageUrl
@@ -260,11 +282,11 @@ class UpdateNoteActivity : AppCompatActivity() {
             saveDate
         )
 
-        getCurrentDocId(noteUpdate, currentImageUrl)
+        getCurrentDocId(noteUpdate, currentImageUrl, dialog)
 
     }
 
-    private fun getCurrentDocId(noteUpdate: NoteInfoModel, currentImageUrl: String) {
+    private fun getCurrentDocId(noteUpdate: NoteInfoModel, currentImageUrl: String, dialog: Dialog) {
         FBDocRef.fbDB.collection("note_info").whereEqualTo("uid", currentUid)
             .whereEqualTo("imageUrl", currentImageUrl)
             .get().addOnSuccessListener { result ->
@@ -272,11 +294,11 @@ class UpdateNoteActivity : AppCompatActivity() {
 
                 for (item in result.documentChanges) noteId = item.document.id
 
-                getUpdateNote(noteId, noteUpdate)
+                getUpdateNote(noteId, noteUpdate, dialog)
             }
     }
 
-    private fun getUpdateNote(noteId: String, noteUpdate: NoteInfoModel) {
+    private fun getUpdateNote(noteId: String, noteUpdate: NoteInfoModel, dialog: Dialog) {
         val tsDoc = FBDocRef.fbDB.collection("note_info").document(noteId)
 
         FBDocRef.fbDB.runTransaction { transition ->
@@ -309,6 +331,7 @@ class UpdateNoteActivity : AppCompatActivity() {
             transition.set(tsDoc, dataModel)
 
         }
+        dialog.dismiss()
         Toast.makeText(this, "변경되었습니다.", Toast.LENGTH_SHORT).show()
 
         val intent = Intent(this, MainActivity::class.java)
